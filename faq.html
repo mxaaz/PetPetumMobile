@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ / Pomoc — PetPetumMobile</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+           background: #fafafa; color: #333; line-height: 1.7; }
+    header { background: #2E7D32; color: #fff; padding: 36px 24px; }
+    header h1 { font-size: 1.8rem; }
+    header p { margin-top: 6px; opacity: 0.85; font-size: 0.95rem; }
+    article { max-width: 800px; margin: 0 auto; padding: 40px 24px 60px; }
+    .lang-switcher { display: flex; gap: 8px; margin-bottom: 32px; }
+    .lang-btn { padding: 6px 16px; border-radius: 20px; border: 2px solid #2E7D32;
+                cursor: pointer; font-size: 0.9rem; font-weight: 600; background: #fff; color: #2E7D32; }
+    .lang-btn.active { background: #2E7D32; color: #fff; }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+    h2 { font-size: 1.2rem; color: #2E7D32; margin: 32px 0 10px;
+         border-bottom: 1px solid #E8F5E9; padding-bottom: 6px; }
+    details { border: 1px solid #E8F5E9; border-radius: 8px; margin-bottom: 10px;
+              background: #fff; padding: 0; overflow: hidden; }
+    summary { padding: 14px 18px; font-weight: 600; font-size: 0.95rem;
+              cursor: pointer; list-style: none; display: flex; justify-content: space-between;
+              align-items: center; color: #333; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: '+'; font-size: 1.2rem; color: #2E7D32; font-weight: 400; }
+    details[open] summary::after { content: '−'; }
+    details[open] summary { background: #E8F5E9; }
+    .answer { padding: 14px 18px 16px; font-size: 0.9rem; color: #555; border-top: 1px solid #E8F5E9; }
+    .answer p { margin-bottom: 8px; }
+    .answer ol, .answer ul { margin: 8px 0 8px 20px; }
+    .answer li { margin-bottom: 4px; }
+    .contact-box { background: #E8F5E9; border-radius: 8px; padding: 20px 24px; margin-top: 40px; }
+    .contact-box h3 { color: #2E7D32; font-size: 1rem; margin-bottom: 8px; }
+    .contact-box a { color: #2E7D32; font-weight: 600; }
+    footer { text-align: center; padding: 24px; color: #999; font-size: 0.82rem;
+             border-top: 1px solid #eee; margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FAQ &amp; Help / Pomoc</h1>
+    <p>PetPetumMobile — Frequently Asked Questions / Najczęściej zadawane pytania</p>
+  </header>
+
+  <article>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="switchLang('en', this)">English</button>
+      <button class="lang-btn" onclick="switchLang('pl', this)">Polski</button>
+    </div>
+
+    <!-- ============ ENGLISH ============ -->
+    <div id="lang-en" class="lang-section active">
+
+      <h2>Account &amp; Data</h2>
+
+      <details>
+        <summary>How do I delete my account?</summary>
+        <div class="answer">
+          <p>You can delete your account directly from the app:</p>
+          <ol>
+            <li>Go to <strong>Settings</strong></li>
+            <li>Tap <strong>Delete account</strong></li>
+            <li>Confirm by typing DELETE</li>
+          </ol>
+          <p>All your data (pets, health records, photos) will be permanently removed from our servers. This action cannot be undone.</p>
+          <p>You can also request deletion via our <a href="account-deletion.html">Account Deletion page</a>.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I export my data?</summary>
+        <div class="answer">
+          <p>Go to <strong>Settings → Export my data</strong>. A JSON file containing all your pets' data will be generated and shared via your device's share sheet.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Is my data safe?</summary>
+        <div class="answer">
+          <p>Yes. All data stored on your device is encrypted using AES-256. Data sent to our servers is transmitted over TLS. We never sell your data to third parties. See our <a href="privacy.html">Privacy Policy</a> for full details.</p>
+        </div>
+      </details>
+
+      <h2>Premium &amp; Subscriptions</h2>
+
+      <details>
+        <summary>How do I cancel my subscription?</summary>
+        <div class="answer">
+          <p><strong>Google Play (Android):</strong></p>
+          <ol>
+            <li>Open the Google Play Store app</li>
+            <li>Tap your profile picture → <strong>Payments &amp; subscriptions</strong></li>
+            <li>Tap <strong>Subscriptions</strong></li>
+            <li>Find <strong>PetPetumMobile</strong> and tap <strong>Cancel subscription</strong></li>
+          </ol>
+          <p><strong>App Store (iOS):</strong></p>
+          <ol>
+            <li>Open <strong>Settings</strong> on your iPhone/iPad</li>
+            <li>Tap your name → <strong>Subscriptions</strong></li>
+            <li>Find <strong>PetPetumMobile</strong> and tap <strong>Cancel Subscription</strong></li>
+          </ol>
+          <p>Your Premium access will remain active until the end of the current billing period.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I restore my purchases?</summary>
+        <div class="answer">
+          <p>If you reinstalled the app or switched to a new device:</p>
+          <ol>
+            <li>Open PetPetumMobile</li>
+            <li>Go to <strong>Settings → Premium</strong></li>
+            <li>Tap <strong>Restore Purchases</strong></li>
+          </ol>
+          <p>Make sure you are logged in with the same Google/Apple account that you used to purchase the subscription.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I get a refund?</summary>
+        <div class="answer">
+          <p>Refunds are handled by Google Play or the App Store, not by us directly.</p>
+          <p><strong>Google Play:</strong> Visit <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener">play.google.com/store/account/subscriptions</a> and request a refund within 48 hours of purchase.</p>
+          <p><strong>App Store:</strong> Visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> to request a refund.</p>
+          <p>If you have issues, contact us at <a href="mailto:petpetum.support@gmail.com">petpetum.support@gmail.com</a> and we'll do our best to help.</p>
+        </div>
+      </details>
+
+      <h2>Sync &amp; Cloud</h2>
+
+      <details>
+        <summary>My data is not syncing between devices — what do I do?</summary>
+        <div class="answer">
+          <p>Try the following steps:</p>
+          <ol>
+            <li>Make sure you are logged in with the same account on both devices</li>
+            <li>Check your internet connection</li>
+            <li>Go to <strong>Settings → Cloud Sync</strong> and tap <strong>Sync now</strong></li>
+            <li>If the issue persists, sign out and sign in again</li>
+          </ol>
+          <p>Cloud Sync requires a <strong>Premium</strong> subscription. If you are not a Premium user, your data is stored locally on the device only.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>I see a "conflict" warning — what does it mean?</summary>
+        <div class="answer">
+          <p>A conflict occurs when the same data (e.g. a pet's weight) was modified on two different devices while offline. You will be asked to choose which version to keep. You can always find the conflict resolution screen under <strong>Settings → Cloud Sync → Conflicts</strong>.</p>
+        </div>
+      </details>
+
+      <h2>Notifications &amp; Reminders</h2>
+
+      <details>
+        <summary>I'm not receiving reminders — how do I fix this?</summary>
+        <div class="answer">
+          <ol>
+            <li>Check that notifications are enabled for PetPetumMobile in your device's <strong>Settings → Notifications</strong></li>
+            <li>Make sure the reminder is set to a future date</li>
+            <li>On Android, check that Battery Optimization is disabled for PetPetumMobile</li>
+          </ol>
+        </div>
+      </details>
+
+      <h2>Privacy &amp; Legal</h2>
+
+      <details>
+        <summary>What data do you collect?</summary>
+        <div class="answer">
+          <p>We collect only data you explicitly enter: pet profiles, health records, and photos. We also collect anonymized crash reports to improve app stability. See our full <a href="privacy.html">Privacy Policy</a> for details.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I exercise my GDPR rights?</summary>
+        <div class="answer">
+          <p>You can:</p>
+          <ul>
+            <li><strong>Access &amp; export</strong> your data: Settings → Export my data</li>
+            <li><strong>Delete</strong> your data: Settings → Delete account</li>
+            <li><strong>Correct</strong> your data: Edit any record directly in the app</li>
+          </ul>
+          <p>For any other requests, contact us at <a href="mailto:petpetum.support@gmail.com">petpetum.support@gmail.com</a>.</p>
+        </div>
+      </details>
+
+      <div class="contact-box">
+        <h3>Still need help?</h3>
+        <p>We aim to respond within 24 hours.<br>
+        Email: <a href="mailto:petpetum.support@gmail.com">petpetum.support@gmail.com</a></p>
+      </div>
+    </div>
+
+    <!-- ============ POLISH ============ -->
+    <div id="lang-pl" class="lang-section">
+
+      <h2>Konto i dane</h2>
+
+      <details>
+        <summary>Jak usunąć konto?</summary>
+        <div class="answer">
+          <p>Możesz usunąć konto bezpośrednio z aplikacji:</p>
+          <ol>
+            <li>Przejdź do <strong>Ustawień</strong></li>
+            <li>Kliknij <strong>Usuń konto</strong></li>
+            <li>Potwierdź wpisując USUŃ</li>
+          </ol>
+          <p>Wszystkie Twoje dane (pupile, historia zdrowia, zdjęcia) zostaną trwale usunięte z naszych serwerów. Tej akcji nie można cofnąć.</p>
+          <p>Możesz też wysłać prośbę przez naszą <a href="account-deletion.html">stronę usuwania konta</a>.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Jak wyeksportować moje dane?</summary>
+        <div class="answer">
+          <p>Przejdź do <strong>Ustawienia → Eksportuj moje dane</strong>. Plik JSON ze wszystkimi danymi pupili zostanie wygenerowany i udostępniony przez systemowe menu udostępniania.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Czy moje dane są bezpieczne?</summary>
+        <div class="answer">
+          <p>Tak. Wszystkie dane na Twoim urządzeniu są zaszyfrowane algorytmem AES-256. Dane wysyłane na serwery są przesyłane przez TLS. Nigdy nie sprzedajemy Twoich danych podmiotom trzecim. Szczegóły znajdziesz w naszej <a href="privacy-pl.html">Polityce prywatności</a>.</p>
+        </div>
+      </details>
+
+      <h2>Premium i subskrypcje</h2>
+
+      <details>
+        <summary>Jak anulować subskrypcję?</summary>
+        <div class="answer">
+          <p><strong>Google Play (Android):</strong></p>
+          <ol>
+            <li>Otwórz aplikację Google Play Store</li>
+            <li>Kliknij swoje zdjęcie profilowe → <strong>Płatności i subskrypcje</strong></li>
+            <li>Kliknij <strong>Subskrypcje</strong></li>
+            <li>Znajdź <strong>PetPetumMobile</strong> i kliknij <strong>Anuluj subskrypcję</strong></li>
+          </ol>
+          <p><strong>App Store (iOS):</strong></p>
+          <ol>
+            <li>Otwórz <strong>Ustawienia</strong> na iPhone/iPad</li>
+            <li>Kliknij swoje imię → <strong>Subskrypcje</strong></li>
+            <li>Znajdź <strong>PetPetumMobile</strong> i kliknij <strong>Anuluj subskrypcję</strong></li>
+          </ol>
+          <p>Dostęp Premium pozostaje aktywny do końca bieżącego okresu rozliczeniowego.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Jak przywrócić zakupy?</summary>
+        <div class="answer">
+          <p>Jeśli ponownie zainstalowałeś/aś aplikację lub zmieniłeś/aś urządzenie:</p>
+          <ol>
+            <li>Otwórz PetPetumMobile</li>
+            <li>Przejdź do <strong>Ustawienia → Premium</strong></li>
+            <li>Kliknij <strong>Przywróć zakupy</strong></li>
+          </ol>
+          <p>Upewnij się, że jesteś zalogowany/a na to samo konto Google/Apple, które było użyte przy zakupie.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Czy mogę otrzymać zwrot środków?</summary>
+        <div class="answer">
+          <p>Zwroty są obsługiwane przez Google Play lub App Store, nie przez nas bezpośrednio.</p>
+          <p><strong>Google Play:</strong> Odwiedź <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener">play.google.com/store/account/subscriptions</a> i poproś o zwrot w ciągu 48 godzin od zakupu.</p>
+          <p><strong>App Store:</strong> Odwiedź <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>, aby złożyć wniosek o zwrot.</p>
+          <p>W razie problemów napisz do nas na <a href="mailto:petpetum.support@gmail.com">petpetum.support@gmail.com</a>, postaramy się pomóc.</p>
+        </div>
+      </details>
+
+      <h2>Synchronizacja i chmura</h2>
+
+      <details>
+        <summary>Dane nie synchronizują się między urządzeniami — co zrobić?</summary>
+        <div class="answer">
+          <p>Wypróbuj poniższe kroki:</p>
+          <ol>
+            <li>Upewnij się, że jesteś zalogowany/a na to samo konto na obu urządzeniach</li>
+            <li>Sprawdź połączenie z internetem</li>
+            <li>Przejdź do <strong>Ustawienia → Synchronizacja</strong> i kliknij <strong>Synchronizuj teraz</strong></li>
+            <li>Jeśli problem trwa, wyloguj się i zaloguj ponownie</li>
+          </ol>
+          <p>Synchronizacja w chmurze wymaga subskrypcji <strong>Premium</strong>. Bez Premium dane są przechowywane tylko lokalnie na urządzeniu.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Widzę ostrzeżenie o "konflikcie" — co to znaczy?</summary>
+        <div class="answer">
+          <p>Konflikt pojawia się, gdy te same dane (np. waga pupila) zostały zmodyfikowane na dwóch różnych urządzeniach w trybie offline. Zostaniesz poproszony/a o wybranie wersji do zachowania. Ekran rozwiązywania konfliktów znajdziesz w <strong>Ustawienia → Synchronizacja → Konflikty</strong>.</p>
+        </div>
+      </details>
+
+      <h2>Powiadomienia i przypomnienia</h2>
+
+      <details>
+        <summary>Nie otrzymuję przypomnień — jak to naprawić?</summary>
+        <div class="answer">
+          <ol>
+            <li>Sprawdź, czy powiadomienia dla PetPetumMobile są włączone w <strong>Ustawieniach systemowych → Powiadomienia</strong></li>
+            <li>Upewnij się, że przypomnienie jest ustawione na przyszłą datę</li>
+            <li>Na Androidzie sprawdź, czy Optymalizacja baterii jest wyłączona dla PetPetumMobile</li>
+          </ol>
+        </div>
+      </details>
+
+      <h2>Prywatność i prawo</h2>
+
+      <details>
+        <summary>Jakie dane zbieracie?</summary>
+        <div class="answer">
+          <p>Zbieramy wyłącznie dane, które sam/a wprowadzasz: profile pupili, historię zdrowia i zdjęcia. Zbieramy też anonimowe raporty o awariach w celu poprawy stabilności aplikacji. Szczegóły w naszej <a href="privacy-pl.html">Polityce prywatności</a>.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Jak skorzystać z praw RODO?</summary>
+        <div class="answer">
+          <p>Możesz:</p>
+          <ul>
+            <li><strong>Dostęp i eksport</strong> danych: Ustawienia → Eksportuj moje dane</li>
+            <li><strong>Usunięcie</strong> danych: Ustawienia → Usuń konto</li>
+            <li><strong>Poprawienie</strong> danych: edytuj dowolny rekord bezpośrednio w aplikacji</li>
+          </ul>
+          <p>W przypadku innych żądań skontaktuj się z nami: <a href="mailto:petpetum.support@gmail.com">petpetum.support@gmail.com</a>.</p>
+        </div>
+      </details>
+
+      <div class="contact-box">
+        <h3>Nadal potrzebujesz pomocy?</h3>
+        <p>Staramy się odpowiadać w ciągu 24 godzin.<br>
+        Email: <a href="mailto:petpetum.support@gmail.com">petpetum.support@gmail.com</a></p>
+      </div>
+    </div>
+  </article>
+
+  <footer>
+    &copy; 2025 PetPetumMobile. All rights reserved.
+  </footer>
+
+  <script>
+    function switchLang(lang, btn) {
+      document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById('lang-' + lang).classList.add('active');
+      btn.classList.add('active');
+    }
+  </script>
+</body>
+</html>
