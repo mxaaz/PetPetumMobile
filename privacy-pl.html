@@ -31,7 +31,7 @@
     <p>PetPetumMobile — mobilna aplikacja do zarządzania zwierzętami domowymi</p>
   </header>
   <article>
-    <p class="meta">Ostatnia aktualizacja: kwiecień 2025 &nbsp;|&nbsp; Obowiązuje od: kwiecień 2025</p>
+    <p class="meta">Ostatnia aktualizacja: maj 2026 &nbsp;|&nbsp; Obowiązuje od: maj 2026</p>
 
     <h2>1. Wprowadzenie</h2>
     <p>
@@ -57,9 +57,9 @@
     <h3>2.2 Informacje zbierane automatycznie</h3>
     <ul>
       <li><strong>Lokalizacja (tylko podczas używania)</strong> — lokalizacja przybliżona lub dokładna, używana wyłącznie do wyświetlania pobliskich klinik weterynaryjnych na mapie. Zbierana tylko wtedy, gdy Aplikacja jest otwarta i gdy korzystasz z funkcji mapy. Nie zbieramy lokalizacji w tle.</li>
-      <li><strong>Identyfikatory urządzenia</strong> — używane przez Firebase i (w przyszłych wersjach) AdMob do celów analitycznych i reklamowych. Możesz zrezygnować z reklam spersonalizowanych w dowolnym momencie.</li>
-      <li><strong>Raporty awarii</strong> — anonimowe dane o awariach i wydajności zbierane przez Firebase Crashlytics (w przyszłych wersjach) w celu poprawy stabilności.</li>
-      <li><strong>Analityka użytkowania</strong> — zagregowane statystyki użytkowania przez Firebase Analytics (w przyszłych wersjach).</li>
+      <li><strong>Identyfikatory urządzenia / reklamowe</strong> — używane przez Firebase oraz Google AdMob do celów analitycznych i reklamowych. Reklamy wyświetlane są wyłącznie użytkownikom wersji bezpłatnej; subskrybenci Premium nie widzą reklam. W Europejskim Obszarze Gospodarczym prosimy o Twoją zgodę (przez mechanizm zgód Google) przed wyświetlaniem reklam spersonalizowanych; możesz zrezygnować z reklam spersonalizowanych w dowolnym momencie.</li>
+      <li><strong>Raporty awarii</strong> — anonimowe dane o awariach i wydajności zbierane przez Firebase Crashlytics w celu poprawy stabilności.</li>
+      <li><strong>Analityka użytkowania</strong> — zagregowane statystyki użytkowania przez Firebase Analytics.</li>
     </ul>
 
     <h3>2.3 Zakupy w aplikacji</h3>
@@ -76,7 +76,7 @@
       <li>Wyświetlanie pobliskich klinik weterynaryjnych z wykorzystaniem bieżącej lokalizacji (na żądanie).</li>
       <li>Przetwarzanie i weryfikacja statusu subskrypcji premium.</li>
       <li>Analiza raportów awarii w celu naprawy błędów i ulepszenia Aplikacji.</li>
-      <li>Wyświetlanie reklam (przyszłe wersje) — możesz zrezygnować z reklam spersonalizowanych.</li>
+      <li>Wyświetlanie reklam użytkownikom wersji bezpłatnej (subskrybenci Premium nie widzą reklam); możesz zrezygnować z reklam spersonalizowanych.</li>
     </ul>
 
     <h2>4. Przechowywanie danych</h2>
@@ -96,12 +96,26 @@
     <h2>5. Usługi podmiotów trzecich</h2>
     <ul>
       <li><strong>Firebase (Google LLC)</strong> — uwierzytelnianie, Firestore, Storage, Crashlytics, Analytics. <a href="https://policies.google.com/privacy" target="_blank">Polityka prywatności Google</a>.</li>
-      <li><strong>Google AdMob</strong> (przyszłość) — SDK reklamowy. Może używać identyfikatorów urządzenia do personalizacji reklam. Możesz zrezygnować przez ustawienia urządzenia.</li>
+      <li><strong>Google AdMob</strong> — SDK reklamowy, reklamy wyświetlane użytkownikom wersji bezpłatnej. Może używać identyfikatorów urządzenia / reklamowych do dostarczania i personalizacji reklam. Reklamy spersonalizowane w EOG wymagają Twojej zgody; możesz zrezygnować przez wbudowane okno zgody lub ustawienia urządzenia. <a href="https://support.google.com/admob/answer/6128543" target="_blank">AdMob a prywatność</a>.</li>
+      <li><strong>RevenueCat</strong> — zarządza statusem subskrypcji Premium. Otrzymuje anonimowy identyfikator użytkownika aplikacji oraz status zakupu (brak danych karty płatniczej). <a href="https://www.revenuecat.com/privacy" target="_blank">Prywatność RevenueCat</a>.</li>
       <li><strong>Google Play / Apple App Store</strong> — przetwarzanie zakupów w aplikacji.</li>
       <li><strong>OpenStreetMap / Nominatim / Overpass</strong> — dane mapowe i lokalizacje klinik (brak wysyłania danych osobowych, tylko współrzędne).</li>
     </ul>
 
-    <h2>6. Twoje prawa (RODO)</h2>
+    <h2>6. Udostępnianie pupila między użytkownikami</h2>
+    <p>
+      Aplikacja umożliwia udostępnienie pupila innemu użytkownikowi (np. członkowi rodziny lub
+      weterynarzowi) przez zaproszenie e-mail albo kod QR / link zapraszający. Po udostępnieniu
+      zaproszony użytkownik może przeglądać dane tego pupila na swoim koncie, w zakresie
+      ograniczonym do wybranego przez Ciebie poziomu dostępu (np. rola weterynarza pozwala
+      przeglądać wyłącznie dane medyczne: wizyty, szczepienia, leki, badania krwi i wagę).
+      To Ty decydujesz, kogo zaprosić, i możesz cofnąć dostęp w dowolnym momencie. Odpowiadasz
+      za wybór osób, którym udzielasz dostępu; nie odpowiadamy za sposób, w jaki zaproszony
+      użytkownik wykorzysta udostępnione dane. Udostępnianie wymaga włączonej synchronizacji
+      z chmurą (Firebase).
+    </p>
+
+    <h2>7. Twoje prawa (RODO)</h2>
     <p>Jeśli jesteś w Europejskim Obszarze Gospodarczym (EOG), masz następujące prawa:</p>
     <ul>
       <li><strong>Prawo dostępu</strong> — żądanie kopii wszystkich danych osobowych, które posiadamy o Tobie.</li>
@@ -113,7 +127,7 @@
     </ul>
     <p>Aby skorzystać z tych praw, skontaktuj się pod adresem <a href="mailto:mateusz33825@gmail.com">mateusz33825@gmail.com</a>. Odpowiemy w ciągu 30 dni.</p>
 
-    <h2>7. Prawa mieszkańców Kalifornii (CCPA)</h2>
+    <h2>8. Prawa mieszkańców Kalifornii (CCPA)</h2>
     <p>
       Jeśli jesteś mieszkańcem Kalifornii, masz dodatkowe prawa na mocy California Consumer
       Privacy Act (CCPA):
@@ -126,14 +140,14 @@
     </ul>
     <p>Aby złożyć wniosek CCPA, napisz na <a href="mailto:mateusz33825@gmail.com">mateusz33825@gmail.com</a>.</p>
 
-    <h2>8. Okres przechowywania danych</h2>
+    <h2>9. Okres przechowywania danych</h2>
     <p>
       Dane lokalne są przechowywane do momentu ich usunięcia lub odinstalowania Aplikacji.
       Dane w chmurze (Firebase) są przechowywane do momentu usunięcia konta. Po usunięciu
       konta dane są trwale usuwane z serwerów Firebase w ciągu 30 dni.
     </p>
 
-    <h2>9. Prywatność dzieci</h2>
+    <h2>10. Prywatność dzieci</h2>
     <p>
       Aplikacja nie jest przeznaczona dla dzieci poniżej 13 lat (lub 16 lat w EOG). Nie
       zbieramy świadomie danych osobowych od dzieci. Jeśli uważasz, że dziecko podało dane
@@ -141,7 +155,7 @@
       a usuniemy je niezwłocznie.
     </p>
 
-    <h2>10. Bezpieczeństwo</h2>
+    <h2>11. Bezpieczeństwo</h2>
     <p>
       Stosujemy standardowe branżowe środki bezpieczeństwa, w tym szyfrowanie AES-256 dla
       danych lokalnych, szyfrowanie TLS dla danych w tranzycie oraz bezpieczne
@@ -149,14 +163,14 @@
       bezpieczna.
     </p>
 
-    <h2>11. Zmiany w polityce</h2>
+    <h2>12. Zmiany w polityce</h2>
     <p>
       Możemy od czasu do czasu aktualizować niniejszą Politykę Prywatności. Zmiany zostaną
       opublikowane na tej stronie z zaktualizowaną datą. Dalsze korzystanie z Aplikacji po
       zmianach oznacza akceptację nowej polityki.
     </p>
 
-    <h2>12. Kontakt</h2>
+    <h2>13. Kontakt</h2>
     <p>
       W przypadku pytań dotyczących niniejszej Polityki Prywatności lub chęci skorzystania
       z praw, skontaktuj się:<br /><br />
