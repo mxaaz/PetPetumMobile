@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PetPetum: opieka nad psem i kotem w jednym miejscu</title>
-  <meta name="description" content="PetPetum to aplikacja do opieki nad psem i kotem: przypomnienia o szczepieniach i wizytach, dziennik opieki, planer posiłków i wyniki badań weterynaryjnych. Android i iOS." />
+  <title>PetPetum: niezależna książeczka zdrowia psa i kota (Android i iOS)</title>
+  <meta name="description" content="PetPetum to aplikacja dla psa i kota: przypomnienia o szczepieniach, dziennik opieki, planer posiłków, wyniki badań weterynaryjnych z trendami i panele chorób przewlekłych (CKD, cukrzyca). Android i iOS, po polsku." />
+  <meta name="keywords" content="aplikacja dla psa, aplikacja dla kota, dziennik pupila, przypomnienia o szczepieniach, kalendarz szczepień, aplikacja dla kota z chorobą nerek, dziennik kuwety, śledzenie wagi pupila" />
 
-  <meta property="og:title" content="PetPetum: opieka nad psem i kotem" />
-  <meta property="og:description" content="Przypomnienia, dziennik opieki, planer posiłków i wyniki badań weterynaryjnych w jednej aplikacji." />
+  <meta property="og:title" content="PetPetum: niezależna książeczka zdrowia psa i kota" />
+  <meta property="og:description" content="Przypomnienia, dziennik opieki, planer posiłków i wyniki badań weterynaryjnych z trendami. Dla opiekunów psów i kotów, także z chorobą przewlekłą." />
   <meta property="og:image" content="icon.png" />
   <meta property="og:type" content="website" />
   <link rel="icon" href="icon.png" />
@@ -169,6 +170,59 @@
     .footer-links a:hover { color: #fff; text-decoration: underline; }
     .footer-meta { font-size: .82rem; color: #828c82; }
 
+    /* ---------- problem -> solution ---------- */
+    .problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 32px; }
+    .problem-card { background: #fff; border: 1px solid #ececec; border-radius: var(--radius); padding: 28px 22px; text-align: center; transition: transform .2s ease, box-shadow .2s ease; }
+    .problem-card:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(0,0,0,.08); }
+    .problem-card .emoji { font-size: 2.6rem; line-height: 1; margin-bottom: 14px; display: block; }
+    .problem-card p { font-size: 1.02rem; color: var(--ink); font-weight: 600; }
+    .solution-line { text-align: center; font-size: 1.3rem; font-weight: 700; color: var(--green-dark); max-width: 760px; margin: 0 auto; letter-spacing: -.2px; }
+    .solution-line .hl { background: linear-gradient(180deg, transparent 62%, #FFE08A 62%); padding: 0 3px; }
+
+    /* ---------- niche (chronic conditions) ---------- */
+    .niche { background: linear-gradient(150deg, #2E7D32 0%, #14512a 100%); border-radius: 24px; padding: 50px 42px; color: #fff; position: relative; overflow: hidden; }
+    .niche::after { content: '🐾'; position: absolute; right: -10px; bottom: -24px; font-size: 9rem; opacity: .07; transform: rotate(-12deg); }
+    .niche .eyebrow { display: inline-block; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.3); border-radius: 999px; padding: 5px 14px; font-size: .8rem; font-weight: 700; letter-spacing: .4px; text-transform: uppercase; margin-bottom: 16px; }
+    .niche h2 { font-size: 1.95rem; margin-bottom: 14px; letter-spacing: -.4px; line-height: 1.15; max-width: 660px; }
+    .niche p.lead { font-size: 1.08rem; opacity: .95; max-width: 720px; margin-bottom: 22px; }
+    .niche .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
+    .niche .tags span { background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.32); border-radius: 999px; padding: 8px 16px; font-size: .92rem; font-weight: 600; }
+    .niche .niche-points { display: flex; flex-wrap: wrap; gap: 14px 28px; margin-bottom: 24px; }
+    .niche .niche-points span { display: inline-flex; align-items: center; gap: 9px; font-size: .98rem; font-weight: 500; }
+    .niche .niche-points .e { font-size: 1.3rem; }
+    .niche .niche-note { font-size: .86rem; opacity: .8; max-width: 720px; position: relative; }
+
+    /* ---------- why us ---------- */
+    .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .why-card { display: flex; gap: 16px; background: #fff; border: 1px solid #ececec; border-radius: var(--radius); padding: 24px; }
+    .why-card .ic { flex-shrink: 0; width: 46px; height: 46px; border-radius: 13px; background: var(--green-light); display: grid; place-items: center; }
+    .why-card .ic svg { width: 24px; height: 24px; stroke: var(--green-dark); }
+    .why-card h3 { font-size: 1.08rem; color: var(--green-dark); margin-bottom: 6px; }
+    .why-card p { font-size: .94rem; color: var(--muted); }
+
+    /* ---------- pricing ---------- */
+    .pricing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; align-items: start; }
+    .price-card { background: #fff; border: 1px solid #ececec; border-radius: 20px; padding: 30px 28px; }
+    .price-card.premium { border: 2px solid var(--green); box-shadow: 0 10px 30px rgba(46,125,50,.14); position: relative; }
+    .price-card .plan-name { font-size: 1.25rem; font-weight: 700; color: var(--green-dark); margin-bottom: 4px; }
+    .price-card .plan-sub { font-size: .92rem; color: var(--muted); margin-bottom: 18px; }
+    .price-card .badge-trial { position: absolute; top: 18px; right: 18px; background: var(--green); color: #fff; font-size: .74rem; font-weight: 700; padding: 5px 12px; border-radius: 999px; }
+    .price-card ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .price-card li { display: flex; gap: 10px; align-items: flex-start; font-size: .95rem; color: var(--ink); }
+    .price-card li svg { width: 19px; height: 19px; stroke: var(--green); flex-shrink: 0; margin-top: 2px; }
+    .price-foot { text-align: center; font-size: .9rem; color: var(--muted); margin-top: 20px; }
+
+    /* ---------- faq ---------- */
+    .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+    .faq-item { background: #fff; border: 1px solid #ececec; border-radius: 14px; overflow: hidden; }
+    .faq-item summary { cursor: pointer; padding: 18px 22px; font-weight: 600; color: var(--green-dark); font-size: 1.02rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; font-size: 1.4rem; color: var(--green); font-weight: 400; line-height: 1; }
+    .faq-item[open] summary::after { content: '\2212'; }
+    .faq-item .faq-body { padding: 0 22px 20px; font-size: .96rem; color: var(--muted); }
+    .faq-more { text-align: center; margin-top: 22px; font-size: .95rem; }
+    .faq-more a { color: var(--green-dark); font-weight: 600; }
+
     /* ---------- reveal animation ---------- */
     .reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
     .reveal.in-view { opacity: 1; transform: none; }
@@ -184,6 +238,10 @@
       .hero h1 { font-size: 2.05rem; }
       .hero .tagline { font-size: 1.12rem; }
       .section-head h2 { font-size: 1.55rem; }
+      .problem-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .niche { padding: 36px 24px; }
     }
     @media (max-width: 520px) {
       .nav .nav-cta { display: none; }
@@ -210,6 +268,9 @@
       <g id="i-lock" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></g>
       <g id="i-globe" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c2.5 2.5 2.5 13 0 16M12 4c-2.5 2.5-2.5 13 0 16"/></g>
       <g id="i-phone2" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></g>
+      <g id="i-check" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></g>
+      <g id="i-alert" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17h.01"/></g>
+      <g id="i-wifi-off" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18M9 17a4 4 0 0 1 6 0M5.5 12.5a9 9 0 0 1 5-2.4M18.5 12.5a9 9 0 0 0-3-2"/></g>
     </defs>
   </svg>
 
@@ -218,8 +279,9 @@
     <a class="brand" href="#top"><img src="icon.png" alt="" />PetPetum</a>
     <div class="nav-links">
       <a href="#features"><span class="pl">Funkcje</span><span class="en">Features</span></a>
-      <a href="#download"><span class="pl">Pobierz</span><span class="en">Download</span></a>
-      <a href="faq.html">FAQ</a>
+      <a href="#why"><span class="pl">Dlaczego my</span><span class="en">Why us</span></a>
+      <a href="#pricing"><span class="pl">Cennik</span><span class="en">Pricing</span></a>
+      <a href="#faq">FAQ</a>
     </div>
     <div class="nav-right">
       <div class="lang-switch" role="group" aria-label="Language">
@@ -233,14 +295,13 @@
   <!-- HERO -->
   <header class="hero" id="top">
     <img class="app-icon" src="icon.png" alt="PetPetum" />
-    <h1>PetPetum</h1>
-    <p class="tagline">
-      <span class="pl">Cała opieka nad psem i kotem w jednym miejscu.</span>
-      <span class="en">All your dog &amp; cat care in one place.</span>
-    </p>
+    <h1>
+      <span class="pl">Twoja niezależna książeczka zdrowia pupila</span>
+      <span class="en">Your pet's independent health book</span>
+    </h1>
     <p class="sub">
-      <span class="pl">Przypomnienia o szczepieniach i wizytach, dziennik opieki, planer posiłków i wyniki badań weterynaryjnych. Bez chaosu karteczek.</span>
-      <span class="en">Reminders for vaccinations and vet visits, a care journal, meal planner, and veterinary lab results. No more scattered sticky notes.</span>
+      <span class="pl">Cała historia, przypomnienia i wyniki badań na Twoim telefonie, zawsze pod ręką.</span>
+      <span class="en">All the history, reminders and lab results on your phone, always at hand.</span>
     </p>
     <div class="store-badges" id="download-hero">
       <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.petpetum.mobile" target="_blank" rel="noopener">
@@ -263,10 +324,35 @@
   </div>
 
   <main>
+    <!-- PROBLEM -> SOLUTION -->
+    <section id="problem">
+      <div class="section-head reveal">
+        <h2><span class="pl">Znasz to uczucie? 😩</span><span class="en">Sound familiar? 😩</span></h2>
+      </div>
+      <div class="problem-grid reveal">
+        <div class="problem-card">
+          <span class="emoji">🗒️</span>
+          <p><span class="pl">Karteczki znikają, a terminy szczepień i wizyt umykają.</span><span class="en">Sticky notes vanish and vaccination and visit dates slip by.</span></p>
+        </div>
+        <div class="problem-card">
+          <span class="emoji">😟</span>
+          <p><span class="pl">Boisz się, że przeoczysz wczesny sygnał choroby.</span><span class="en">You're afraid you'll miss an early sign of illness.</span></p>
+        </div>
+        <div class="problem-card">
+          <span class="emoji">📱💨</span>
+          <p><span class="pl">Zmieniasz telefon i cała historia pupila przepada.</span><span class="en">You change phones and your pet's whole history is gone.</span></p>
+        </div>
+      </div>
+      <p class="solution-line reveal">
+        <span class="pl">PetPetum to porządkuje, przypomina w porę i <span class="hl">pokazuje trendy</span> w zdrowiu pupila. 🐾</span>
+        <span class="en">PetPetum keeps it in order, reminds you in time and <span class="hl">shows the trends</span> in your pet's health. 🐾</span>
+      </p>
+    </section>
+
     <!-- FEATURES SHOWCASE -->
     <section id="features">
       <div class="section-head reveal">
-        <h2><span class="pl">Wszystko, czego potrzebuje Twój pupil</span><span class="en">Everything your pet needs</span></h2>
+        <h2><span class="pl">Wszystko, czego potrzebuje Twój pupil 🐶🐱</span><span class="en">Everything your pet needs 🐶🐱</span></h2>
         <p><span class="pl">Najedź na funkcję, żeby zobaczyć ją w aplikacji.</span><span class="en">Hover a feature to see it inside the app.</span></p>
       </div>
 
@@ -345,7 +431,7 @@
     <!-- MORE STRIP -->
     <section style="padding-top:0;">
       <div class="section-head reveal">
-        <h2><span class="pl">I jeszcze więcej</span><span class="en">And more</span></h2>
+        <h2><span class="pl">I jeszcze więcej ✨</span><span class="en">And more ✨</span></h2>
       </div>
       <div class="more-strip reveal">
         <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-syringe"/></svg><span class="pl">Podpowiedzi szczepień (WSAVA)</span><span class="en">Vaccine suggestions (WSAVA)</span></span>
@@ -354,6 +440,140 @@
         <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-cross"/></svg><span class="pl">Wizyty i odrobaczanie</span><span class="en">Vet visits &amp; deworming</span></span>
         <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-lock"/></svg><span class="pl">Eksport i usuwanie danych (RODO)</span><span class="en">Data export &amp; deletion (GDPR)</span></span>
       </div>
+    </section>
+
+    <!-- NICHE: chronic conditions -->
+    <section id="niche">
+      <div class="niche reveal">
+        <span class="eyebrow"><span class="pl">❤️‍🩹 Twój spokój głowy</span><span class="en">❤️‍🩹 Your peace of mind</span></span>
+        <h2><span class="pl">Choroba przewlekła? Wyłap wczesny sygnał, zanim urośnie.</span><span class="en">A chronic condition? Catch the early sign before it grows.</span></h2>
+        <p class="lead">
+          <span class="pl">Dla opiekunów kotów i psów z CKD, cukrzycą, tarczycą, FLUTD czy chorobą serca. PetPetum pilnuje tego, co ważne, między wizytami u weterynarza.</span>
+          <span class="en">For owners of cats and dogs with CKD, diabetes, thyroid issues, FLUTD or heart conditions. PetPetum watches what matters between vet visits.</span>
+        </p>
+        <div class="tags">
+          <span>🫘 CKD</span><span>🩸 <span class="pl">Cukrzyca</span><span class="en">Diabetes</span></span><span>🦋 <span class="pl">Tarczyca</span><span class="en">Thyroid</span></span><span>🚽 FLUTD</span><span>🫀 <span class="pl">Serce</span><span class="en">Cardiac</span></span>
+        </div>
+        <div class="niche-points">
+          <span><span class="e">📈</span><span class="pl">Trendy badań krwi z normami</span><span class="en">Blood test trends with reference ranges</span></span>
+          <span><span class="e">💧</span><span class="pl">Dziennik kuwety i nawodnienia</span><span class="en">Litter box and hydration log</span></span>
+          <span><span class="e">🫁</span><span class="pl">Pomiar tempa oddechu (Cardio Check)</span><span class="en">Respiratory rate check (Cardio Check)</span></span>
+        </div>
+        <p class="niche-note">
+          <span class="pl">PetPetum porządkuje dane i pokazuje trendy, nie stawia diagnozy. W sprawach zdrowia zawsze skonsultuj się z weterynarzem.</span>
+          <span class="en">PetPetum organizes data and shows trends, it does not diagnose. Always consult your veterinarian about your pet's health.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section id="why">
+      <div class="section-head reveal">
+        <h2><span class="pl">Dlaczego PetPetum, a nie inne aplikacje 🏆</span><span class="en">Why PetPetum, not other apps 🏆</span></h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-bell"/></svg></span>
+          <div>
+            <h3><span class="pl">Przypomnienia, które nie zawodzą</span><span class="en">Reminders that never fail</span></h3>
+            <p><span class="pl">Działają nawet po restarcie telefonu, więc żaden termin nie umknie.</span><span class="en">They work even after a phone reboot, so no date slips by.</span></p>
+          </div>
+        </div>
+        <div class="why-card reveal">
+          <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-flask"/></svg></span>
+          <div>
+            <h3><span class="pl">Głębia chorób przewlekłych</span><span class="en">Real depth for chronic conditions</span></h3>
+            <p><span class="pl">Panele chorób i trendy wyników badań, których nie znajdziesz w zwykłych aplikacjach.</span><span class="en">Condition dashboards and lab trends you won't find in generic apps.</span></p>
+          </div>
+        </div>
+        <div class="why-card reveal">
+          <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-lock"/></svg></span>
+          <div>
+            <h3><span class="pl">Prywatność i tryb offline</span><span class="en">Privacy and offline</span></h3>
+            <p><span class="pl">Dane szyfrowane, działa bez internetu, zgodność z RODO i bez sprzedaży danych.</span><span class="en">Encrypted data, works without internet, GDPR compliant and no data selling.</span></p>
+          </div>
+        </div>
+        <div class="why-card reveal">
+          <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-share"/></svg></span>
+          <div>
+            <h3><span class="pl">Gotowe dla weterynarza</span><span class="en">Vet-ready</span></h3>
+            <p><span class="pl">Udostępnianie tylko-do-odczytu, raport PDF i karta opiekuna na jeden klik.</span><span class="en">Read-only sharing, a PDF report and a petsitter card in one tap.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing">
+      <div class="section-head reveal">
+        <h2><span class="pl">Zacznij za darmo, rozszerz gdy zechcesz</span><span class="en">Start free, upgrade when you want</span></h2>
+        <p><span class="pl">7 dni Premium za darmo. Bez zobowiązań.</span><span class="en">7 days of Premium free. No commitment.</span></p>
+      </div>
+      <div class="pricing-grid">
+        <div class="price-card reveal">
+          <div class="plan-name">Free</div>
+          <div class="plan-sub"><span class="pl">Wszystko, czego potrzeba na start</span><span class="en">Everything you need to start</span></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg><span class="pl">Profile pupili i dziennik opieki</span><span class="en">Pet profiles and care journal</span></li>
+            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg><span class="pl">Przypomnienia: szczepienia, wizyty, odrobaczanie</span><span class="en">Reminders: vaccinations, visits, deworming</span></li>
+            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg><span class="pl">Planer posiłków z kaloriami i zapasami</span><span class="en">Meal planner with calories and stock</span></li>
+            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg><span class="pl">Leki i suplementy z przypomnieniami</span><span class="en">Medications and supplements with reminders</span></li>
+            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg><span class="pl">Waga, objawy, aktywność, nawodnienie, kuweta</span><span class="en">Weight, symptoms, activity, hydration, litter box</span></li>
+            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg><span class="pl">Kontakty i mapa klinik</span><span class="en">Contacts and clinic map</span></li>
+          </ul>
+        </div>
+        <div class="price-card premium reveal">
+          <span class="badge-trial"><span class="pl">7 dni za darmo</span><span class="en">7 days free</span></span>
+          <div class="plan-name">Premium ⭐</div>
+          <div class="plan-sub"><span class="pl">Dla pełnej kontroli nad zdrowiem</span><span class="en">For full control over health</span></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg><span class="pl">Wyniki badań krwi z trendami i normami</span><span class="en">Blood test results with trends and reference ranges</span></li>
+            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg><span class="pl">Zaawansowana analiza zdrowia (oś czasu i analityka)</span><span class="en">Advanced health analysis (timeline and analytics)</span></li>
+            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg><span class="pl">Cardio Check (pomiar tempa oddechu)</span><span class="en">Cardio Check (respiratory rate)</span></li>
+            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg><span class="pl">Synchronizacja w chmurze i udostępnianie</span><span class="en">Cloud sync and sharing</span></li>
+            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg><span class="pl">Wiele pupili i eksport PDF</span><span class="en">Multiple pets and PDF export</span></li>
+            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg><span class="pl">Bez reklam</span><span class="en">No ads</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="price-foot">
+        <span class="pl">Plan miesięczny, roczny lub dożywotni. Aktualne ceny znajdziesz w Google Play i App Store.</span>
+        <span class="en">Monthly, yearly or lifetime plan. You'll find current prices in Google Play and the App Store.</span>
+      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="section-head reveal">
+        <h2><span class="pl">Najczęstsze pytania ❓</span><span class="en">Frequently asked questions ❓</span></h2>
+      </div>
+      <div class="faq-list reveal">
+        <details class="faq-item">
+          <summary><span class="pl">Jak anulować subskrypcję?</span><span class="en">How do I cancel my subscription?</span></summary>
+          <div class="faq-body"><span class="pl">Subskrypcją zarządzasz w sklepie, w którym ją kupiłeś: Google Play (Subskrypcje) lub App Store (Apple ID, Subskrypcje). Anulujesz w każdej chwili, dostęp trwa do końca opłaconego okresu.</span><span class="en">You manage your subscription in the store where you bought it: Google Play (Subscriptions) or the App Store (Apple ID, Subscriptions). Cancel anytime, access lasts until the end of the paid period.</span></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="pl">Czym jest 7 dni Premium za darmo?</span><span class="en">What is the 7-day free Premium?</span></summary>
+          <div class="faq-body"><span class="pl">To bezpłatny okres próbny pełnego Premium. Jeśli anulujesz przed jego końcem, nic nie zapłacisz.</span><span class="en">It's a free trial of full Premium. If you cancel before it ends, you pay nothing.</span></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="pl">Czy moje dane są bezpieczne?</span><span class="en">Is my data safe?</span></summary>
+          <div class="faq-body"><span class="pl">Tak. Dane na urządzeniu są szyfrowane, aplikacja jest zgodna z RODO, a Twoich danych nie sprzedajemy. Synchronizacja w chmurze jest opcjonalna.</span><span class="en">Yes. On-device data is encrypted, the app is GDPR compliant, and we do not sell your data. Cloud sync is optional.</span></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="pl">Czy aplikacja działa bez internetu?</span><span class="en">Does the app work offline?</span></summary>
+          <div class="faq-body"><span class="pl">Tak. PetPetum działa offline, a dane domyślnie zostają na Twoim telefonie. Konto i synchronizacja nie są wymagane do podstawowego użycia.</span><span class="en">Yes. PetPetum works offline and your data stays on your phone by default. An account and sync are not required for basic use.</span></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="pl">Czy mogę wyeksportować lub usunąć dane?</span><span class="en">Can I export or delete my data?</span></summary>
+          <div class="faq-body"><span class="pl">Tak. Dane wyeksportujesz do pliku, a konto wraz z danymi możesz w całości usunąć, zgodnie z RODO.</span><span class="en">Yes. You can export your data to a file and fully delete your account and data, in line with GDPR.</span></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="pl">Nie dostaję przypomnień, jak to naprawić?</span><span class="en">I'm not getting reminders, how do I fix it?</span></summary>
+          <div class="faq-body"><span class="pl">Sprawdź, czy powiadomienia dla PetPetum są włączone w ustawieniach telefonu, a na Androidzie wyłącz optymalizację baterii dla aplikacji.</span><span class="en">Check that notifications for PetPetum are enabled in your phone settings, and on Android disable battery optimization for the app.</span></div>
+        </details>
+      </div>
+      <p class="faq-more reveal"><a href="faq.html"><span class="pl">Zobacz pełne FAQ &amp; pomoc</span><span class="en">See full FAQ &amp; help</span></a></p>
     </section>
 
     <!-- DISCLAIMER -->
@@ -367,7 +587,7 @@
     <!-- FINAL CTA -->
     <section id="download" style="padding-top:0;">
       <div class="cta-final reveal">
-        <h2><span class="pl">Zacznij dbać o pupila lepiej</span><span class="en">Start caring for your pet better</span></h2>
+        <h2><span class="pl">Zacznij dbać o pupila lepiej 🐾</span><span class="en">Start caring for your pet better 🐾</span></h2>
         <p><span class="pl">Pobierz PetPetum za darmo na Androida i iOS.</span><span class="en">Download PetPetum free on Android and iOS.</span></p>
         <div class="store-badges">
           <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.petpetum.mobile" target="_blank" rel="noopener">
