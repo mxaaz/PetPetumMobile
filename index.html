@@ -41,9 +41,10 @@
       padding: 12px 22px; transition: background .25s ease, box-shadow .25s ease;
     }
     .nav.scrolled { background: rgba(255,255,255,.92); backdrop-filter: blur(10px); box-shadow: 0 1px 12px rgba(0,0,0,.08); }
-    .nav .brand { display: flex; align-items: center; gap: 9px; font-weight: 700; font-size: 1.1rem; color: #fff; }
-    .nav.scrolled .brand { color: var(--green-dark); }
-    .nav .brand img { width: 30px; height: 30px; border-radius: 8px; }
+    .nav .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.32rem; color: #fff; letter-spacing: -.2px; }
+    .nav:not(.scrolled) .brand { text-shadow: 0 1px 8px rgba(0,0,0,.4); }
+    .nav.scrolled .brand { color: var(--green-dark); text-shadow: none; }
+    .nav .brand img { width: 38px; height: 38px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.3); }
     .nav .nav-links { display: flex; gap: 22px; margin-left: 24px; }
     .nav .nav-links a { color: rgba(255,255,255,.92); text-decoration: none; font-size: .92rem; font-weight: 500; }
     .nav.scrolled .nav-links a { color: var(--muted); }
@@ -55,12 +56,12 @@
       padding: 9px 18px; border-radius: 999px; box-shadow: 0 2px 8px rgba(46,125,50,.3);
     }
     .nav .nav-cta:hover { background: var(--green-dark); }
-    .nav .nav-social { display: flex; gap: 6px; }
-    .nav .nav-social a { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; color: #fff; background: rgba(255,255,255,.16); transition: background .2s ease, color .2s ease; }
-    .nav .nav-social a:hover { background: #fff; color: var(--green-dark); }
+    .nav .nav-social { display: flex; gap: 8px; }
+    .nav .nav-social a { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; color: #fff; background: rgba(255,255,255,.24); transition: background .2s ease, color .2s ease, transform .15s ease; }
+    .nav .nav-social a:hover { background: #fff; color: var(--green-dark); transform: translateY(-2px); }
     .nav.scrolled .nav-social a { color: var(--green-dark); background: var(--green-light); }
     .nav.scrolled .nav-social a:hover { background: var(--green); color: #fff; }
-    .nav .nav-social svg { width: 16px; height: 16px; }
+    .nav .nav-social svg { width: 21px; height: 21px; }
     .lang-switch { display: flex; gap: 3px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.4); border-radius: 999px; padding: 3px; }
     .nav.scrolled .lang-switch { background: var(--green-light); border-color: var(--green-border); }
     .lang-switch button { border: none; background: transparent; cursor: pointer; font-size: .82rem; font-weight: 700; color: rgba(255,255,255,.85); padding: 4px 11px; border-radius: 999px; }
@@ -69,17 +70,21 @@
 
     /* ---------- hero ---------- */
     header.hero {
-      position: relative; color: #fff; text-align: center;
-      padding: 150px 24px 96px;
+      position: relative; color: #fff;
+      padding: 120px 24px 84px;
       background:
-        linear-gradient(160deg, rgba(46,125,50,.86) 0%, rgba(27,94,32,.94) 100%),
+        linear-gradient(160deg, rgba(46,125,50,.88) 0%, rgba(27,94,32,.95) 100%),
         url('hero.jpg') center/cover no-repeat,
         linear-gradient(160deg, var(--green) 0%, var(--green-dark) 100%);
     }
-    .hero .app-icon { width: 92px; height: 92px; border-radius: 22px; box-shadow: 0 10px 30px rgba(0,0,0,.3); margin-bottom: 22px; }
-    .hero h1 { font-size: 2.7rem; margin-bottom: 14px; letter-spacing: -.6px; line-height: 1.1; }
-    .hero .tagline { font-size: 1.3rem; font-weight: 500; margin-bottom: 10px; }
-    .hero .sub { font-size: 1.04rem; opacity: .92; max-width: 620px; margin: 0 auto 32px; }
+    .hero-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1.05fr .95fr; gap: 44px; align-items: center; text-align: left; }
+    .hero-copy .app-icon { width: 76px; height: 76px; border-radius: 18px; box-shadow: 0 10px 30px rgba(0,0,0,.3); margin-bottom: 18px; display: inline-block; }
+    .hero h1 { font-size: 3.3rem; margin-bottom: 18px; letter-spacing: -.8px; line-height: 1.06; }
+    .hero .sub { font-size: 1.2rem; opacity: .95; max-width: 540px; margin-bottom: 32px; }
+    .hero-copy .store-badges { justify-content: flex-start; }
+    .hero-phone { display: flex; justify-content: center; perspective: 1200px; }
+    .hero-phone .phone { width: 282px; transform: rotate(-3deg); box-shadow: 0 36px 80px rgba(0,0,0,.42), 0 0 0 2px #1c1c1c; transition: transform .35s ease; }
+    .hero-phone .phone:hover { transform: rotate(0deg) translateY(-4px); }
 
     .store-badges { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
     .store-badge {
@@ -245,8 +250,14 @@
       .phone-wrap { display: none; }
       .feature-item { flex-wrap: wrap; }
       .feature-item .inline-shot { display: block; width: 100%; margin-top: 14px; border-radius: 14px; border: 1px solid #e2e2e2; }
-      .hero h1 { font-size: 2.05rem; }
-      .hero .tagline { font-size: 1.12rem; }
+      .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+      .hero-copy .store-badges { justify-content: center; }
+      .hero .sub { margin-left: auto; margin-right: auto; }
+      .hero-phone { order: 2; }
+      .hero-phone .phone { width: 240px; transform: none; }
+      .hero-phone .phone:hover { transform: translateY(-4px); }
+      .hero h1 { font-size: 2.3rem; }
+      .hero .sub { font-size: 1.08rem; }
       .section-head h2 { font-size: 1.55rem; }
       .problem-grid { grid-template-columns: 1fr; }
       .why-grid { grid-template-columns: 1fr; }
@@ -312,24 +323,35 @@
 
   <!-- HERO -->
   <header class="hero" id="top">
-    <img class="app-icon" src="icon.png" alt="PetPetum" />
-    <h1>
-      <span class="pl">Twoja niezależna książeczka zdrowia pupila</span>
-      <span class="en">Your pet's independent health book</span>
-    </h1>
-    <p class="sub">
-      <span class="pl">Cała historia, przypomnienia i wyniki badań na Twoim telefonie, zawsze pod ręką.</span>
-      <span class="en">All the history, reminders and lab results on your phone, always at hand.</span>
-    </p>
-    <div class="store-badges" id="download-hero">
-      <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.petpetum.mobile" target="_blank" rel="noopener">
-        <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#EA4335" d="M325 256 110 41a30 30 0 0 0-15-8l199 199z"/><path fill="#FBBC04" d="M404 207 325 256l79 49 60-35c20-12 20-39 0-51z"/><path fill="#34A853" d="M110 471l215-215 69 49-244 174a30 30 0 0 1-40-8z"/><path fill="#4285F4" d="M40 52a30 30 0 0 0-8 20v368a30 30 0 0 0 8 20l254-204z"/></svg>
-        <span><small><span class="pl">Pobierz w</span><span class="en">Get it on</span></small><span class="big">Google Play</span></span>
-      </a>
-      <a class="store-badge" href="https://apps.apple.com/us/app/petpetum-pet-health-tracker/id6763942522" target="_blank" rel="noopener">
-        <svg viewBox="0 0 384 512" aria-hidden="true"><path fill="#000" d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-87 21s-46-20-75-20c-39 1-74 22-94 57-40 70-10 173 29 230 19 28 42 59 72 58 29-1 40-19 75-19s45 19 75 18c31 0 50-28 69-56 22-32 31-63 31-65-1-1-59-23-60-91z"/><path fill="#000" d="M261 87c16-19 27-46 24-73-23 1-51 15-67 34-15 17-28 44-25 70 26 2 52-13 68-31z"/></svg>
-        <span><small><span class="pl">Pobierz w</span><span class="en">Download on the</span></small><span class="big">App Store</span></span>
-      </a>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <img class="app-icon" src="icon.png" alt="PetPetum" />
+        <h1>
+          <span class="pl">Twoja niezależna książeczka zdrowia pupila</span>
+          <span class="en">Your pet's independent health book</span>
+        </h1>
+        <p class="sub">
+          <span class="pl">Cała historia, przypomnienia i wyniki badań na Twoim telefonie, zawsze pod ręką.</span>
+          <span class="en">All the history, reminders and lab results on your phone, always at hand.</span>
+        </p>
+        <div class="store-badges" id="download-hero">
+          <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.petpetum.mobile" target="_blank" rel="noopener">
+            <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#EA4335" d="M325 256 110 41a30 30 0 0 0-15-8l199 199z"/><path fill="#FBBC04" d="M404 207 325 256l79 49 60-35c20-12 20-39 0-51z"/><path fill="#34A853" d="M110 471l215-215 69 49-244 174a30 30 0 0 1-40-8z"/><path fill="#4285F4" d="M40 52a30 30 0 0 0-8 20v368a30 30 0 0 0 8 20l254-204z"/></svg>
+            <span><small><span class="pl">Pobierz w</span><span class="en">Get it on</span></small><span class="big">Google Play</span></span>
+          </a>
+          <a class="store-badge" href="https://apps.apple.com/us/app/petpetum-pet-health-tracker/id6763942522" target="_blank" rel="noopener">
+            <svg viewBox="0 0 384 512" aria-hidden="true"><path fill="#000" d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-87 21s-46-20-75-20c-39 1-74 22-94 57-40 70-10 173 29 230 19 28 42 59 72 58 29-1 40-19 75-19s45 19 75 18c31 0 50-28 69-56 22-32 31-63 31-65-1-1-59-23-60-91z"/><path fill="#000" d="M261 87c16-19 27-46 24-73-23 1-51 15-67 34-15 17-28 44-25 70 26 2 52-13 68-31z"/></svg>
+            <span><small><span class="pl">Pobierz w</span><span class="en">Download on the</span></small><span class="big">App Store</span></span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-phone">
+        <div class="phone">
+          <div class="screens">
+            <img class="active" src="screens/dashboard.jpg" alt="PetPetum: panel pupila" />
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
