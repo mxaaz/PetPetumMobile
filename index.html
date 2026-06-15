@@ -1,84 +1,461 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PetPetumMobile — Legal Documents</title>
+  <title>PetPetum: opieka nad psem i kotem w jednym miejscu</title>
+  <meta name="description" content="PetPetum to aplikacja do opieki nad psem i kotem: przypomnienia o szczepieniach i wizytach, dziennik opieki, planer posiłków i wyniki badań weterynaryjnych. Android i iOS." />
+
+  <meta property="og:title" content="PetPetum: opieka nad psem i kotem" />
+  <meta property="og:description" content="Przypomnienia, dziennik opieki, planer posiłków i wyniki badań weterynaryjnych w jednej aplikacji." />
+  <meta property="og:image" content="icon.png" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="icon.png" />
+
   <style>
+    :root {
+      --green: #2E7D32;
+      --green-dark: #1B5E20;
+      --green-light: #E8F5E9;
+      --green-border: #C8E6C9;
+      --ink: #1f241f;
+      --muted: #5a5f5a;
+      --bg: #f4f7f4;
+      --card: #ffffff;
+      --radius: 16px;
+    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-           background: #f5f5f5; color: #333; }
-    header { background: #2E7D32; color: #fff; padding: 40px 24px; text-align: center; }
-    header h1 { font-size: 2rem; margin-bottom: 8px; }
-    header p { opacity: 0.85; font-size: 1rem; }
-    main { max-width: 720px; margin: 48px auto; padding: 0 24px; }
-    .card { background: #fff; border-radius: 8px; padding: 24px 28px; margin-bottom: 16px;
-            box-shadow: 0 1px 4px rgba(0,0,0,.1); }
-    .card h2 { font-size: 1.1rem; margin-bottom: 12px; color: #2E7D32; }
-    .links { display: flex; gap: 12px; flex-wrap: wrap; }
-    .links a { display: inline-block; padding: 8px 16px; border-radius: 4px;
-               background: #E8F5E9; color: #2E7D32; text-decoration: none;
-               font-size: 0.9rem; font-weight: 500; border: 1px solid #C8E6C9; }
-    .links a:hover { background: #C8E6C9; }
-    footer { text-align: center; padding: 32px 24px; color: #999; font-size: 0.85rem; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg); color: var(--ink); line-height: 1.55; -webkit-font-smoothing: antialiased;
+    }
+    body[data-lang="pl"] .en, body[data-lang="en"] .pl { display: none !important; }
+    a { color: inherit; }
+
+    /* ---------- top nav ---------- */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 60;
+      display: flex; align-items: center; gap: 16px;
+      padding: 12px 22px; transition: background .25s ease, box-shadow .25s ease;
+    }
+    .nav.scrolled { background: rgba(255,255,255,.92); backdrop-filter: blur(10px); box-shadow: 0 1px 12px rgba(0,0,0,.08); }
+    .nav .brand { display: flex; align-items: center; gap: 9px; font-weight: 700; font-size: 1.1rem; color: #fff; }
+    .nav.scrolled .brand { color: var(--green-dark); }
+    .nav .brand img { width: 30px; height: 30px; border-radius: 8px; }
+    .nav .nav-links { display: flex; gap: 22px; margin-left: 24px; }
+    .nav .nav-links a { color: rgba(255,255,255,.92); text-decoration: none; font-size: .92rem; font-weight: 500; }
+    .nav.scrolled .nav-links a { color: var(--muted); }
+    .nav .nav-links a:hover { color: #fff; }
+    .nav.scrolled .nav-links a:hover { color: var(--green-dark); }
+    .nav .nav-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+    .nav .nav-cta {
+      background: var(--green); color: #fff; text-decoration: none; font-weight: 600; font-size: .9rem;
+      padding: 9px 18px; border-radius: 999px; box-shadow: 0 2px 8px rgba(46,125,50,.3);
+    }
+    .nav .nav-cta:hover { background: var(--green-dark); }
+    .lang-switch { display: flex; gap: 3px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.4); border-radius: 999px; padding: 3px; }
+    .nav.scrolled .lang-switch { background: var(--green-light); border-color: var(--green-border); }
+    .lang-switch button { border: none; background: transparent; cursor: pointer; font-size: .82rem; font-weight: 700; color: rgba(255,255,255,.85); padding: 4px 11px; border-radius: 999px; }
+    .nav.scrolled .lang-switch button { color: var(--muted); }
+    .lang-switch button.active { background: #fff; color: var(--green-dark); }
+
+    /* ---------- hero ---------- */
+    header.hero {
+      position: relative; color: #fff; text-align: center;
+      padding: 150px 24px 96px;
+      background:
+        linear-gradient(160deg, rgba(46,125,50,.86) 0%, rgba(27,94,32,.94) 100%),
+        url('hero.jpg') center/cover no-repeat,
+        linear-gradient(160deg, var(--green) 0%, var(--green-dark) 100%);
+    }
+    .hero .app-icon { width: 92px; height: 92px; border-radius: 22px; box-shadow: 0 10px 30px rgba(0,0,0,.3); margin-bottom: 22px; }
+    .hero h1 { font-size: 2.7rem; margin-bottom: 14px; letter-spacing: -.6px; line-height: 1.1; }
+    .hero .tagline { font-size: 1.3rem; font-weight: 500; margin-bottom: 10px; }
+    .hero .sub { font-size: 1.04rem; opacity: .92; max-width: 620px; margin: 0 auto 32px; }
+
+    .store-badges { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .store-badge {
+      display: inline-flex; align-items: center; gap: 11px; background: #fff; color: #111;
+      text-decoration: none; padding: 11px 22px; border-radius: 13px; font-weight: 600;
+      box-shadow: 0 6px 18px rgba(0,0,0,.2); transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .store-badge:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,.26); }
+    .store-badge svg { width: 26px; height: 26px; flex-shrink: 0; }
+    .store-badge small { display: block; font-size: .68rem; font-weight: 500; opacity: .7; line-height: 1; margin-bottom: 2px; }
+    .store-badge span.big { font-size: 1.04rem; line-height: 1.1; }
+
+    /* ---------- trust strip ---------- */
+    .trust {
+      background: var(--green-dark); color: #d7e8d8;
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 34px;
+      padding: 18px 24px; font-size: .92rem; font-weight: 500;
+    }
+    .trust span { display: inline-flex; align-items: center; gap: 8px; }
+    .trust svg { width: 17px; height: 17px; opacity: .85; }
+
+    main { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 78px 0; }
+    .section-head { text-align: center; margin-bottom: 48px; }
+    .section-head h2 { font-size: 1.9rem; color: var(--green-dark); letter-spacing: -.4px; margin-bottom: 10px; }
+    .section-head p { color: var(--muted); font-size: 1.02rem; max-width: 540px; margin: 0 auto; }
+
+    /* ---------- features showcase (sticky split) ---------- */
+    .showcase { display: grid; grid-template-columns: 1fr 360px; gap: 56px; align-items: start; }
+    .feature-list { display: flex; flex-direction: column; gap: 14px; }
+    .feature-item {
+      display: flex; gap: 16px; padding: 20px 22px; border-radius: var(--radius);
+      background: var(--card); border: 1px solid #ececec; cursor: pointer;
+      transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+    }
+    .feature-item:hover { transform: translateY(-2px); }
+    .feature-item.active { border-color: var(--green); box-shadow: 0 8px 26px rgba(46,125,50,.16); }
+    .feature-item .ic {
+      flex-shrink: 0; width: 46px; height: 46px; border-radius: 13px;
+      background: var(--green-light); display: grid; place-items: center; transition: background .2s ease;
+    }
+    .feature-item.active .ic { background: var(--green); }
+    .feature-item .ic svg { width: 24px; height: 24px; stroke: var(--green-dark); transition: stroke .2s ease; }
+    .feature-item.active .ic svg { stroke: #fff; }
+    .feature-item h3 { font-size: 1.1rem; color: var(--green-dark); margin-bottom: 5px; }
+    .feature-item p { font-size: .94rem; color: var(--muted); }
+    /* inline screenshot (mobile only) */
+    .feature-item .inline-shot { display: none; }
+
+    /* sticky phone */
+    .phone-wrap { position: sticky; top: 100px; display: flex; justify-content: center; }
+    .phone {
+      position: relative; width: 300px; aspect-ratio: 1179 / 2556;
+      background: #0d0d0d; border-radius: 42px; padding: 11px;
+      box-shadow: 0 24px 60px rgba(0,0,0,.32), 0 0 0 2px #1c1c1c;
+    }
+    .phone::before { /* notch */
+      content: ''; position: absolute; top: 16px; left: 50%; transform: translateX(-50%);
+      width: 96px; height: 26px; background: #0d0d0d; border-radius: 0 0 16px 16px; z-index: 3;
+    }
+    .phone .screens { position: relative; width: 100%; height: 100%; border-radius: 32px; overflow: hidden; background: #000; }
+    .phone .screens img {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      opacity: 0; transition: opacity .45s ease;
+    }
+    .phone .screens img.active { opacity: 1; }
+
+    /* ---------- secondary "more" strip ---------- */
+    .more-strip { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 8px; }
+    .more-chip {
+      display: inline-flex; align-items: center; gap: 9px; background: var(--card);
+      border: 1px solid #e4e4e4; border-radius: 999px; padding: 10px 18px; font-size: .92rem; font-weight: 500; color: var(--ink);
+    }
+    .more-chip svg { width: 18px; height: 18px; stroke: var(--green); }
+
+    /* ---------- disclaimer ---------- */
+    .disclaimer {
+      max-width: 720px; margin: 0 auto; background: var(--green-light); border: 1px solid var(--green-border);
+      border-radius: 14px; padding: 18px 24px; font-size: .92rem; color: var(--green-dark); text-align: center;
+    }
+
+    /* ---------- final CTA ---------- */
+    .cta-final { text-align: center; background: linear-gradient(160deg, var(--green) 0%, var(--green-dark) 100%); border-radius: 24px; padding: 56px 28px; color: #fff; margin: 0 0 12px; }
+    .cta-final h2 { font-size: 1.9rem; margin-bottom: 10px; letter-spacing: -.3px; }
+    .cta-final p { opacity: .9; margin-bottom: 28px; }
+
+    /* ---------- footer ---------- */
+    footer { background: #161a16; color: #c4ccc4; padding: 46px 24px 34px; }
+    .footer-inner { max-width: 1080px; margin: 0 auto; }
+    .footer-top { display: flex; align-items: center; gap: 10px; margin-bottom: 22px; font-weight: 700; color: #fff; }
+    .footer-top img { width: 26px; height: 26px; border-radius: 7px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-bottom: 22px; }
+    .footer-links a { color: #c4ccc4; text-decoration: none; font-size: .9rem; }
+    .footer-links a:hover { color: #fff; text-decoration: underline; }
+    .footer-meta { font-size: .82rem; color: #828c82; }
+
+    /* ---------- reveal animation ---------- */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.in-view { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+    /* ---------- responsive ---------- */
+    @media (max-width: 880px) {
+      .nav .nav-links { display: none; }
+      .showcase { grid-template-columns: 1fr; gap: 0; }
+      .phone-wrap { display: none; }
+      .feature-item { flex-wrap: wrap; }
+      .feature-item .inline-shot { display: block; width: 100%; margin-top: 14px; border-radius: 14px; border: 1px solid #e2e2e2; }
+      .hero h1 { font-size: 2.05rem; }
+      .hero .tagline { font-size: 1.12rem; }
+      .section-head h2 { font-size: 1.55rem; }
+    }
+    @media (max-width: 520px) {
+      .nav .nav-cta { display: none; }
+      header.hero { padding: 128px 20px 72px; }
+    }
   </style>
 </head>
-<body>
-  <header>
-    <h1>PetPetumMobile</h1>
-    <p>Legal Documents &amp; Policies</p>
+<body data-lang="pl">
+
+  <!-- icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <g id="i-bell" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6"/><path d="M10 20a2 2 0 0 0 4 0"/></g>
+      <g id="i-journal" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/></g>
+      <g id="i-bowl" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18a9 9 0 0 1-18 0z"/><path d="M12 11V7M12 7a2 2 0 1 1 2-2"/></g>
+      <g id="i-chart" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16"/><path d="M7 15l3-3 3 2 4-5"/></g>
+      <g id="i-flask" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6L5 18a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M8 14h8"/></g>
+      <g id="i-paw" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="9" r="1.6"/><circle cx="12" cy="7" r="1.6"/><circle cx="17" cy="9" r="1.6"/><path d="M12 12c-3 0-5 2-5 4.5C7 19 9 19 12 19s5 0 5-2.5C17 14 15 12 12 12z"/></g>
+      <g id="i-syringe" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l6 6M18 6l-9 9-5 1 1-5 9-9M9 11l4 4"/></g>
+      <g id="i-share" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.5"/><circle cx="17" cy="6" r="2.5"/><circle cx="17" cy="18" r="2.5"/><path d="M8.2 10.8l6.6-3.6M8.2 13.2l6.6 3.6"/></g>
+      <g id="i-box" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-4 9 4-9 4-9-4z"/><path d="M3 8v8l9 4 9-4V8M12 12v8"/></g>
+      <g id="i-cross" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/></g>
+      <g id="i-shield" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 5-3 7-7 9-4-2-7-4-7-9V6l7-3z"/></g>
+      <g id="i-lock" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></g>
+      <g id="i-globe" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c2.5 2.5 2.5 13 0 16M12 4c-2.5 2.5-2.5 13 0 16"/></g>
+      <g id="i-phone2" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></g>
+    </defs>
+  </svg>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a class="brand" href="#top"><img src="icon.png" alt="" />PetPetum</a>
+    <div class="nav-links">
+      <a href="#features"><span class="pl">Funkcje</span><span class="en">Features</span></a>
+      <a href="#download"><span class="pl">Pobierz</span><span class="en">Download</span></a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-set-lang="pl" class="active">PL</button>
+        <button type="button" data-set-lang="en">EN</button>
+      </div>
+      <a class="nav-cta" href="#download"><span class="pl">Pobierz</span><span class="en">Get the app</span></a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <img class="app-icon" src="icon.png" alt="PetPetum" />
+    <h1>PetPetum</h1>
+    <p class="tagline">
+      <span class="pl">Cała opieka nad psem i kotem w jednym miejscu.</span>
+      <span class="en">All your dog &amp; cat care in one place.</span>
+    </p>
+    <p class="sub">
+      <span class="pl">Przypomnienia o szczepieniach i wizytach, dziennik opieki, planer posiłków i wyniki badań weterynaryjnych. Bez chaosu karteczek.</span>
+      <span class="en">Reminders for vaccinations and vet visits, a care journal, meal planner, and veterinary lab results. No more scattered sticky notes.</span>
+    </p>
+    <div class="store-badges" id="download-hero">
+      <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.petpetum.mobile" target="_blank" rel="noopener">
+        <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#EA4335" d="M325 256 110 41a30 30 0 0 0-15-8l199 199z"/><path fill="#FBBC04" d="M404 207 325 256l79 49 60-35c20-12 20-39 0-51z"/><path fill="#34A853" d="M110 471l215-215 69 49-244 174a30 30 0 0 1-40-8z"/><path fill="#4285F4" d="M40 52a30 30 0 0 0-8 20v368a30 30 0 0 0 8 20l254-204z"/></svg>
+        <span><small><span class="pl">Pobierz w</span><span class="en">Get it on</span></small><span class="big">Google Play</span></span>
+      </a>
+      <a class="store-badge" href="https://apps.apple.com/us/app/petpetum-pet-health-tracker/id6763942522" target="_blank" rel="noopener">
+        <svg viewBox="0 0 384 512" aria-hidden="true"><path fill="#000" d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-87 21s-46-20-75-20c-39 1-74 22-94 57-40 70-10 173 29 230 19 28 42 59 72 58 29-1 40-19 75-19s45 19 75 18c31 0 50-28 69-56 22-32 31-63 31-65-1-1-59-23-60-91z"/><path fill="#000" d="M261 87c16-19 27-46 24-73-23 1-51 15-67 34-15 17-28 44-25 70 26 2 52-13 68-31z"/></svg>
+        <span><small><span class="pl">Pobierz w</span><span class="en">Download on the</span></small><span class="big">App Store</span></span>
+      </a>
+    </div>
   </header>
+
+  <!-- TRUST STRIP -->
+  <div class="trust">
+    <span><svg viewBox="0 0 24 24"><use href="#i-phone2" stroke="#d7e8d8"/></svg><span class="pl">Android i iOS</span><span class="en">Android &amp; iOS</span></span>
+    <span><svg viewBox="0 0 24 24"><use href="#i-globe" stroke="#d7e8d8"/></svg><span class="pl">Po polsku i angielsku</span><span class="en">Polish &amp; English</span></span>
+    <span><svg viewBox="0 0 24 24"><use href="#i-lock" stroke="#d7e8d8"/></svg><span class="pl">Dane szyfrowane</span><span class="en">Encrypted data</span></span>
+    <span><svg viewBox="0 0 24 24"><use href="#i-shield" stroke="#d7e8d8"/></svg><span class="pl">Zgodność z RODO</span><span class="en">GDPR compliant</span></span>
+  </div>
+
   <main>
-    <div class="card">
-      <h2>Privacy Policy</h2>
-      <p style="margin-bottom:14px;font-size:.9rem;color:#555;">
-        Describes what data we collect, how we use it, and your rights under GDPR &amp; CCPA.
-      </p>
-      <div class="links">
-        <a href="privacy.html">English</a>
-        <a href="privacy-pl.html">Polski</a>
+    <!-- FEATURES SHOWCASE -->
+    <section id="features">
+      <div class="section-head reveal">
+        <h2><span class="pl">Wszystko, czego potrzebuje Twój pupil</span><span class="en">Everything your pet needs</span></h2>
+        <p><span class="pl">Najedź na funkcję, żeby zobaczyć ją w aplikacji.</span><span class="en">Hover a feature to see it inside the app.</span></p>
       </div>
-    </div>
-    <div class="card">
-      <h2>Terms of Service</h2>
-      <p style="margin-bottom:14px;font-size:.9rem;color:#555;">
-        Terms and conditions governing the use of PetPetumMobile.
-      </p>
-      <div class="links">
-        <a href="terms.html">English</a>
-        <a href="terms-pl.html">Polski</a>
+
+      <div class="showcase">
+        <div class="feature-list">
+          <div class="feature-item active reveal" data-screen="reminders">
+            <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-bell"/></svg></span>
+            <div>
+              <h3><span class="pl">Przypomnienia w porę</span><span class="en">Timely reminders</span></h3>
+              <p><span class="pl">Szczepienia, odrobaczanie, wizyty u weterynarza i leki. Powiadomienia działają też po restarcie telefonu.</span><span class="en">Vaccinations, deworming, vet visits and prescriptions. Notifications survive a phone reboot.</span></p>
+              <img class="inline-shot" src="screens/reminders.jpg" alt="" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="feature-item reveal" data-screen="dashboard">
+            <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-journal"/></svg></span>
+            <div>
+              <h3><span class="pl">Dziennik opieki</span><span class="en">Care journal</span></h3>
+              <p><span class="pl">Waga, objawy, aktywność, nawodnienie i dziennik kuwety, wszystko na jednym panelu.</span><span class="en">Weight, symptoms, activity, hydration and a litter box log on a single dashboard.</span></p>
+              <img class="inline-shot" src="screens/dashboard.jpg" alt="" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="feature-item reveal" data-screen="meal">
+            <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-bowl"/></svg></span>
+            <div>
+              <h3><span class="pl">Planer posiłków</span><span class="en">Meal planner</span></h3>
+              <p><span class="pl">Dzienny plan karmienia dopasowany do pupila, śledzenie kalorii i zapasów karmy.</span><span class="en">A daily feeding plan tailored to your pet, with calorie and food-stock tracking.</span></p>
+              <img class="inline-shot" src="screens/meal.jpg" alt="" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="feature-item reveal" data-screen="weight">
+            <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-chart"/></svg></span>
+            <div>
+              <h3><span class="pl">Waga i trendy</span><span class="en">Weight &amp; trends</span></h3>
+              <p><span class="pl">Wykresy wagi z normami dla rasy oraz podpowiedź, czy pupil trzyma idealną wagę.</span><span class="en">Weight charts with breed reference ranges and a hint whether your pet stays at an ideal weight.</span></p>
+              <img class="inline-shot" src="screens/weight.jpg" alt="" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="feature-item reveal" data-screen="health">
+            <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-flask"/></svg></span>
+            <div>
+              <h3><span class="pl">Badania i zdrowie</span><span class="en">Lab results &amp; health</span></h3>
+              <p><span class="pl">Wyniki badań weterynaryjnych z normami referencyjnymi, oś czasu szczepień i panele chorób przewlekłych.</span><span class="en">Veterinary lab results with reference ranges, a vaccination timeline and chronic condition dashboards.</span></p>
+              <img class="inline-shot" src="screens/health.jpg" alt="" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="feature-item reveal" data-screen="training">
+            <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-paw"/></svg></span>
+            <div>
+              <h3><span class="pl">Trening i nauka komend</span><span class="en">Training &amp; commands</span></h3>
+              <p><span class="pl">Sesje treningowe z punktami i postępem nauki komend, krok po kroku.</span><span class="en">Training sessions with points and step-by-step command mastery tracking.</span></p>
+              <img class="inline-shot" src="screens/training.jpg" alt="" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+        <div class="phone-wrap">
+          <div class="phone">
+            <div class="screens" id="screens">
+              <img data-screen="reminders" class="active" src="screens/reminders.jpg" alt="PetPetum: przypomnienia" />
+              <img data-screen="dashboard" src="screens/dashboard.jpg" alt="PetPetum: panel" />
+              <img data-screen="meal" src="screens/meal.jpg" alt="PetPetum: planer posiłków" />
+              <img data-screen="weight" src="screens/weight.jpg" alt="PetPetum: waga" />
+              <img data-screen="health" src="screens/health.jpg" alt="PetPetum: badania" />
+              <img data-screen="training" src="screens/training.jpg" alt="PetPetum: trening" />
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <h2>Account Deletion Policy</h2>
-      <p style="margin-bottom:14px;font-size:.9rem;color:#555;">
-        How to delete your account and all associated data from PetPetumMobile.
-      </p>
-      <div class="links">
-        <a href="account-deletion.html">English / Polski</a>
+    </section>
+
+    <!-- MORE STRIP -->
+    <section style="padding-top:0;">
+      <div class="section-head reveal">
+        <h2><span class="pl">I jeszcze więcej</span><span class="en">And more</span></h2>
       </div>
-    </div>
-    <div class="card">
-      <h2>FAQ &amp; Help</h2>
-      <p style="margin-bottom:14px;font-size:.9rem;color:#555;">
-        Frequently asked questions about subscriptions, sync, data, and more.
-      </p>
-      <div class="links">
-        <a href="faq.html">English &amp; Polski</a>
+      <div class="more-strip reveal">
+        <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-syringe"/></svg><span class="pl">Podpowiedzi szczepień (WSAVA)</span><span class="en">Vaccine suggestions (WSAVA)</span></span>
+        <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-share"/></svg><span class="pl">Udostępnianie rodzinie i weterynarzowi</span><span class="en">Share with family &amp; your vet</span></span>
+        <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-box"/></svg><span class="pl">Zapasy karmy, leków i żwirku</span><span class="en">Food, meds &amp; litter stock</span></span>
+        <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-cross"/></svg><span class="pl">Wizyty i odrobaczanie</span><span class="en">Vet visits &amp; deworming</span></span>
+        <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-lock"/></svg><span class="pl">Eksport i usuwanie danych (RODO)</span><span class="en">Data export &amp; deletion (GDPR)</span></span>
       </div>
-    </div>
-    <div class="card">
-      <h2>Contact &amp; Support</h2>
-      <p style="margin-bottom:14px;font-size:.9rem;color:#555;">
-        Need help? We aim to respond within 24 hours.
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section style="padding-top:0;">
+      <p class="disclaimer reveal">
+        <span class="pl">PetPetum to organizer opieki nad zwierzęciem, nie urządzenie medyczne. W sprawach zdrowia pupila zawsze skonsultuj się z weterynarzem.</span>
+        <span class="en">PetPetum is a pet care organizer, not a medical device. Always consult your veterinarian about your pet's health.</span>
       </p>
-      <div class="links">
-        <a href="mailto:petpetum.support@gmail.com">petpetum.support@gmail.com</a>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section id="download" style="padding-top:0;">
+      <div class="cta-final reveal">
+        <h2><span class="pl">Zacznij dbać o pupila lepiej</span><span class="en">Start caring for your pet better</span></h2>
+        <p><span class="pl">Pobierz PetPetum za darmo na Androida i iOS.</span><span class="en">Download PetPetum free on Android and iOS.</span></p>
+        <div class="store-badges">
+          <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.petpetum.mobile" target="_blank" rel="noopener">
+            <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#EA4335" d="M325 256 110 41a30 30 0 0 0-15-8l199 199z"/><path fill="#FBBC04" d="M404 207 325 256l79 49 60-35c20-12 20-39 0-51z"/><path fill="#34A853" d="M110 471l215-215 69 49-244 174a30 30 0 0 1-40-8z"/><path fill="#4285F4" d="M40 52a30 30 0 0 0-8 20v368a30 30 0 0 0 8 20l254-204z"/></svg>
+            <span><small><span class="pl">Pobierz w</span><span class="en">Get it on</span></small><span class="big">Google Play</span></span>
+          </a>
+          <a class="store-badge" href="https://apps.apple.com/us/app/petpetum-pet-health-tracker/id6763942522" target="_blank" rel="noopener">
+            <svg viewBox="0 0 384 512" aria-hidden="true"><path fill="#000" d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-87 21s-46-20-75-20c-39 1-74 22-94 57-40 70-10 173 29 230 19 28 42 59 72 58 29-1 40-19 75-19s45 19 75 18c31 0 50-28 69-56 22-32 31-63 31-65-1-1-59-23-60-91z"/><path fill="#000" d="M261 87c16-19 27-46 24-73-23 1-51 15-67 34-15 17-28 44-25 70 26 2 52-13 68-31z"/></svg>
+            <span><small><span class="pl">Pobierz w</span><span class="en">Download on the</span></small><span class="big">App Store</span></span>
+          </a>
+        </div>
       </div>
-    </div>
+    </section>
   </main>
+
+  <!-- FOOTER -->
   <footer>
-    &copy; 2025 PetPetumMobile. All rights reserved.
+    <div class="footer-inner">
+      <div class="footer-top"><img src="icon.png" alt="" />PetPetum</div>
+      <div class="footer-links">
+        <a href="privacy-pl.html"><span class="pl">Polityka prywatności</span><span class="en">Privacy (PL)</span></a>
+        <a href="privacy.html"><span class="pl">Privacy (EN)</span><span class="en">Privacy Policy</span></a>
+        <a href="terms-pl.html"><span class="pl">Regulamin</span><span class="en">Terms (PL)</span></a>
+        <a href="terms.html"><span class="pl">Terms (EN)</span><span class="en">Terms of Service</span></a>
+        <a href="account-deletion.html"><span class="pl">Usunięcie konta</span><span class="en">Account deletion</span></a>
+        <a href="faq.html">FAQ</a>
+        <a href="mailto:petpetum.support@gmail.com"><span class="pl">Kontakt</span><span class="en">Contact</span></a>
+      </div>
+      <p class="footer-meta">
+        &copy; <span id="year">2026</span> PetPetum &middot;
+        <span class="pl">Aplikacja do opieki nad psem i kotem &middot; Android i iOS</span>
+        <span class="en">Pet care app for dogs and cats &middot; Android &amp; iOS</span>
+      </p>
+    </div>
   </footer>
+
+  <script>
+    (function () {
+      var body = document.body;
+
+      /* language */
+      var langButtons = document.querySelectorAll('[data-set-lang]');
+      function setLang(lang) {
+        body.setAttribute('data-lang', lang);
+        document.documentElement.setAttribute('lang', lang);
+        langButtons.forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-set-lang') === lang); });
+        try { localStorage.setItem('petpetum_lang', lang); } catch (e) {}
+      }
+      langButtons.forEach(function (b) { b.addEventListener('click', function () { setLang(b.getAttribute('data-set-lang')); }); });
+      var saved; try { saved = localStorage.getItem('petpetum_lang'); } catch (e) {}
+      setLang(saved || ((navigator.language || 'pl').toLowerCase().indexOf('pl') === 0 ? 'pl' : 'en'));
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      /* sticky nav background */
+      var nav = document.getElementById('nav');
+      function onScroll() { nav.classList.toggle('scrolled', window.scrollY > 40); }
+      onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+      /* feature -> phone screen swap */
+      var items = document.querySelectorAll('.feature-item');
+      var screens = document.querySelectorAll('#screens img');
+      function activate(name) {
+        items.forEach(function (it) { it.classList.toggle('active', it.getAttribute('data-screen') === name); });
+        screens.forEach(function (im) { im.classList.toggle('active', im.getAttribute('data-screen') === name); });
+      }
+      items.forEach(function (it) {
+        var name = it.getAttribute('data-screen');
+        it.addEventListener('mouseenter', function () { activate(name); });
+        it.addEventListener('click', function () { activate(name); });
+      });
+
+      /* scroll-driven active feature (desktop) + reveal animation */
+      if ('IntersectionObserver' in window) {
+        var revObs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in-view'); revObs.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(function (el) { revObs.observe(el); });
+
+        var desktop = window.matchMedia('(min-width: 881px)');
+        var actObs = new IntersectionObserver(function (entries) {
+          if (!desktop.matches) return;
+          entries.forEach(function (e) { if (e.isIntersecting) activate(e.target.getAttribute('data-screen')); });
+        }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+        items.forEach(function (it) { actObs.observe(it); });
+      } else {
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in-view'); });
+      }
+    })();
+  </script>
 </body>
 </html>
