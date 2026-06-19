@@ -29,12 +29,12 @@ layout: default
     </div>
   </section>
 
-  {% assign related = site.posts | where_exp: "p", "p.url != page.url" | first: 3 %}
+  {% assign related = site.posts | where_exp: "p", "p.url != page.url" %}
   {% if related.size > 0 %}
   <section class="related">
     <h2>Przeczytaj też</h2>
     <div class="post-grid">
-      {% for post in related %}
+      {% for post in related limit: 3 %}
         {% assign rgrad = post.cover_style | default: "grad-b" %}
         <a class="post-card" href="{{ post.url | relative_url }}">
           <div class="cover {{ rgrad }}"{% if post.cover_image %} style="background-image:url('{{ post.cover_image | relative_url }}')"{% endif %}>
