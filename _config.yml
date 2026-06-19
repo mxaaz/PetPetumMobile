@@ -5,7 +5,8 @@ lang: pl
 
 permalink: /blog/:title/
 
-collections_dir: .
+# Buduj posty datowane w przyszłości (clock buildera GH Actions vs data wpisu)
+future: true
 
 # Pluginy whitelisted na GitHub Pages (zero CI)
 plugins:
