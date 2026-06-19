@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<div class="blog-hero">
+  <span class="eyebrow">{{ page.eyebrow | default: "Blog PetPetum" }}</span>
+  <h1>{{ page.heading | default: page.title }}</h1>
+  <p>{{ page.subhead }}</p>
+</div>
+
+<div class="wrap">
+  {% assign posts = site.posts %}
+  {% if page.filter_category %}
+    {% assign posts = site.posts | where_exp: "p", "p.categories contains page.filter_category" %}
+  {% endif %}
+
+  {% if posts.size == 0 %}
+    <p class="empty">Wkrótce pojawią się tu pierwsze wpisy. 🐾</p>
+  {% else %}
+  <div class="post-grid">
+    {% for post in posts %}
+      {% assign grad = "grad-a" %}
+      {% if post.cover_style %}{% assign grad = post.cover_style %}{% endif %}
+      <a class="post-card" href="{{ post.url | relative_url }}">
+        <div class="cover {{ grad }}"{% if post.cover_image %} style="background-image:url('{{ post.cover_image | relative_url }}')"{% endif %}>
+          {% unless post.cover_image %}{{ post.emoji | default: "🐾" }}{% endunless %}
+          {% if post.category_label %}<span class="badge">{{ post.category_label }}</span>{% endif %}
+        </div>
+        <div class="body">
+          <div class="meta"><span>{{ post.date | date: "%-d.%m.%Y" }}</span>{% if post.read_time %}<span>&middot; {{ post.read_time }} min czytania</span>{% endif %}</div>
+          <h3>{{ post.title }}</h3>
+          <p class="excerpt">{{ post.excerpt_text | default: post.excerpt | strip_html | truncate: 130 }}</p>
+          <span class="more">Czytaj dalej →</span>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>

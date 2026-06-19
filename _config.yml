@@ -1,0 +1,40 @@
+title: PetPetum
+description: Aplikacja do opieki nad psem i kotem. Porady, zdrowie pupila i nowości w aplikacji.
+url: "https://petpetummobile.pl"
+lang: pl
+
+permalink: /blog/:title/
+
+collections_dir: .
+
+# Pluginy whitelisted na GitHub Pages (zero CI)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+feed:
+  path: /feed.xml
+
+# Domyślne front-matter dla wpisów
+defaults:
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+
+# Nie przetwarzaj plików niepotrzebnych przez Jekyll
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - app-ads
+  - vendor
+  - .gitignore
+
+# Kategorie (do filtrowania / changelog)
+category_labels:
+  changelog: "Nowości w aplikacji"
+  porady: "Porady"
+  zdrowie: "Zdrowie pupila"
