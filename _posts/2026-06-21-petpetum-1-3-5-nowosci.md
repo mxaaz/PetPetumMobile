@@ -1,16 +1,16 @@
 ---
-title: "PetPetum 1.3.4: spokojniej, stabilniej i z podpowiedziami"
-date: 2026-06-20 10:00:00 +0200
+title: "PetPetum 1.3.5: spokojniej, stabilniej i z podpowiedziami"
+date: 2026-06-21 10:00:00 +0200
 categories: [changelog]
 category_label: "Nowości"
 cover_style: grad-a
 emoji: "✨"
 read_time: 3
 excerpt_text: "Proaktywne podpowiedzi z Twoich danych, powiązanie wyników z wizytą, eksport trendów do PDF, śledzenie fosforu i automatyczna kopia zapasowa. Plus stabilniejsze udostępnianie i mniej awarii."
-description: "Co nowego w PetPetum 1.3.4: podpowiedzi Warto sprawdzić, powiązanie wyników weterynaryjnych z wizytą, eksport trendów do PDF, śledzenie fosforu przy chorobach nerek, automatyczna kopia zapasowa i stabilniejsze udostępnianie pupila."
+description: "Co nowego w PetPetum 1.3.5: podpowiedzi Warto sprawdzić, powiązanie wyników weterynaryjnych z wizytą, eksport trendów do PDF, śledzenie fosforu przy chorobach nerek, automatyczna kopia zapasowa i stabilniejsze udostępnianie pupila."
 ---
 
-Po dużej aktualizacji 1.3.3 skupiliśmy się na wygładzeniu i drobnych, ale wygodnych narzędziach. Oto co dostajesz w wersji 1.3.4.
+Po dużej aktualizacji 1.3.3 skupiliśmy się na wygładzeniu i drobnych, ale wygodnych narzędziach. Oto co dostajesz w wersji 1.3.5.
 
 ## „Warto sprawdzić": podpowiedzi z Twoich danych
 
