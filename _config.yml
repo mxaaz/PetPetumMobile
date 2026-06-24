@@ -5,8 +5,9 @@ lang: pl
 
 permalink: /blog/:title/
 
-# Buduj posty datowane w przyszłości (clock buildera GH Actions vs data wpisu)
-future: true
+# false = posty z przyszłą datą są UKRYTE do dnia publikacji (drip).
+# Codzienny rebuild (.github/workflows/scheduled-rebuild.yml) odsłania je gdy nadejdzie ich data.
+future: false
 
 # Pluginy whitelisted na GitHub Pages (zero CI)
 plugins:
