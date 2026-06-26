@@ -1,6 +1,6 @@
 ---
 title: "Czego nie może jeść pies i kot? Lista produktów, które mogą zaszkodzić"
-date: 2026-07-05 09:00:00 +0200
+date: 2026-06-26 09:00:00 +0200
 categories: [zdrowie]
 category_label: "Zdrowie pupila"
 cover_style: grad-a

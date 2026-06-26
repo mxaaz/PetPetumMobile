@@ -1,6 +1,6 @@
 ---
 title: "Linienie latem: jak ogarnąć sierść psa i kota bez nerwów"
-date: 2026-07-13 09:00:00 +0200
+date: 2026-07-04 09:00:00 +0200
 categories: [porady]
 category_label: "Porady"
 cover_style: grad-a

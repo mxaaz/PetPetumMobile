@@ -1,6 +1,6 @@
 ---
 title: "Spacery w upał: gorący asfalt i łapy, o których łatwo zapomnieć"
-date: 2026-07-07 09:00:00 +0200
+date: 2026-06-28 09:00:00 +0200
 categories: [porady]
 category_label: "Porady"
 cover_style: grad-b

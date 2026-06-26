@@ -1,6 +1,6 @@
 ---
 title: "Burze i lęk przed hałasem u psa: jak pomóc spłoszonemu pupilowi"
-date: 2026-07-11 09:00:00 +0200
+date: 2026-07-02 09:00:00 +0200
 categories: [porady]
 category_label: "Porady"
 cover_style: grad-d
