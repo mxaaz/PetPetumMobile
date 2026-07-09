@@ -6,7 +6,7 @@ category_label: "Nowości"
 cover_style: grad-a
 emoji: "✨"
 read_time: 4
-excerpt_text: "Największa aktualizacja PetPetum: odświeżony, spokojniejszy wygląd całej aplikacji, konfigurowalny panel „Dziś", nowy kalendarz, przypomnienia z gestem oraz wygodniejsze karmienie ze skanem kodu i trybem automatycznego karmnika."
+excerpt_text: "Największa aktualizacja PetPetum: odświeżony, spokojniejszy wygląd całej aplikacji, konfigurowalny panel „Dziś”, nowy kalendarz, przypomnienia z gestem oraz wygodniejsze karmienie ze skanem kodu i trybem automatycznego karmnika."
 description: "Co nowego w PetPetum 2.0: nowy wygląd Natura, panel Dziś układany po swojemu, przeprojektowany kalendarz, przypomnienia z gestem odbyte/podane, drzemka karmienia, automatyczny karmnik, skan kodu i etykiety karmy oraz przypomnienie zamów zapas."
 ---
 
