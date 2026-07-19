@@ -59,7 +59,7 @@ Podejrzenie udaru cieplnego to sytuacja pilna. Schładzaj zwierzę i jednocześn
 - 🚙 W aucie tylko z działającą klimatyzacją i nigdy sam
 
 <div class="callout tip">
-W PetPetum trzymasz numery do lecznicy i kontakt SOS pod ręką, także offline, więc w nagłej sytuacji nie tracisz czasu na szukanie. Możesz też śledzić nawodnienie pupila w upalne dni i zapisać pomiar temperatury, jeśli zaleci to weterynarz.
+W ApkaŁapka trzymasz numery do lecznicy i kontakt SOS pod ręką, także offline, więc w nagłej sytuacji nie tracisz czasu na szukanie. Możesz też śledzić nawodnienie pupila w upalne dni i zapisać pomiar temperatury, jeśli zaleci to weterynarz.
 </div>
 
 Gorące dni da się przejść bezpiecznie. Wystarczy cień, woda, rozsądne godziny spacerów i zero ryzyka w aucie. 🐾

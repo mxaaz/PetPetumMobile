@@ -34,7 +34,7 @@ Nadmierna senność i apatia mogą mieć wiele przyczyn, od bólu po choroby og�
 </div>
 
 <div class="callout tip">
-W PetPetum możesz śledzić aktywność i nastrój pupila, dzięki czemu łatwiej zauważyć, że spadek energii to nie jeden leniwy dzień, tylko dłuższy trend wart uwagi.
+W ApkaŁapka możesz śledzić aktywność i nastrój pupila, dzięki czemu łatwiej zauważyć, że spadek energii to nie jeden leniwy dzień, tylko dłuższy trend wart uwagi.
 </div>
 
 Zdrowy pupil ma prawo do drzemek i to dużej ich liczby. Kluczem nie jest liczba godzin, tylko znajomość jego codziennego rytmu na tyle dobra, by wyłapać, gdy coś się zmienia. 🐾

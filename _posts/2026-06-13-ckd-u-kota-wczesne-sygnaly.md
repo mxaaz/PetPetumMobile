@@ -45,7 +45,7 @@ Gdy choroba jest już rozpoznana, codzienna kontrola kilku rzeczy potrafi wiele 
 - 📅 **Regularne kontrole**, żeby reagować wcześnie, a nie po fakcie
 
 <div class="callout tip">
-W PetPetum zapiszesz wyniki badań i zobaczysz ich trend na wykresie, oznaczysz u kota chorobę przewlekłą, by zebrać istotne dane w jednym panelu, i będziesz śledzić nawodnienie oraz kuwetę. Łatwiej wtedy zauważyć, że coś idzie w złą stronę.
+W ApkaŁapka zapiszesz wyniki badań i zobaczysz ich trend na wykresie, oznaczysz u kota chorobę przewlekłą, by zebrać istotne dane w jednym panelu, i będziesz śledzić nawodnienie oraz kuwetę. Łatwiej wtedy zauważyć, że coś idzie w złą stronę.
 </div>
 
 ## Najważniejsze w jednym zdaniu

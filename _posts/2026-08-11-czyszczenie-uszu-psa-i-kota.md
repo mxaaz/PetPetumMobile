@@ -45,7 +45,7 @@ Ten wpis pomaga w codziennej pielęgnacji, ale nie zastąpi otoskopu. Przyczyny 
 </div>
 
 <div class="callout tip">
-W PetPetum możesz dodać sprawdzanie uszu do zabiegów pielęgnacyjnych z przypomnieniem. Krótki rytuał co jakiś czas i żadne zapalenie nie rozwinie się tygodniami niezauważone.
+W ApkaŁapka możesz dodać sprawdzanie uszu do zabiegów pielęgnacyjnych z przypomnieniem. Krótki rytuał co jakiś czas i żadne zapalenie nie rozwinie się tygodniami niezauważone.
 </div>
 
 Minuta zaglądania do uszu przy okazji wieczornych pieszczot to cała profilaktyka, jakiej potrzebuje większość pupili. 🐾

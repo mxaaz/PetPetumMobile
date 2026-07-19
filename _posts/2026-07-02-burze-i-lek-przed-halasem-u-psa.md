@@ -34,7 +34,7 @@ Twój spokój jest dla psa ważnym sygnałem:
 - 🦴 **Spokojne rozproszenie** uwagi bywa pomocne, jeśli pies w ogóle jest na nie gotowy
 
 <div class="callout tip">
-W PetPetum możesz w dzienniku objawów odnotować, jak pupil znosi burze i hałas, dzięki czemu z czasem widzisz, czy lęk się nasila i masz konkret do rozmowy z weterynarzem lub behawiorystą.
+W ApkaŁapka możesz w dzienniku objawów odnotować, jak pupil znosi burze i hałas, dzięki czemu z czasem widzisz, czy lęk się nasila i masz konkret do rozmowy z weterynarzem lub behawiorystą.
 </div>
 
 <div class="callout vet">

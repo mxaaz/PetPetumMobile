@@ -35,7 +35,7 @@ Stare domowe sposoby bywają groźne, bo drażnią kleszcza i zwiększają ryzyk
 Te metody mogą sprawić, że kleszcz wprowadzi do organizmu więcej śliny, a o to właśnie chodzi, żeby tego uniknąć.
 
 <div class="callout tip">
-W PetPetum zanotujesz datę usunięcia kleszcza i ewentualne objawy, a także zaplanujesz przypomnienie o kolejnej ochronie przeciwkleszczowej, żeby nie wypaść z rytmu w sezonie.
+W ApkaŁapka zanotujesz datę usunięcia kleszcza i ewentualne objawy, a także zaplanujesz przypomnienie o kolejnej ochronie przeciwkleszczowej, żeby nie wypaść z rytmu w sezonie.
 </div>
 
 <div class="callout vet">

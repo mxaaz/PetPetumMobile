@@ -28,7 +28,7 @@ Pierwszego dnia mniej znaczy więcej. Spokój jest cenniejszy niż atrakcje.
 - 🧸 Znajomy zapach (koc, zabawka od hodowcy) pomaga się zadomowić
 
 <div class="callout tip">
-Nadaj pupilowi profil w PetPetum już na starcie: gatunek, data urodzenia, waga, a z czasem notatki o charakterze. To wygodny punkt, do którego wrócisz przy pierwszej wizycie u weterynarza.
+Nadaj pupilowi profil w ApkaŁapka już na starcie: gatunek, data urodzenia, waga, a z czasem notatki o charakterze. To wygodny punkt, do którego wrócisz przy pierwszej wizycie u weterynarza.
 </div>
 
 ## O czym pamiętać po stronie zdrowia
@@ -47,7 +47,7 @@ Plan szczepień i profilaktyki ustala weterynarz na pierwszej wizycie. Warto um�
 ## Niech start zostanie w pamięci
 
 <div class="callout tip">
-W PetPetum zapiszesz pierwsze szczepienia, ważenia i wizyty oraz ustawisz przypomnienia o kolejnych dawkach. Dzięki temu od pierwszego dnia budujesz kompletną historię pupila, zamiast odtwarzać ją potem z pamięci.
+W ApkaŁapka zapiszesz pierwsze szczepienia, ważenia i wizyty oraz ustawisz przypomnienia o kolejnych dawkach. Dzięki temu od pierwszego dnia budujesz kompletną historię pupila, zamiast odtwarzać ją potem z pamięci.
 </div>
 
 Daj sobie i pupilowi czas. Po kilku dniach zobaczysz, jak nieśmiały przybysz zmienia się w pewnego siebie domownika. 🐾

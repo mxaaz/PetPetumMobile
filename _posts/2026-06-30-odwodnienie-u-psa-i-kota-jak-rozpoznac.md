@@ -45,7 +45,7 @@ Stopień odwodnienia i jego przyczynę ocenia weterynarz, bo może kryć się za
 </div>
 
 <div class="callout tip">
-W PetPetum możesz prowadzić dziennik nawodnienia i odnotowywać, czy pupil pije mało, normalnie czy dużo, dzięki czemu łatwiej wychwycić dzień, w którym coś wyraźnie odbiega od normy.
+W ApkaŁapka możesz prowadzić dziennik nawodnienia i odnotowywać, czy pupil pije mało, normalnie czy dużo, dzięki czemu łatwiej wychwycić dzień, w którym coś wyraźnie odbiega od normy.
 </div>
 
 Latem nawodnienie to jeden z prostszych sposobów dbania o zwierzaka. Kilka misek, świeża woda i czujne oko na drobne zmiany robią dużą różnicę. 🐾

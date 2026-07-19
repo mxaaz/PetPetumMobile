@@ -45,7 +45,7 @@ Ten wpis pomaga zauważyć problem, ale przyczynę świądu czy bólu ustala wet
 </div>
 
 <div class="callout tip">
-W PetPetum możesz notować epizody lizania w dzienniku objawów i obserwować nastrój pupila. Wzorzec z dat i notatek często mówi weterynarzowi więcej niż pojedyncza obserwacja z poczekalni.
+W ApkaŁapka możesz notować epizody lizania w dzienniku objawów i obserwować nastrój pupila. Wzorzec z dat i notatek często mówi weterynarzowi więcej niż pojedyncza obserwacja z poczekalni.
 </div>
 
 Uważny opiekun wyłapie zmianę w pielęgnacji szybciej niż ktokolwiek inny. To dokładnie ten moment, w którym problem najłatwiej rozwiązać. 🐾

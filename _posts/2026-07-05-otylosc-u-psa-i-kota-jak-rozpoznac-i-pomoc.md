@@ -39,7 +39,7 @@ Plan odchudzania, tempo i dietę ustala weterynarz, bo za nadwagą czasem kryją
 </div>
 
 <div class="callout tip">
-W PetPetum możesz śledzić wagę pupila na wykresie i korzystać z planera posiłków, dzięki czemu łatwiej zauważyć trend i trzymać się ustalonych porcji zamiast nakładać na oko.
+W ApkaŁapka możesz śledzić wagę pupila na wykresie i korzystać z planera posiłków, dzięki czemu łatwiej zauważyć trend i trzymać się ustalonych porcji zamiast nakładać na oko.
 </div>
 
 Nie chodzi o restrykcyjną dietę z dnia na dzień. Chodzi o to, by zauważyć trend wcześnie i spokojnie wrócić pupila do formy, krok po kroku. 🐾

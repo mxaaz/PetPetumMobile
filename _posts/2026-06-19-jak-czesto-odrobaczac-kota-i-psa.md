@@ -46,7 +46,7 @@ Nie podawaj psich preparatów kotom. Niektóre substancje bezpieczne dla psa są
 Cała profilaktyka działa tylko wtedy, gdy jest regularna. A właśnie regularność wypada najsłabiej, bo terminy odrobaczania łatwo wylatują z głowy między codziennymi obowiązkami.
 
 <div class="callout tip">
-W PetPetum ustawisz przypomnienie o odrobaczaniu z wyprzedzeniem i zapiszesz, jaki preparat był podany oraz kiedy. Następnym razem nie musisz pamiętać daty ani nazwy.
+W ApkaŁapka ustawisz przypomnienie o odrobaczaniu z wyprzedzeniem i zapiszesz, jaki preparat był podany oraz kiedy. Następnym razem nie musisz pamiętać daty ani nazwy.
 </div>
 
 Krótko: częstotliwość ustal z weterynarzem pod kątem trybu życia pupila, a samo pilnowanie terminów zrzuć na aplikację. 🐾

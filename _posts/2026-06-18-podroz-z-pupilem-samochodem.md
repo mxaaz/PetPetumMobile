@@ -39,7 +39,7 @@ Spokojna podróż zaczyna się na długo przed odpaleniem silnika.
 Gdy jesteś daleko od domu, a coś się dzieje, liczy się każda minuta. Numer do najbliższej lecznicy, informacje o szczepieniach, alergiach i lekach pupila powinny być dostępne od ręki, także bez zasięgu.
 
 <div class="callout tip">
-W PetPetum karta opieki, terminy, szczepienia i numery SOS są w jednym miejscu i działają offline. Pokażesz je obcemu weterynarzowi jednym dotknięciem.
+W ApkaŁapka karta opieki, terminy, szczepienia i numery SOS są w jednym miejscu i działają offline. Pokażesz je obcemu weterynarzowi jednym dotknięciem.
 </div>
 
 ## 5. Spokój to też przygotowanie głowy

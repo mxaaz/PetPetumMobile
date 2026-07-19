@@ -34,7 +34,7 @@ Za zmianą zachowania może stać ból, stres albo choroba, a odróżni je weter
 </div>
 
 <div class="callout tip">
-W PetPetum możesz zapisywać nastrój pupila na osobnym kaflu, a funkcja „Warto sprawdzić" zwróci uwagę na zmiany widoczne w Twoich danych. Dzięki temu łatwiej zauważyć, że gorszy nastrój to nie jeden dzień, tylko dłuższy trend.
+W ApkaŁapka możesz zapisywać nastrój pupila na osobnym kaflu, a funkcja „Warto sprawdzić" zwróci uwagę na zmiany widoczne w Twoich danych. Dzięki temu łatwiej zauważyć, że gorszy nastrój to nie jeden dzień, tylko dłuższy trend.
 </div>
 
 Uważność nie oznacza ciągłego niepokoju. Chodzi o to, żeby znać codzienny rytm pupila na tyle dobrze, by w porę wychwycić, że coś z niego wypadło. 🐾

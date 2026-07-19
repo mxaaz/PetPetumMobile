@@ -49,7 +49,7 @@ Nie używaj ludzkiej pasty do zębów. Zawiera składniki (np. fluor, ksylitol),
 Higiena jamy ustnej to klasyk z kategorii "zrobię jutro", a potem mija pół roku.
 
 <div class="callout tip">
-W PetPetum potraktujesz czyszczenie zębów jako jeden z zabiegów pielęgnacyjnych: zapiszesz, kiedy było ostatnio, i ustawisz przypomnienie o kolejnym. Dzięki temu nie umknie w natłoku codzienności.
+W ApkaŁapka potraktujesz czyszczenie zębów jako jeden z zabiegów pielęgnacyjnych: zapiszesz, kiedy było ostatnio, i ustawisz przypomnienie o kolejnym. Dzięki temu nie umknie w natłoku codzienności.
 </div>
 
 Kilka minut przy pysku pupila co jakiś czas potrafi oszczędzić mu bólu, a Tobie kosztownej wizyty. 🐾

@@ -37,7 +37,7 @@ Kwestie związane z rują, sterylizacją i zdrowiem rozrodczym najlepiej omówi�
 </div>
 
 <div class="callout tip">
-W PetPetum możesz prowadzić dziennik cyklu rui, zapisując daty i notatki. Dzięki temu łatwiej przewidzieć kolejny okres i mieć pod ręką przejrzysty przegląd, gdy rozmawiasz o tym z weterynarzem.
+W ApkaŁapka możesz prowadzić dziennik cyklu rui, zapisując daty i notatki. Dzięki temu łatwiej przewidzieć kolejny okres i mieć pod ręką przejrzysty przegląd, gdy rozmawiasz o tym z weterynarzem.
 </div>
 
 Pierwsza ruja to naturalny próg w życiu pupilki. Spokojna obserwacja i kilka zapisanych dat sprawiają, że kolejne cykle przestają zaskakiwać, a Ty wiesz, co jest dla niej normą. 🐾

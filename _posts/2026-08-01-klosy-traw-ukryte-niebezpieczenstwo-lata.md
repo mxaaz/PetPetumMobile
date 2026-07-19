@@ -41,7 +41,7 @@ Ten wpis pomaga rozpoznać podejrzane sygnały, ale nie zastąpi badania. Nagłe
 </div>
 
 <div class="callout tip">
-W PetPetum możesz zapisać w dzienniku objawów, kiedy dokładnie zaczęło się potrząsanie głową czy lizanie łapy. Taka notatka z datą i okolicznościami bardzo ułatwia weterynarzowi szukanie przyczyny.
+W ApkaŁapka możesz zapisać w dzienniku objawów, kiedy dokładnie zaczęło się potrząsanie głową czy lizanie łapy. Taka notatka z datą i okolicznościami bardzo ułatwia weterynarzowi szukanie przyczyny.
 </div>
 
 Sezon kłosów trwa mniej więcej do końca lata. Minuta przeglądu po spacerze to najtańsza profilaktyka, jaką znamy. 🐾

@@ -1,5 +1,5 @@
 ---
-title: "PetPetum 1.3.6: zeskanuj wyniki zamiast je przepisywać"
+title: "ApkaŁapka 1.3.6: zeskanuj wyniki zamiast je przepisywać"
 date: 2026-06-23 10:00:00 +0200
 categories: [changelog]
 category_label: "Nowości"
@@ -7,7 +7,7 @@ cover_style: grad-a
 emoji: "📷"
 read_time: 3
 excerpt_text: "Zrób zdjęcie kartki z wynikami od weterynarza, a aplikacja przepisze parametry za Ciebie, bez wysyłania do chmury. Do tego lepszy widok zaległych wizyt i wygodne udostępnianie weterynarzowi."
-description: "Co nowego w PetPetum 1.3.6: skanowanie wyników weterynaryjnych ze zdjęcia z rozpoznawaniem na telefonie, zaległe wizyty w sekcji Nadchodzące, udostępnianie weterynarzowi i klikalne wyniki w widoku udostępnionym."
+description: "Co nowego w ApkaŁapka 1.3.6: skanowanie wyników weterynaryjnych ze zdjęcia z rozpoznawaniem na telefonie, zaległe wizyty w sekcji Nadchodzące, udostępnianie weterynarzowi i klikalne wyniki w widoku udostępnionym."
 ---
 
 W wersji 1.3.6 zajęliśmy się rzeczą, która zabierała najwięcej czasu: ręcznym przepisywaniem wyników od weterynarza. Teraz wystarczy zdjęcie.

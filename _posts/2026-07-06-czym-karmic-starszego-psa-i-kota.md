@@ -39,7 +39,7 @@ Dieta seniora, zwłaszcza przy chorobach przewlekłych, powinna być ustalona z 
 </div>
 
 <div class="callout tip">
-W PetPetum możesz prowadzić planer posiłków i śledzić wagę na wykresie, dzięki czemu łatwiej utrzymać regularność karmienia i wcześnie zauważyć, że apetyt lub waga seniora zmieniają kierunek.
+W ApkaŁapka możesz prowadzić planer posiłków i śledzić wagę na wykresie, dzięki czemu łatwiej utrzymać regularność karmienia i wcześnie zauważyć, że apetyt lub waga seniora zmieniają kierunek.
 </div>
 
 Starszy pupil nie potrzebuje rewolucji w misce, tylko uważności. Dobrze dobrane posiłki i czujne oko na drobne zmiany sprawiają, że senior dłużej cieszy się formą. 🐾

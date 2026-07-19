@@ -39,7 +39,7 @@ Nagłe chudnięcie lub tycie bez zmiany diety warto skonsultować z weterynarzem
 Regularne ważenie ma sens tylko wtedy, gdy zapisujesz wyniki i widzisz kierunek zmian. Karteczka na lodówce gubi się po tygodniu.
 
 <div class="callout tip">
-W PetPetum zapiszesz kolejne pomiary wagi, ustawisz przypomnienie o regularnym ważeniu i zobaczysz trend w czasie. Łatwo wtedy wychwycić, że pupil powoli chudnie albo tyje, zanim stanie się to problemem.
+W ApkaŁapka zapiszesz kolejne pomiary wagi, ustawisz przypomnienie o regularnym ważeniu i zobaczysz trend w czasie. Łatwo wtedy wychwycić, że pupil powoli chudnie albo tyje, zanim stanie się to problemem.
 </div>
 
 <div class="callout warn">

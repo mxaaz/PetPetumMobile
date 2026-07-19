@@ -39,7 +39,7 @@ Choroby odkleszczowe rozpoznaje i leczy weterynarz, często na podstawie badania
 </div>
 
 <div class="callout tip">
-W PetPetum możesz notować obserwacje i objawy z konkretnymi datami, a funkcja „Warto sprawdzić" delikatnie zwróci uwagę, gdy zauważy zmiany, na przykład spadek aktywności. Przy wizycie masz wtedy gotowy przegląd tego, co działo się w domu.
+W ApkaŁapka możesz notować obserwacje i objawy z konkretnymi datami, a funkcja „Warto sprawdzić" delikatnie zwróci uwagę, gdy zauważy zmiany, na przykład spadek aktywności. Przy wizycie masz wtedy gotowy przegląd tego, co działo się w domu.
 </div>
 
 <div class="callout warn">

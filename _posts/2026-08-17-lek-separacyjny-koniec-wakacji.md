@@ -41,7 +41,7 @@ Część objawów przypisywanych samotności (wpadki, wylizywanie, apatia) może
 </div>
 
 <div class="callout tip">
-W PetPetum możesz zapisywać nastrój i aktywność pupila. Po zmianie rytmu dnia od razu widzisz, czy zwierzak wraca do formy, czy napięcie się utrzymuje i potrzebna jest pomoc.
+W ApkaŁapka możesz zapisywać nastrój i aktywność pupila. Po zmianie rytmu dnia od razu widzisz, czy zwierzak wraca do formy, czy napięcie się utrzymuje i potrzebna jest pomoc.
 </div>
 
 Wrzesień zawsze przychodzi nagle, ale dla pupila nie musi. Kilka tygodni łagodnego przejścia i cichy dom przestaje być powodem do paniki. 🐾

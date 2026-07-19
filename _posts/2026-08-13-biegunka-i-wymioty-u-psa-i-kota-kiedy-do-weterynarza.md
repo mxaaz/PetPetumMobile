@@ -48,7 +48,7 @@ Ten wpis pomaga podjąć decyzję "obserwować czy jechać", ale nie zastąpi ba
 </div>
 
 <div class="callout tip">
-W PetPetum możesz notować epizody w dzienniku objawów z godziną i opisem. Gdy trafisz do lecznicy, zamiast odtwarzać wszystko z pamięci, po prostu pokażesz lekarzowi przebieg z aplikacji.
+W ApkaŁapka możesz notować epizody w dzienniku objawów z godziną i opisem. Gdy trafisz do lecznicy, zamiast odtwarzać wszystko z pamięci, po prostu pokażesz lekarzowi przebieg z aplikacji.
 </div>
 
 Większość takich epizodów kończy się dobrze. A znajomość czerwonych flag sprawia, że te poważniejsze kończą się dobrze dlatego, że zareagowałeś na czas. 🐾

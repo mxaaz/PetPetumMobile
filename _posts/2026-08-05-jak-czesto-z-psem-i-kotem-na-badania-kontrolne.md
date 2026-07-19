@@ -35,7 +35,7 @@ Podane rytmy to ogólna orientacja, nie sztywna reguła. Częstotliwość kontro
 </div>
 
 <div class="callout tip">
-W PetPetum zapiszesz terminy wizyt z przypomnieniami, a historię wizyt i wyniki weterynaryjne masz w jednym miejscu. Na kontroli nie musisz sobie przypominać, co było rok temu: wystarczy otworzyć aplikację.
+W ApkaŁapka zapiszesz terminy wizyt z przypomnieniami, a historię wizyt i wyniki weterynaryjne masz w jednym miejscu. Na kontroli nie musisz sobie przypominać, co było rok temu: wystarczy otworzyć aplikację.
 </div>
 
 Kontrola raz w roku to niewielki wysiłek, a daje coś bezcennego: spokój, że niczego nie przegapiliśmy. 🐾

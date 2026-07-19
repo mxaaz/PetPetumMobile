@@ -37,7 +37,7 @@ Tak i dla wielu opiekunów to złoty środek. Miks pozwala połączyć wygodę s
 - 🥣 **Patrzeć na skład:** jakość i bilans są ważniejsze niż sam fakt, czy karma jest sucha, czy mokra
 
 <div class="callout tip">
-W PetPetum ułożysz plan posiłków z godzinami i porcjami oraz dopilnujesz zapasu karmy, dzięki czemu łatwiej trzymać się konsekwentnie jednego schematu, zamiast karmić na oko.
+W ApkaŁapka ułożysz plan posiłków z godzinami i porcjami oraz dopilnujesz zapasu karmy, dzięki czemu łatwiej trzymać się konsekwentnie jednego schematu, zamiast karmić na oko.
 </div>
 
 <div class="callout vet">

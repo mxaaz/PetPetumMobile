@@ -41,7 +41,7 @@ Rozpoznanie alergii czy nietolerancji pokarmowej stawia weterynarz, zwykle na po
 </div>
 
 <div class="callout tip">
-W PetPetum przy dodawaniu karmy możesz zapisać alergeny pupila, a aplikacja ostrzeże, gdy nowa karma zawiera składnik z listy. Razem z planerem posiłków łatwiej wtedy pilnować, co faktycznie ląduje w misce.
+W ApkaŁapka przy dodawaniu karmy możesz zapisać alergeny pupila, a aplikacja ostrzeże, gdy nowa karma zawiera składnik z listy. Razem z planerem posiłków łatwiej wtedy pilnować, co faktycznie ląduje w misce.
 </div>
 
 <div class="callout warn">

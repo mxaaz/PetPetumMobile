@@ -46,7 +46,7 @@ Domowa obserwacja kuwety nie zastępuje badania, ale daje weterynarzowi konkret 
 </div>
 
 <div class="callout tip">
-W PetPetum zarejestrujesz wizyty w kuwecie jednym dotknięciem, a aplikacja zwróci uwagę na niepokojące sytuacje, takie jak długi brak moczu albo ślady krwi. Masz gotową oś czasu na wizytę.
+W ApkaŁapka zarejestrujesz wizyty w kuwecie jednym dotknięciem, a aplikacja zwróci uwagę na niepokojące sytuacje, takie jak długi brak moczu albo ślady krwi. Masz gotową oś czasu na wizytę.
 </div>
 
 Kuweta nie kłamie. Wystarczy ją obserwować i reagować, gdy coś wyraźnie odbiega od normy Twojego kota. 🐾

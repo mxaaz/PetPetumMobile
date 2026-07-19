@@ -1,16 +1,16 @@
 ---
-title: "PetPetum 2.0: zupełnie nowy wygląd i garść narzędzi opieki"
+title: "ApkaŁapka 2.0: zupełnie nowy wygląd i garść narzędzi opieki"
 date: 2026-07-09 10:00:00 +0200
 categories: [changelog]
 category_label: "Nowości"
 cover_style: grad-a
 emoji: "✨"
 read_time: 4
-excerpt_text: "Największa aktualizacja PetPetum: odświeżony, spokojniejszy wygląd całej aplikacji, konfigurowalny panel „Dziś”, nowy kalendarz, przypomnienia z gestem oraz wygodniejsze karmienie ze skanem kodu i trybem automatycznego karmnika."
-description: "Co nowego w PetPetum 2.0: nowy wygląd Natura, panel Dziś układany po swojemu, przeprojektowany kalendarz, przypomnienia z gestem odbyte/podane, drzemka karmienia, automatyczny karmnik, skan kodu i etykiety karmy oraz przypomnienie zamów zapas."
+excerpt_text: "Największa aktualizacja ApkaŁapka: odświeżony, spokojniejszy wygląd całej aplikacji, konfigurowalny panel „Dziś”, nowy kalendarz, przypomnienia z gestem oraz wygodniejsze karmienie ze skanem kodu i trybem automatycznego karmnika."
+description: "Co nowego w ApkaŁapka 2.0: nowy wygląd Natura, panel Dziś układany po swojemu, przeprojektowany kalendarz, przypomnienia z gestem odbyte/podane, drzemka karmienia, automatyczny karmnik, skan kodu i etykiety karmy oraz przypomnienie zamów zapas."
 ---
 
-To nasza największa aktualizacja od premiery. Przenieśliśmy PetPetum na zupełnie nowy, spokojniejszy wygląd i dołożyliśmy narzędzia, które upraszczają codzienną opiekę. Oto co dostajesz w wersji 2.0.
+To nasza największa aktualizacja od premiery. Przenieśliśmy ApkaŁapka na zupełnie nowy, spokojniejszy wygląd i dołożyliśmy narzędzia, które upraszczają codzienną opiekę. Oto co dostajesz w wersji 2.0.
 
 ## Nowy, spokojniejszy wygląd
 
@@ -58,7 +58,7 @@ Podpowiedzi to obserwacje z Twoich danych, nie porada weterynaryjna. Decyzje o z
 
 ## Zaktualizuj już teraz
 
-PetPetum 2.0 jest już dostępne w Google Play i App Store. Zaktualizuj aplikację, żeby zobaczyć nowy wygląd i wszystkie nowe narzędzia.
+ApkaŁapka 2.0 jest już dostępne w Google Play i App Store. Zaktualizuj aplikację, żeby zobaczyć nowy wygląd i wszystkie nowe narzędzia.
 
 - Android: [Google Play](https://play.google.com/store/apps/details?id=com.petpetum.mobile)
 - iOS: [App Store](https://apps.apple.com/us/app/petpetum-pet-health-tracker/id6763942522)

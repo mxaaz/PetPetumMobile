@@ -46,7 +46,7 @@ Ten wpis pomaga obserwować, nie diagnozować. Objawy przypominające cukrzycę 
 </div>
 
 <div class="callout tip">
-W PetPetum możesz śledzić wagę i nawodnienie pupila oraz prowadzić panel choroby przewlekłej, gdy diagnoza już padnie. Trend z kilku tygodni widać na wykresie od razu, a to właśnie trendy zdradzają cukrzycę najwcześniej.
+W ApkaŁapka możesz śledzić wagę i nawodnienie pupila oraz prowadzić panel choroby przewlekłej, gdy diagnoza już padnie. Trend z kilku tygodni widać na wykresie od razu, a to właśnie trendy zdradzają cukrzycę najwcześniej.
 </div>
 
 Uważność na codzienne drobiazgi, miskę, kuwetę i wagę, to najlepsza profilaktyka, jaką może dać opiekun. 🐾

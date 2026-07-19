@@ -35,7 +35,7 @@ Nie chodzi o to, że nożyczek nigdy nie wolno używać. Chodzi o to, by robić 
 Zamiast maszynki najlepiej działa nuda i konsekwencja: **regularne szczotkowanie**. Wyczesanie martwego podszerstku realnie poprawia krążenie powietrza przy skórze, a do tego usuwa nadmiar wypadającej sierści.
 
 <div class="callout tip">
-W PetPetum możesz zapisywać sesje pielęgnacji i ustawić przypomnienie o szczotkowaniu, dzięki czemu w sezonie linienia łatwiej trzymać regularność, zamiast nadrabiać raz na jakiś czas.
+W ApkaŁapka możesz zapisywać sesje pielęgnacji i ustawić przypomnienie o szczotkowaniu, dzięki czemu w sezonie linienia łatwiej trzymać regularność, zamiast nadrabiać raz na jakiś czas.
 </div>
 
 <div class="callout vet">

@@ -35,7 +35,7 @@ Spokojny kot to nie tylko mniej stresu dla obu stron, to też badanie, które ł
 </div>
 
 <div class="callout tip">
-W PetPetum możesz notować wizyty i obserwacje, a karta opiekuna albo przegląd historii przydaje się, gdy chcesz szybko przekazać weterynarzowi, co działo się między wizytami. Mniej improwizacji w gabinecie to spokojniejsza wizyta.
+W ApkaŁapka możesz notować wizyty i obserwacje, a karta opiekuna albo przegląd historii przydaje się, gdy chcesz szybko przekazać weterynarzowi, co działo się między wizytami. Mniej improwizacji w gabinecie to spokojniejsza wizyta.
 </div>
 
 Wizyta u weterynarza nigdy nie będzie dla kota przyjemnością, ale nie musi być traumą. Odrobina przygotowania w domu zmienia ją z walki w coś, co da się przejść spokojnie. 🐾

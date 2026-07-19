@@ -34,7 +34,7 @@ Najlepszy moment na zamówienie zapasu to ten, w którym jeszcze go nie potrzebu
 </div>
 
 <div class="callout tip">
-W PetPetum funkcja „Zamów zapas" przypomni, zanim skończy się karma, zapas albo lek, i podrzuci link do sklepu, jeśli go zapiszesz. Aplikacja liczy zużycie za Ciebie, więc sygnał przychodzi z wyprzedzeniem, a nie przy pustej misce.
+W ApkaŁapka funkcja „Zamów zapas" przypomni, zanim skończy się karma, zapas albo lek, i podrzuci link do sklepu, jeśli go zapiszesz. Aplikacja liczy zużycie za Ciebie, więc sygnał przychodzi z wyprzedzeniem, a nie przy pustej misce.
 </div>
 
 Zapanowanie nad zapasami to jeden z tych drobiazgów, które nie robią wrażenia, dopóki nie zawiodą. Odrobina wyprzedzenia zamienia comiesięczny stres w rutynę, o której nie trzeba myśleć. 🐾

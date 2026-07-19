@@ -39,7 +39,7 @@ Jeśli zostawiasz pupila pod opieką, zadbaj, by druga osoba miała komplet info
 - 🐾 Przyzwyczajenia i to, co pupila uspokaja
 
 <div class="callout tip">
-W PetPetum przygotujesz kartę opiekuna: gotowe zestawienie karmienia, leków, alergii, kontaktu do weterynarza i numerów awaryjnych, które wyślesz albo pokażesz osobie zostającej z pupilem. Możesz też bezpiecznie udostępnić jej profil pupila w aplikacji.
+W ApkaŁapka przygotujesz kartę opiekuna: gotowe zestawienie karmienia, leków, alergii, kontaktu do weterynarza i numerów awaryjnych, które wyślesz albo pokażesz osobie zostającej z pupilem. Możesz też bezpiecznie udostępnić jej profil pupila w aplikacji.
 </div>
 
 ## Zaplanuj z wyprzedzeniem

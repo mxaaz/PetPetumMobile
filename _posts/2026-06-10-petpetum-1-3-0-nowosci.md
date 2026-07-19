@@ -1,5 +1,5 @@
 ---
-title: "PetPetum 1.3.0: bliżej opieki nad pupilem"
+title: "ApkaŁapka 1.3.0: bliżej opieki nad pupilem"
 date: 2026-06-10 10:00:00 +0200
 categories: [changelog]
 category_label: "Nowości"
@@ -7,7 +7,7 @@ cover_style: grad-b
 emoji: "📊"
 read_time: 3
 excerpt_text: "Dziennik kuwety z alertami, panele chorób przewlekłych, trendy wyników weterynaryjnych i szybkie dodawanie badań. Duży krok w stronę spokojniejszej opieki."
-description: "Co nowego w PetPetum 1.3.0: dziennik kuwety z alertami, panele chorób przewlekłych (CKD, cukrzyca, tarczyca, FLUTD, FIP), wykresy trendu wyników weterynaryjnych i jednostki kg/lb oraz C/F."
+description: "Co nowego w ApkaŁapka 1.3.0: dziennik kuwety z alertami, panele chorób przewlekłych (CKD, cukrzyca, tarczyca, FLUTD, FIP), wykresy trendu wyników weterynaryjnych i jednostki kg/lb oraz C/F."
 ---
 
 Wersja 1.3.0 mocno przybliżyła nas do tego, co najważniejsze: **wcześnie wychwytywać sygnały i mieć wszystko pod ręką**.

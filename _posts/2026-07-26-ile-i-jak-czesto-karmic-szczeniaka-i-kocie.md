@@ -38,7 +38,7 @@ Dokładne porcje i dobór karmy zależą od gatunku, rasy, tempa wzrostu i stanu
 </div>
 
 <div class="callout tip">
-W PetPetum możesz ustawić planer posiłków z porami karmienia i przypomnieniami, dzięki czemu łatwiej utrzymać regularny rytm malucha, nawet gdy dzień jest zabiegany.
+W ApkaŁapka możesz ustawić planer posiłków z porami karmienia i przypomnieniami, dzięki czemu łatwiej utrzymać regularny rytm malucha, nawet gdy dzień jest zabiegany.
 </div>
 
 Karmienie malucha to nie skomplikowana matematyka, tylko regularność, odpowiednia karma i uważne oko na to, jak rośnie. Reszta przychodzi z czasem i obserwacją. 🐾

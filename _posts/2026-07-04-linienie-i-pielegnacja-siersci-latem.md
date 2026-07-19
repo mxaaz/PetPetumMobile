@@ -39,7 +39,7 @@ Nadmierne wypadanie sierści, łysiejące placki, świąd albo zmiany na skórze
 </div>
 
 <div class="callout tip">
-W PetPetum możesz zapisywać sesje pielęgnacji i ustawić przypomnienie o szczotkowaniu, dzięki czemu w sezonie linienia łatwiej trzymać regularność, zamiast nadrabiać raz na jakiś czas.
+W ApkaŁapka możesz zapisywać sesje pielęgnacji i ustawić przypomnienie o szczotkowaniu, dzięki czemu w sezonie linienia łatwiej trzymać regularność, zamiast nadrabiać raz na jakiś czas.
 </div>
 
 Sierści latem nie da się zatrzymać, ale szczotka i odrobina rutyny sprawiają, że i pupil, i mieszkanie przechodzą przez ten sezon spokojniej. 🐾

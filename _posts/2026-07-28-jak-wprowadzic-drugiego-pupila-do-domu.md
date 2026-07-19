@@ -38,7 +38,7 @@ Agresja, ciągły strach albo wycofanie utrzymujące się mimo spokojnego wprowa
 </div>
 
 <div class="callout tip">
-W PetPetum możesz prowadzić osobny profil dla każdego pupila, z jego karmieniem, wizytami i obserwacjami. Dzięki temu nad codzienną opieką dwójki panujesz równie spokojnie jak nad jednym.
+W ApkaŁapka możesz prowadzić osobny profil dla każdego pupila, z jego karmieniem, wizytami i obserwacjami. Dzięki temu nad codzienną opieką dwójki panujesz równie spokojnie jak nad jednym.
 </div>
 
 Drugi pupil potrafi dać pierwszemu towarzystwo, a domownikom podwójną dawkę radości. Cierpliwe, spokojne zapoznanie to najlepsza inwestycja w to, by pod jednym dachem zapanowała zgoda. 🐾

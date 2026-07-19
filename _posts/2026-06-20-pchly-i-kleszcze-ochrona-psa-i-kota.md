@@ -54,7 +54,7 @@ Jeśli po ugryzieniu pojawi się zaczerwienienie rozszerzające się wokół mie
 Profilaktyka przeciw pasożytom to klasyczny przykład rzeczy, która działa tylko wtedy, gdy jest regularna, a regularność łatwo rozbija się o codzienny pośpiech.
 
 <div class="callout tip">
-W PetPetum ustawisz przypomnienie o kolejnej dawce ochrony przeciw pchłom i kleszczom oraz zapiszesz, jaki preparat i kiedy był podany. Aplikacja przypomni, zanim ochrona przestanie działać.
+W ApkaŁapka ustawisz przypomnienie o kolejnej dawce ochrony przeciw pchłom i kleszczom oraz zapiszesz, jaki preparat i kiedy był podany. Aplikacja przypomni, zanim ochrona przestanie działać.
 </div>
 
 Krótko: dobierz preparat z weterynarzem, pilnuj terminów, a po każdym spacerze sprawdzaj pupila. Tyle wystarczy, by sezon kleszczowy przejść spokojnie. 🐾

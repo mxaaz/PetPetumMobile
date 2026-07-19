@@ -43,7 +43,7 @@ Wyraźnie przyspieszony oddech w spoczynku, wysiłek przy oddychaniu, oddychanie
 Trudno porównać dzisiejszy wynik z tym sprzed tygodnia, gdy liczby są tylko w głowie.
 
 <div class="callout tip">
-W PetPetum zapiszesz kolejne pomiary tempa oddechu i zobaczysz, jak zmieniają się w czasie. Łatwiej wtedy zauważyć moment, w którym warto zadzwonić do weterynarza.
+W ApkaŁapka zapiszesz kolejne pomiary tempa oddechu i zobaczysz, jak zmieniają się w czasie. Łatwiej wtedy zauważyć moment, w którym warto zadzwonić do weterynarza.
 </div>
 
 Kilkadziesiąt sekund obserwacji śpiącego pupila potrafi dać cenną przewagę czasu. 🐾

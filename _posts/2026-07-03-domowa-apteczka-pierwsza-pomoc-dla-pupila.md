@@ -37,7 +37,7 @@ Nigdy nie podawaj pupilowi ludzkich leków przeciwbólowych ani przeciwgorączko
 </div>
 
 <div class="callout tip">
-W PetPetum zapiszesz numery alarmowe i kontakt do swojego weterynarza w jednym miejscu, więc w stresującej chwili masz je od razu pod ręką, zamiast przeszukiwać telefon.
+W ApkaŁapka zapiszesz numery alarmowe i kontakt do swojego weterynarza w jednym miejscu, więc w stresującej chwili masz je od razu pod ręką, zamiast przeszukiwać telefon.
 </div>
 
 <div class="callout vet">

@@ -38,7 +38,7 @@ Wyniki weterynaryjne interpretuje weterynarz, uwzględniając stan i historię k
 </div>
 
 <div class="callout tip">
-W PetPetum możesz zeskanować wyniki weterynaryjne prosto z kartki i trzymać je w jednym miejscu, a aplikacja pokaże trend parametru w czasie. Przy kolejnej wizycie masz uporządkowaną historię pod ręką, zamiast szukać luźnych kartek.
+W ApkaŁapka możesz zeskanować wyniki weterynaryjne prosto z kartki i trzymać je w jednym miejscu, a aplikacja pokaże trend parametru w czasie. Przy kolejnej wizycie masz uporządkowaną historię pod ręką, zamiast szukać luźnych kartek.
 </div>
 
 Zrozumienie wyników nie polega na zastąpieniu weterynarza, tylko na byciu jego partnerem. Uporządkowana dokumentacja i kilka trafnych pytań sprawiają, że każda wizyta jest bardziej konkretna. 🐾

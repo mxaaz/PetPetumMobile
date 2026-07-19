@@ -1,5 +1,5 @@
 ---
-title: "PetPetum 1.3.3: więcej spokoju między wizytami u weterynarza"
+title: "ApkaŁapka 1.3.3: więcej spokoju między wizytami u weterynarza"
 date: 2026-06-17 10:00:00 +0200
 categories: [changelog]
 category_label: "Nowości"
@@ -7,7 +7,7 @@ cover_style: grad-a
 emoji: "✨"
 read_time: 3
 excerpt_text: "Logowanie Google i Apple, panele chorób przewlekłych, trendy badań, udostępnianie pupila przez QR i sporo więcej. Oto co przynosi największa aktualizacja."
-description: "Co nowego w PetPetum 1.3.3: logowanie Google i Apple, panele opieki przy chorobach przewlekłych, trendy wyników weterynaryjnych, udostępnianie pupila przez QR i kopia zapasowa."
+description: "Co nowego w ApkaŁapka 1.3.3: logowanie Google i Apple, panele opieki przy chorobach przewlekłych, trendy wyników weterynaryjnych, udostępnianie pupila przez QR i kopia zapasowa."
 ---
 
 To była nasza największa aktualizacja. Skupiliśmy się na jednym: **więcej spokoju między wizytami u weterynarza**. Oto co dostajesz w wersji 1.3.3.

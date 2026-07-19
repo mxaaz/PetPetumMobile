@@ -41,7 +41,7 @@ Ten wpis pomaga ocenić ryzyko, ale nie zastąpi diagnozy. Każde niepokojące o
 </div>
 
 <div class="callout tip">
-W PetPetum możesz szybko zanotować w dzienniku objawów, co i kiedy się pojawiło po kąpieli. Godzina, miejsce i lista objawów to dokładnie te informacje, o które zapyta weterynarz.
+W ApkaŁapka możesz szybko zanotować w dzienniku objawów, co i kiedy się pojawiło po kąpieli. Godzina, miejsce i lista objawów to dokładnie te informacje, o które zapyta weterynarz.
 </div>
 
 Pływanie to dla wielu psów najlepsza część lata i niech tak zostanie. Wystarczy chwila oceny wody przed wejściem, by radość nie skończyła się w lecznicy. 🐾

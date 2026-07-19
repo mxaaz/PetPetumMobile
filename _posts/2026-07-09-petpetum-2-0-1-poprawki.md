@@ -1,5 +1,5 @@
 ---
-title: "PetPetum 2.0.1: poprawki i stabilność po Waszych zgłoszeniach"
+title: "ApkaŁapka 2.0.1: poprawki i stabilność po Waszych zgłoszeniach"
 date: 2026-07-09 14:00:00 +0200
 categories: [changelog]
 category_label: "Nowości"
@@ -7,7 +7,7 @@ cover_style: grad-a
 emoji: "🛠️"
 read_time: 2
 excerpt_text: "Krótka aktualizacja po premierze 2.0: naprawiliśmy rzadkie zawieszenia, poprawiliśmy zapis poziomu nawodnienia w trybie gościa oraz dopracowaliśmy koszty, paragony, kuwetę i kalendarz."
-description: "Co poprawiliśmy w PetPetum 2.0.1: stabilność ekranu subskrypcji i zapisu karmy, poziom nawodnienia w trybie gościa, wczytywanie paragonów, czytelna data kuwety, lista kosztów i nazwy zabiegów w kalendarzu."
+description: "Co poprawiliśmy w ApkaŁapka 2.0.1: stabilność ekranu subskrypcji i zapisu karmy, poziom nawodnienia w trybie gościa, wczytywanie paragonów, czytelna data kuwety, lista kosztów i nazwy zabiegów w kalendarzu."
 ---
 
 Zaraz po premierze wersji 2.0 zebraliśmy Wasze zgłoszenia i wypuszczamy krótką aktualizację, która wygładza kilka drobiazgów i poprawia stabilność. Dziękujemy każdemu, kto napisał, co da się ulepszyć.

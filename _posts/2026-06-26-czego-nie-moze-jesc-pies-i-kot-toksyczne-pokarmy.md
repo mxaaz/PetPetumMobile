@@ -45,7 +45,7 @@ Reakcja zależy od produktu, ilości i wielkości zwierzaka, dlatego oceni ją w
 </div>
 
 <div class="callout tip">
-W PetPetum możesz zapisać kontakt do swojej lecznicy i numer alarmowy w jednym miejscu, a w dzienniku objawów odnotować, co i kiedy się wydarzyło, dzięki czemu w stresie nie szukasz tych informacji po szufladach.
+W ApkaŁapka możesz zapisać kontakt do swojej lecznicy i numer alarmowy w jednym miejscu, a w dzienniku objawów odnotować, co i kiedy się wydarzyło, dzięki czemu w stresie nie szukasz tych informacji po szufladach.
 </div>
 
 Nie chodzi o to, by panikować przy każdym okruszku. Chodzi o to, by te kilka naprawdę groźnych produktów trzymać poza zasięgiem, a numer do weterynarza mieć pod ręką. 🐾

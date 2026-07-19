@@ -38,7 +38,7 @@ Zwróć uwagę na sygnały przegrzania: intensywne dyszenie, osłabienie, ślini
 </div>
 
 <div class="callout tip">
-W PetPetum możesz ustawić przypomnienia dopasowane do swojego rytmu dnia, dzięki czemu łatwiej trzymać się chłodniejszych pór na spacer w czasie fali upałów.
+W ApkaŁapka możesz ustawić przypomnienia dopasowane do swojego rytmu dnia, dzięki czemu łatwiej trzymać się chłodniejszych pór na spacer w czasie fali upałów.
 </div>
 
 Lato ze zwierzakiem może być świetne, wystarczy przesunąć spacer na chłodniejszą porę i sprawdzić chodnik dłonią. Te dwie sekundy potrafią uchronić łapy przed poparzeniem. 🐾

@@ -45,7 +45,7 @@ Przed szczepieniem maluch powinien być zdrowy i odrobaczony. Jeśli pupil gorze
 Książeczka zdrowia bywa w szufladzie, a terminy w głowie. To przepis na przegapioną dawkę.
 
 <div class="callout tip">
-W PetPetum zapiszesz wykonane szczepienia i ustawisz przypomnienie o kolejnej dawce oraz o corocznych przypominających. Cała historia jest pod ręką także na wizycie u nowego weterynarza.
+W ApkaŁapka zapiszesz wykonane szczepienia i ustawisz przypomnienie o kolejnej dawce oraz o corocznych przypominających. Cała historia jest pod ręką także na wizycie u nowego weterynarza.
 </div>
 
 Pierwsze miesiące są intensywne, ale dobrze poprowadzony kalendarz szczepień to spokój na lata. 🐾

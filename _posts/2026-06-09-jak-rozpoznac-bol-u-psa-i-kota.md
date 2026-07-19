@@ -43,7 +43,7 @@ Ocena i leczenie bólu należą do weterynarza. Nigdy nie podawaj zwierzęciu lu
 </div>
 
 <div class="callout tip">
-W PetPetum zapiszesz objawy i zmiany w zachowaniu z datą, a na wizycie pokażesz weterynarzowi konkretną oś czasu zamiast "chyba od jakiegoś czasu gorzej". To realnie pomaga w trafnej ocenie.
+W ApkaŁapka zapiszesz objawy i zmiany w zachowaniu z datą, a na wizycie pokażesz weterynarzowi konkretną oś czasu zamiast "chyba od jakiegoś czasu gorzej". To realnie pomaga w trafnej ocenie.
 </div>
 
 Im wcześniej wychwycisz, że "coś jest nie tak", tym szybciej pupil dostanie pomoc. 🐾

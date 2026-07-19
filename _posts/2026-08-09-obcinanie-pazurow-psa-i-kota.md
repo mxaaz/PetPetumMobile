@@ -36,7 +36,7 @@ Jeśli dojdzie do skaleczenia unaczynienia i krwawienie nie ustaje mimo ucisku, 
 </div>
 
 <div class="callout tip">
-W PetPetum możesz zapisywać zabiegi pielęgnacyjne z przypomnieniem o kolejnym terminie. Pazury przestają być "kiedyś się zrobi", a stają się spokojną rutyną co kilka tygodni.
+W ApkaŁapka możesz zapisywać zabiegi pielęgnacyjne z przypomnieniem o kolejnym terminie. Pazury przestają być "kiedyś się zrobi", a stają się spokojną rutyną co kilka tygodni.
 </div>
 
 Krótkie, regularne sesje z nagrodą sprawiają, że po kilku tygodniach obcinanie przestaje być walką. A wygodny chód pupila jest tego wart. 🐾

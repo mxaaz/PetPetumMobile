@@ -39,7 +39,7 @@ Samo picie nie postawi diagnozy. Trwała zmiana pragnienia to sygnał, by odwied
 ## Prosty nawyk: świeża woda i obserwacja
 
 <div class="callout tip">
-Dbaj o stały dostęp do świeżej wody (koty często wolą szeroką miskę albo poidełko z fontanną). A w PetPetum możesz śledzić nawodnienie pupila, dzięki czemu łatwiej zauważysz, że od jakiegoś czasu pije wyraźnie więcej albo mniej niż zwykle.
+Dbaj o stały dostęp do świeżej wody (koty często wolą szeroką miskę albo poidełko z fontanną). A w ApkaŁapka możesz śledzić nawodnienie pupila, dzięki czemu łatwiej zauważysz, że od jakiegoś czasu pije wyraźnie więcej albo mniej niż zwykle.
 </div>
 
 <div class="callout warn">

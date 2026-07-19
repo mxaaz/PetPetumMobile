@@ -40,7 +40,7 @@ Ten wpis pomaga obserwować i reagować, ale nie zastąpi badania. Każdą niepo
 </div>
 
 <div class="callout tip">
-W PetPetum możesz zanotować w dzienniku objawów, jak pupil zareagował na użądlenie. Przy kolejnym zdarzeniu od razu wiesz, czy Twój zwierzak reaguje łagodnie, czy trzeba działać szybciej.
+W ApkaŁapka możesz zanotować w dzienniku objawów, jak pupil zareagował na użądlenie. Przy kolejnym zdarzeniu od razu wiesz, czy Twój zwierzak reaguje łagodnie, czy trzeba działać szybciej.
 </div>
 
 Sezon na osy trwa do jesieni, więc warto mieć ten plan w głowie. Spokojna, szybka reakcja opiekuna to najlepsze, co pupil może dostać w takiej chwili. 🐾
