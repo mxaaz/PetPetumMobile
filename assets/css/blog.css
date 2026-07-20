@@ -41,6 +41,7 @@ img { max-width: 100%; display: block; }
 .social-rail a:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0,0,0,.26); }
 .social-rail a.r-fb:hover { background: #1877f2; }
 .social-rail a.r-tt:hover { background: #000; }
+.social-rail a.r-ig:hover { background: #e1306c; }
 .social-rail a.r-gp:hover { background: #34a853; }
 .social-rail a.r-as:hover { background: #0d96f6; }
 .social-rail svg { width: 24px; height: 24px; }
