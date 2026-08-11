@@ -61,4 +61,4 @@ Podpowiedzi to obserwacje z Twoich danych, nie porada weterynaryjna. Decyzje o z
 ApkaŁapka 2.0 jest już dostępne w Google Play i App Store. Zaktualizuj aplikację, żeby zobaczyć nowy wygląd i wszystkie nowe narzędzia.
 
 - Android: [Google Play](https://play.google.com/store/apps/details?id=com.petpetum.mobile)
-- iOS: [App Store](https://apps.apple.com/us/app/petpetum-pet-health-tracker/id6763942522)
+- iOS: [App Store](https://apps.apple.com/us/app/apka%C5%82apka-pet-care-diary/id6763942522)
