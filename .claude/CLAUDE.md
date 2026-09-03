@@ -37,6 +37,33 @@ excerpt_text: "…"          # 1-2 zdania na kartę wpisu, ma zachęcać, nie st
 description: "…"           # meta SEO, konkretne frazy, jedno zdanie
 ```
 
+## Ton strony: ApkaŁapka + Ty (decyzja usera 2026-09-02)
+
+Strona ma dwie strefy i dwa głosy. Granica: czy po drugiej stronie stoi narzędzie, czy człowiek
+z firmy.
+
+**Strefa produktowa** (`index.html`, listingi bloga i changelogu): podmiotem czynności jest
+**ApkaŁapka**, adresatem **Ty**.
+
+- ✅ „ApkaŁapka porządkuje terminy, przypomina w porę i pokazuje trendy w zdrowiu pupila."
+- ✅ „ApkaŁapka pilnuje tego, co ważne, między wizytami u weterynarza."
+- ✅ „ApkaŁapka nie sprzedaje Twoich danych."
+- ❌ „Pomożemy", „zadbamy", „pilnujemy za Ciebie", „z nami", „nasza aplikacja".
+
+Powód: nazwa marki wybrzmiewa, zamiast znikać w „my"; obietnica dotyczy narzędzia, nie opieki, więc
+trzyma linię „organizer, nie diagnoza"; ton zostaje uprzejmy, bez skracania dystansu.
+
+**Strefa firmowa** (`faq.html`, dokumenty prawne, kontakt, treść wpisów): „my" jest tu na miejscu,
+bo odzywa się firma do człowieka. „Zbieramy wyłącznie dane, które sam/a wprowadzasz", „Staramy się
+odpowiadać w ciągu 24 godzin".
+
+**Emoji: nie w nagłówkach.** Zero emoji w `h1`, `h2` i w eyebrow. Wolno w kaflach, tagach, chipach
+i na okładkach wpisów, bo tam niosą lekkość, a nie nadają tonu.
+
+**Zmieniasz copy? Zmień OBIE wersje językowe.** `index.html` trzyma PL i EN w jednym pliku
+(`<span class="pl">` / `<span class="en">`), a `faq.html` w dwóch osobnych sekcjach `#lang-en`
+i `#lang-pl`. Zgubiona para zostawia polskie zdanie na angielskiej wersji strony.
+
 ## Reguły treści (te same co w marketingu)
 
 - **ZERO em dash (U+2014).** Dwukropek, przecinek, nawias, kropka.
@@ -59,6 +86,36 @@ description: "…"           # meta SEO, konkretne frazy, jedno zdanie
 - `app-ads.txt` i `app-ads/` - identyfikator AdMob. Literówka wyłącza monetyzację.
 - `CNAME` - jedna linia trzymająca domenę. Skasowanie zdejmuje stronę z `apkalapka.pl`.
 - `_layouts/`, `_includes/`, `assets/` - szablon i style. Zmieniasz wygląd tylko na polecenie.
+- `hero.jpg` - generowana półfotorealistyczna ilustracja psa i kota z 15.06.2026. **Nie jest już
+  używana** i nie podpinaj jej z powrotem: hero ma akwarelowy pas `assets/hero-bg.webp`. Fotorealizm
+  odpada zawsze, patrz `ai-act.md`.
+- `hero2.jpeg` - źródło akwareli, z niego wycięty jest `assets/hero-bg.webp`. Nie podpinaj źródła
+  bezpośrednio w CSS: nie ma wygaszonej góry i waży 15 razy więcej.
+- `assets/hero-pattern.svg` - wzór wektorowy z podejścia sprzed 2026-09-03, nieużywany przez nic.
+
+## Hero na stronie głównej
+
+**Hero jest jasny** (decyzja usera 2026-09-03): papier `#EAEAE3`, tekst `--green-dark`, nav nad hero
+ciemny bez cienia. Nie ma trybu ciemnego na stronie i nie było - jeśli ktoś raportuje, że tło się
+nie zmienia po przełączeniu motywu, to wtyczka w przeglądarce, nie błąd.
+
+Tło to akwarelowy pas `assets/hero-bg.webp` (kot i pies, gałązki, łapki, serce z kreski) przyklejony
+do dołu w pełnej szerokości, nad nim dwa miękkie mycia w CSS. Źródło ma proporcję 5,28:1, więc
+**świadomie nie ma tu `cover`**: kadrowanie do wysokości hero (815 px przy 1920 i 1440) pokazałoby
+tylko środkowe 45% szerokości i ucięłoby kota i psa przy lewej krawędzi. `100% auto` pokazuje całą
+szerokość zawsze, a przy 1920 px pas renderuje się jako 1920x364, czyli w pomniejszeniu - ostro.
+
+Górna krawędź grafiki jest **wygaszona w alfie** (gradient na 150 px z 448), dlatego pas przechodzi
+w papier bez widocznej linii cięcia. Stąd WebP z przezroczystością zamiast JPEG-a i stąd brak
+fallbacku PNG: ten sam plik w PNG waży 1,3 MB wobec 37 KB.
+
+Trzy szerokości, trzy zachowania: powyżej 880 px `100% auto` na dole; 520-880 px `auto 190px`, bo
+makieta telefonu schodzi pod tekst i pas musi być niższy niż ona; poniżej 520 px `300% auto` z
+kotwicą `left bottom`, żeby w wąskim kadrze zostali kot i pies. W obu wariantach mobilnych hero ma
+`padding-bottom: 168px` - bez tego telefon przykrywa zwierzaki.
+
+Zmieniasz to? **Sprawdzaj zrzutem przy 1920, 1440, 768, 560 i 390 px.** Zwierzaki mają być widoczne
+i nieprzykryte na każdej z nich, a przejście pasa w papier niewidoczne.
 
 ## Konwencje
 

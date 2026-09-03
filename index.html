@@ -90,14 +90,13 @@
       padding: 12px 22px; transition: background .25s ease, box-shadow .25s ease;
     }
     .nav.scrolled { background: rgba(255,255,255,.92); backdrop-filter: blur(10px); box-shadow: 0 1px 12px rgba(0,0,0,.08); }
-    .nav .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.36rem; color: #fff; letter-spacing: -.2px; font-family: var(--serif); }
-    .nav:not(.scrolled) .brand { text-shadow: 0 1px 8px rgba(0,0,0,.4); }
+    .nav .brand { text-decoration: none; display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.36rem; color: var(--green-dark); letter-spacing: -.2px; font-family: var(--serif); }
     .nav.scrolled .brand { color: var(--green-dark); text-shadow: none; }
-    .nav .brand img { width: 38px; height: 38px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.3); }
+    .nav .brand img { width: 38px; height: 38px; border-radius: 10px; box-shadow: 0 2px 10px rgba(45,74,62,.18); }
     .nav .nav-links { display: flex; gap: 22px; margin-left: 24px; }
-    .nav .nav-links a { color: rgba(255,255,255,.92); text-decoration: none; font-size: .92rem; font-weight: 500; }
+    .nav .nav-links a { color: var(--muted); text-decoration: none; font-size: .92rem; font-weight: 500; }
     .nav.scrolled .nav-links a { color: var(--muted); }
-    .nav .nav-links a:hover { color: #fff; }
+    .nav .nav-links a:hover { color: var(--green-dark); }
     .nav.scrolled .nav-links a:hover { color: var(--green-dark); }
     .nav .nav-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
     .nav .nav-cta {
@@ -116,25 +115,31 @@
     .social-rail a.r-as:hover { background: #0d96f6; }
     .social-rail svg { width: 24px; height: 24px; }
     @media (max-width: 760px) { .social-rail { display: none; } }
-    .lang-switch { display: flex; gap: 3px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.4); border-radius: 999px; padding: 3px; }
+    .lang-switch { display: flex; gap: 3px; background: var(--green-light); border: 1px solid var(--green-border); border-radius: 999px; padding: 3px; }
     .nav.scrolled .lang-switch { background: var(--green-light); border-color: var(--green-border); }
-    .lang-switch button { border: none; background: transparent; cursor: pointer; font-size: .82rem; font-weight: 700; color: rgba(255,255,255,.85); padding: 4px 11px; border-radius: 999px; }
+    .lang-switch button { border: none; background: transparent; cursor: pointer; font-size: .82rem; font-weight: 700; color: var(--muted); padding: 4px 11px; border-radius: 999px; }
     .nav.scrolled .lang-switch button { color: var(--muted); }
     .lang-switch button.active { background: #fff; color: var(--green-dark); }
 
     /* ---------- hero ---------- */
+    /* Tło hero: akwarelowy pas (kot, pies, gałązki, łapki) przyklejony do dołu w pełnej
+       szerokości, nad nim papier i dwa miękkie mycia w CSS. Grafika ma wygaszoną górną
+       krawędź w alfie, więc nie widać miejsca, w którym się kończy.
+       Świadomie BEZ `cover`: przy proporcji 5,28:1 kadrowanie do wysokości hero ucinałoby
+       kota i psa przy lewej krawędzi. `100% auto` pokazuje całą szerokość zawsze. */
     header.hero {
-      position: relative; color: #fff;
+      position: relative; color: var(--ink); overflow: hidden;
       padding: 120px 24px 84px;
       background:
-        linear-gradient(160deg, rgba(91,130,102,.86) 0%, rgba(45,74,62,.95) 100%),
-        url('hero.jpg') center/cover no-repeat,
-        linear-gradient(160deg, var(--green) 0%, var(--green-dark) 100%);
+        url('assets/hero-bg.webp') center bottom / 100% auto no-repeat,
+        radial-gradient(85% 70% at 10% -10%, rgba(146,186,155,.26) 0%, rgba(146,186,155,0) 62%),
+        radial-gradient(75% 60% at 94% 0%, rgba(146,186,155,.20) 0%, rgba(146,186,155,0) 58%),
+        #EAEAE3;
     }
-    .hero-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1.05fr .95fr; gap: 44px; align-items: center; text-align: left; }
-    .hero-copy .app-icon { width: 76px; height: 76px; border-radius: 18px; box-shadow: 0 10px 30px rgba(0,0,0,.3); margin-bottom: 18px; display: inline-block; }
-    .hero h1 { font-size: 3.3rem; margin-bottom: 18px; letter-spacing: -.8px; line-height: 1.06; }
-    .hero .sub { font-size: 1.2rem; opacity: .95; max-width: 540px; margin-bottom: 32px; }
+    .hero-inner { position: relative; z-index: 2; max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1.05fr .95fr; gap: 44px; align-items: center; text-align: left; }
+    .hero-copy .app-icon { width: 76px; height: 76px; border-radius: 18px; box-shadow: 0 10px 30px rgba(45,74,62,.22); margin-bottom: 18px; display: inline-block; }
+    .hero h1 { font-size: 3.3rem; margin-bottom: 18px; letter-spacing: -.8px; line-height: 1.06; color: var(--green-dark); }
+    .hero .sub { font-size: 1.2rem; color: var(--muted); max-width: 620px; margin-bottom: 32px; }
     .hero-copy .store-badges { justify-content: flex-start; }
     .hero-phone { display: flex; justify-content: center; perspective: 1200px; }
     .hero-phone .phone { width: 282px; transform: rotate(-3deg); box-shadow: 0 36px 80px rgba(0,0,0,.42), 0 0 0 2px #1c1c1c; transition: transform .35s ease; }
@@ -280,6 +285,11 @@
     .price-card li { display: flex; gap: 10px; align-items: flex-start; font-size: .95rem; color: var(--ink); }
     .price-card li svg { width: 19px; height: 19px; stroke: var(--green); flex-shrink: 0; margin-top: 2px; }
     .price-foot { text-align: center; font-size: .9rem; color: var(--muted); margin-top: 20px; }
+    .trial-how { background: #fff; border: 1px solid #E6E1D6; border-radius: 20px; padding: 28px 30px; margin-top: 22px; }
+    .trial-how h3 { font-family: var(--serif); font-size: 1.2rem; color: var(--green-dark); margin-bottom: 16px; }
+    .trial-how ol { padding-left: 20px; display: flex; flex-direction: column; gap: 10px; }
+    .trial-how li { font-size: .95rem; color: var(--ink); padding-left: 4px; }
+    .trial-how li::marker { color: var(--green); font-weight: 700; }
 
     /* ---------- faq ---------- */
     .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
@@ -305,6 +315,16 @@
       .feature-item { flex-wrap: wrap; }
       .feature-item .inline-shot { display: block; width: 100%; margin-top: 14px; border-radius: 14px; border: 1px solid #E6E1D6; }
       .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+      .hero h1 br, .hero .sub br { display: none; }
+      /* Hero na telefonie jest wyższy niż szerszy: powiększamy pas i kotwiczymy go
+         w lewym dolnym rogu, żeby w kadrze zostały kot i pies. Zapas na dole musi być
+         większy niż na desktopie, bo makieta telefonu schodzi tu na sam spód kolumny
+         i bez tego przykrywałaby zwierzaki. */
+      header.hero {
+        padding-bottom: 168px;
+        background-size: auto 190px, auto, auto;
+        background-position: left bottom, center top, center top;
+      }
       .hero-copy .store-badges { justify-content: center; }
       .hero .sub { margin-left: auto; margin-right: auto; }
       .hero-phone { order: 2; }
@@ -320,7 +340,9 @@
     }
     @media (max-width: 520px) {
       .nav .nav-cta { display: none; }
-      header.hero { padding: 128px 20px 72px; }
+      /* Poniżej 520 px pas skalujemy szerokością, nie wysokością: inaczej kot i pies
+         robią się za małe względem kolumny. */
+      header.hero { padding: 128px 20px 168px; background-size: 300% auto, auto, auto; }
     }
     /* blog teaser covers */
     #blog-latest .blog-cover.grad-a { background: linear-gradient(140deg, #5B8266, #2D4A3E); }
@@ -363,10 +385,11 @@
     <a class="brand" href="#top"><img src="icon.png" alt="" />ApkaŁapka</a>
     <div class="nav-links">
       <a href="#features"><span class="pl">Funkcje</span><span class="en">Features</span></a>
-      <a href="#why"><span class="pl">Dlaczego my</span><span class="en">Why us</span></a>
+      <a href="#why"><span class="pl">Dlaczego ApkaŁapka</span><span class="en">Why ApkaŁapka</span></a>
       <a href="#pricing"><span class="pl">Cennik</span><span class="en">Pricing</span></a>
       <a href="#faq">FAQ</a>
       <a href="/blog/">Blog</a>
+      <a href="/changelog/"><span class="pl">Nowości</span><span class="en">What's new</span></a>
     </div>
     <div class="nav-right">
       <div class="lang-switch" role="group" aria-label="Language">
@@ -402,12 +425,12 @@
       <div class="hero-copy">
         <img class="app-icon" src="icon.png" alt="ApkaŁapka" />
         <h1>
-          <span class="pl">Twoja niezależna książeczka zdrowia pupila</span>
-          <span class="en">Your pet's independent health book</span>
+          <span class="pl">Książeczka zdrowia <br>Twojego pupila</span>
+          <span class="en">Your pet's <br>health record book</span>
         </h1>
         <p class="sub">
-          <span class="pl">Cała historia, przypomnienia i wyniki badań na Twoim telefonie, zawsze pod ręką.</span>
-          <span class="en">All the history, reminders and lab results on your phone, always at hand.</span>
+          <span class="pl">Pełna historia, wszystkie powiadomienia i wyniki badań <br>w jednym miejscu, zawsze pod ręką.</span>
+          <span class="en">The full history, every reminder and lab result <br>in one place, always at hand.</span>
         </p>
         <div class="store-badges" id="download-hero">
           <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.petpetum.mobile" target="_blank" rel="noopener">
@@ -443,7 +466,7 @@
     <!-- PROBLEM -> SOLUTION -->
     <section id="problem">
       <div class="section-head reveal">
-        <h2><span class="pl">Znasz to uczucie? 😩</span><span class="en">Sound familiar? 😩</span></h2>
+        <h2><span class="pl">Znasz to uczucie?</span><span class="en">Sound familiar?</span></h2>
       </div>
       <div class="problem-grid reveal">
         <div class="problem-card">
@@ -460,15 +483,15 @@
         </div>
       </div>
       <p class="solution-line reveal">
-        <span class="pl">ApkaŁapka to porządkuje, przypomina w porę i <span class="hl">pokazuje trendy</span> w zdrowiu pupila. 🐾</span>
-        <span class="en">ApkaŁapka (Polish for "paw app") keeps it in order, reminds you in time and <span class="hl">shows the trends</span> in your pet's health. 🐾</span>
+        <span class="pl">ApkaŁapka to porządkuje, przypomina w porę i <span class="hl">pokazuje trendy</span> w zdrowiu pupila.</span>
+        <span class="en">ApkaŁapka (Polish for "paw app") keeps it in order, reminds you in time and <span class="hl">shows the trends</span> in your pet's health.</span>
       </p>
     </section>
 
     <!-- FEATURES SHOWCASE -->
     <section id="features">
       <div class="section-head reveal">
-        <h2><span class="pl">Wszystko, czego potrzebuje Twój pupil 🐶🐱</span><span class="en">Everything your pet needs 🐶🐱</span></h2>
+        <h2><span class="pl">Wszystko, czego potrzebuje Twój pupil</span><span class="en">Everything your pet needs</span></h2>
         <p><span class="pl">Najedź na funkcję, żeby zobaczyć ją w aplikacji.</span><span class="en">Hover a feature to see it inside the app.</span></p>
       </div>
 
@@ -571,7 +594,7 @@
     <!-- MORE STRIP -->
     <section style="padding-top:0;">
       <div class="section-head reveal">
-        <h2><span class="pl">I jeszcze więcej ✨</span><span class="en">And more ✨</span></h2>
+        <h2><span class="pl">I jeszcze więcej</span><span class="en">And more</span></h2>
       </div>
       <div class="more-strip reveal">
         <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-syringe"/></svg><span class="pl">Podpowiedzi szczepień (WSAVA)</span><span class="en">Vaccine suggestions (WSAVA)</span></span>
@@ -585,7 +608,7 @@
     <!-- NICHE: chronic conditions -->
     <section id="niche">
       <div class="niche reveal">
-        <span class="eyebrow"><span class="pl">❤️‍🩹 Twój spokój głowy</span><span class="en">❤️‍🩹 Your peace of mind</span></span>
+        <span class="eyebrow"><span class="pl">Twój spokój głowy</span><span class="en">Your peace of mind</span></span>
         <h2><span class="pl">Choroba przewlekła? Wyłap wczesny sygnał, zanim urośnie.</span><span class="en">A chronic condition? Catch the early sign before it grows.</span></h2>
         <p class="lead">
           <span class="pl">Dla opiekunów kotów i psów z CKD, cukrzycą, tarczycą, FLUTD czy chorobą serca. ApkaŁapka pilnuje tego, co ważne, między wizytami u weterynarza.</span>
@@ -609,7 +632,7 @@
     <!-- WHY US -->
     <section id="why">
       <div class="section-head reveal">
-        <h2><span class="pl">Dlaczego ApkaŁapka, a nie inne aplikacje 🏆</span><span class="en">Why ApkaŁapka, not other apps 🏆</span></h2>
+        <h2><span class="pl">Dlaczego ApkaŁapka, a nie inne aplikacje</span><span class="en">Why ApkaŁapka, not other apps</span></h2>
       </div>
       <div class="why-grid">
         <div class="why-card reveal">
@@ -647,7 +670,7 @@
     <section id="pricing">
       <div class="section-head reveal">
         <h2><span class="pl">Zacznij za darmo, rozszerz gdy zechcesz</span><span class="en">Start free, upgrade when you want</span></h2>
-        <p><span class="pl">7 dni Premium za darmo. Bez zobowiązań.</span><span class="en">7 days of Premium free. No commitment.</span></p>
+        <p><span class="pl">7 dni pełnego Premium za darmo. Anulujesz w każdej chwili, a jeśli zrobisz to przed końcem 7 dnia, nie zapłacisz nic.</span><span class="en">7 days of full Premium free. Cancel anytime, and if you do it before day 7 ends, you pay nothing.</span></p>
       </div>
       <div class="pricing-grid">
         <div class="price-card reveal">
@@ -676,6 +699,19 @@
           </ul>
         </div>
       </div>
+      <div class="trial-how reveal">
+        <h3><span class="pl">Jak działa 7 dni Premium za darmo</span><span class="en">How the 7 days of free Premium work</span></h3>
+        <ol>
+          <li><span class="pl">Premium włączasz w aplikacji, przez Google Play albo App Store.</span><span class="en">You start Premium in the app, through Google Play or the App Store.</span></li>
+          <li><span class="pl">Przez 7 dni masz pełne Premium i nic nie płacisz.</span><span class="en">For 7 days you get full Premium and pay nothing.</span></li>
+          <li><span class="pl">Ósmego dnia subskrypcja odnawia się automatycznie, a sklep pobiera opłatę za wybrany plan.</span><span class="en">On day 8 the subscription renews automatically and the store charges for the plan you picked.</span></li>
+          <li><span class="pl">Anulujesz w każdej chwili: w Google Play w sekcji Subskrypcje, w App Store w Apple ID &rarr; Subskrypcje. Jeśli anulujesz przed końcem 7 dnia, nie zapłacisz nic.</span><span class="en">Cancel anytime: in Google Play under Subscriptions, in the App Store under Apple ID &rarr; Subscriptions. Cancel before day 7 ends and you pay nothing.</span></li>
+          <li><span class="pl">Po anulowaniu dostęp do Premium trwa do końca opłaconego okresu, potem aplikacja wraca do planu Free.</span><span class="en">After cancelling, Premium access lasts until the end of the paid period, then the app returns to the Free plan.</span></li>
+          <li><span class="pl">Twoje dane zostają. Plan Free niczego nie kasuje, wygasa tylko dostęp do funkcji Premium.</span><span class="en">Your data stays. The Free plan deletes nothing, only access to Premium features expires.</span></li>
+          <li><span class="pl">Ile dni zostało do końca okresu próbnego, widzisz na ekranie Premium w aplikacji.</span><span class="en">The Premium screen in the app shows how many trial days are left.</span></li>
+          <li><span class="pl">Ceny i dostępne plany znajdziesz w Google Play i App Store, tam są zawsze aktualne.</span><span class="en">Prices and available plans are in Google Play and the App Store, always up to date there.</span></li>
+        </ol>
+      </div>
       <p class="price-foot">
         <span class="pl">Plan miesięczny, roczny lub dożywotni. Aktualne ceny znajdziesz w Google Play i App Store.</span>
         <span class="en">Monthly, yearly or lifetime plan. You'll find current prices in Google Play and the App Store.</span>
@@ -685,7 +721,7 @@
     <!-- FAQ -->
     <section id="faq">
       <div class="section-head reveal">
-        <h2><span class="pl">Najczęstsze pytania ❓</span><span class="en">Frequently asked questions ❓</span></h2>
+        <h2><span class="pl">Najczęstsze pytania</span><span class="en">Frequently asked questions</span></h2>
       </div>
       <div class="faq-list reveal">
         <details class="faq-item">
@@ -694,11 +730,11 @@
         </details>
         <details class="faq-item">
           <summary><span class="pl">Czym jest 7 dni Premium za darmo?</span><span class="en">What is the 7-day free Premium?</span></summary>
-          <div class="faq-body"><span class="pl">To bezpłatny okres próbny pełnego Premium. Jeśli anulujesz przed jego końcem, nic nie zapłacisz.</span><span class="en">It's a free trial of full Premium. If you cancel before it ends, you pay nothing.</span></div>
+          <div class="faq-body"><span class="pl">To bezpłatny okres próbny pełnego Premium, uruchamiany jako subskrypcja w Google Play albo App Store. Po 7 dniach subskrypcja odnawia się automatycznie i sklep pobiera opłatę. Jeśli anulujesz przed końcem 7 dnia, nie zapłacisz nic, a dostęp trwa do końca okresu próbnego.</span><span class="en">It's a free trial of full Premium, started as a subscription in Google Play or the App Store. After 7 days the subscription renews automatically and the store charges you. Cancel before day 7 ends and you pay nothing, with access lasting until the trial is over.</span></div>
         </details>
         <details class="faq-item">
           <summary><span class="pl">Czy moje dane są bezpieczne?</span><span class="en">Is my data safe?</span></summary>
-          <div class="faq-body"><span class="pl">Tak. Dane na urządzeniu są szyfrowane, aplikacja jest zgodna z RODO, a Twoich danych nie sprzedajemy. Synchronizacja w chmurze jest opcjonalna.</span><span class="en">Yes. On-device data is encrypted, the app is GDPR compliant, and we do not sell your data. Cloud sync is optional.</span></div>
+          <div class="faq-body"><span class="pl">Tak. Dane na urządzeniu są szyfrowane, aplikacja jest zgodna z RODO, a ApkaŁapka nie sprzedaje Twoich danych. Synchronizacja w chmurze jest opcjonalna.</span><span class="en">Yes. On-device data is encrypted, the app is GDPR compliant, and ApkaŁapka does not sell your data. Cloud sync is optional.</span></div>
         </details>
         <details class="faq-item">
           <summary><span class="pl">Czy aplikacja działa bez internetu?</span><span class="en">Does the app work offline?</span></summary>
@@ -729,7 +765,7 @@
     <section id="blog-latest" class="reveal" style="max-width:1080px;margin:0 auto 12px;padding:10px 22px 8px;">
       <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px;">
         <h2 style="font-size:1.9rem;letter-spacing:-.3px;">
-          <span class="pl">Najnowsze z bloga 📰</span><span class="en">Latest from the blog 📰</span>
+          <span class="pl">Najnowsze z bloga</span><span class="en">Latest from the blog</span>
         </h2>
         <a href="/blog/" style="color:var(--green);font-weight:700;text-decoration:none;white-space:nowrap;">
           <span class="pl">Wszystkie wpisy →</span><span class="en">All posts →</span>
@@ -759,8 +795,8 @@
     <!-- FINAL CTA -->
     <section id="download" style="padding-top:0;">
       <div class="cta-final reveal">
-        <h2><span class="pl">Zacznij dbać o pupila lepiej 🐾</span><span class="en">Start caring for your pet better 🐾</span></h2>
-        <p><span class="pl">Pobierz ApkaŁapka za darmo na Androida i iOS.</span><span class="en">Download ApkaŁapka free on Android and iOS.</span></p>
+        <h2><span class="pl">Zacznij prowadzić książeczkę zdrowia pupila</span><span class="en">Start your pet's health record book</span></h2>
+        <p><span class="pl">ApkaŁapka jest za darmo na Androida i iOS.</span><span class="en">ApkaŁapka is free on Android and iOS.</span></p>
         <div class="store-badges">
           <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.petpetum.mobile" target="_blank" rel="noopener">
             <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#EA4335" d="M325 256 110 41a30 30 0 0 0-15-8l199 199z"/><path fill="#FBBC04" d="M404 207 325 256l79 49 60-35c20-12 20-39 0-51z"/><path fill="#34A853" d="M110 471l215-215 69 49-244 174a30 30 0 0 1-40-8z"/><path fill="#4285F4" d="M40 52a30 30 0 0 0-8 20v368a30 30 0 0 0 8 20l254-204z"/></svg>
@@ -791,6 +827,8 @@
         </a>
       </div>
       <div class="footer-links">
+        <a href="/blog/">Blog</a>
+        <a href="/changelog/"><span class="pl">Nowości</span><span class="en">What's new</span></a>
         <a href="privacy-pl.html"><span class="pl">Polityka prywatności</span><span class="en">Privacy (PL)</span></a>
         <a href="privacy.html"><span class="pl">Privacy (EN)</span><span class="en">Privacy Policy</span></a>
         <a href="terms-pl.html"><span class="pl">Regulamin</span><span class="en">Terms (PL)</span></a>

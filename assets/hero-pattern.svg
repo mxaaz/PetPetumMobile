@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="440" viewBox="0 0 440 440">
+  <!-- Wzór tła hero: łapki, listki i okręgi w kolorach marki.
+       Kafel 440x440 powtarzany przez CSS. Elementy rozmieszczone nierównomiernie
+       i w różnych skalach, żeby powtórzenie kafla nie układało się w widoczną siatkę.
+       Kolory na sztywno, bo tło hero jest zawsze ciemnozielone. -->
+  <defs>
+    <g id="paw">
+      <circle cx="-15" cy="-6" r="5.4"/>
+      <circle cx="-4.5" cy="-14" r="5.4"/>
+      <circle cx="7" cy="-12.5" r="5.4"/>
+      <circle cx="17" cy="-3" r="5.4"/>
+      <ellipse cx="1" cy="11" rx="14.5" ry="11.5"/>
+    </g>
+    <path id="leaf" d="M0 0c19 2 32 15 34 34C15 32 2 19 0 0z"/>
+  </defs>
+
+  <g fill="#ffffff" fill-opacity="0.055">
+    <use href="#paw" transform="translate(58 92) rotate(-16) scale(1.15)"/>
+    <use href="#paw" transform="translate(318 46) rotate(22) scale(0.7)"/>
+    <use href="#paw" transform="translate(196 246) rotate(-7) scale(0.92)"/>
+    <use href="#paw" transform="translate(392 330) rotate(34) scale(0.55)"/>
+    <use href="#leaf" transform="translate(268 132) rotate(31) scale(1.05)"/>
+    <use href="#leaf" transform="translate(96 348) rotate(-58) scale(0.72)"/>
+    <use href="#leaf" transform="translate(414 202) rotate(148) scale(0.5)"/>
+  </g>
+
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="2">
+    <circle cx="152" cy="168" r="38"/>
+    <circle cx="356" cy="256" r="21"/>
+    <circle cx="46" cy="286" r="13"/>
+    <circle cx="252" cy="404" r="30"/>
+  </g>
+</svg>
