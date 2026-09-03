@@ -1,21 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Strona jest jasna z założenia i nie ma trybu ciemnego. Dark Reader honoruje ten
-       znacznik i zostawia ją w spokoju: akwarelowe tło hero jest zbudowane na kontraście
-       rzędu kilku procent i po przyciemnieniu przez wtyczkę znika. -->
-  <meta name="darkreader-lock" />
-  <title>FAQ / Pomoc: ApkaŁapka</title>
-  <meta name="description" content="Najczęściej zadawane pytania o ApkaŁapka: konto i dane, subskrypcje Premium, synchronizacja w chmurze, powiadomienia, prywatność i RODO." />
-  <link rel="canonical" href="https://apkalapka.pl/faq.html" />
-  <link rel="icon" href="icon.png" />
-  <link rel="apple-touch-icon" href="icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script type="application/ld+json">
+---
+layout: default
+title: "FAQ / Pomoc: ApkaŁapka"
+description: "Najczęściej zadawane pytania o ApkaŁapka: konto i dane, subskrypcje Premium, synchronizacja w chmurze, powiadomienia, prywatność i RODO."
+permalink: /faq.html
+---
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -34,23 +23,13 @@
     ]
   }
   </script>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-           background: #F6F4EE; color: #2D3A31; line-height: 1.7; }
-    h1, h2 { font-family: 'Newsreader', Georgia, serif; }
-    header { background: #5B8266; color: #fff; padding: 36px 24px; }
-    header h1 { font-size: 1.8rem; }
-    header p { margin-top: 6px; opacity: 0.85; font-size: 0.95rem; }
-    article { max-width: 800px; margin: 0 auto; padding: 40px 24px 60px; }
+<style>
     .lang-switcher { display: flex; gap: 8px; margin-bottom: 32px; }
     .lang-btn { padding: 6px 16px; border-radius: 20px; border: 2px solid #5B8266;
                 cursor: pointer; font-size: 0.9rem; font-weight: 600; background: #fff; color: #5B8266; }
     .lang-btn.active { background: #5B8266; color: #fff; }
     .lang-section { display: none; }
     .lang-section.active { display: block; }
-    h2 { font-size: 1.2rem; color: #5B8266; margin: 32px 0 10px;
-         border-bottom: 1px solid #E0EAD9; padding-bottom: 6px; }
     details { border: 1px solid #E0EAD9; border-radius: 8px; margin-bottom: 10px;
               background: #fff; padding: 0; overflow: hidden; }
     summary { padding: 14px 18px; font-weight: 600; font-size: 0.95rem;
@@ -67,17 +46,16 @@
     .contact-box { background: #E0EAD9; border-radius: 8px; padding: 20px 24px; margin-top: 40px; }
     .contact-box h3 { color: #5B8266; font-size: 1rem; margin-bottom: 8px; }
     .contact-box a { color: #5B8266; font-weight: 600; }
-    footer { text-align: center; padding: 24px; color: #999; font-size: 0.82rem;
-             border-top: 1px solid #eee; margin-top: 24px; }
   </style>
-</head>
-<body>
-  <header>
-    <h1>FAQ &amp; Help / Pomoc</h1>
-    <p>ApkaŁapka: Frequently Asked Questions / Najczęściej zadawane pytania</p>
-  </header>
 
-  <article>
+<div class="blog-hero">
+  <span class="eyebrow">Pomoc</span>
+  <h1>FAQ &amp; Help / Pomoc</h1>
+  <p>ApkaŁapka: Frequently Asked Questions / Najczęściej zadawane pytania</p>
+</div>
+
+<div class="wrap">
+  <div class="article">
     <div class="lang-switcher">
       <button class="lang-btn active" onclick="switchLang('en', this)">English</button>
       <button class="lang-btn" onclick="switchLang('pl', this)">Polski</button>
@@ -121,10 +99,10 @@
       <details>
         <summary>How do the 7 days of free Premium work?</summary>
         <div class="answer">
-          <p>It is a free trial of full Premium that you start in the app as a subscription in Google Play or the App Store. For 7 days you pay nothing.</p>
+          <p>It is a free trial of full access to Premium that you start in the app as a subscription in Google Play or the App Store. You use it free for 7 days, and if you do nothing, the subscription simply turns into a paid one and you keep going without interruption.</p>
           <ol>
             <li>On day 8 the subscription renews automatically and the store charges for the plan you picked.</li>
-            <li>You can cancel anytime, in the store where you started the trial. Cancel before day 7 ends and you pay nothing.</li>
+            <li>If it's not for you, cancel anytime, in the store where you started the trial. Do it before day 7 ends and you pay nothing.</li>
             <li>After cancelling, Premium access lasts until the end of the paid period.</li>
             <li>The <strong>Settings → Premium</strong> screen in the app shows how many trial days are left.</li>
           </ol>
@@ -286,10 +264,10 @@
       <details>
         <summary>Jak działa 7 dni Premium za darmo?</summary>
         <div class="answer">
-          <p>To bezpłatny okres próbny pełnego Premium, który uruchamiasz w aplikacji jako subskrypcję w Google Play albo App Store. Przez 7 dni nie płacisz nic.</p>
+          <p>To bezpłatny okres próbny pełnego dostępu do Premium, który uruchamiasz w aplikacji jako subskrypcję w Google Play albo App Store. Przez 7 dni korzystasz za darmo, a jeśli nic nie zrobisz, subskrypcja po prostu przechodzi w płatną i korzystasz dalej bez przerwy.</p>
           <ol>
             <li>Ósmego dnia subskrypcja odnawia się automatycznie i sklep pobiera opłatę za wybrany plan.</li>
-            <li>Anulujesz w każdej chwili, w sklepie, w którym uruchomiłeś/aś okres próbny. Jeśli zrobisz to przed końcem 7 dnia, nie zapłacisz nic.</li>
+            <li>Jeśli to nie dla Ciebie, anulujesz w każdej chwili, w sklepie, w którym uruchomiłeś/aś okres próbny. Zrób to przed końcem 7 dnia, a nic nie zapłacisz.</li>
             <li>Po anulowaniu dostęp do Premium trwa do końca opłaconego okresu.</li>
             <li>Ile dni zostało do końca okresu próbnego, widzisz na ekranie <strong>Ustawienia → Premium</strong> w aplikacji.</li>
           </ol>
@@ -412,21 +390,14 @@
         Email: <a href="mailto:apkalapka.support@gmail.com">apkalapka.support@gmail.com</a></p>
       </div>
     </div>
-  </article>
+  </div>
+</div>
 
-  <footer>
-    &copy; <span id="year">2026</span> ApkaŁapka. All rights reserved.
-  </footer>
-
-  <script>
-    function switchLang(lang, btn) {
-      document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
-      document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
-      document.getElementById('lang-' + lang).classList.add('active');
-      btn.classList.add('active');
-    }
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "678e0ee451344f30a68a795309e4bb32"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
-</html>
+<script>
+  function switchLang(lang, btn) {
+    document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>

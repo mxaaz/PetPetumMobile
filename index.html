@@ -275,7 +275,7 @@
     .problem-card:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(0,0,0,.08); }
     .problem-card .emoji { font-size: 2.6rem; line-height: 1; margin-bottom: 14px; display: block; }
     .problem-card p { font-size: 1.02rem; color: var(--ink); font-weight: 600; }
-    .solution-line { text-align: center; font-size: 1.3rem; font-weight: 700; color: var(--green-dark); max-width: 760px; margin: 0 auto; letter-spacing: -.2px; }
+    .solution-line { text-align: center; text-wrap: balance; font-size: 1.3rem; font-weight: 700; color: var(--green-dark); max-width: 760px; margin: 0 auto; letter-spacing: -.2px; }
     .solution-line .hl { background: linear-gradient(180deg, transparent 62%, #EBDDB3 62%); padding: 0 3px; }
 
     /* ---------- niche (chronic conditions) ---------- */
@@ -286,9 +286,11 @@
     .niche p.lead { font-size: 1.08rem; opacity: .95; max-width: 720px; margin-bottom: 22px; }
     .niche .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
     .niche .tags span { background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.32); border-radius: 999px; padding: 8px 16px; font-size: .92rem; font-weight: 600; }
+    .niche .tags svg.tag-ic { width: 16px; height: 16px; stroke: #fff; vertical-align: -3px; margin-right: 2px; }
     .niche .niche-points { display: flex; flex-wrap: wrap; gap: 14px 28px; margin-bottom: 24px; }
     .niche .niche-points span { display: inline-flex; align-items: center; gap: 9px; font-size: .98rem; font-weight: 500; }
     .niche .niche-points .e { font-size: 1.3rem; }
+    .niche .niche-points .e svg { width: 20px; height: 20px; stroke: #fff; vertical-align: -5px; }
     .niche .niche-note { font-size: .86rem; opacity: .8; max-width: 720px; position: relative; }
 
     /* ---------- why us ---------- */
@@ -392,6 +394,9 @@
       <g id="i-shield" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 5-3 7-7 9-4-2-7-4-7-9V6l7-3z"/></g>
       <g id="i-lock" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></g>
       <g id="i-globe" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c2.5 2.5 2.5 13 0 16M12 4c-2.5 2.5-2.5 13 0 16"/></g>
+      <g id="i-kidney" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4C8 4 5 7 5 11c0 3 1.5 5 4 6.5-1-1.5-1.5-3-1.5-4.5C7.5 15 9 14 12 14c3 0 5-2 5-5s-2-5-5-5z"/></g>
+      <g id="i-heart" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></g>
+      <g id="i-lungs" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v7"/><path d="M12 10c-1.3 0-1.8-1-3.2-1C6.5 9 5 11 5 14.5 5 18 6.5 20 8.5 20c1 0 1.5-.5 2-1.5.5-1 .5-2 .5-3.5V10z"/><path d="M12 10c1.3 0 1.8-1 3.2-1 2.3 0 3.8 2 3.8 5.5 0 3.5-1.5 5.5-3.5 5.5-1 0-1.5-.5-2-1.5-.5-1-.5-2-.5-3.5V10z"/></g>
       <g id="i-phone2" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></g>
       <g id="i-check" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></g>
       <g id="i-alert" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17h.01"/></g>
@@ -615,7 +620,7 @@
     <!-- MORE STRIP -->
     <section style="padding-top:0;">
       <div class="section-head reveal">
-        <h2><span class="pl">I jeszcze więcej</span><span class="en">And more</span></h2>
+        <h2><span class="pl">I wiele więcej</span><span class="en">And more</span></h2>
       </div>
       <div class="more-strip reveal">
         <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-syringe"/></svg><span class="pl">Podpowiedzi szczepień (WSAVA)</span><span class="en">Vaccine suggestions (WSAVA)</span></span>
@@ -632,16 +637,16 @@
         <span class="eyebrow"><span class="pl">Twój spokój głowy</span><span class="en">Your peace of mind</span></span>
         <h2><span class="pl">Choroba przewlekła? Wyłap wczesny sygnał, zanim urośnie.</span><span class="en">A chronic condition? Catch the early sign before it grows.</span></h2>
         <p class="lead">
-          <span class="pl">Dla opiekunów kotów i psów z CKD, cukrzycą, tarczycą, FLUTD czy chorobą serca. ApkaŁapka pilnuje tego, co ważne, między wizytami u weterynarza.</span>
-          <span class="en">For owners of cats and dogs with CKD, diabetes, thyroid issues, FLUTD or heart conditions. ApkaŁapka watches what matters between vet visits.</span>
+          <span class="pl">Dla opiekunów kotów i psów z CKD, cukrzycą, tarczycą, FLUTD czy chorobą serca. ApkaŁapka pomaga pilnować tego, co ważne, między wizytami u weterynarza.</span>
+          <span class="en">For owners of cats and dogs with CKD, diabetes, thyroid issues, FLUTD or heart conditions. ApkaŁapka helps you keep track of what matters between vet visits.</span>
         </p>
         <div class="tags">
-          <span>🫘 CKD</span><span>🩸 <span class="pl">Cukrzyca</span><span class="en">Diabetes</span></span><span>🦋 <span class="pl">Tarczyca</span><span class="en">Thyroid</span></span><span>🚽 FLUTD</span><span>🫀 <span class="pl">Serce</span><span class="en">Cardiac</span></span>
+          <span><svg class="tag-ic" viewBox="0 0 24 24"><use href="#i-kidney"/></svg> CKD</span><span>🩸 <span class="pl">Cukrzyca</span><span class="en">Diabetes</span></span><span>🦋 <span class="pl">Tarczyca</span><span class="en">Thyroid</span></span><span>🚽 FLUTD</span><span><svg class="tag-ic" viewBox="0 0 24 24"><use href="#i-heart"/></svg> <span class="pl">Serce</span><span class="en">Cardiac</span></span>
         </div>
         <div class="niche-points">
           <span><span class="e">📈</span><span class="pl">Trendy badań krwi z normami</span><span class="en">Blood test trends with reference ranges</span></span>
           <span><span class="e">💧</span><span class="pl">Dziennik kuwety i nawodnienia</span><span class="en">Litter box and hydration log</span></span>
-          <span><span class="e">🫁</span><span class="pl">Pomiar tempa oddechu (Cardio Check)</span><span class="en">Respiratory rate check (Cardio Check)</span></span>
+          <span><span class="e"><svg viewBox="0 0 24 24"><use href="#i-lungs"/></svg></span><span class="pl">Pomiar tempa oddechu (Cardio Check)</span><span class="en">Respiratory rate check (Cardio Check)</span></span>
         </div>
         <p class="niche-note">
           <span class="pl">ApkaŁapka porządkuje dane i pokazuje trendy, nie stawia diagnozy. W sprawach zdrowia zawsze skonsultuj się z weterynarzem.</span>
@@ -691,7 +696,7 @@
     <section id="pricing">
       <div class="section-head reveal">
         <h2><span class="pl">Zacznij za darmo, rozszerz gdy zechcesz</span><span class="en">Start free, upgrade when you want</span></h2>
-        <p><span class="pl">7 dni pełnego Premium za darmo. Anulujesz w każdej chwili, a jeśli zrobisz to przed końcem 7 dnia, nie zapłacisz nic.</span><span class="en">7 days of full Premium free. Cancel anytime, and if you do it before day 7 ends, you pay nothing.</span></p>
+        <p><span class="pl">7 dni pełnego dostępu do Premium za darmo. Nie musisz nic robić, żeby korzystać dalej, a jeśli to nie dla Ciebie, anulujesz przed końcem 7 dnia i nic nie płacisz.</span><span class="en">7 days of full access to Premium, free. You don't have to do anything to keep using it, and if it's not for you, cancel before day 7 ends and pay nothing.</span></p>
       </div>
       <div class="pricing-grid">
         <div class="price-card reveal">
@@ -738,7 +743,7 @@
         </details>
         <details class="faq-item">
           <summary><span class="pl">Czym jest 7 dni Premium za darmo?</span><span class="en">What is the 7-day free Premium?</span></summary>
-          <div class="faq-body"><span class="pl">To bezpłatny okres próbny pełnego Premium, uruchamiany jako subskrypcja w Google Play albo App Store. Po 7 dniach subskrypcja odnawia się automatycznie i sklep pobiera opłatę. Jeśli anulujesz przed końcem 7 dnia, nie zapłacisz nic, a dostęp trwa do końca okresu próbnego.</span><span class="en">It's a free trial of full Premium, started as a subscription in Google Play or the App Store. After 7 days the subscription renews automatically and the store charges you. Cancel before day 7 ends and you pay nothing, with access lasting until the trial is over.</span></div>
+          <div class="faq-body"><span class="pl">To bezpłatny okres próbny pełnego dostępu do Premium, uruchamiany jako subskrypcja w Google Play albo App Store. Nie musisz nic robić, żeby korzystać dalej: po 7 dniach subskrypcja po prostu odnawia się automatycznie i sklep pobiera opłatę. Jeśli to nie dla Ciebie, anulujesz przed końcem 7 dnia i nic nie płacisz, a dostęp trwa do końca okresu próbnego.</span><span class="en">It's a free trial of full access to Premium, started as a subscription in Google Play or the App Store. You don't have to do anything to keep using it: after 7 days the subscription simply renews automatically and the store charges you. If it's not for you, cancel before day 7 ends and pay nothing, with access lasting until the trial is over.</span></div>
         </details>
         <details class="faq-item">
           <summary><span class="pl">Czy moje dane są bezpieczne?</span><span class="en">Is my data safe?</span></summary>

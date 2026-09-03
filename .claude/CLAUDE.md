@@ -46,7 +46,7 @@ z firmy.
 **ApkaŁapka**, adresatem **Ty**.
 
 - ✅ „ApkaŁapka porządkuje terminy, przypomina w porę i pokazuje trendy w zdrowiu pupila."
-- ✅ „ApkaŁapka pilnuje tego, co ważne, między wizytami u weterynarza."
+- ✅ „ApkaŁapka pomaga pilnować tego, co ważne, między wizytami u weterynarza."
 - ✅ „ApkaŁapka nie sprzedaje Twoich danych."
 - ❌ „Pomożemy", „zadbamy", „pilnujemy za Ciebie", „z nami", „nasza aplikacja".
 
@@ -157,8 +157,9 @@ krawędź przez całą szerokość okna. Przy 200 px rozkłada się niepostrzeż
 czemu wygaszona górna krawędź nigdy nie zostaje ucięta. Poniżej 880 px stała wysokość 150 px, bo
 przy proporcji pas schodziłby do kilkudziesięciu pikseli.
 
-Blog i changelog jadą na `assets/css/blog.css` i tego wzoru **nie mają**. Jak będziesz to
-ujednolicał, przenieś tam ten sam blok `background` z `index.html`.
+Blog, changelog i FAQ jadą na `assets/css/blog.css`, który ma ten sam blok `background`
+przeniesiony z `index.html` (od commitu „łapki w tle na blogu i changelogu"), więc wzór łapek
+jest tam już spójny ze stroną główną - nic nie trzeba migrować.
 
 ## Konwencje
 
