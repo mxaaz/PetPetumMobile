@@ -5,6 +5,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Strona jest jasna z założenia i nie ma trybu ciemnego. Dark Reader honoruje ten
+       znacznik i zostawia ją w spokoju: akwarelowe tło hero jest zbudowane na kontraście
+       rzędu kilku procent i po przyciemnieniu przez wtyczkę znika. -->
+  <meta name="darkreader-lock" />
   <title>ApkaŁapka: niezależna książeczka zdrowia psa i kota (Android i iOS)</title>
   <meta name="description" content="ApkaŁapka to aplikacja dla psa i kota: przypomnienia o szczepieniach, dziennik opieki, planer posiłków, wyniki badań weterynaryjnych z trendami i panele chorób przewlekłych (CKD, cukrzyca). Android i iOS, po polsku." />
   <meta name="keywords" content="aplikacja dla psa, aplikacja dla kota, dziennik pupila, przypomnienia o szczepieniach, kalendarz szczepień, aplikacja dla kota z chorobą nerek, dziennik kuwety, śledzenie wagi pupila" />
@@ -77,7 +81,14 @@
     html { scroll-behavior: smooth; }
     body {
       font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg); color: var(--ink); line-height: 1.55; -webkit-font-smoothing: antialiased;
+      /* Krem plus wzór (łapki, listki, okręgi) w dwóch niewspółmiernych skalach, żeby
+         powtórzenie kafla nie układało się w widoczną siatkę. Hero, pasek zaufania i stopka
+         mają własne nieprzezroczyste tła, więc wzór widać tylko między sekcjami. */
+      background:
+        url('assets/page-pattern.svg') 0 0 / 320px 320px repeat,
+        url('assets/page-pattern.svg') 130px 185px / 215px 215px repeat,
+        var(--bg);
+      color: var(--ink); line-height: 1.55; -webkit-font-smoothing: antialiased;
     }
     h1, h2 { font-family: var(--serif); font-weight: 600; }
     body[data-lang="pl"] .en, body[data-lang="en"] .pl { display: none !important; }
@@ -230,6 +241,11 @@
     .cta-final h2 { font-size: 1.9rem; margin-bottom: 10px; letter-spacing: -.3px; }
     .cta-final p { opacity: .9; margin-bottom: 28px; }
 
+    /* Akwarelowy pas domykający stronę, ta sama grafika co w hero, odbita w poziomie,
+       więc kot i pies siedzą po prawej. `aspect-ratio` trzyma wysokość równą renderowanej
+       wysokości grafiki, dzięki czemu wygaszona górna krawędź nigdy nie zostaje ucięta. */
+    .page-foot-art { aspect-ratio: 2365 / 448; background: url('assets/page-foot.webp') center bottom / 100% auto no-repeat; }
+
     /* ---------- footer ---------- */
     footer { background: #1F2A23; color: #C7D0C7; padding: 46px 24px 34px; }
     .footer-inner { max-width: 1080px; margin: 0 auto; }
@@ -337,6 +353,7 @@
       .why-grid { grid-template-columns: 1fr; }
       .pricing-grid { grid-template-columns: 1fr; }
       .niche { padding: 36px 24px; }
+      .page-foot-art { aspect-ratio: auto; height: 150px; background-size: auto 150px; background-position: left bottom; }
     }
     @media (max-width: 520px) {
       .nav .nav-cta { display: none; }
@@ -812,6 +829,8 @@
   </main>
 
   <!-- FOOTER -->
+  <div class="page-foot-art" aria-hidden="true"></div>
+
   <footer>
     <div class="footer-inner">
       <div class="footer-top"><img src="icon.png" alt="" />ApkaŁapka</div>

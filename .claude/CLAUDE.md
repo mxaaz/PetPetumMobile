@@ -117,6 +117,24 @@ kotwicą `left bottom`, żeby w wąskim kadrze zostali kot i pies. W obu wariant
 Zmieniasz to? **Sprawdzaj zrzutem przy 1920, 1440, 768, 560 i 390 px.** Zwierzaki mają być widoczne
 i nieprzykryte na każdej z nich, a przejście pasa w papier niewidoczne.
 
+## Tło reszty strony
+
+Poniżej hero `body` ma krem `--bg` plus wzór `assets/page-pattern.svg` (te same łapki, listki
+i okręgi co w hero, ale zielonym tuszem) w dwóch niewspółmiernych skalach, 320 i 215 px.
+**Krycie 0,020 dla wypełnień i 0,016 dla obrysów.** To celowo mniej niż 0,05-0,06 z wariantu na
+ciemnym tle: ciemny tusz na jasnym kremie czyta się dużo mocniej i przy 0,032 wychodziła tapeta
+z widocznym powtórzeniem kafla. Wzór widać tylko między sekcjami, bo hero, pasek zaufania, karty
+i stopka mają własne nieprzezroczyste tła.
+
+Stronę domyka `.page-foot-art` tuż nad stopką: `assets/page-foot.webp`, czyli ta sama akwarela co
+w hero odbita w poziomie (`-flop`), więc kot i pies siedzą po prawej. `aspect-ratio: 2365/448`
+trzyma wysokość elementu równą renderowanej wysokości grafiki, dzięki czemu wygaszona górna
+krawędź nigdy nie zostaje ucięta. Poniżej 880 px stała wysokość 150 px, bo przy proporcji pas
+schodziłby do kilkudziesięciu pikseli.
+
+Blog i changelog jadą na `assets/css/blog.css` i tego wzoru **nie mają**. Jak będziesz to
+ujednolicał, przenieś tam ten sam blok `background` z `index.html`.
+
 ## Konwencje
 
 - Commity po polsku, `<type>: <opis>`, **bez trailerów**. Dla wpisów: `content: <opis>`.
