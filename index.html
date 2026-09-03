@@ -246,7 +246,7 @@
     /* Akwarelowy pas domykający stronę, ta sama grafika co w hero, odbita w poziomie,
        więc kot i pies siedzą po prawej. `aspect-ratio` trzyma wysokość równą renderowanej
        wysokości grafiki, dzięki czemu wygaszona górna krawędź nigdy nie zostaje ucięta. */
-    .page-foot-art { aspect-ratio: 2365 / 448; background: url('assets/page-foot.webp') center bottom / 100% auto no-repeat; }
+    .page-foot-art { aspect-ratio: 2365 / 310; background: url('assets/page-foot.webp') center bottom / 100% auto no-repeat; }
 
     /* ---------- footer ---------- */
     footer { background: #1F2A23; color: #C7D0C7; padding: 46px 24px 34px; }
@@ -303,11 +303,6 @@
     .price-card li { display: flex; gap: 10px; align-items: flex-start; font-size: .95rem; color: var(--ink); }
     .price-card li svg { width: 19px; height: 19px; stroke: var(--green); flex-shrink: 0; margin-top: 2px; }
     .price-foot { text-align: center; font-size: .9rem; color: var(--muted); margin-top: 20px; }
-    .trial-how { background: #fff; border: 1px solid #E6E1D6; border-radius: 20px; padding: 28px 30px; margin-top: 22px; }
-    .trial-how h3 { font-family: var(--serif); font-size: 1.2rem; color: var(--green-dark); margin-bottom: 16px; }
-    .trial-how ol { padding-left: 20px; display: flex; flex-direction: column; gap: 10px; }
-    .trial-how li { font-size: .95rem; color: var(--ink); padding-left: 4px; }
-    .trial-how li::marker { color: var(--green); font-weight: 700; }
 
     /* ---------- faq ---------- */
     .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
@@ -718,19 +713,6 @@
           </ul>
         </div>
       </div>
-      <div class="trial-how reveal">
-        <h3><span class="pl">Jak działa 7 dni Premium za darmo</span><span class="en">How the 7 days of free Premium work</span></h3>
-        <ol>
-          <li><span class="pl">Premium włączasz w aplikacji, przez Google Play albo App Store.</span><span class="en">You start Premium in the app, through Google Play or the App Store.</span></li>
-          <li><span class="pl">Przez 7 dni masz pełne Premium i nic nie płacisz.</span><span class="en">For 7 days you get full Premium and pay nothing.</span></li>
-          <li><span class="pl">Ósmego dnia subskrypcja odnawia się automatycznie, a sklep pobiera opłatę za wybrany plan.</span><span class="en">On day 8 the subscription renews automatically and the store charges for the plan you picked.</span></li>
-          <li><span class="pl">Anulujesz w każdej chwili: w Google Play w sekcji Subskrypcje, w App Store w Apple ID &rarr; Subskrypcje. Jeśli anulujesz przed końcem 7 dnia, nie zapłacisz nic.</span><span class="en">Cancel anytime: in Google Play under Subscriptions, in the App Store under Apple ID &rarr; Subscriptions. Cancel before day 7 ends and you pay nothing.</span></li>
-          <li><span class="pl">Po anulowaniu dostęp do Premium trwa do końca opłaconego okresu, potem aplikacja wraca do planu Free.</span><span class="en">After cancelling, Premium access lasts until the end of the paid period, then the app returns to the Free plan.</span></li>
-          <li><span class="pl">Twoje dane zostają. Plan Free niczego nie kasuje, wygasa tylko dostęp do funkcji Premium.</span><span class="en">Your data stays. The Free plan deletes nothing, only access to Premium features expires.</span></li>
-          <li><span class="pl">Ile dni zostało do końca okresu próbnego, widzisz na ekranie Premium w aplikacji.</span><span class="en">The Premium screen in the app shows how many trial days are left.</span></li>
-          <li><span class="pl">Ceny i dostępne plany znajdziesz w Google Play i App Store, tam są zawsze aktualne.</span><span class="en">Prices and available plans are in Google Play and the App Store, always up to date there.</span></li>
-        </ol>
-      </div>
       <p class="price-foot">
         <span class="pl">Plan miesięczny, roczny lub dożywotni. Aktualne ceny znajdziesz w Google Play i App Store.</span>
         <span class="en">Monthly, yearly or lifetime plan. You'll find current prices in Google Play and the App Store.</span>
@@ -812,7 +794,7 @@
     {% endif %}
 
     <!-- FINAL CTA -->
-    <section id="download" style="padding-top:0;">
+    <section id="download" style="padding-top:0;padding-bottom:18px;">
       <div class="cta-final reveal">
         <h2><span class="pl">Zacznij prowadzić książeczkę zdrowia pupila</span><span class="en">Start your pet's health record book</span></h2>
         <p><span class="pl">ApkaŁapka jest za darmo na Androida i iOS.</span><span class="en">ApkaŁapka is free on Android and iOS.</span></p>

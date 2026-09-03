@@ -138,10 +138,14 @@ Wzór widać tylko między sekcjami, bo hero, pasek zaufania, karty i stopka maj
 nieprzezroczyste tła.
 
 Stronę domyka `.page-foot-art` tuż nad stopką: `assets/page-foot.webp`, czyli ta sama akwarela co
-w hero odbita w poziomie (`-flop`), więc kot i pies siedzą po prawej. `aspect-ratio: 2365/448`
-trzyma wysokość elementu równą renderowanej wysokości grafiki, dzięki czemu wygaszona górna
-krawędź nigdy nie zostaje ucięta. Poniżej 880 px stała wysokość 150 px, bo przy proporcji pas
-schodziłby do kilkudziesięciu pikseli.
+w hero, ale **z dolnych 310 px źródła** i odbita w poziomie (`-flop`), więc kot i pies siedzą po
+prawej. Wycinek jest węższy niż w hero, bo pełne 448 px zostawiało nad pasem szeroki jałowy pas
+papieru i user zgłosił to jako dziurę w układzie (2026-09-03). Z tego samego powodu sekcja
+`#download` ma `padding-bottom: 18px` zamiast domyślnych 78 px.
+
+`aspect-ratio: 2365/310` trzyma wysokość elementu równą renderowanej wysokości grafiki, dzięki
+czemu wygaszona górna krawędź nigdy nie zostaje ucięta. Poniżej 880 px stała wysokość 150 px, bo
+przy proporcji pas schodziłby do kilkudziesięciu pikseli.
 
 Blog i changelog jadą na `assets/css/blog.css` i tego wzoru **nie mają**. Jak będziesz to
 ujednolicał, przenieś tam ten sam blok `background` z `index.html`.
