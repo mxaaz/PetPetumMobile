@@ -122,6 +122,12 @@ i nieprzykryte na każdej z nich, a przejście pasa w papier niewidoczne.
 Poniżej hero `body` ma krem `--bg` plus `assets/page-paws.webp`: kafel 520 px z 20 akwarelowymi
 łapkami **wyciętymi z `hero2.jpeg`**, czyli z tej samej grafiki co hero.
 
+**Łapki widać tylko przy lewej i prawej krawędzi okna.** Na wzór nałożona jest zasłona w kolorze
+kremu, `linear-gradient(to right, ...)` z pełnym kryciem między 23% a 77% szerokości. W środkowym
+pasie, gdzie stoi treść, wzór gaśnie do zera. Bez tej zasłony łapki szły pod tekst i całość robiła
+się nieczytelna (zgłoszenie usera 2026-09-03). Stopy w procentach, nie w pikselach, więc na wąskim
+oknie zasłona zakrywa prawie wszystko, i dobrze: tam na wzór nie ma miejsca.
+
 **Nie rysuj tu łapki wektorowo.** Próbowaliśmy (SVG z czterech kółek i owalu, krycie 0,02, potem
 0,30) i za każdym razem gryzło się z hero: akwarela ma wydłużone paluchy, nieregularną poduszkę
 i rozmyte krawędzie, geometryczny odpowiednik wygląda przy niej jak z innej strony. Za mocne
@@ -138,12 +144,16 @@ Wzór widać tylko między sekcjami, bo hero, pasek zaufania, karty i stopka maj
 nieprzezroczyste tła.
 
 Stronę domyka `.page-foot-art` tuż nad stopką: `assets/page-foot.webp`, czyli ta sama akwarela co
-w hero, ale **z dolnych 310 px źródła** i odbita w poziomie (`-flop`), więc kot i pies siedzą po
+w hero, ale **z dolnych 340 px źródła** i odbita w poziomie (`-flop`), więc kot i pies siedzą po
 prawej. Wycinek jest węższy niż w hero, bo pełne 448 px zostawiało nad pasem szeroki jałowy pas
 papieru i user zgłosił to jako dziurę w układzie (2026-09-03). Z tego samego powodu sekcja
 `#download` ma `padding-bottom: 18px` zamiast domyślnych 78 px.
 
-`aspect-ratio: 2365/310` trzyma wysokość elementu równą renderowanej wysokości grafiki, dzięki
+**Wygaszenie górnej krawędzi rozciągnij na 200 px z 340.** Papier w grafice jest zieleńszy od kremu
+strony, więc przy krótkim wygaszeniu (próbowaliśmy 100 px) różnica tonu układa się w poziomą
+krawędź przez całą szerokość okna. Przy 200 px rozkłada się niepostrzeżenie.
+
+`aspect-ratio: 2365/340` trzyma wysokość elementu równą renderowanej wysokości grafiki, dzięki
 czemu wygaszona górna krawędź nigdy nie zostaje ucięta. Poniżej 880 px stała wysokość 150 px, bo
 przy proporcji pas schodziłby do kilkudziesięciu pikseli.
 

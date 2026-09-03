@@ -86,8 +86,15 @@
          krawędzi, więc kafel klei się bez szwu. Wektorowa łapka tu nie pasowała: hero
          jest akwarelowy, a geometryczne kółka i owal gryzły się z nim. Hero, pasek
          zaufania i stopka mają własne nieprzezroczyste tła, więc wzór widać tylko
-         między sekcjami. */
+         między sekcjami.
+         Zasłona w kolorze kremu na wierzchu zostawia łapki tylko przy lewej i prawej
+         krawędzi okna, a w środkowym pasie, gdzie stoi treść, gasi je do zera. Bez tego
+         wzór szedł pod tekst i wszystko robiło się nieczytelne. */
       background:
+        linear-gradient(to right,
+          rgba(246,244,238,0) 0%, rgba(246,244,238,0) 7%,
+          rgba(246,244,238,1) 23%, rgba(246,244,238,1) 77%,
+          rgba(246,244,238,0) 93%, rgba(246,244,238,0) 100%),
         url('assets/page-paws.webp') 0 0 / 520px 520px repeat,
         var(--bg);
       color: var(--ink); line-height: 1.55; -webkit-font-smoothing: antialiased;
@@ -246,7 +253,7 @@
     /* Akwarelowy pas domykający stronę, ta sama grafika co w hero, odbita w poziomie,
        więc kot i pies siedzą po prawej. `aspect-ratio` trzyma wysokość równą renderowanej
        wysokości grafiki, dzięki czemu wygaszona górna krawędź nigdy nie zostaje ucięta. */
-    .page-foot-art { aspect-ratio: 2365 / 310; background: url('assets/page-foot.webp') center bottom / 100% auto no-repeat; }
+    .page-foot-art { aspect-ratio: 2365 / 340; background: url('assets/page-foot.webp') center bottom / 100% auto no-repeat; }
 
     /* ---------- footer ---------- */
     footer { background: #1F2A23; color: #C7D0C7; padding: 46px 24px 34px; }
