@@ -81,11 +81,14 @@
     html { scroll-behavior: smooth; }
     body {
       font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      /* Krem plus wzór (łapki, listki, okręgi) w dwóch niewspółmiernych skalach, żeby
-         powtórzenie kafla nie układało się w widoczną siatkę. Hero, pasek zaufania i stopka
-         mają własne nieprzezroczyste tła, więc wzór widać tylko między sekcjami. */
+      /* Krem plus łapki wycięte z tej samej akwareli co hero (`hero2.jpeg`): 20 sztuk
+         w kaflu 520 px, rozrzuconych losowo z minimalnym odstępem i marginesem od
+         krawędzi, więc kafel klei się bez szwu. Wektorowa łapka tu nie pasowała: hero
+         jest akwarelowy, a geometryczne kółka i owal gryzły się z nim. Hero, pasek
+         zaufania i stopka mają własne nieprzezroczyste tła, więc wzór widać tylko
+         między sekcjami. */
       background:
-        url('assets/page-pattern.svg') 0 0 / 260px 260px repeat,
+        url('assets/page-paws.webp') 0 0 / 520px 520px repeat,
         var(--bg);
       color: var(--ink); line-height: 1.55; -webkit-font-smoothing: antialiased;
     }

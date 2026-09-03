@@ -119,14 +119,20 @@ i nieprzykryte na każdej z nich, a przejście pasa w papier niewidoczne.
 
 ## Tło reszty strony
 
-Poniżej hero `body` ma krem `--bg` plus wzór `assets/page-pattern.svg`: łapki i drobne listki
-zielonym tuszem `--green`, jedna warstwa, kafel 260 px. **Krycie 0,30 dla łapek i 0,22 dla
-listków** (decyzja usera 2026-09-03). Wcześniejsze podejścia na 0,032 i 0,020 były praktycznie
-niewidoczne, user chciał wzoru, który widać. Okręgów nie ma, czytały się jak bąble.
+Poniżej hero `body` ma krem `--bg` plus `assets/page-paws.webp`: kafel 520 px z 20 akwarelowymi
+łapkami **wyciętymi z `hero2.jpeg`**, czyli z tej samej grafiki co hero.
 
-Ceną za to krycie jest to, że nagłówki sekcji i linia rozwiązania stoją wprost na łapkach.
-Jeśli kiedyś to zacznie przeszkadzać, są dwa wyjścia: zejść z kryciem do 0,20-0,22 albo dołożyć
-kremową poświatę pod te dwa bloki tekstu, zamiast ruszać wzór.
+**Nie rysuj tu łapki wektorowo.** Próbowaliśmy (SVG z czterech kółek i owalu, krycie 0,02, potem
+0,30) i za każdym razem gryzło się z hero: akwarela ma wydłużone paluchy, nieregularną poduszkę
+i rozmyte krawędzie, geometryczny odpowiednik wygląda przy niej jak z innej strony. Za mocne
+krycie to nie był problem samego krycia, tylko kształtu (obserwacja usera 2026-09-03).
+
+Jak odtworzyć kafel: wytnij łapkę z `hero2.jpeg`, zrób alfę z jasności (`-colorspace gray
+-negate -level 9%,24%`), **dociśnij resztkę alfy do zera** (`-channel A -level 14%,100%`) i dopiero
+wtedy obracaj. Bez tego ostatniego kroku papier zostaje na 11% krycia i po obrocie widać wokół
+każdej łapki prostokątną poświatę. Łapki rozrzucone losowo z minimalnym odstępem 92 px i
+marginesem od krawędzi kafla, więc kafel klei się bez szwu; siatka rzędów wychodzi widoczna,
+jeśli rozmieszczać je równomiernie.
 
 Wzór widać tylko między sekcjami, bo hero, pasek zaufania, karty i stopka mają własne
 nieprzezroczyste tła.
