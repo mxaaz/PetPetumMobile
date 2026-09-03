@@ -119,12 +119,17 @@ i nieprzykryte na każdej z nich, a przejście pasa w papier niewidoczne.
 
 ## Tło reszty strony
 
-Poniżej hero `body` ma krem `--bg` plus wzór `assets/page-pattern.svg` (te same łapki, listki
-i okręgi co w hero, ale zielonym tuszem) w dwóch niewspółmiernych skalach, 320 i 215 px.
-**Krycie 0,020 dla wypełnień i 0,016 dla obrysów.** To celowo mniej niż 0,05-0,06 z wariantu na
-ciemnym tle: ciemny tusz na jasnym kremie czyta się dużo mocniej i przy 0,032 wychodziła tapeta
-z widocznym powtórzeniem kafla. Wzór widać tylko między sekcjami, bo hero, pasek zaufania, karty
-i stopka mają własne nieprzezroczyste tła.
+Poniżej hero `body` ma krem `--bg` plus wzór `assets/page-pattern.svg`: łapki i drobne listki
+zielonym tuszem `--green`, jedna warstwa, kafel 260 px. **Krycie 0,30 dla łapek i 0,22 dla
+listków** (decyzja usera 2026-09-03). Wcześniejsze podejścia na 0,032 i 0,020 były praktycznie
+niewidoczne, user chciał wzoru, który widać. Okręgów nie ma, czytały się jak bąble.
+
+Ceną za to krycie jest to, że nagłówki sekcji i linia rozwiązania stoją wprost na łapkach.
+Jeśli kiedyś to zacznie przeszkadzać, są dwa wyjścia: zejść z kryciem do 0,20-0,22 albo dołożyć
+kremową poświatę pod te dwa bloki tekstu, zamiast ruszać wzór.
+
+Wzór widać tylko między sekcjami, bo hero, pasek zaufania, karty i stopka mają własne
+nieprzezroczyste tła.
 
 Stronę domyka `.page-foot-art` tuż nad stopką: `assets/page-foot.webp`, czyli ta sama akwarela co
 w hero odbita w poziomie (`-flop`), więc kot i pies siedzą po prawej. `aspect-ratio: 2365/448`

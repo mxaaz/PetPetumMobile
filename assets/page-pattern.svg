@@ -1,9 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="440" height="440" viewBox="0 0 440 440">
-  <!-- Wzór tła strony: łapki, listki i okręgi w kolorach marki.
-       Kafel 440x440 powtarzany przez CSS. Elementy rozmieszczone nierównomiernie
-       i w różnych skalach, żeby powtórzenie kafla nie układało się w widoczną siatkę.
-       Zielony tusz na jasnym kremie. Krycie niższe niż w wariancie na ciemnym tle:
-       ten sam procent na jasnym czyta się mocniej i robi z tego tapetę. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="260" viewBox="0 0 260 260">
+  <!-- Wzór tła strony: łapki i drobne listki zielonym tuszem na kremie.
+       Kafel 260x260 powtarzany przez CSS, jedna warstwa. Elementy w różnych skalach
+       i obrotach, rozmieszczone nierównomiernie, żeby powtórzenie nie układało się
+       w widoczną siatkę. Kolor i krycie na sztywno, bo tło strony jest zawsze kremowe. -->
   <defs>
     <g id="paw">
       <circle cx="-15" cy="-6" r="5.4"/>
@@ -15,20 +14,20 @@
     <path id="leaf" d="M0 0c19 2 32 15 34 34C15 32 2 19 0 0z"/>
   </defs>
 
-  <g fill="#2D4A3E" fill-opacity="0.020">
-    <use href="#paw" transform="translate(58 92) rotate(-16) scale(1.15)"/>
-    <use href="#paw" transform="translate(318 46) rotate(22) scale(0.7)"/>
-    <use href="#paw" transform="translate(196 246) rotate(-7) scale(0.92)"/>
-    <use href="#paw" transform="translate(392 330) rotate(34) scale(0.55)"/>
-    <use href="#leaf" transform="translate(268 132) rotate(31) scale(1.05)"/>
-    <use href="#leaf" transform="translate(96 348) rotate(-58) scale(0.72)"/>
-    <use href="#leaf" transform="translate(414 202) rotate(148) scale(0.5)"/>
+  <g fill="#5B8266" fill-opacity="0.30">
+    <use href="#paw" transform="translate(44 38) rotate(-14) scale(0.86)"/>
+    <use href="#paw" transform="translate(178 66) rotate(21) scale(0.62)"/>
+    <use href="#paw" transform="translate(104 132) rotate(-6) scale(1.02)"/>
+    <use href="#paw" transform="translate(226 158) rotate(38) scale(0.7)"/>
+    <use href="#paw" transform="translate(28 196) rotate(9) scale(0.74)"/>
+    <use href="#paw" transform="translate(150 232) rotate(-27) scale(0.9)"/>
+    <use href="#paw" transform="translate(246 12) rotate(-33) scale(0.5)"/>
   </g>
 
-  <g fill="none" stroke="#2D4A3E" stroke-opacity="0.016" stroke-width="2">
-    <circle cx="152" cy="168" r="38"/>
-    <circle cx="356" cy="256" r="21"/>
-    <circle cx="46" cy="286" r="13"/>
-    <circle cx="252" cy="404" r="30"/>
+  <g fill="#5B8266" fill-opacity="0.22">
+    <use href="#leaf" transform="translate(212 96) rotate(31) scale(0.62)"/>
+    <use href="#leaf" transform="translate(62 100) rotate(-58) scale(0.46)"/>
+    <use href="#leaf" transform="translate(120 178) rotate(148) scale(0.4)"/>
+    <use href="#leaf" transform="translate(4 138) rotate(74) scale(0.52)"/>
   </g>
 </svg>
