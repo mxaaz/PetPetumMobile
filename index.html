@@ -231,6 +231,12 @@
     }
     .phone .screens img.active { opacity: 1; }
 
+    /* Drugi blok pokazu: telefon po lewej, zeby dwa pokazy pod soba nie wygladaly
+       jak ten sam ekran powtorzony. Ponizej 880 px .phone-wrap znika, wiec
+       kolejnosc w DOM nie ma tam znaczenia. */
+    .showcase--flip { grid-template-columns: 360px 1fr; }
+    .showcase-note { margin-top: 16px; font-size: .86rem; color: var(--muted); opacity: .85; }
+
     /* ---------- secondary "more" strip ---------- */
     .more-strip { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 8px; }
     .more-chip {
@@ -402,6 +408,8 @@
       <g id="i-alert" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17h.01"/></g>
       <g id="i-wifi-off" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18M9 17a4 4 0 0 1 6 0M5.5 12.5a9 9 0 0 1 5-2.4M18.5 12.5a9 9 0 0 0-3-2"/></g>
       <g id="i-cal" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></g>
+      <g id="i-doc" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></g>
+      <g id="i-pulse" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h3.5l2.2-6 4.2 12 2.6-6H21"/></g>
       <g id="i-grid" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></g>
     </defs>
   </svg>
@@ -625,9 +633,81 @@
       <div class="more-strip reveal">
         <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-syringe"/></svg><span class="pl">Podpowiedzi szczepień (WSAVA)</span><span class="en">Vaccine suggestions (WSAVA)</span></span>
         <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-share"/></svg><span class="pl">Udostępnianie rodzinie i weterynarzowi</span><span class="en">Share with family &amp; your vet</span></span>
-        <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-flask"/></svg><span class="pl">Wyniki badań weterynaryjnych z trendami</span><span class="en">Veterinary lab results with trends</span></span>
+        <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-doc"/></svg><span class="pl">Karta opiekuna w PDF</span><span class="en">Pet sitter card as a PDF</span></span>
         <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-cross"/></svg><span class="pl">Wizyty i odrobaczanie</span><span class="en">Vet visits &amp; deworming</span></span>
         <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-lock"/></svg><span class="pl">Eksport i usuwanie danych (RODO)</span><span class="en">Data export &amp; deletion (GDPR)</span></span>
+      </div>
+    </section>
+
+    <!-- HEALTH SHOWCASE -->
+    <section id="health">
+      <div class="section-head reveal">
+        <h2><span class="pl">Konkrety na wizytę u weterynarza</span><span class="en">Hard facts for the vet visit</span></h2>
+        <p><span class="pl">ApkaŁapka zbiera wyniki badań, wagę i historię leczenia, a potem składa z nich raport PDF, który zabierasz na wizytę.</span><span class="en">ApkaŁapka collects lab results, weight and treatment history, then puts them into a PDF report you take to the visit.</span></p>
+      </div>
+
+      <div class="showcase showcase--flip">
+        <div class="phone-wrap">
+          <div class="phone">
+            <div class="screens">
+              <img data-screen="report" class="active pl" src="screens/pl-report.jpg" alt="ApkaŁapka: raport zdrowia PDF" />
+              <img data-screen="report" class="active en" src="screens/en-report.jpg" alt="ApkaŁapka: health report PDF" />
+              <img data-screen="bloodtests" class="pl" src="screens/pl-bloodtests.jpg" alt="ApkaŁapka: wyniki badań" />
+              <img data-screen="bloodtests" class="en" src="screens/en-bloodtests.jpg" alt="ApkaŁapka: lab results" />
+              <img data-screen="health" class="pl" src="screens/pl-health.jpg" alt="ApkaŁapka: analiza zdrowia" />
+              <img data-screen="health" class="en" src="screens/en-health.jpg" alt="ApkaŁapka: health analysis" />
+              <img data-screen="cardio" class="pl" src="screens/pl-cardio.jpg" alt="ApkaŁapka: Cardio Check" />
+              <img data-screen="cardio" class="en" src="screens/en-cardio.jpg" alt="ApkaŁapka: Cardio Check" />
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-list">
+          <div class="feature-item active reveal" data-screen="report">
+            <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-doc"/></svg></span>
+            <div>
+              <h3><span class="pl">Raport zdrowia w PDF</span><span class="en">Health report as a PDF</span></h3>
+              <p><span class="pl">Waga, wizyty, szczepienia, odrobaczanie, wyniki badań, leki i koszty w jednym pliku. Zaznaczasz, co ma się w nim znaleźć, a plik powstaje na Twoim telefonie.</span><span class="en">Weight, visits, vaccinations, deworming, lab results, meds and expenses in one file. You tick what goes in, and the file is created on your phone.</span></p>
+              <img class="inline-shot pl" src="screens/pl-report.jpg" alt="" loading="lazy" />
+              <img class="inline-shot en" src="screens/en-report.jpg" alt="" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="feature-item reveal" data-screen="bloodtests">
+            <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-flask"/></svg></span>
+            <div>
+              <h3><span class="pl">Wyniki badań z trendem</span><span class="en">Lab results with trends</span></h3>
+              <p><span class="pl">Parametry z zakresami referencyjnymi z Twojego wyniku i oznaczeniem tego, co wypada poza normą. Dotknij parametru, żeby zobaczyć, jak zmieniał się w czasie.</span><span class="en">Parameters with the reference ranges from your own result and a mark on whatever falls outside them. Tap a parameter to see how it changed over time.</span></p>
+              <img class="inline-shot pl" src="screens/pl-bloodtests.jpg" alt="" loading="lazy" />
+              <img class="inline-shot en" src="screens/en-bloodtests.jpg" alt="" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="feature-item reveal" data-screen="health">
+            <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-pulse"/></svg></span>
+            <div>
+              <h3><span class="pl">Analiza zdrowia</span><span class="en">Health analysis</span></h3>
+              <p><span class="pl">Przegląd z alertami, oś czasu zdarzeń i wykresy wagi, oddechu oraz parametrów krwi. Widać, co działo się między wizytami.</span><span class="en">An overview with alerts, a timeline of events and charts of weight, breathing and blood parameters. You can see what happened between visits.</span></p>
+              <img class="inline-shot pl" src="screens/pl-health.jpg" alt="" loading="lazy" />
+              <img class="inline-shot en" src="screens/en-health.jpg" alt="" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="feature-item reveal" data-screen="cardio">
+            <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-lungs"/></svg></span>
+            <div>
+              <h3>Cardio Check</h3>
+              <p><span class="pl">Tempo oddechu w spoczynku, mierzone tapnięciami przez 30 sekund. Wynik ląduje w historii pupila i na wykresie trendu.</span><span class="en">Resting breathing rate, measured by tapping for 30 seconds. The result lands in your pet's history and on the trend chart.</span></p>
+              <img class="inline-shot pl" src="screens/pl-cardio.jpg" alt="" loading="lazy" />
+              <img class="inline-shot en" src="screens/en-cardio.jpg" alt="" loading="lazy" />
+            </div>
+          </div>
+
+          <p class="showcase-note reveal">
+            <span class="pl">To zapis Twoich obserwacji i wyników od weterynarza, ułożony w czasie. Ocena i decyzja należą do weterynarza.</span>
+            <span class="en">These are your own notes and results from your vet, arranged over time. The assessment and the decision belong to your veterinarian.</span>
+          </p>
+        </div>
       </div>
     </section>
 
@@ -882,17 +962,24 @@
       function onScroll() { nav.classList.toggle('scrolled', window.scrollY > 40); }
       onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
 
-      /* feature -> phone screen swap */
+      /* feature -> phone screen swap, osobno dla kazdego bloku .showcase:
+         nazwy ekranow sa unikalne globalnie, ale zapytania musza siedziec w swoim
+         bloku, zeby pokaz zdrowotny nie gasil ekranu w pokazie glownym. */
       var items = document.querySelectorAll('.feature-item');
-      var screens = document.querySelectorAll('#screens img');
-      function activate(name) {
-        items.forEach(function (it) { it.classList.toggle('active', it.getAttribute('data-screen') === name); });
-        screens.forEach(function (im) { im.classList.toggle('active', im.getAttribute('data-screen') === name); });
-      }
-      items.forEach(function (it) {
-        var name = it.getAttribute('data-screen');
-        it.addEventListener('mouseenter', function () { activate(name); });
-        it.addEventListener('click', function () { activate(name); });
+      var activators = new WeakMap();
+      document.querySelectorAll('.showcase').forEach(function (box) {
+        var boxItems = box.querySelectorAll('.feature-item');
+        var boxScreens = box.querySelectorAll('.screens img');
+        function activate(name) {
+          boxItems.forEach(function (it) { it.classList.toggle('active', it.getAttribute('data-screen') === name); });
+          boxScreens.forEach(function (im) { im.classList.toggle('active', im.getAttribute('data-screen') === name); });
+        }
+        boxItems.forEach(function (it) {
+          var name = it.getAttribute('data-screen');
+          activators.set(it, activate);
+          it.addEventListener('mouseenter', function () { activate(name); });
+          it.addEventListener('click', function () { activate(name); });
+        });
       });
 
       /* scroll-driven active feature (desktop) + reveal animation */
@@ -905,7 +992,11 @@
         var desktop = window.matchMedia('(min-width: 881px)');
         var actObs = new IntersectionObserver(function (entries) {
           if (!desktop.matches) return;
-          entries.forEach(function (e) { if (e.isIntersecting) activate(e.target.getAttribute('data-screen')); });
+          entries.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            var fn = activators.get(e.target);
+            if (fn) fn(e.target.getAttribute('data-screen'));
+          });
         }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
         items.forEach(function (it) { actObs.observe(it); });
       } else {
