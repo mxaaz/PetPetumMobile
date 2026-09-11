@@ -28,14 +28,19 @@ z repo aplikacji. **Sam z siebie nie wymyślaj tematów: sprawdź najpierw, co j
 ```yaml
 title: "…"                 # w cudzysłowie, bez em dash
 date: 2026-10-02 09:00:00 +0200
-categories: [porady]       # porady | zdrowie | changelog
-category_label: "Porady"   # etykieta wyświetlana
+categories: [porady]       # porady | zdrowie | changelog | spolecznosc
+category_label: "Porady"   # etykieta wyświetlana ("Poznajcie pupili" dla spolecznosc)
 cover_style: grad-a        # grad-a…grad-d, przeplataj między sąsiednimi postami
 emoji: "🐾"
 read_time: 5
 excerpt_text: "…"          # 1-2 zdania na kartę wpisu, ma zachęcać, nie streszczać
 description: "…"           # meta SEO, konkretne frazy, jedno zdanie
 ```
+
+**Kategoria `spolecznosc` („Poznajcie pupili")** to wpisy o pupilach, których opiekunowie korzystają
+z ApkaŁapki. Ma własną zakładkę `/poznajcie-pupili/` w nawigacji i stopce. Pisze się je własnymi
+słowami na podstawie faktów od opiekuna, bez kopiowania ich opisów z Instagrama, i **bez słowa
+„współpraca"**: pupil korzysta z ApkaŁapki (decyzja usera 2026-09-11).
 
 ## Ton strony: ApkaŁapka + Ty (decyzja usera 2026-09-02)
 
