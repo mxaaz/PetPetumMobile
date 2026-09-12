@@ -40,6 +40,16 @@ Dodanie wpisu do kuwety wymagało dotąd przejścia przez pełny formularz. Tera
 
 Gdy coś odbiega od normy, na przykład krew albo biegunka, wiersz „Coś było nie tak?" prowadzi do pełnego formularza. To samo okno otwiera skrót spod ikony aplikacji na ekranie telefonu.
 
+## Jeden filtr okresu i jeden wybór godziny
+
+W każdym dzienniku i na każdym wykresie filtr okresu wygląda teraz tak samo: 7, 30 albo 90 dni, rok, wszystko, albo własny zakres dat. Siedzi w pasku u góry ekranu, więc od razu widać, jaki okres oglądacie. Filtr zawęża historię, a nie to, co dzieje się dziś, więc bieżące przypomnienia i dzisiejsze wpisy zostają na swoim miejscu.
+
+Przy okazji zniknęły przewijane kółka przy wyborze godziny. Wszędzie, gdzie podajecie porę, pojawia się zwykła tarcza zegara. Zdjęliśmy też limit roku wstecz przy wpisach do kuwety, nastroju, nawodnienia i temperatury, bo blokował uzupełnianie starszej historii.
+
+## Aplikacja działa płynniej
+
+Przy kontach z synchronizacją w chmurze i dużą liczbą wpisów aplikacja potrafiła się zacinać, im dłużej była używana. Poprawiliśmy sposób, w jaki pobiera dane i jak wyświetla zdjęcia: galeria i miniatury zajmują teraz znacznie mniej pamięci telefonu, a przechodzenie między ekranami jest płynniejsze.
+
 ## Co jeszcze nowego
 
 - Przycisk zapisu jest w tym samym miejscu we wszystkich pełnoekranowych edytorach: w pasku u góry ekranu.
