@@ -5,9 +5,9 @@ categories: [changelog]
 category_label: "Nowości"
 cover_style: grad-a
 emoji: "📄"
-read_time: 4
+read_time: 5
 excerpt_text: "Raport PDF, który widać w aplikacji i który zbiera to, o co pyta weterynarz. Do tego karty na pulpicie, które wreszcie prowadzą tam, gdzie obiecują, i wpis kuwety w dwa tapnięcia."
-description: "ApkaŁapka 2.5.0: podgląd raportu PDF i zestaw na wizytę u weterynarza, klikalne karty „Warto sprawdzić”, ciekawostki prowadzące do funkcji, szybki wpis kuwety, pełne etykiety przy dużej czcionce."
+description: "ApkaŁapka 2.5.0: podgląd raportu PDF i zestaw na wizytę u weterynarza, klikalne karty „Warto sprawdzić”, wydatki w czasie, jeden wzór kalorii w planie żywienia, szybki wpis kuwety, pełne etykiety przy dużej czcionce."
 ---
 
 To większe wydanie niż zwykle, bo zebrało dwie wersje, które nie trafiły osobno do sklepów. Łączy je jedno pytanie: jak szybko da się dojść z pulpitu do tego, co trzeba zapisać, i jak łatwo potem pokazać to weterynarzowi. 🐾
@@ -27,6 +27,22 @@ Przy okazji naprawiliśmy błąd, przez który raport potrafił się nie wygener
 Sekcja „Warto sprawdzić" na pulpicie pokazuje obserwacje z Twoich własnych wpisów: że waga oddala się od celu, że kilka dni z rzędu pupil pił mało, że pominięto dawkę leku. Karty pisały, co warto sprawdzić, ale nie dało się w nie kliknąć.
 
 Teraz tapnięcie otwiera właściwy ekran tego pupila: historię ważeń, nawodnienie, leki, kuwetę. Tam, gdzie obserwacja dotyczy porcji, prowadzi do planu posiłków.
+
+## Utrzymujące się objawy na pulpicie
+
+Do „Warto sprawdzić" doszła jeszcze jedna obserwacja. Jeśli w dzienniku objawów jest wpis, który od kilku dni nie został oznaczony jako ustąpiony, albo wpis z wysokim nasileniem, na pulpicie pojawi się karta z przejściem do dziennika. Karta mówi o Twoim wpisie, a nie o stanie pupila: przypomina, że coś zostało zapisane i czeka na aktualizację albo na rozmowę z weterynarzem. Działa za darmo.
+
+## Wydatki w czasie
+
+W Kosztach pojawiła się karta, która pokazuje, ile wydajesz na pupila w wybranym okresie. Wykres sum, średnia miesięczna i udział każdej kategorii w procentach. Średnia pojawia się, gdy masz co najmniej 90 dni historii, bo z krótszego okresu wychodziłaby przypadkowa liczba. Karta korzysta z tego samego filtra okresu co dzienniki i też jest za darmo.
+
+## Kalorie w planie żywienia liczone jednym wzorem
+
+Generator planu, kalkulator kalorii i ręczny kreator planu liczyły dotąd dzienne zapotrzebowanie trochę inaczej, więc ten sam pupil potrafił dostać trzy różne liczby. Teraz wszystkie trzy liczą tak samo, na podstawie publikowanych tabel współczynników dla psów i kotów (Pet Nutrition Alliance oraz Today's Veterinary Nurse), i biorą pod uwagę kastrację zaznaczoną w profilu pupila.
+
+U wielu pupili wynik będzie niższy niż wcześniej. Aplikacja doliczała zapas za domyślną aktywność, a wartości z tabel już zakładają zwykły tryb życia. Zapisane plany się nie zmieniają, nowe liczby dotyczą tylko planów tworzonych od teraz. Cel „Budowa mięśni" zastąpił cel „Aktywny pies" dla psów, które codziennie trenują albo pracują.
+
+Wynik zawsze jest punktem wyjścia, nie zaleceniem. Obserwuj wagę pupila i ustal porcję z weterynarzem.
 
 ## Ciekawostka dnia z przejściem do funkcji
 
@@ -56,6 +72,7 @@ Przy kontach z synchronizacją w chmurze i dużą liczbą wpisów aplikacja potr
 - Przy powiększonej czcionce systemowej widać pełne nazwy pól, kafli i nagłówków zamiast urwanych słów.
 - Aplikacja nie zamyka się już przy starcie na części telefonów z Androidem.
 - Wizyta oznaczona jako odbyta nie przypomina już o sobie.
+- Kalendarz pokazuje leki dokładnie w dniach ich kuracji, także gdy kuracja zaczyna się za kilka dni albo już się skończyła.
 
 <div class="callout vet">
 Dane o zdrowiu w aplikacji to dziennik opieki, a nie diagnoza. W razie niepokojących objawów skonsultuj się z weterynarzem.
