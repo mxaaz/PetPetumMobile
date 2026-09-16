@@ -64,7 +64,7 @@ Przy okazji zniknęły przewijane kółka przy wyborze godziny. Wszędzie, gdzie
 
 ## Aplikacja działa płynniej
 
-Przy kontach z synchronizacją w chmurze i dużą liczbą wpisów aplikacja potrafiła się zacinać, im dłużej była używana. Poprawiliśmy sposób, w jaki pobiera dane i jak wyświetla zdjęcia: galeria i miniatury zajmują teraz znacznie mniej pamięci telefonu, a przechodzenie między ekranami jest płynniejsze.
+Przy kontach z synchronizacją w chmurze i dużą liczbą wpisów aplikacja potrafiła się zacinać, im dłużej była używana. Poprawiliśmy sposób, w jaki pobiera dane i wyświetla zdjęcia, więc przechodzenie między ekranami jest płynniejsze.
 
 ## Co jeszcze nowego
 
