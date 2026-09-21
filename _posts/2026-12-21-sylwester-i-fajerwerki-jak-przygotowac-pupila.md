@@ -17,7 +17,7 @@ Huk petard, błyski i wibracje potrafią przestraszyć nawet spokojnego pupila. 
 - 🩺 **Jeśli pupil silnie boi się hałasu, porozmawiaj z weterynarzem:** wcześniej, a nie 31 grudnia, bo pomoc w lęku dobiera lekarz
 - 🏷️ **Sprawdź adresatkę, obrożę i szelki:** niech będą dobrze dopasowane, żeby pies nie wyślizgnął się ze strachu
 - 📇 **Zaktualizuj dane przy chipie:** telefon i adres muszą być aktualne
-- 🎧 **Ćwicz nagrania dźwięków fajerwerków:** cicho, w trakcie zabawy lub jedzenia, tylko jeśli pupil reaguje spokojnie
+- 🎧 **Zapytaj weterynarza lub behawiorystę o oswajanie z dźwiękami:** to działa tylko przy dobrym prowadzeniu, a źle zrobione może nasilić lęk
 - 🛏️ **Przygotuj bezpieczne miejsce:** pokój lub kąt bez okien, z kocem, wodą i ulubionymi rzeczami
 
 ## W dniu sylwestra
@@ -27,7 +27,7 @@ Huk petard, błyski i wibracje potrafią przestraszyć nawet spokojnego pupila. 
 - 🏠 **Kota trzymaj w domu:** okna i balkony zamknięte, a kuweta i woda w bezpiecznym pokoju
 - 🪟 **Zasłoń okna i włącz muzykę lub telewizor:** to tłumi część huku i błysków
 - 🍖 **Zajęcie dla pupila:** gryzak, zabawka na karmę lub mata węchowa
-- 👥 **Zostań z nim, jeśli możesz:** spokojna obecność opiekuna zwykle pomaga, a samotność potęguje strach
+- 👥 **Bądź w domu, jeśli możesz:** spokojna obecność opiekuna zwykle pomaga, ale nie zmuszaj pupila do kontaktu, jeśli woli się schować
 
 <div class="pullquote">
 Fajerwerków nie wyłączysz, ale możesz sprawić, że pupil będzie miał gdzie się schować i kogo mieć obok.

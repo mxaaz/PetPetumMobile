@@ -35,12 +35,12 @@ Kot na ciepłym kaloryferze to zwykle bezpieczny obrazek. Kot przy gorącym piec
 
 ## Gdy dojdzie do oparzenia
 
-- 🚿 **Chłodź letnią, nie lodowatą wodą:** przez kilka minut miejsce oparzenia
-- 🚫 **Nie smaruj maściami, tłuszczem ani proszkami z domu:** utrudniają ocenę rany
-- 🩹 **Zabezpiecz luźno czystym, wilgotnym materiałem** i jedź do weterynarza
+- 🚿 **Schłódź miejsce letnią wodą:** przez kilka minut, delikatnie
+- 🚫 **Nie smaruj niczym z domowej apteczki:** maści, tłuszcz i proszki utrudniają ocenę rany
+- 🚗 **Jedź do weterynarza, także przy niewielkim oparzeniu:** zwierzę może ukrywać ból, a sierść zasłania ranę
 
 <div class="callout vet">
-Nawet niewielkie oparzenie u psa lub kota może okazać się głębsze, niż wygląda, bo sierść zasłania skórę, a uszkodzenie ujawnia się po kilku dniach. Ten wpis pomaga zapobiegać, ale ocena rany należy do weterynarza.
+Oparzenie u psa lub kota bywa głębsze, niż wygląda, bo sierść zasłania skórę. Ten wpis pomaga zapobiegać, a ocena i leczenie rany należą do weterynarza.
 </div>
 
 <div class="callout tip">

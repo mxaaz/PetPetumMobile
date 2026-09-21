@@ -26,7 +26,7 @@ description: "Pies lub kot zjadł resztki ze świątecznego stołu: co zanotowa�
 - 😣 **Ból brzucha:** pupil garbi się, skomli, nie pozwala się dotknąć
 - 🎈 **Wzdęty, twardy brzuch**
 - 😪 **Apatia i osłabienie:** pupil, który nie ma ochoty na nic
-- 🐈 **Kot, który przestał jeść:** u kotów odmowa jedzenia szybko staje się poważna
+- 🐈 **Kot, który przestał jeść:** u kotów brak apetytu to powód do szybkiego kontaktu z weterynarzem
 - ⚡ **Drżenia, drgawki, chwiejny chód:** możliwe zatrucie
 - 🦴 **Duszenie się, kaszel, ślinienie po kości lub ości**
 
@@ -36,14 +36,14 @@ Po tłustym posiłku problem może pojawić się dopiero po dniu lub dwóch. Nie
 
 ## Tłuste jedzenie i trzustka
 
-Świąteczne dania są często tłuste. U niektórych psów jeden obfity posiłek może wywołać zapalenie trzustki, które daje wymioty, brak apetytu i ból brzucha. Zwykle występuje po dniu lub dwóch.
+Świąteczne dania są często tłuste. Po obfitym, tłustym posiłku u niektórych psów rozwija się zapalenie trzustki, które daje wymioty, brak apetytu i ból brzucha. Objawy mogą pojawić się z opóźnieniem, dlatego obserwuj pupila także w kolejnych dniach.
 
 ## Co robić w drugim dniu świąt, gdy gabinety są zamknięte
 
 - 📞 **Sprawdź wcześniej, kto pełni dyżur:** klinika całodobowa w okolicy albo telefoniczna konsultacja
 - 🌡️ **Obserwuj pupila:** apetyt, wypróżnienia, aktywność, wymioty
 - 💧 **Zapewnij dostęp do wody:** przy rozstroju łatwo o odwodnienie
-- 🍽️ **Nie karm niczym „tłustym na poprawę":** zapytaj weterynarza, czy i czym karmić w następnych godzinach
+- 🍽️ **Zapytaj weterynarza, czy i czym karmić:** nie podawaj na własną rękę lekkich dań ani domowych sposobów
 
 <div class="callout warn">
 Kiedy pupil zjadł czekoladę, rodzynki, cebulę, ksylitol albo kość, nie czekaj na objawy. Dzwoń od razu.

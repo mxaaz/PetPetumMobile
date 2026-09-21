@@ -15,13 +15,13 @@ description: "Świąteczne potrawy niebezpieczne dla psa i kota: czekolada, rodz
 ## Co szczególnie szkodzi
 
 - 🍫 **Czekolada i kakao:** dla psów toksyczna, im ciemniejsza, tym groźniejsza, a piernik i makowiec z czekoladą też się liczą
-- 🍇 **Rodzynki, winogrona i keks:** u psów mogą prowadzić do ostrego uszkodzenia nerek, bez dobrze znanego bezpiecznego progu
+- 🍇 **Rodzynki, winogrona i keks:** u psów mogą prowadzić do poważnych problemów z nerkami, dlatego nie zakładaj, że mała ilość jest bezpieczna
 - 🧅 **Cebula i czosnek:** uszkadzają krwinki czerwone, a ukrywają się w farszach, uszkach, sosach i pierogach
 - 🍬 **Ksylitol:** słodzik w niektórych wypiekach i gumach do żucia, dla psów bardzo niebezpieczny
 - 🐟 **Ości i kości:** także ryba, drób i gotowane kości mogą się łamać, kaleczyć przewód pokarmowy i się zaklinować
 - 🥩 **Tłuste dania, skórki, sosy:** ryzyko rozstroju żołądka i zapalenia trzustki
 - 🍷 **Alkohol i surowe ciasto drożdżowe:** trafiają na stół z przyzwyczajenia, a u pupila dają objawy zatrucia
-- 🌰 **Orzechy, w tym makadamia:** dla psa bywają toksyczne, a inne orzechy tłuste i trudne do strawienia
+- 🌰 **Orzechy:** niektóre, na przykład makadamia, są toksyczne dla psów, a inne są tłuste i obciążają przewód pokarmowy
 
 <div class="pullquote">
 Nie trzeba kilku talerzy, żeby pupil zachorował. Czasem wystarcza jeden kawałek z podłogi albo ręki dziecka pod stołem.
@@ -32,12 +32,12 @@ Nie trzeba kilku talerzy, żeby pupil zachorował. Czasem wystarcza jeden kawał
 - 🚪 **Zamykaj pupila w innym pokoju w trakcie kolacji:** albo wyznacz mu miejsce z gryzakiem lub zabawą na węch
 - 🗣️ **Powiedz gościom i dzieciom, żeby nie dokarmiali:** proste „prosimy, nie dokarmiać" wystarczy
 - 🗑️ **Zamykaj kosze:** resztki, kości i opakowania po jedzeniu to jedne z częstszych źródeł problemów
-- 🍖 **Przygotuj pupilowi własne, bezpieczne przysmaki:** i wliczaj je do dziennej porcji
+- 🍖 **Przygotuj pupilowi jego własny smakołyk:** kupiony dla psa lub kota, z odliczeniem od dziennej porcji
 - 🧽 **Sprzątaj ze stołu i blatów od razu:** koty zdobywają jedzenie zwinniej, niż się wydaje
 
 ## Co mogą zjeść
 
-Zwykle bezpieczna jest niewielka ilość gotowanego, niesolonego i nieprzyprawionego mięsa bez kości albo gotowanej marchewki. W razie wątpliwości lepiej nie dawać nic z ludzkiego stołu, a wybrać smakołyk kupiony dla pupila.
+Najbezpieczniej nie dawać nic z ludzkiego stołu. Jeśli chcesz, żeby pupil poczuł się częścią świąt, wybierz smakołyk kupiony specjalnie dla psa lub kota i wliczaj go do dziennej porcji. Jeśli pupil ma choroby przewlekłe, alergie albo specjalną dietę, o każdy wyjątek zapytaj weterynarza.
 
 <div class="callout warn">
 Jeśli pupil zjadł coś z listy powyżej, nie czekaj na objawy. Zanotuj, co i mniej więcej ile, zabierz opakowanie i zadzwoń do weterynarza lub na dyżur całodobowy. Nie wywołuj wymiotów samodzielnie.
