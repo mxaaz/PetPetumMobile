@@ -1,6 +1,6 @@
 ---
 title: "Grzyby, żołędzie i kasztany: jesienne zagrożenia na spacerze"
-date: 2026-09-30 09:00:00 +0200
+date: 2026-10-10 09:00:00 +0200
 categories: [zdrowie]
 category_label: "Zdrowie pupila"
 cover_style: grad-c

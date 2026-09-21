@@ -1,6 +1,6 @@
 ---
 title: "Kaszel u psa i kota: kiedy to zakrztuszenie, a kiedy sygnał ostrzegawczy"
-date: 2026-10-02 09:00:00 +0200
+date: 2026-10-14 09:00:00 +0200
 categories: [zdrowie]
 category_label: "Zdrowie pupila"
 cover_style: grad-d

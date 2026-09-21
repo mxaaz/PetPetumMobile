@@ -1,6 +1,6 @@
 ---
 title: "Pies i kot senior: co się zmienia i na co patrzeć uważniej"
-date: 2026-10-12 09:00:00 +0200
+date: 2026-11-03 09:00:00 +0200
 categories: [zdrowie]
 category_label: "Zdrowie pupila"
 cover_style: grad-a

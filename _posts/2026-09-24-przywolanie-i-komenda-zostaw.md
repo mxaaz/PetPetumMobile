@@ -1,6 +1,6 @@
 ---
 title: "Przywołanie i komenda zostaw: podstawy, które przydają się codziennie"
-date: 2026-09-22 09:00:00 +0200
+date: 2026-09-24 09:00:00 +0200
 categories: [porady]
 category_label: "Porady"
 cover_style: grad-a

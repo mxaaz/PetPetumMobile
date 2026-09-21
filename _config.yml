@@ -9,6 +9,11 @@ permalink: /blog/:title/
 # Codzienny rebuild (.github/workflows/scheduled-rebuild.yml) odsłania je gdy nadejdzie ich data.
 future: false
 
+# Rytm publikacji postów (jedyne źródło prawdy; skill blog-content i scripts/reschedule_posts.py
+# czytają stąd). Zmieniasz rytm: popraw tu i uruchom `python3 scripts/reschedule_posts.py --apply`.
+drip_interval_days: 4
+drip_time: "09:00:00 +0200"
+
 # Pluginy whitelisted na GitHub Pages (zero CI)
 plugins:
   - jekyll-seo-tag
@@ -33,6 +38,7 @@ exclude:
   - README.md
   - app-ads
   - vendor
+  - scripts
   - .gitignore
 
 # Kategorie (do filtrowania / changelog)

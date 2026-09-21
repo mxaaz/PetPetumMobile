@@ -1,6 +1,6 @@
 ---
 title: "Zaparcia u psa i kota: kiedy przestają być drobiazgiem"
-date: 2026-10-06 09:00:00 +0200
+date: 2026-10-22 09:00:00 +0200
 categories: [zdrowie]
 category_label: "Zdrowie pupila"
 cover_style: grad-a

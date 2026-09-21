@@ -18,8 +18,10 @@ z repo aplikacji. **Sam z siebie nie wymyślaj tematów: sprawdź najpierw, co j
 - `_config.yml` ma `future: false`, więc **post z datą jutrzejszą jest niewidoczny do swojego dnia**.
 - Strona buduje się na push, a datowane posty odsłania **codzienny rebuild**
   (`.github/workflows/scheduled-rebuild.yml`, 07:15 UTC).
-- Rytm: **co dwa dni, godzina 09:00 +0200**. Nowy post dostaje pierwszą wolną datę w tym rytmie,
-  licząc od najpóźniejszego pliku w `_posts/`. Nie wsadzaj postów wstecz.
+- Rytm siedzi w `_config.yml` (`drip_interval_days`, `drip_time`), obecnie **co 4 dni, 09:00 +0200**
+  (decyzja usera 2026-09-21, bo tematy się kończyły). Nowy post dostaje pierwszą wolną datę w tym
+  rytmie, licząc od najpóźniejszego pliku w `_posts/`. Zmiana rytmu: popraw `_config.yml` i puść
+  `python3 scripts/reschedule_posts.py --apply` (przelicza kolejkę, pomija `changelog` i `spolecznosc`). Nie wsadzaj postów wstecz.
 - Nazwa pliku: `YYYY-MM-DD-slug.md`, slug myślnikami, bez polskich znaków. Data w nazwie i w
   `date:` musi się zgadzać, inaczej Jekyll opublikuje post w innym dniu, niż myślisz.
 

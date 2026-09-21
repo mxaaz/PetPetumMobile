@@ -1,6 +1,6 @@
 ---
 title: "Zoonozy: co realnie można złapać od pupila i jak temu zapobiegać"
-date: 2026-10-10 09:00:00 +0200
+date: 2026-10-30 09:00:00 +0200
 categories: [zdrowie]
 category_label: "Zdrowie pupila"
 cover_style: grad-d

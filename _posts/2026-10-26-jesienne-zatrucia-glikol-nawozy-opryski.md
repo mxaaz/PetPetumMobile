@@ -1,6 +1,6 @@
 ---
 title: "Jesienne zatrucia: glikol z chłodnicy, nawozy i opryski"
-date: 2026-10-08 09:00:00 +0200
+date: 2026-10-26 09:00:00 +0200
 categories: [zdrowie]
 category_label: "Zdrowie pupila"
 cover_style: grad-d

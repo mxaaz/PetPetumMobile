@@ -1,6 +1,6 @@
 ---
 title: "Sezon grzewczy: sucha skóra, matowa sierść i popękany nos"
-date: 2026-09-24 09:00:00 +0200
+date: 2026-09-28 09:00:00 +0200
 categories: [porady]
 category_label: "Porady"
 cover_style: grad-b

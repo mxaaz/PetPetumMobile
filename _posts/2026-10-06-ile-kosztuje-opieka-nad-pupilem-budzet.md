@@ -1,6 +1,6 @@
 ---
 title: "Ile kosztuje opieka nad pupilem i jak zaplanować na to budżet"
-date: 2026-09-28 09:00:00 +0200
+date: 2026-10-06 09:00:00 +0200
 categories: [porady]
 category_label: "Porady"
 cover_style: grad-d

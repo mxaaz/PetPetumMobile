@@ -1,6 +1,6 @@
 ---
 title: "Stawy seniora jesienią: chłód, wilgoć i poranna sztywność"
-date: 2026-10-04 09:00:00 +0200
+date: 2026-10-18 09:00:00 +0200
 categories: [zdrowie]
 category_label: "Zdrowie pupila"
 cover_style: grad-c
