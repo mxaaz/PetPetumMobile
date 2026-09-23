@@ -132,8 +132,14 @@ Poniżej hero `body` ma krem `--bg` plus `assets/page-paws.webp`: kafel 520 px z
 **Łapki widać tylko przy lewej i prawej krawędzi okna.** Na wzór nałożona jest zasłona w kolorze
 kremu, `linear-gradient(to right, ...)` z pełnym kryciem między 23% a 77% szerokości. W środkowym
 pasie, gdzie stoi treść, wzór gaśnie do zera. Bez tej zasłony łapki szły pod tekst i całość robiła
-się nieczytelna (zgłoszenie usera 2026-09-03). Stopy w procentach, nie w pikselach, więc na wąskim
-oknie zasłona zakrywa prawie wszystko, i dobrze: tam na wzór nie ma miejsca.
+się nieczytelna (zgłoszenie usera 2026-09-03).
+
+**Same procenty nie wystarczą** (poprawka 2026-09-23): przy 390 px zasłona 23–77% zostawiała po
+~90 px wzoru z każdej strony, dokładnie pod tekstem wpisu. Dlatego stopy są liczone przez
+`min(23%, calc(50% - 400px))` i `max(77%, calc(50% + 400px))` (analogicznie 7%/93% z ±500 px):
+pełne krycie nigdy nie jest węższe niż 800 px wokół środka. Poniżej ~800 px zasłona kryje całą
+szerokość, powyżej ~1480 px działają same procenty, więc desktop wygląda jak wcześniej. Ten sam
+blok siedzi w `index.html` i `assets/css/blog.css`: zmieniasz jeden, zmień drugi.
 
 **Nie rysuj tu łapki wektorowo.** Próbowaliśmy (SVG z czterech kółek i owalu, krycie 0,02, potem
 0,30) i za każdym razem gryzło się z hero: akwarela ma wydłużone paluchy, nieregularną poduszkę
@@ -167,6 +173,18 @@ przy proporcji pas schodziłby do kilkudziesięciu pikseli.
 Blog, changelog i FAQ jadą na `assets/css/blog.css`, który ma ten sam blok `background`
 przeniesiony z `index.html` (od commitu „łapki w tle na blogu i changelogu"), więc wzór łapek
 jest tam już spójny ze stroną główną - nic nie trzeba migrować.
+
+## Zrzuty aplikacji i ikony
+
+- Strona ładuje `screens/*.webp` (600x1300, około 25 KB sztuka). `screens/*.jpg` (944x2046) to źródła:
+  nowy zrzut wrzucasz jako JPG i robisz z niego WebP
+  (`magick X.jpg -resize 600x -strip -quality 80 -define webp:method=6 X.webp`).
+- `report`, `bloodtests`, `health` i `cardio` mają jeden plik bez prefiksu języka, bo wersje
+  PL i EN były identyczne (oba po polsku). Angielski zrzut podmienia się jako `en-<nazwa>.webp`.
+- Każdy `<img>` zrzutu ma `width`/`height` i `loading="lazy"`, oprócz polskiego zrzutu w hero
+  (`fetchpriority="high"`). Bez lazy przeglądarka ściągała też ukryte makiety i drugi język.
+- `icon.png` (512 px) zostaje do `og:image` i logo w JSON-LD. Na stronie wisi `icon-180.png`
+  (nawigacja, hero, apple-touch) i `icon-64.png` (favicona, stopka).
 
 ## Konwencje
 

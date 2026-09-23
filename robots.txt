@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://petpetummobile.pl/sitemap.xml
+Sitemap: https://apkalapka.pl/sitemap.xml

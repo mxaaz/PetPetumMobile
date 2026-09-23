@@ -27,8 +27,8 @@
   <meta name="twitter:description" content="Przypomnienia, dziennik opieki, planer posiłków i wyniki badań weterynaryjnych z trendami. Dla psów i kotów, także z chorobą przewlekłą." />
   <meta name="twitter:image" content="https://apkalapka.pl/icon.png" />
 
-  <link rel="icon" href="icon.png" />
-  <link rel="apple-touch-icon" href="icon.png" />
+  <link rel="icon" href="icon-64.png" />
+  <link rel="apple-touch-icon" href="icon-180.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -89,12 +89,16 @@
          między sekcjami.
          Zasłona w kolorze kremu na wierzchu zostawia łapki tylko przy lewej i prawej
          krawędzi okna, a w środkowym pasie, gdzie stoi treść, gasi je do zera. Bez tego
-         wzór szedł pod tekst i wszystko robiło się nieczytelne. */
+         wzór szedł pod tekst i wszystko robiło się nieczytelne.
+         Stopy są w procentach, ale `min()`/`max()` pilnują, żeby pełne krycie nigdy nie
+         było węższe niż 800 px wokół środka. Same procenty na wąskim oknie zostawiały po
+         bokach wzór pod tekstem (przy 390 px po ok. 90 px); poniżej ~800 px zasłona
+         kryje teraz całą szerokość. Od ~1480 px w górę działają same procenty. */
       background:
         linear-gradient(to right,
-          rgba(246,244,238,0) 0%, rgba(246,244,238,0) 7%,
-          rgba(246,244,238,1) 23%, rgba(246,244,238,1) 77%,
-          rgba(246,244,238,0) 93%, rgba(246,244,238,0) 100%),
+          rgba(246,244,238,0) 0%, rgba(246,244,238,0) min(7%, calc(50% - 500px)),
+          rgba(246,244,238,1) min(23%, calc(50% - 400px)), rgba(246,244,238,1) max(77%, calc(50% + 400px)),
+          rgba(246,244,238,0) max(93%, calc(50% + 500px)), rgba(246,244,238,0) 100%),
         url('assets/page-paws.webp') 0 0 / 520px 520px repeat,
         var(--bg);
       color: var(--ink); line-height: 1.55; -webkit-font-smoothing: antialiased;
@@ -201,6 +205,7 @@
     }
     .feature-item:hover { transform: translateY(-2px); }
     .feature-item.active { border-color: var(--green); box-shadow: 0 8px 26px rgba(91,130,102,.18); }
+    .feature-item:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
     .feature-item .ic {
       flex-shrink: 0; width: 46px; height: 46px; border-radius: 13px;
       background: var(--green-light); display: grid; place-items: center; transition: background .2s ease;
@@ -347,7 +352,9 @@
       .showcase { grid-template-columns: 1fr; gap: 0; }
       .phone-wrap { display: none; }
       .feature-item { flex-wrap: wrap; }
-      .feature-item .inline-shot { display: block; width: 100%; margin-top: 14px; border-radius: 14px; border: 1px solid #E6E1D6; }
+      .feature-item .inline-shot { display: block; width: 100%; height: auto; margin-top: 14px; border-radius: 14px; border: 1px solid #E6E1D6; }
+      /* Na telefonie zrzut stoi przy każdej funkcji, a najechania nie ma. */
+      .hover-hint { display: none; }
       .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 30px; }
       .hero h1 br, .hero .sub br { display: none; }
       /* Hero na telefonie jest wyższy niż szerszy: powiększamy pas i kotwiczymy go
@@ -422,7 +429,7 @@
 
   <!-- NAV -->
   <nav class="nav" id="nav">
-    <a class="brand" href="#top"><img src="icon.png" alt="" />ApkaŁapka</a>
+    <a class="brand" href="#top"><img src="icon-180.png" alt="" />ApkaŁapka</a>
     <div class="nav-links">
       <a href="#features"><span class="pl">Funkcje</span><span class="en">Features</span></a>
       <a href="#why"><span class="pl">Dlaczego ApkaŁapka</span><span class="en">Why ApkaŁapka</span></a>
@@ -464,7 +471,7 @@
   <header class="hero" id="top">
     <div class="hero-inner">
       <div class="hero-copy">
-        <img class="app-icon" src="icon.png" alt="ApkaŁapka" />
+        <img class="app-icon" src="icon-180.png" alt="ApkaŁapka" />
         <h1>
           <span class="pl">Książeczka zdrowia <br>Twojego pupila</span>
           <span class="en">Your pet's <br>health record book</span>
@@ -487,8 +494,8 @@
       <div class="hero-phone">
         <div class="phone">
           <div class="screens">
-            <img class="active pl" src="screens/pl-today.jpg" alt="ApkaŁapka: panel Dziś" />
-            <img class="active en" src="screens/en-today.jpg" alt="ApkaŁapka: Today panel" />
+            <img class="active pl" src="screens/pl-today.webp" alt="ApkaŁapka: panel Dziś" fetchpriority="high" width="600" height="1300" />
+            <img class="active en" src="screens/en-today.webp" alt="ApkaŁapka: Today panel" loading="lazy" width="600" height="1300" />
           </div>
         </div>
       </div>
@@ -533,7 +540,7 @@
     <section id="features">
       <div class="section-head reveal">
         <h2><span class="pl">Wszystko, czego potrzebuje Twój pupil</span><span class="en">Everything your pet needs</span></h2>
-        <p><span class="pl">Najedź na funkcję, żeby zobaczyć ją w aplikacji.</span><span class="en">Hover a feature to see it inside the app.</span></p>
+        <p class="hover-hint"><span class="pl">Najedź na funkcję, żeby zobaczyć ją w aplikacji.</span><span class="en">Hover a feature to see it inside the app.</span></p>
       </div>
 
       <div class="showcase">
@@ -543,8 +550,8 @@
             <div>
               <h3><span class="pl">Panel Dziś, ułożony po Twojemu</span><span class="en">A Today panel, arranged your way</span></h3>
               <p><span class="pl">Posiłki, aktywność, nawodnienie, leki, waga i nastrój pupila w jednym miejscu. Sam wybierasz kafle.</span><span class="en">Meals, activity, hydration, meds, weight and mood in one place. You pick the tiles.</span></p>
-              <img class="inline-shot pl" src="screens/pl-today.jpg" alt="" loading="lazy" />
-              <img class="inline-shot en" src="screens/en-today.jpg" alt="" loading="lazy" />
+              <img class="inline-shot pl" src="screens/pl-today.webp" alt="" loading="lazy" width="600" height="1300" />
+              <img class="inline-shot en" src="screens/en-today.webp" alt="" loading="lazy" width="600" height="1300" />
             </div>
           </div>
 
@@ -553,8 +560,8 @@
             <div>
               <h3><span class="pl">Przypomnienia w porę</span><span class="en">Timely reminders</span></h3>
               <p><span class="pl">Szczepienia, odrobaczanie, wizyty u weterynarza i leki. Powiadomienia działają też po restarcie telefonu.</span><span class="en">Vaccinations, deworming, vet visits and prescriptions. Notifications survive a phone reboot.</span></p>
-              <img class="inline-shot pl" src="screens/pl-reminders.jpg" alt="" loading="lazy" />
-              <img class="inline-shot en" src="screens/en-reminders.jpg" alt="" loading="lazy" />
+              <img class="inline-shot pl" src="screens/pl-reminders.webp" alt="" loading="lazy" width="600" height="1300" />
+              <img class="inline-shot en" src="screens/en-reminders.webp" alt="" loading="lazy" width="600" height="1300" />
             </div>
           </div>
 
@@ -563,8 +570,8 @@
             <div>
               <h3><span class="pl">Kalendarz opieki</span><span class="en">Care calendar</span></h3>
               <p><span class="pl">Wizyty, szczepienia, odrobaczanie i leki w jednym kalendarzu. Dotknij wpisu, aby przejść do szczegółów.</span><span class="en">Visits, vaccinations, deworming and meds in one calendar. Tap an entry to open the details.</span></p>
-              <img class="inline-shot pl" src="screens/pl-calendar.jpg" alt="" loading="lazy" />
-              <img class="inline-shot en" src="screens/en-calendar.jpg" alt="" loading="lazy" />
+              <img class="inline-shot pl" src="screens/pl-calendar.webp" alt="" loading="lazy" width="600" height="1300" />
+              <img class="inline-shot en" src="screens/en-calendar.webp" alt="" loading="lazy" width="600" height="1300" />
             </div>
           </div>
 
@@ -573,8 +580,8 @@
             <div>
               <h3><span class="pl">Planer posiłków</span><span class="en">Meal planner</span></h3>
               <p><span class="pl">Dzienny plan karmienia dopasowany do pupila, śledzenie kalorii i zapasów karmy.</span><span class="en">A daily feeding plan tailored to your pet, with calorie and food-stock tracking.</span></p>
-              <img class="inline-shot pl" src="screens/pl-meal.jpg" alt="" loading="lazy" />
-              <img class="inline-shot en" src="screens/en-meal.jpg" alt="" loading="lazy" />
+              <img class="inline-shot pl" src="screens/pl-meal.webp" alt="" loading="lazy" width="600" height="1300" />
+              <img class="inline-shot en" src="screens/en-meal.webp" alt="" loading="lazy" width="600" height="1300" />
             </div>
           </div>
 
@@ -583,8 +590,8 @@
             <div>
               <h3><span class="pl">Zapasy pod kontrolą</span><span class="en">Supplies under control</span></h3>
               <p><span class="pl">Karma, leki i żwirek z alertami o kończącym się zapasie oraz przypomnieniem, żeby zamówić wcześniej.</span><span class="en">Food, meds and litter with low-stock alerts and an early reorder reminder.</span></p>
-              <img class="inline-shot pl" src="screens/pl-supplies.jpg" alt="" loading="lazy" />
-              <img class="inline-shot en" src="screens/en-supplies.jpg" alt="" loading="lazy" />
+              <img class="inline-shot pl" src="screens/pl-supplies.webp" alt="" loading="lazy" width="600" height="1300" />
+              <img class="inline-shot en" src="screens/en-supplies.webp" alt="" loading="lazy" width="600" height="1300" />
             </div>
           </div>
 
@@ -593,8 +600,8 @@
             <div>
               <h3><span class="pl">Waga i trendy</span><span class="en">Weight &amp; trends</span></h3>
               <p><span class="pl">Wykresy wagi z normami dla rasy oraz podpowiedź, czy pupil trzyma idealną wagę.</span><span class="en">Weight charts with breed reference ranges and a hint whether your pet stays at an ideal weight.</span></p>
-              <img class="inline-shot pl" src="screens/pl-weight.jpg" alt="" loading="lazy" />
-              <img class="inline-shot en" src="screens/en-weight.jpg" alt="" loading="lazy" />
+              <img class="inline-shot pl" src="screens/pl-weight.webp" alt="" loading="lazy" width="600" height="1300" />
+              <img class="inline-shot en" src="screens/en-weight.webp" alt="" loading="lazy" width="600" height="1300" />
             </div>
           </div>
 
@@ -603,8 +610,8 @@
             <div>
               <h3><span class="pl">Każda funkcja pod ręką</span><span class="en">Every feature at hand</span></h3>
               <p><span class="pl">Wyniki badań weterynaryjnych, pielęgnacja, koszty, dokumenty i więcej. Wszystko z jednego ekranu.</span><span class="en">Veterinary lab results, grooming, expenses, documents and more. All from a single screen.</span></p>
-              <img class="inline-shot pl" src="screens/pl-features.jpg" alt="" loading="lazy" />
-              <img class="inline-shot en" src="screens/en-features.jpg" alt="" loading="lazy" />
+              <img class="inline-shot pl" src="screens/pl-features.webp" alt="" loading="lazy" width="600" height="1300" />
+              <img class="inline-shot en" src="screens/en-features.webp" alt="" loading="lazy" width="600" height="1300" />
             </div>
           </div>
         </div>
@@ -612,20 +619,20 @@
         <div class="phone-wrap">
           <div class="phone">
             <div class="screens" id="screens">
-              <img data-screen="today" class="active pl" src="screens/pl-today.jpg" alt="ApkaŁapka: panel Dziś" />
-              <img data-screen="today" class="active en" src="screens/en-today.jpg" alt="ApkaŁapka: Today panel" />
-              <img data-screen="reminders" class="pl" src="screens/pl-reminders.jpg" alt="ApkaŁapka: przypomnienia" />
-              <img data-screen="reminders" class="en" src="screens/en-reminders.jpg" alt="ApkaŁapka: reminders" />
-              <img data-screen="calendar" class="pl" src="screens/pl-calendar.jpg" alt="ApkaŁapka: kalendarz" />
-              <img data-screen="calendar" class="en" src="screens/en-calendar.jpg" alt="ApkaŁapka: calendar" />
-              <img data-screen="meal" class="pl" src="screens/pl-meal.jpg" alt="ApkaŁapka: planer posiłków" />
-              <img data-screen="meal" class="en" src="screens/en-meal.jpg" alt="ApkaŁapka: meal planner" />
-              <img data-screen="supplies" class="pl" src="screens/pl-supplies.jpg" alt="ApkaŁapka: zapasy" />
-              <img data-screen="supplies" class="en" src="screens/en-supplies.jpg" alt="ApkaŁapka: supplies" />
-              <img data-screen="weight" class="pl" src="screens/pl-weight.jpg" alt="ApkaŁapka: waga" />
-              <img data-screen="weight" class="en" src="screens/en-weight.jpg" alt="ApkaŁapka: weight" />
-              <img data-screen="features" class="pl" src="screens/pl-features.jpg" alt="ApkaŁapka: wszystkie funkcje" />
-              <img data-screen="features" class="en" src="screens/en-features.jpg" alt="ApkaŁapka: all features" />
+              <img data-screen="today" class="active pl" src="screens/pl-today.webp" alt="ApkaŁapka: panel Dziś" loading="lazy" width="600" height="1300" />
+              <img data-screen="today" class="active en" src="screens/en-today.webp" alt="ApkaŁapka: Today panel" loading="lazy" width="600" height="1300" />
+              <img data-screen="reminders" class="pl" src="screens/pl-reminders.webp" alt="ApkaŁapka: przypomnienia" loading="lazy" width="600" height="1300" />
+              <img data-screen="reminders" class="en" src="screens/en-reminders.webp" alt="ApkaŁapka: reminders" loading="lazy" width="600" height="1300" />
+              <img data-screen="calendar" class="pl" src="screens/pl-calendar.webp" alt="ApkaŁapka: kalendarz" loading="lazy" width="600" height="1300" />
+              <img data-screen="calendar" class="en" src="screens/en-calendar.webp" alt="ApkaŁapka: calendar" loading="lazy" width="600" height="1300" />
+              <img data-screen="meal" class="pl" src="screens/pl-meal.webp" alt="ApkaŁapka: planer posiłków" loading="lazy" width="600" height="1300" />
+              <img data-screen="meal" class="en" src="screens/en-meal.webp" alt="ApkaŁapka: meal planner" loading="lazy" width="600" height="1300" />
+              <img data-screen="supplies" class="pl" src="screens/pl-supplies.webp" alt="ApkaŁapka: zapasy" loading="lazy" width="600" height="1300" />
+              <img data-screen="supplies" class="en" src="screens/en-supplies.webp" alt="ApkaŁapka: supplies" loading="lazy" width="600" height="1300" />
+              <img data-screen="weight" class="pl" src="screens/pl-weight.webp" alt="ApkaŁapka: waga" loading="lazy" width="600" height="1300" />
+              <img data-screen="weight" class="en" src="screens/en-weight.webp" alt="ApkaŁapka: weight" loading="lazy" width="600" height="1300" />
+              <img data-screen="features" class="pl" src="screens/pl-features.webp" alt="ApkaŁapka: wszystkie funkcje" loading="lazy" width="600" height="1300" />
+              <img data-screen="features" class="en" src="screens/en-features.webp" alt="ApkaŁapka: all features" loading="lazy" width="600" height="1300" />
             </div>
           </div>
         </div>
@@ -657,14 +664,14 @@
         <div class="phone-wrap">
           <div class="phone">
             <div class="screens">
-              <img data-screen="report" class="active pl" src="screens/pl-report.jpg" alt="ApkaŁapka: raport zdrowia PDF" />
-              <img data-screen="report" class="active en" src="screens/en-report.jpg" alt="ApkaŁapka: health report PDF" />
-              <img data-screen="bloodtests" class="pl" src="screens/pl-bloodtests.jpg" alt="ApkaŁapka: wyniki badań" />
-              <img data-screen="bloodtests" class="en" src="screens/en-bloodtests.jpg" alt="ApkaŁapka: lab results" />
-              <img data-screen="health" class="pl" src="screens/pl-health.jpg" alt="ApkaŁapka: analiza zdrowia" />
-              <img data-screen="health" class="en" src="screens/en-health.jpg" alt="ApkaŁapka: health analysis" />
-              <img data-screen="cardio" class="pl" src="screens/pl-cardio.jpg" alt="ApkaŁapka: Cardio Check" />
-              <img data-screen="cardio" class="en" src="screens/en-cardio.jpg" alt="ApkaŁapka: Cardio Check" />
+              <img data-screen="report" class="active pl" src="screens/report.webp" alt="ApkaŁapka: raport zdrowia PDF" loading="lazy" width="600" height="1300" />
+              <img data-screen="report" class="active en" src="screens/report.webp" alt="ApkaŁapka: health report PDF" loading="lazy" width="600" height="1300" />
+              <img data-screen="bloodtests" class="pl" src="screens/bloodtests.webp" alt="ApkaŁapka: wyniki badań" loading="lazy" width="600" height="1300" />
+              <img data-screen="bloodtests" class="en" src="screens/bloodtests.webp" alt="ApkaŁapka: lab results" loading="lazy" width="600" height="1300" />
+              <img data-screen="health" class="pl" src="screens/health.webp" alt="ApkaŁapka: analiza zdrowia" loading="lazy" width="600" height="1300" />
+              <img data-screen="health" class="en" src="screens/health.webp" alt="ApkaŁapka: health analysis" loading="lazy" width="600" height="1300" />
+              <img data-screen="cardio" class="pl" src="screens/cardio.webp" alt="ApkaŁapka: Cardio Check" loading="lazy" width="600" height="1300" />
+              <img data-screen="cardio" class="en" src="screens/cardio.webp" alt="ApkaŁapka: Cardio Check" loading="lazy" width="600" height="1300" />
             </div>
           </div>
         </div>
@@ -675,8 +682,8 @@
             <div>
               <h3><span class="pl">Raport zdrowia w PDF</span><span class="en">Health report as a PDF</span></h3>
               <p><span class="pl">Waga, wizyty, szczepienia, odrobaczanie, wyniki badań, leki i koszty w jednym pliku. Zaznaczasz, co ma się w nim znaleźć, a plik powstaje na Twoim telefonie.</span><span class="en">Weight, visits, vaccinations, deworming, lab results, meds and expenses in one file. You tick what goes in, and the file is created on your phone.</span></p>
-              <img class="inline-shot pl" src="screens/pl-report.jpg" alt="" loading="lazy" />
-              <img class="inline-shot en" src="screens/en-report.jpg" alt="" loading="lazy" />
+              <img class="inline-shot pl" src="screens/report.webp" alt="" loading="lazy" width="600" height="1300" />
+              <img class="inline-shot en" src="screens/report.webp" alt="" loading="lazy" width="600" height="1300" />
             </div>
           </div>
 
@@ -685,8 +692,8 @@
             <div>
               <h3><span class="pl">Wyniki badań z trendem</span><span class="en">Lab results with trends</span></h3>
               <p><span class="pl">Parametry z zakresami referencyjnymi z Twojego wyniku i oznaczeniem tego, co wypada poza normą. Dotknij parametru, żeby zobaczyć, jak zmieniał się w czasie.</span><span class="en">Parameters with the reference ranges from your own result and a mark on whatever falls outside them. Tap a parameter to see how it changed over time.</span></p>
-              <img class="inline-shot pl" src="screens/pl-bloodtests.jpg" alt="" loading="lazy" />
-              <img class="inline-shot en" src="screens/en-bloodtests.jpg" alt="" loading="lazy" />
+              <img class="inline-shot pl" src="screens/bloodtests.webp" alt="" loading="lazy" width="600" height="1300" />
+              <img class="inline-shot en" src="screens/bloodtests.webp" alt="" loading="lazy" width="600" height="1300" />
             </div>
           </div>
 
@@ -695,8 +702,8 @@
             <div>
               <h3><span class="pl">Analiza zdrowia</span><span class="en">Health analysis</span></h3>
               <p><span class="pl">Przegląd z alertami, oś czasu zdarzeń i wykresy wagi, oddechu oraz parametrów krwi. Widać, co działo się między wizytami.</span><span class="en">An overview with alerts, a timeline of events and charts of weight, breathing and blood parameters. You can see what happened between visits.</span></p>
-              <img class="inline-shot pl" src="screens/pl-health.jpg" alt="" loading="lazy" />
-              <img class="inline-shot en" src="screens/en-health.jpg" alt="" loading="lazy" />
+              <img class="inline-shot pl" src="screens/health.webp" alt="" loading="lazy" width="600" height="1300" />
+              <img class="inline-shot en" src="screens/health.webp" alt="" loading="lazy" width="600" height="1300" />
             </div>
           </div>
 
@@ -705,8 +712,8 @@
             <div>
               <h3>Cardio Check</h3>
               <p><span class="pl">Tempo oddechu w spoczynku, mierzone tapnięciami przez 30 sekund. Wynik ląduje w historii pupila i na wykresie trendu.</span><span class="en">Resting breathing rate, measured by tapping for 30 seconds. The result lands in your pet's history and on the trend chart.</span></p>
-              <img class="inline-shot pl" src="screens/pl-cardio.jpg" alt="" loading="lazy" />
-              <img class="inline-shot en" src="screens/en-cardio.jpg" alt="" loading="lazy" />
+              <img class="inline-shot pl" src="screens/cardio.webp" alt="" loading="lazy" width="600" height="1300" />
+              <img class="inline-shot en" src="screens/cardio.webp" alt="" loading="lazy" width="600" height="1300" />
             </div>
           </div>
 
@@ -916,7 +923,7 @@
 
   <footer>
     <div class="footer-inner">
-      <div class="footer-top"><img src="icon.png" alt="" />ApkaŁapka</div>
+      <div class="footer-top"><img src="icon-64.png" alt="" />ApkaŁapka</div>
       <div class="footer-social">
         <a href="https://www.facebook.com/lapkaapka" target="_blank" rel="noopener" aria-label="Facebook">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.5h3V5.5h-3c-2.2 0-3.8 1.8-3.8 4v1.8H7.5v3h2.7V21h3v-6.7h2.6l.6-3h-3.2v-1.6c0-.7.5-1.2 1.2-1.2z"/></svg>
@@ -985,6 +992,9 @@
         boxItems.forEach(function (it) {
           var name = it.getAttribute('data-screen');
           activators.set(it, activate);
+          /* Kafel ma działać też z klawiatury: Tab przechodzi po funkcjach i przełącza ekran. */
+          it.setAttribute('tabindex', '0');
+          it.addEventListener('focus', function () { activate(name); });
           it.addEventListener('mouseenter', function () { activate(name); });
           it.addEventListener('click', function () { activate(name); });
         });
