@@ -1,16 +1,56 @@
 ---
-title: "ApkaŁapka 2.5.0: raport na wizytę i krótsza droga do funkcji"
+title: "ApkaŁapka 2.5.0: wyszukiwarka, analiza żywienia i raport na wizytę"
 date: 2026-09-11 10:00:00 +0200
 categories: [changelog]
 category_label: "Nowości"
 cover_style: grad-a
-emoji: "📄"
-read_time: 5
-excerpt_text: "Raport PDF, który widać w aplikacji i który zbiera to, o co pyta weterynarz. Do tego karty na pulpicie, które wreszcie prowadzą tam, gdzie obiecują, i wpis kuwety w dwa tapnięcia."
-description: "ApkaŁapka 2.5.0: podgląd raportu PDF i zestaw na wizytę u weterynarza, klikalne karty „Warto sprawdzić”, wydatki w czasie, jeden wzór kalorii w planie żywienia, szybki wpis kuwety, pełne etykiety przy dużej czcionce."
+emoji: "🔎"
+read_time: 8
+excerpt_text: "Jedno pole, które znajduje wpisy, funkcje i pierwszą pomoc. Analiza żywienia z przysmakami, ocena sylwetki w trzech pytaniach, karty karm ze zdjęciem i raport PDF, który zbiera to, o co pyta weterynarz."
+description: "ApkaŁapka 2.5.0: wyszukiwarka, analiza żywienia, przysmaki, jeden kreator planu żywienia, ocena sylwetki, waga względem wzorca rasy, karty karm ze zdjęciem, Cofnij po usunięciu wpisu, podgląd raportu PDF i zestaw na wizytę u weterynarza."
 ---
 
-To większe wydanie niż zwykle, bo zebrało dwie wersje, które nie trafiły osobno do sklepów. Łączy je jedno pytanie: jak szybko da się dojść z pulpitu do tego, co trzeba zapisać, i jak łatwo potem pokazać to weterynarzowi. 🐾
+To największe wydanie w historii ApkaŁapki. Zebrało kilka wersji, które nie trafiły osobno do sklepów, i sporo próśb od osób, które piszą do nas, czego im brakuje. Trzy filary: łatwiej coś znaleźć, dokładniej widać, co pupil je, i łatwiej pokazać to wszystko weterynarzowi. 🐾
+
+## Wyszukiwarka
+
+Na pulpicie pojawiło się pole „Szukaj w ApkaŁapce”. Znajduje Twoje wpisy wszystkich pupili (wizyty, leki, szczepienia, objawy, wydatki i pozostałe dzienniki), funkcje aplikacji, ustawienia i porady pierwszej pomocy. Wyniki są pogrupowane, a tapnięcie otwiera dokładnie ten wpis albo ekran, którego szukasz, a dziennik od razu na okresie, w którym wpis leży.
+
+Wyszukiwarka wybacza jedną literówkę, pomija spójniki i rozpoznaje imię pupila w zapytaniu. Pamięta też ostatnio otwierane wyniki, więc do często sprawdzanych rzeczy wracasz jednym tapnięciem.
+
+## Analiza żywienia
+
+W Analizie zdrowia jest nowa zakładka „Żywienie”. Porównuje kalorie, które pupil realnie zjada według Twoich wpisów, z planem posiłków i z zapotrzebowaniem wyliczonym ze wzoru. Pokazuje udział przysmaków i jedzenia spoza planu, regularność posiłków oraz białko, tłuszcz i błonnik. Ta część jest za darmo.
+
+W Premium dochodzą trzy karty: czy dieta składa się z karm pełnoporcjowych, ile wody pupil dostaje z karmy i jak skład diety wypada względem wytycznych FEDIAF dla psów i kotów. To liczby z Twoich wpisów, nie ocena zdrowia. Gdy coś Cię niepokoi, porozmawiaj z weterynarzem.
+
+## Przysmaki i jedzenie spoza planu
+
+Dawne „dodatkowe karmienie” zastąpiło okienko „Przysmak lub inne jedzenie”. Przysmak wybierasz z listy i podajesz liczbę sztuk, a aplikacja przelicza je na gramy i kalorie, jeśli przy przysmaku wpisano wagę jednej sztuki. Kawałek sera czy resztę obiadu wpisujesz z nazwy, z gramami i kaloriami, jeśli je znasz. Zapas przysmaku zmniejsza się sam, a gdy przysmak pasuje do alergii zapisanej w profilu pupila, okienko to pokaże.
+
+## Jeden kreator planu żywienia
+
+Zamiast generatora, kalkulatora i ręcznego kreatora jest jeden kreator w czterech krokach: cel, karmy, posiłki, podsumowanie. Zapotrzebowanie liczy jednym wzorem, na podstawie publikowanych tabel współczynników dla psów i kotów, i bierze pod uwagę kastrację zaznaczoną w profilu. Przy odchudzaniu liczy kalorie od wagi docelowej, zgodnie z wytycznymi AAHA, gdy cel jest wyraźnie niższy od obecnej wagi.
+
+Gdy w profilu pupila jest schorzenie, a wybrana karma nie wygląda na dietę weterynaryjną, kreator o tym przypomni. Wynik zawsze jest punktem wyjścia, nie zaleceniem: obserwuj wagę pupila i ustal porcję z weterynarzem.
+
+## Ocena sylwetki
+
+W historii wagi jest nowa karta „Sylwetka”. Trzy pytania: jak czujesz żebra, czy widać talię z góry i jak biegnie linia brzucha z boku. Wynik to stopień w skali 1-9 z opisem, oparty na skali kondycji ciała WSAVA. Po zapisaniu nowego ważenia aplikacja zapyta, czy ocenić też sylwetkę, ale nie częściej niż raz na miesiąc.
+
+Ostatnia ocena podpowiada kreatorowi planu kondycję pupila, trafia na oś czasu w Analizie zdrowia i do raportu PDF dla weterynarza. Ocenę sylwetki weterynarz robi dotykiem i okiem, a aplikacja tylko zapisuje Twoją obserwację.
+
+## Waga względem wzorca rasy
+
+Zakresy wagi ras sprawdziliśmy jeden po drugim w źródłach: wzorcach FCI, klubach ras i organizacjach z kraju pochodzenia rasy. Przy każdym zakresie widać, skąd pochodzi i jak pewne jest źródło. Rasa bez sprawdzonego zakresu nie dostaje już wymyślonej normy, a ocena mówi po prostu „poniżej”, „w zakresie” albo „powyżej zakresu ze wzorca rasy”.
+
+## Karty karm ze zdjęciem
+
+Lista karm i Zapasy wyglądają inaczej. Każda karma ma zdjęcie opakowania: z linku do sklepu, z etykiety albo zrobione przez Ciebie. Kolor obwódki zdjęcia pokazuje stan zapasu, a pasek pod spodem, na ile dni wystarczy. Przysmaki liczą zapas w sztukach. Bez zdjęcia jest ikona rodzaju karmy.
+
+## Cofnij po usunięciu wpisu
+
+W każdym dzienniku usunięty wpis da się przywrócić z paska na dole ekranu. Karty wpisów wyglądają wszędzie tak samo, powiązania między wizytą, wydatkiem i objawem da się kliknąć, a wizyta, wydatek i lek mają jedną sekcję załączników na kilka plików. Na koncie w chmurze załączniki zapisują się razem z wpisem.
 
 ## Raport PDF, który da się pokazać lekarzowi
 
@@ -35,14 +75,6 @@ Do „Warto sprawdzić" doszła jeszcze jedna obserwacja. Jeśli w dzienniku obj
 ## Wydatki w czasie
 
 W Kosztach pojawiła się karta, która pokazuje, ile wydajesz na pupila w wybranym okresie. Wykres sum, średnia miesięczna i udział każdej kategorii w procentach. Średnia pojawia się, gdy masz co najmniej 90 dni historii, bo z krótszego okresu wychodziłaby przypadkowa liczba. Karta korzysta z tego samego filtra okresu co dzienniki i też jest za darmo.
-
-## Kalorie w planie żywienia liczone jednym wzorem
-
-Generator planu, kalkulator kalorii i ręczny kreator planu liczyły dotąd dzienne zapotrzebowanie trochę inaczej, więc ten sam pupil potrafił dostać trzy różne liczby. Teraz wszystkie trzy liczą tak samo, na podstawie publikowanych tabel współczynników dla psów i kotów (Pet Nutrition Alliance oraz Today's Veterinary Nurse), i biorą pod uwagę kastrację zaznaczoną w profilu pupila.
-
-U wielu pupili wynik będzie niższy niż wcześniej. Aplikacja doliczała zapas za domyślną aktywność, a wartości z tabel już zakładają zwykły tryb życia. Zapisane plany się nie zmieniają, nowe liczby dotyczą tylko planów tworzonych od teraz. Cel „Budowa mięśni" zastąpił cel „Aktywny pies" dla psów, które codziennie trenują albo pracują.
-
-Wynik zawsze jest punktem wyjścia, nie zaleceniem. Obserwuj wagę pupila i ustal porcję z weterynarzem.
 
 ## Ciekawostka dnia z przejściem do funkcji
 
