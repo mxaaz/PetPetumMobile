@@ -191,3 +191,35 @@ jest tam już spójny ze stroną główną - nic nie trzeba migrować.
 - Commity po polsku, `<type>: <opis>`, **bez trailerów**. Dla wpisów: `content: <opis>`.
 - Jeden commit na paczkę postów, nie na plik.
 - Zdjęcia i grafiki do wpisów: tylko materiał od usera (`ApkaLapkaMarketing/Media/`), nigdy generowane.
+
+## Strona główna: układ od 2026-10-11
+
+Kolejność: hero → pasek → **Sytuacje** (`#sytuacje`, 4 pytania opiekuna i odpowiedź aplikacji) →
+**Co jest w środku** (`#features`, 12 kafli + telefon) → **Opinie** (`#opinie`) → **Od twórcy**
+(`#od-tworcy`) → cennik → FAQ → blog → CTA. Wycięte: „Znasz to uczucie?”, „I wiele więcej”,
+„Konkrety na wizytę”, „Choroba przewlekła”, „Dlaczego ApkaŁapka” (decyzja usera: krótsza strona,
+mniej ogólników). Przebudowa po pojawieniu się konkurenta lapaapp.pl: z niego wolno brać tylko
+układ, **nigdy tekstów ani grafik**.
+
+- **Słowa „PDF” nie używamy** w treści strony (user 2026-10-11): „raport dla weterynarza”.
+- **Sytuacje:** każde zdanie sprawdzone w `PetPetumMobile/.claude/features/` (komentarz w HTML
+  podaje pliki). Zmieniasz zdanie albo aplikacja zmieniła działanie → sprawdź ponownie.
+- **Kafle:** plakietka Premium tylko przy tym, co jest w `kPremiumFeatures` (`premium_screen.dart`).
+  Na desktopie telefon sam przechodzi po kaflach (pasek postępu pod aktywnym), dopóki kursor nie
+  wejdzie na siatkę. Na telefonie dotknięcie kafla rozwija jego zrzut.
+- **Opinie:** wyłącznie prawdziwe, cytowane dosłownie ze sklepów, z datą „Stan z”. **Nigdy opinii
+  z konta twórcy** (MxaaZx w App Store). Oceny 5,0 / 4,9 są statyczne: aktualizuj je razem z datą
+  (też w linii pod przyciskami w hero). Bez `aggregateRating` w JSON-LD.
+- **Od twórcy:** jedyny głos „ja” na stronie głównej. Zdjęcie `assets/czesia.webp` z
+  `Media/Czesia/Czesia_profil.jpeg`.
+- **Tropy łapek** (`.paw-trail`): `assets/paw.webp` to pojedyncza łapka wycięta z `hero2.jpeg`
+  przepisem z sekcji o tle. W hero idą od kota i psa w prawo, w CTA w górę. Poniżej 880 px ukryte,
+  bo w jednej kolumnie weszłyby pod telefon. Przy `prefers-reduced-motion` stoją.
+- **Telefon w hero** przewija 6 ekranów co 3,2 s (kropki pod spodem), stoi pod kursorem i przy
+  `prefers-reduced-motion`.
+- **Zrzuty 2026-10-11** (z `ApkaLapkaMarketing/Media/Aplikacja/nowe/`): nowe `pl-today`, `pl-calendar`,
+  `pl-weight`, `pl-litter`, `pl-hydration`. Kuweta i nawodnienie nie mają wersji EN, więc angielska
+  strona pokazuje polski zrzut. Planer, zapasy i przypomnienia zostały stare, bo nowe pokazują marki
+  karm (Bozita, Animonda): decyzja usera, czy kadrować, rozmyć czy zostawić.
+- Lokalny `jekyll build` nie działa (2026-10-11: brak gemu `eventmachine` po aktualizacji Ruby).
+  Podgląd: kopia `index.html` bez bloku Liquid bloga, otwarta z `file://`.
