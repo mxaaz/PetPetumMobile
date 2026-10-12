@@ -202,24 +202,45 @@ mniej ogólników). Przebudowa po pojawieniu się konkurenta lapaapp.pl: z niego
 układ, **nigdy tekstów ani grafik**.
 
 - **Słowa „PDF” nie używamy** w treści strony (user 2026-10-11): „raport dla weterynarza”.
+- **Copy Sytuacji bez straszenia i bez obiecywania tego, czego aplikacja nie widzi** (user
+  2026-10-12): aplikacja nie wie, czy kot był w kuwecie, wie tylko to, co wpiszesz, więc odpowiedź
+  zaczyna się od wpisu. Nie eksponować alertów o krwi: lepiej „z Twoich wpisów liczy normę i daje
+  znać, gdy coś odbiega”. Bez wydumanych słów („worek”, „składa raport”), pisz tak, jak mówi opiekun.
 - **Sytuacje:** każde zdanie sprawdzone w `PetPetumMobile/.claude/features/` (komentarz w HTML
   podaje pliki). Zmieniasz zdanie albo aplikacja zmieniła działanie → sprawdź ponownie.
 - **Kafle:** plakietka Premium tylko przy tym, co jest w `kPremiumFeatures` (`premium_screen.dart`).
+  Opis kafla mówi, co konkretnie zrobisz i co zobaczysz, z listą rzeczy wziętą z aplikacji (np. Pulpit
+  wymienia kafle do wyboru z `quick_access_customize_screen.dart`). Bez oczywistości w rodzaju „działa
+  po restarcie telefonu” (user 2026-10-12). Kafel nazywa się „Pulpit”, jak zakładka w aplikacji.
   Na desktopie telefon sam przechodzi po kaflach (pasek postępu pod aktywnym), dopóki kursor nie
   wejdzie na siatkę. Na telefonie dotknięcie kafla rozwija jego zrzut.
 - **Opinie:** wyłącznie prawdziwe, cytowane dosłownie ze sklepów, z datą „Stan z”. **Nigdy opinii
   z konta twórcy** (MxaaZx w App Store). Oceny 5,0 / 4,9 są statyczne: aktualizuj je razem z datą
   (też w linii pod przyciskami w hero). Bez `aggregateRating` w JSON-LD.
-- **Od twórcy:** jedyny głos „ja” na stronie głównej. Zdjęcie `assets/czesia.webp` z
-  `Media/Czesia/Czesia_profil.jpeg`.
+- **Od twórcy:** jedyny głos „ja” na stronie głównej (stąd „Napisz do mnie”, nie „do nas”). Tekst
+  podyktowany przez usera 2026-10-12. Zdjęcia przenikają się co 3,5 s od kociaka do dziś
+  (`#founder-photos`, rusza dopiero w kadrze, przy `prefers-reduced-motion` stoi obecne):
+  `czesia-kociak-1` z `mrugacz.jpeg` (wycięta broda człowieka u góry), `-2` z `spi_z_lapkami.jpeg`,
+  `-3` z `głodzilla.jpeg` (wycięty klapek z logo FILA), na koniec `czesia.webp` z `Czesia_profil.jpeg`.
+- **„Też w środku”:** eksport i usuwanie danych (RODO) zdjęte 2026-10-12, bo żyją w FAQ. Doszły SOS,
+  wydatki, pielęgnacja i ubezpieczenie. Pielęgnacja dostanie własny kafel po przebudowie funkcji
+  (backlog aplikacji).
 - **Tropy łapek** (`.paw-trail`): `assets/paw.webp` to pojedyncza łapka wycięta z `hero2.jpeg`
   przepisem z sekcji o tle. W hero idą od kota i psa w prawo, w CTA w górę. Poniżej 880 px ukryte,
   bo w jednej kolumnie weszłyby pod telefon. Przy `prefers-reduced-motion` stoją.
+- **Tropy wzdłuż strony** (`.side-trails`, od 2026-10-12, prośba usera „więcej łapek, też niżej”):
+  skrypt rysuje dla każdej sekcji `main` (bez `#download`) trop schodzący w dół lewym marginesem
+  i drugi, z opóźnieniem, prawym. Odcinki się stykają, więc trop idzie przez całą stronę, krok co 54 px. Odcinek rusza, gdy sekcja wjedzie w kadr. Działa tylko przy
+  marginesie ≥ 110 px (z prawej liczonym bez paska ikon), czyli od ok. 1180 px szerokości.
+  **Tam, gdzie są tropy, stały wzór `page-paws.webp` na stronie głównej znika** (`body.has-trails`):
+  ta sama akwarela w obu warstwach zlewała się i animacji nie było widać. Węższe okna i blog mają
+  wzór jak dawniej.
 - **Telefon w hero** przewija 6 ekranów co 3,2 s (kropki pod spodem), stoi pod kursorem i przy
   `prefers-reduced-motion`.
 - **Zrzuty 2026-10-11** (z `ApkaLapkaMarketing/Media/Aplikacja/nowe/`): nowe `pl-today`, `pl-calendar`,
   `pl-weight`, `pl-litter`, `pl-hydration`. Kuweta i nawodnienie nie mają wersji EN, więc angielska
-  strona pokazuje polski zrzut. Planer, zapasy i przypomnienia zostały stare, bo nowe pokazują marki
-  karm (Bozita, Animonda): decyzja usera, czy kadrować, rozmyć czy zostawić.
+  strona pokazuje polski zrzut. 2026-10-12 doszedł nowy `pl-supplies` z markami karm (Animonda,
+  Bozita) w kadrze: user kazał wrzucić bez kadrowania. `en-supplies` zostaje stary, po angielsku.
+  Planer i przypomnienia nadal stare (nowe też pokazują marki, decyzja usera).
 - Lokalny `jekyll build` nie działa (2026-10-11: brak gemu `eventmachine` po aktualizacji Ruby).
   Podgląd: kopia `index.html` bez bloku Liquid bloga, otwarta z `file://`.

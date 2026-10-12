@@ -236,7 +236,7 @@
       position: absolute; left: var(--x); top: var(--y); width: 30px; height: 30px;
       background: url('assets/paw.webp') center / contain no-repeat;
       transform: translate(-50%, -50%) rotate(var(--r)); scale: .8; opacity: 0;
-      animation: paw-step 11s ease-in-out infinite; animation-delay: calc(var(--i) * .55s);
+      animation: paw-step var(--dur, 11s) ease-in-out infinite; animation-delay: calc(var(--i) * .55s + var(--off, 0s));
     }
     @keyframes paw-step {
       0% { opacity: 0; scale: .8; }
@@ -245,6 +245,24 @@
       66%, 100% { opacity: 0; scale: 1; }
     }
     .cta-final .paw-trail i { filter: brightness(0) invert(1); --paw-o: .16; }
+    /* Tropy wzdłuż strony: zwierzę schodzi w dół razem z czytelnikiem, sekcja po sekcji,
+       raz lewym, raz prawym marginesem. Ślady rysuje skrypt na dole strony (zależą od wysokości
+       sekcji), a każdy odcinek rusza dopiero, gdy jego sekcja wjedzie w kadr. Drugi trop idzie
+       przeciwnym marginesem z opóźnieniem. Tylko tam, gdzie margines obok treści ma co najmniej
+       110 px (z prawej liczony bez paska ikon), więc nigdy nie wchodzą pod tekst. */
+    .side-trails { inset: auto 0 auto 0; z-index: 0; }
+    /* Gdzie chodzą tropy, stały wzór łapek znika: ta sama akwarela w obu warstwach zlewała się
+       w jedno i animacji nie było widać. Węższe okna (bez tropów) zostają przy wzorze. */
+    body.has-trails { background: var(--bg); }
+    .side-trails .seg:not(.go) i { animation-play-state: paused; }
+    .side-trails i { width: 36px; height: 36px; --paw-o: .72; animation-name: paw-step-long; }
+    /* Wzdłuż strony ślad stoi dłużej niż w hero, więc naraz widać prawie cały odcinek. */
+    @keyframes paw-step-long {
+      0% { opacity: 0; scale: .8; }
+      4% { opacity: var(--paw-o, .55); scale: 1; }
+      78% { opacity: var(--paw-o, .55); scale: 1; }
+      90%, 100% { opacity: 0; scale: 1; }
+    }
 
     /* ---------- sytuacje ---------- */
     .sit-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
@@ -317,7 +335,9 @@
 
     /* ---------- od twórcy ---------- */
     .founder { display: grid; grid-template-columns: 280px 1fr; gap: 44px; align-items: center; background: #fff; border: 1px solid #E6E1D6; border-radius: 24px; padding: 36px 40px; }
-    .founder figure img { display: block; width: 100%; height: auto; border-radius: 18px; transform: rotate(-2.5deg); box-shadow: 0 16px 40px rgba(45,74,62,.18); }
+    .founder-photos { position: relative; aspect-ratio: 4 / 5; border-radius: 18px; overflow: hidden; transform: rotate(-2.5deg); box-shadow: 0 16px 40px rgba(45,74,62,.18); }
+    .founder-photos img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.2s ease; }
+    .founder-photos img.active { opacity: 1; }
     .founder figcaption { text-align: center; font-size: .84rem; color: var(--muted); font-style: italic; margin-top: 14px; }
     .founder h2 { font-size: 1.8rem; color: var(--green-dark); letter-spacing: -.4px; margin-bottom: 14px; }
     .founder p { font-size: 1.02rem; margin-bottom: 12px; }
@@ -481,6 +501,9 @@
       <g id="i-lungs" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v7"/><path d="M12 10c-1.3 0-1.8-1-3.2-1C6.5 9 5 11 5 14.5 5 18 6.5 20 8.5 20c1 0 1.5-.5 2-1.5.5-1 .5-2 .5-3.5V10z"/><path d="M12 10c1.3 0 1.8-1 3.2-1 2.3 0 3.8 2 3.8 5.5 0 3.5-1.5 5.5-3.5 5.5-1 0-1.5-.5-2-1.5-.5-1-.5-2-.5-3.5V10z"/></g>
       <g id="i-phone2" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></g>
       <g id="i-check" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></g>
+      <g id="i-phone" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></g>
+      <g id="i-wallet" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M16 14.5h2"/></g>
+      <g id="i-scissors" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.1 8.1L20 20M8.1 15.9L20 4"/></g>
       <g id="i-alert" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17h.01"/></g>
       <g id="i-wifi-off" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18M9 17a4 4 0 0 1 6 0M5.5 12.5a9 9 0 0 1 5-2.4M18.5 12.5a9 9 0 0 0-3-2"/></g>
       <g id="i-cal" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></g>
@@ -580,8 +603,8 @@
         <div class="phone-float">
           <div class="phone">
             <div class="screens" id="hero-screens">
-              <img data-screen="today" class="active pl" src="screens/pl-today.webp" alt="ApkaŁapka: panel Dziś" fetchpriority="high" width="600" height="1300" />
-              <img data-screen="today" class="active en" src="screens/en-today.webp" alt="ApkaŁapka: Today panel" loading="lazy" width="600" height="1300" />
+              <img data-screen="today" class="active pl" src="screens/pl-today.webp" alt="ApkaŁapka: pulpit" fetchpriority="high" width="600" height="1300" />
+              <img data-screen="today" class="active en" src="screens/en-today.webp" alt="ApkaŁapka: home screen" loading="lazy" width="600" height="1300" />
               <img data-screen="litter" class="pl" src="screens/pl-litter.webp" alt="ApkaŁapka: dziennik kuwety" loading="lazy" width="600" height="1300" />
               <img data-screen="litter" class="en" src="screens/pl-litter.webp" alt="ApkaŁapka: litter box log" loading="lazy" width="600" height="1300" />
               <img data-screen="hydration" class="pl" src="screens/pl-hydration.webp" alt="ApkaŁapka: nawodnienie" loading="lazy" width="600" height="1300" />
@@ -612,8 +635,8 @@
   <main>
     <!-- SYTUACJE: prawdziwe pytania opiekuna i to, co na nie odpowiada aplikacja.
          Każde twierdzenie sprawdzone w PetPetumMobile/.claude/features/ (2026-10-11):
-         hydration.md (norma z 14 dni), food-stock.md + supplies.md, litter_box.md (18 h, krew),
-         pdf_report.md (premium, 1 raport za darmo). Zmieniasz zdanie? Sprawdź je tam ponownie. -->
+         hydration.md (norma z 14 dni), food-stock.md + supplies.md, litter_box.md (ostatnie siusiu, norma, karty „Warto sprawdzić”),
+         pdf_report.md (sekcje, okres 3 mies.–cała historia, premium, 1 raport za darmo). Zmieniasz zdanie? Sprawdź je tam ponownie. -->
     <section id="sytuacje">
       <div class="section-head reveal">
         <h2><span class="pl">Kiedy ApkaŁapka się przydaje</span><span class="en">When ApkaŁapka comes in handy</span></h2>
@@ -627,18 +650,18 @@
         </article>
         <article class="sit-card reveal">
           <span class="sit-ic"><svg viewBox="0 0 24 24"><use href="#i-bowl"/></svg></span>
-          <p class="sit-q"><span class="pl">„Na ile jeszcze starczy tej karmy?”</span><span class="en">“How long will this bag of food last?”</span></p>
-          <p class="sit-a"><span class="pl"><b>ApkaŁapka</b> odejmuje każdą porcję od zapasu, pokazuje, na ile dni wystarczy, i przypomina o zakupie, zanim worek się skończy. Żwirek i leki liczy tak samo.</span><span class="en"><b>ApkaŁapka</b> takes every portion off the stock, shows how many days it will last and reminds you to buy more before the bag runs out. Litter and meds work the same way.</span></p>
+          <p class="sit-q"><span class="pl">„Na ile starczy karmy?”</span><span class="en">“How long will the food last?”</span></p>
+          <p class="sit-a"><span class="pl"><b>ApkaŁapka</b> liczy każdą porcję, pokazuje, na ile dni jeszcze wystarczy karmy, i przypomina o zakupie, zanim zapas się skończy. Żwirek i leki liczy tak samo.</span><span class="en"><b>ApkaŁapka</b> counts every portion, shows how many days of food are left and reminds you to buy more before the stock runs out. Litter and meds work the same way.</span></p>
         </article>
         <article class="sit-card reveal">
           <span class="sit-ic"><svg viewBox="0 0 24 24"><use href="#i-litter"/></svg></span>
-          <p class="sit-q"><span class="pl">„Czy kot dziś w ogóle sikał?”</span><span class="en">“Has the cat peed at all today?”</span></p>
-          <p class="sit-a"><span class="pl"><b>ApkaŁapka</b> zapisuje siusiu i kupę osobno i pokazuje tydzień obok normy Twojego kota. Ostrzega, gdy od 18 godzin nie było siusiu albo gdy we wpisie pojawi się krew.</span><span class="en"><b>ApkaŁapka</b> logs pee and poop separately and shows the week next to your cat's own normal. It warns you when there has been no pee for 18 hours or when an entry mentions blood.</span></p>
+          <p class="sit-q"><span class="pl">„Czy kot dziś w ogóle korzystał z kuwety?”</span><span class="en">“Has the cat used the litter box at all today?”</span></p>
+          <p class="sit-a"><span class="pl">Wpisujesz kuwetę przy sprzątaniu, a <b>ApkaŁapka</b> pokazuje, kiedy było ostatnie siusiu i ostatnia kupa. Z wpisów liczy normę Twojego kota i daje znać, gdy coś od niej odbiega: mniej siusiu niż zwykle, luźne stolce albo długa przerwa bez kupy.</span><span class="en">You log the litter box when you scoop, and <b>ApkaŁapka</b> shows when the last pee and the last poop were. From your entries it works out your cat's normal and lets you know when something drifts from it: fewer pees than usual, loose stools or a long gap without poop.</span></p>
         </article>
         <article class="sit-card reveal">
           <span class="sit-ic"><svg viewBox="0 0 24 24"><use href="#i-doc"/></svg></span>
           <p class="sit-q"><span class="pl">„A jak zmieniała się waga przez ostatni rok?”</span><span class="en">“And how has the weight changed over the past year?”</span></p>
-          <p class="sit-a"><span class="pl"><b>ApkaŁapka</b> składa raport dla weterynarza: waga, leki, szczepienia, odrobaczanie i wyniki badań z wybranego okresu. Zabierasz go na wizytę albo wysyłasz przed nią.</span><span class="en"><b>ApkaŁapka</b> puts together a vet report: weight, meds, vaccinations, deworming and lab results from the period you choose. Take it to the visit or send it ahead.</span></p>
+          <p class="sit-a"><span class="pl"><b>ApkaŁapka</b> tworzy raport dla weterynarza ze wszystkim, o co lekarz pyta na wizycie: waga i jej zmiany, leki, szczepienia, odrobaczanie, objawy i wyniki badań. Okres wybierasz sam, od 3 miesięcy po całą historię.</span><span class="en"><b>ApkaŁapka</b> creates a vet report with everything the vet asks about: weight and how it changed, meds, vaccinations, deworming, symptoms and lab results. You choose the period, from 3 months to the full history.</span></p>
           <span class="chip-premium"><span class="pl">Premium · pierwszy raport za darmo</span><span class="en">Premium · first report free</span></span>
         </article>
       </div>
@@ -659,8 +682,8 @@
         <div class="tiles">
           <div class="tile active reveal" data-screen="today">
             <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-journal"/></svg></span>
-            <h3><span class="pl">Panel Dziś</span><span class="en">Today panel</span></h3>
-            <p><span class="pl">Posiłki, picie, leki, waga i nastrój na jednym ekranie. Kafle układasz sam.</span><span class="en">Meals, drinking, meds, weight and mood on one screen. You arrange the tiles.</span></p>
+            <h3><span class="pl">Pulpit</span><span class="en">Home screen</span></h3>
+            <p><span class="pl">Układasz go po swojemu. Na górze to, co sprawdzasz codziennie: posiłki, picie, kuweta, leki, waga, aktywność albo nastrój. Niżej skróty do czego chcesz: wizyty, szczepienia, odrobaczanie, pielęgnacja, wydatki, badania, temperatura, cykl rui i inne, w dowolnej kolejności.</span><span class="en">Set it up your way. Up top, what you check every day: meals, drinking, litter box, meds, weight, activity or mood. Below, shortcuts to anything you like: visits, vaccinations, deworming, grooming, expenses, lab results, temperature, heat cycle and more, in any order.</span></p>
             <img class="inline-shot pl" src="screens/pl-today.webp" alt="" loading="lazy" width="600" height="1300" />
             <img class="inline-shot en" src="screens/en-today.webp" alt="" loading="lazy" width="600" height="1300" />
             <span class="prog" aria-hidden="true"></span>
@@ -668,7 +691,7 @@
           <div class="tile reveal" data-screen="reminders">
             <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-bell"/></svg></span>
             <h3><span class="pl">Przypomnienia</span><span class="en">Reminders</span></h3>
-            <p><span class="pl">Szczepienia, odrobaczanie, wizyty i leki. Działają też po restarcie telefonu.</span><span class="en">Vaccinations, deworming, visits and meds. They survive a phone reboot.</span></p>
+            <p><span class="pl">Szczepienia, odrobaczanie, wizyty, leki, posiłki, pielęgnacja i ważenie. Sam ustawiasz, ile dni wcześniej, a z powiadomienia odhaczasz jednym dotknięciem.</span><span class="en">Vaccinations, deworming, vet visits, meds, meals, grooming and weigh-ins. You choose how many days ahead, and tick it off straight from the notification.</span></p>
             <img class="inline-shot pl" src="screens/pl-reminders.webp" alt="" loading="lazy" width="600" height="1300" />
             <img class="inline-shot en" src="screens/en-reminders.webp" alt="" loading="lazy" width="600" height="1300" />
             <span class="prog" aria-hidden="true"></span>
@@ -676,7 +699,7 @@
           <div class="tile reveal" data-screen="calendar">
             <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-cal"/></svg></span>
             <h3><span class="pl">Kalendarz opieki</span><span class="en">Care calendar</span></h3>
-            <p><span class="pl">Wszystkie terminy w jednym widoku miesiąca. Wpis otwiera szczegóły.</span><span class="en">Every date in one month view. An entry opens the details.</span></p>
+            <p><span class="pl">Miesiąc z zaznaczonymi wizytami, szczepieniami i odrobaczaniem. Dotykasz dnia i widzisz jego plan: karmienia, leki, pielęgnację, przy kilku pupilach dla wszystkich naraz.</span><span class="en">A month view with vet visits, vaccinations and deworming marked. Tap a day to see its plan: feedings, meds, grooming, for all your pets at once.</span></p>
             <img class="inline-shot pl" src="screens/pl-calendar.webp" alt="" loading="lazy" width="600" height="1300" />
             <img class="inline-shot en" src="screens/en-calendar.webp" alt="" loading="lazy" width="600" height="1300" />
             <span class="prog" aria-hidden="true"></span>
@@ -684,7 +707,7 @@
           <div class="tile reveal" data-screen="meal">
             <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-bowl"/></svg></span>
             <h3><span class="pl">Planer posiłków</span><span class="en">Meal planner</span></h3>
-            <p><span class="pl">Porcje i kalorie dopasowane do pupila, karmienie odhaczane na bieżąco.</span><span class="en">Portions and calories tailored to your pet, feedings ticked off as they happen.</span></p>
+            <p><span class="pl">Liczy, ile kalorii dziennie potrzebuje pupil, i rozkłada je na posiłki w gramach Twojej karmy. Odhaczasz karmienie, a zapas karmy schodzi sam.</span><span class="en">Works out how many calories your pet needs a day and splits them into meals, in grams of your own food. Tick off a feeding and the food stock goes down by itself.</span></p>
             <img class="inline-shot pl" src="screens/pl-meal.webp" alt="" loading="lazy" width="600" height="1300" />
             <img class="inline-shot en" src="screens/en-meal.webp" alt="" loading="lazy" width="600" height="1300" />
             <span class="prog" aria-hidden="true"></span>
@@ -692,7 +715,7 @@
           <div class="tile reveal" data-screen="litter">
             <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-litter"/></svg></span>
             <h3><span class="pl">Kuweta</span><span class="en">Litter box</span></h3>
-            <p><span class="pl">Siusiu i kupa osobno, tydzień obok normy kota i ostrzeżenie, gdy coś odbiega.</span><span class="en">Pee and poop logged separately, the week next to your cat's normal and a warning when something is off.</span></p>
+            <p><span class="pl">Zapisujesz, ile razy kot sikał i ile razy zrobił kupę, a gdy coś było nie tak, dopisujesz szczegóły. ApkaŁapka pokazuje cały tydzień i daje znać, gdy coś odbiega od normy Twojego kota.</span><span class="en">Log how many times your cat peed and pooped, and add details when something was off. ApkaŁapka shows the whole week and lets you know when something drifts from your cat's normal.</span></p>
             <img class="inline-shot pl" src="screens/pl-litter.webp" alt="" loading="lazy" width="600" height="1300" />
             <img class="inline-shot en" src="screens/pl-litter.webp" alt="" loading="lazy" width="600" height="1300" />
             <span class="prog" aria-hidden="true"></span>
@@ -700,7 +723,7 @@
           <div class="tile reveal" data-screen="hydration">
             <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-drop"/></svg></span>
             <h3><span class="pl">Nawodnienie</span><span class="en">Hydration</span></h3>
-            <p><span class="pl">Na oko albo z miski w ml, obok normy pupila z ostatnich dwóch tygodni.</span><span class="en">By eye or measured from the bowl in ml, next to your pet's own normal from the last two weeks.</span></p>
+            <p><span class="pl">Zapisujesz, ile pupil pił: na oko albo dokładnie, w mililitrach z miski. ApkaŁapka porównuje to z jego zwykłym piciem i mówi, kiedy pije wyraźnie więcej albo mniej.</span><span class="en">Log how much your pet drank: by eye, or exactly in ml from the bowl. ApkaŁapka compares it with their usual drinking and tells you when they drink clearly more or less.</span></p>
             <img class="inline-shot pl" src="screens/pl-hydration.webp" alt="" loading="lazy" width="600" height="1300" />
             <img class="inline-shot en" src="screens/pl-hydration.webp" alt="" loading="lazy" width="600" height="1300" />
             <span class="prog" aria-hidden="true"></span>
@@ -708,7 +731,7 @@
           <div class="tile reveal" data-screen="supplies">
             <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-box"/></svg></span>
             <h3><span class="pl">Zapasy</span><span class="en">Supplies</span></h3>
-            <p><span class="pl">Karma, żwirek i leki z ostrzeżeniem, zanim się skończą.</span><span class="en">Food, litter and meds with a heads-up before they run out.</span></p>
+            <p><span class="pl">Karma, leki, żwirek i wszystko, co kupujesz regularnie. Widzisz, na ile dni starczy, i dostajesz przypomnienie o zakupie z wyprzedzeniem.</span><span class="en">Food, meds, litter and anything else you buy regularly. See how many days each will last and get a reminder to restock in time.</span></p>
             <img class="inline-shot pl" src="screens/pl-supplies.webp" alt="" loading="lazy" width="600" height="1300" />
             <img class="inline-shot en" src="screens/en-supplies.webp" alt="" loading="lazy" width="600" height="1300" />
             <span class="prog" aria-hidden="true"></span>
@@ -716,7 +739,7 @@
           <div class="tile reveal" data-screen="weight">
             <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-chart"/></svg></span>
             <h3><span class="pl">Waga i trendy</span><span class="en">Weight &amp; trends</span></h3>
-            <p><span class="pl">Wykres wagi z normą dla rasy i podpowiedzią, czy waga jest idealna.</span><span class="en">A weight chart with breed reference ranges and a hint whether the weight is ideal.</span></p>
+            <p><span class="pl">Wykres wagi z wagą docelową, ocena sylwetki w skali 1-9, a u pupili rasowych porównanie z wzorcem rasy.</span><span class="en">A weight chart with a target weight, a 1-9 body condition score and, for purebred pets, a comparison with the breed standard.</span></p>
             <img class="inline-shot pl" src="screens/pl-weight.webp" alt="" loading="lazy" width="600" height="1300" />
             <img class="inline-shot en" src="screens/en-weight.webp" alt="" loading="lazy" width="600" height="1300" />
             <span class="prog" aria-hidden="true"></span>
@@ -725,7 +748,7 @@
             <span class="badge-premium">Premium</span>
             <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-flask"/></svg></span>
             <h3><span class="pl">Wyniki badań</span><span class="en">Lab results</span></h3>
-            <p><span class="pl">Parametry z zakresami z Twojego wyniku i wykres zmian w czasie.</span><span class="en">Parameters with the ranges from your own result and a chart of changes over time.</span></p>
+            <p><span class="pl">Robisz zdjęcie kartki z laboratorium, a ApkaŁapka odczytuje wyniki. Każdy parametr widzisz na tle normy dla psa albo kota i na wykresie zmian od poprzednich badań.</span><span class="en">Snap the lab printout and ApkaŁapka reads the results. Each value is shown against the normal range for dogs or cats, with a chart of how it changed since earlier tests.</span></p>
             <img class="inline-shot pl" src="screens/bloodtests.webp" alt="" loading="lazy" width="600" height="1300" />
             <img class="inline-shot en" src="screens/bloodtests.webp" alt="" loading="lazy" width="600" height="1300" />
             <span class="prog" aria-hidden="true"></span>
@@ -734,7 +757,7 @@
             <span class="badge-premium">Premium</span>
             <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-pulse"/></svg></span>
             <h3><span class="pl">Analiza zdrowia</span><span class="en">Health analysis</span></h3>
-            <p><span class="pl">Oś czasu i wykresy: widać, co działo się między wizytami.</span><span class="en">A timeline and charts that show what happened between visits.</span></p>
+            <p><span class="pl">Jeden ekran, który mówi, czym się zająć: zaległe szczepienie, kończący się lek, nagła zmiana wagi. Do tego analiza żywienia: kalorie, przysmaki, regularność posiłków i to, czy dieta jest pełnowartościowa. Pod spodem cała historia zdrowia pupila na jednej osi czasu.</span><span class="en">One screen that tells you what needs attention: an overdue vaccination, meds running low, a sudden weight change. Plus a nutrition analysis: calories, treats, meal regularity and whether the diet is complete. Below, your pet's whole health history on one timeline.</span></p>
             <img class="inline-shot pl" src="screens/health.webp" alt="" loading="lazy" width="600" height="1300" />
             <img class="inline-shot en" src="screens/health.webp" alt="" loading="lazy" width="600" height="1300" />
             <span class="prog" aria-hidden="true"></span>
@@ -743,7 +766,7 @@
             <span class="badge-premium">Premium</span>
             <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-lungs"/></svg></span>
             <h3>Cardio Check</h3>
-            <p><span class="pl">Tempo oddechu w spoczynku, liczone tapnięciami przez 30 sekund.</span><span class="en">Resting breathing rate, counted by tapping for 30 seconds.</span></p>
+            <p><span class="pl">Liczysz oddechy pupila w spoczynku, dotykając ekranu przez 30 sekund. ApkaŁapka podaje tempo na minutę, pokazuje, czy mieści się w normie, i zapisuje historię pomiarów.</span><span class="en">Count your pet's breaths at rest by tapping the screen for 30 seconds. ApkaŁapka gives you the rate per minute, shows whether it is in the normal range and keeps a history.</span></p>
             <img class="inline-shot pl" src="screens/cardio.webp" alt="" loading="lazy" width="600" height="1300" />
             <img class="inline-shot en" src="screens/cardio.webp" alt="" loading="lazy" width="600" height="1300" />
             <span class="prog" aria-hidden="true"></span>
@@ -752,7 +775,7 @@
             <span class="badge-premium">Premium</span>
             <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-doc"/></svg></span>
             <h3><span class="pl">Raport dla weterynarza</span><span class="en">Vet report</span></h3>
-            <p><span class="pl">Wybrane sekcje z wybranego okresu, gotowe do pokazania na wizycie.</span><span class="en">The sections and period you pick, ready to show at the visit.</span></p>
+            <p><span class="pl">Wybierasz okres i to, co ma się znaleźć w środku. Drukujesz go albo pokazujesz weterynarzowi na wizycie.</span><span class="en">Pick the period and what goes inside. Print it or show it to your vet at the visit.</span></p>
             <img class="inline-shot pl" src="screens/report.webp" alt="" loading="lazy" width="600" height="1300" />
             <img class="inline-shot en" src="screens/report.webp" alt="" loading="lazy" width="600" height="1300" />
             <span class="prog" aria-hidden="true"></span>
@@ -762,8 +785,8 @@
         <div class="phone-wrap">
           <div class="phone">
             <div class="screens">
-              <img data-screen="today" class="active pl" src="screens/pl-today.webp" alt="ApkaŁapka: panel Dziś" loading="lazy" width="600" height="1300" />
-              <img data-screen="today" class="active en" src="screens/en-today.webp" alt="ApkaŁapka: Today panel" loading="lazy" width="600" height="1300" />
+              <img data-screen="today" class="active pl" src="screens/pl-today.webp" alt="ApkaŁapka: pulpit" loading="lazy" width="600" height="1300" />
+              <img data-screen="today" class="active en" src="screens/en-today.webp" alt="ApkaŁapka: home screen" loading="lazy" width="600" height="1300" />
               <img data-screen="reminders" class="pl" src="screens/pl-reminders.webp" alt="ApkaŁapka: przypomnienia" loading="lazy" width="600" height="1300" />
               <img data-screen="reminders" class="en" src="screens/en-reminders.webp" alt="ApkaŁapka: reminders" loading="lazy" width="600" height="1300" />
               <img data-screen="calendar" class="pl" src="screens/pl-calendar.webp" alt="ApkaŁapka: kalendarz" loading="lazy" width="600" height="1300" />
@@ -797,7 +820,10 @@
         <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-syringe"/></svg><span class="pl">Podpowiedzi szczepień (WSAVA)</span><span class="en">Vaccine suggestions (WSAVA)</span></span>
         <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-share"/></svg><span class="pl">Udostępnianie rodzinie i weterynarzowi</span><span class="en">Sharing with family &amp; your vet</span></span>
         <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-cross"/></svg><span class="pl">Karta opiekuna</span><span class="en">Pet sitter card</span></span>
-        <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-lock"/></svg><span class="pl">Eksport i usuwanie danych (RODO)</span><span class="en">Data export &amp; deletion (GDPR)</span></span>
+        <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-phone"/></svg><span class="pl">SOS: telefon do dyżurnego weterynarza i pierwsza pomoc</span><span class="en">SOS: one tap to your emergency vet, plus first aid</span></span>
+        <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-wallet"/></svg><span class="pl">Wydatki na pupila</span><span class="en">Pet expenses</span></span>
+        <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-scissors"/></svg><span class="pl">Pielęgnacja: zęby, pazury, kąpiel, czesanie</span><span class="en">Grooming: teeth, claws, baths, brushing</span></span>
+        <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg><span class="pl">Ubezpieczenie pupila</span><span class="en">Pet insurance</span></span>
       </div>
     </section>
 
@@ -855,15 +881,23 @@
     <section id="od-tworcy">
       <div class="founder reveal">
         <figure>
-          <img src="assets/czesia.webp" alt="Czesia, kot twórcy ApkaŁapki" loading="lazy" width="560" height="700" />
+          <!-- Czesia od kociaka do dziś: zdjęcia przenikają się co kilka sekund, ostatnie to obecne.
+               Źródła w ApkaLapkaMarketing/Media/Czesia: mrugacz (bez brody u góry), spi_z_lapkami,
+               głodzilla (bez klapka z logo), Czesia_profil. Przy prefers-reduced-motion stoi obecne. -->
+          <div class="founder-photos" id="founder-photos">
+            <img src="assets/czesia-kociak-1.webp" alt="Czesia jako kociak" loading="lazy" width="560" height="700" />
+            <img src="assets/czesia-kociak-2.webp" alt="Czesia jako kociak, śpi z łapkami w górze" loading="lazy" width="560" height="700" />
+            <img src="assets/czesia-kociak-3.webp" alt="Mała Czesia stoi na tylnych łapach" loading="lazy" width="560" height="700" />
+            <img class="active" src="assets/czesia.webp" alt="Czesia dziś, kot twórcy ApkaŁapki" loading="lazy" width="560" height="700" />
+          </div>
           <figcaption><span class="pl">Czesia, pierwsza użytkowniczka</span><span class="en">Czesia, the very first user</span></figcaption>
         </figure>
         <div>
           <h2><span class="pl">Dlaczego powstała ApkaŁapka</span><span class="en">Why ApkaŁapka exists</span></h2>
-          <p class="pl">ApkaŁapkę zrobiłem dla Czesi. Chciałem mieć wszystko pod ręką: wiedzieć, co i ile je, kiedy skończy się karma i żwirek, i mieć gotowe odpowiedzi, kiedy weterynarz pyta o ostatnie tygodnie. Karteczki i notatki w telefonie tego nie ogarniały, więc napisałem aplikację, której sam potrzebowałem.</p>
-          <p class="en">I built ApkaŁapka for Czesia, my cat. I wanted everything at hand: what she eats and how much, when the food and litter will run out, and ready answers when the vet asks about the past few weeks. Sticky notes and phone notes couldn't keep up, so I wrote the app I needed myself.</p>
-          <p class="pl">Dziś korzystają z niej też inni opiekunowie psów i kotów, a ich uwagi trafiają do kolejnych wersji. Czegoś Ci brakuje? Napisz: <a href="mailto:apkalapka.support@gmail.com">apkalapka.support@gmail.com</a>.</p>
-          <p class="en">Today other dog and cat owners use it too, and their feedback goes into new versions. Missing something? Write to <a href="mailto:apkalapka.support@gmail.com">apkalapka.support@gmail.com</a>.</p>
+          <p class="pl">ApkaŁapkę zrobiłem dla Czesi. Chciałem mieć wszystko pod ręką i wiedzieć, co, ile i kiedy. Teraz wiem, kiedy skończy się karma i żwirek, a na wizycie mam gotowe odpowiedzi dla weterynarza. Bez stresu i bez szukania dokumentów, paragonów, zdjęć i karteczek. Notatki i kalendarz w telefonie tego nie ogarniały, więc napisałem aplikację, której sam potrzebowałem.</p>
+          <p class="en">I built ApkaŁapka for Czesia, my cat. I wanted everything at hand and to know what, how much and when. Now I know when the food and litter will run out, and at the vet I have the answers ready. No stress, no digging for documents, receipts, photos and sticky notes. Phone notes and calendar couldn't keep up, so I wrote the app I needed myself.</p>
+          <p class="pl">Dziś korzystają z niej opiekunowie psów i kotów. Czytam każdą wiadomość, a ich uwagi pomagają mi ulepszać kolejne wersje. Czegoś Ci brakuje? Napisz do mnie: <a href="mailto:apkalapka.support@gmail.com">apkalapka.support@gmail.com</a></p>
+          <p class="en">Today dog and cat owners use it too. I read every message, and their feedback helps me make each version better. Missing something? Write to me: <a href="mailto:apkalapka.support@gmail.com">apkalapka.support@gmail.com</a></p>
           <p class="sign"><span class="pl">Mateusz, twórca ApkaŁapki</span><span class="en">Mateusz, maker of ApkaŁapka</span></p>
         </div>
       </div>
@@ -1160,6 +1194,71 @@
           }, { threshold: 0.35 }).observe(wrap);
         }
       }
+
+      /* Czesia od kociaka do dziś */
+      var fp = document.getElementById('founder-photos');
+      if (fp && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        var fImgs = fp.querySelectorAll('img'), fIdx = fImgs.length - 1, fTimer = null;
+        function fNext() { fImgs[fIdx].classList.remove('active'); fIdx = (fIdx + 1) % fImgs.length; fImgs[fIdx].classList.add('active'); }
+        if ('IntersectionObserver' in window) {
+          new IntersectionObserver(function (en) {
+            if (en[0].isIntersecting && !fTimer) { fImgs.forEach(function (im) { im.loading = 'eager'; }); fTimer = setInterval(fNext, 3500); }
+            else if (!en[0].isIntersecting && fTimer) { clearInterval(fTimer); fTimer = null; }
+          }, { threshold: 0.3 }).observe(fp);
+        }
+      }
+
+      /* tropy wzdłuż strony */
+      var mainEl = document.querySelector('main');
+      var trailSecs = Array.prototype.slice.call(document.querySelectorAll('main > section:not(#download)'));
+      var trails = document.createElement('div');
+      trails.className = 'paw-trail side-trails'; trails.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(trails);
+      var trailObs = 'IntersectionObserver' in window ? new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target._segs.forEach(function (g) { g.classList.add('go'); }); trailObs.unobserve(e.target); } });
+      }, { threshold: 0.15 }) : null;
+      function drawTrails() {
+        trails.innerHTML = '';
+        var W = document.documentElement.clientWidth;
+        var gut = mainEl.getBoundingClientRect().left + 24; /* main ma padding 24 px */
+        var on = gut >= 110;
+        document.body.classList.toggle('has-trails', on);
+        trails.style.display = on ? '' : 'none';
+        if (!on) return;
+        var top0 = mainEl.getBoundingClientRect().top + window.scrollY;
+        trails.style.top = top0 + 'px'; trails.style.height = mainEl.offsetHeight + 'px';
+        var step = 54, rail = 70; /* pasek ikon po prawej zajmuje ok. 70 px */
+        var sides = [{ cx: gut / 2, w: gut }];
+        if (gut - rail >= 110) sides.push({ cx: W - rail - (gut - rail) / 2, w: gut - rail });
+        trailSecs.forEach(function (sec, si) {
+          var st = sec.getBoundingClientRect().top + window.scrollY - top0;
+          var y0 = st + 30, y1 = st + sec.offsetHeight - 10; /* odcinki stykają się, trop idzie bez przerw */
+          var n = Math.max(4, Math.floor((y1 - y0) / step));
+          var wasGoing = sec._segs && sec._segs[0].classList.contains('go');
+          sec._segs = sides.map(function (side, sd) {
+            var seg = document.createElement('span'), html = '', amp = Math.min(side.w * 0.16, 26);
+            seg.className = 'seg';
+            for (var k = 0; k < n; k++) {
+              var ph = k * 0.45 + si * 1.7 + sd * 2.4, foot = k % 2 ? 1 : -1;
+              var x = side.cx + Math.sin(ph) * amp + foot * 11;
+              var turn = Math.cos(ph) * amp * 0.45 / step * 57.3; /* skręt za krzywą */
+              html += '<i style="--i:' + k + ';--x:' + x.toFixed(1) + 'px;--y:' + (y0 + k * step) +
+                'px;--r:' + (180 - turn + foot * 7).toFixed(0) + 'deg"></i>';
+            }
+            seg.innerHTML = html;
+            seg.style.setProperty('--dur', (n * 0.55 + 4).toFixed(1) + 's');
+            seg.style.setProperty('--off', (sd * 2.2).toFixed(1) + 's');
+            if (wasGoing || !trailObs) seg.classList.add('go');
+            trails.appendChild(seg);
+            return seg;
+          });
+          if (trailObs && !wasGoing) trailObs.observe(sec);
+        });
+      }
+      drawTrails();
+      window.addEventListener('load', drawTrails);
+      var trailTimer;
+      window.addEventListener('resize', function () { clearTimeout(trailTimer); trailTimer = setTimeout(drawTrails, 200); });
 
       /* reveal animation */
       if ('IntersectionObserver' in window) {
