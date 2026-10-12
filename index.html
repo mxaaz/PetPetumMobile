@@ -236,7 +236,7 @@
       position: absolute; left: var(--x); top: var(--y); width: 30px; height: 30px;
       background: url('assets/paw.webp') center / contain no-repeat;
       transform: translate(-50%, -50%) rotate(var(--r)); scale: .8; opacity: 0;
-      animation: paw-step var(--dur, 11s) ease-in-out infinite; animation-delay: calc(var(--i) * .55s + var(--off, 0s));
+      animation: paw-step var(--dur, 11s) ease-in-out infinite; animation-delay: calc(var(--i) * var(--t, .55s) + var(--off, 0s));
     }
     @keyframes paw-step {
       0% { opacity: 0; scale: .8; }
@@ -249,12 +249,18 @@
        raz lewym, raz prawym marginesem. Ślady rysuje skrypt na dole strony (zależą od wysokości
        sekcji), a każdy odcinek rusza dopiero, gdy jego sekcja wjedzie w kadr. Drugi trop idzie
        przeciwnym marginesem z opóźnieniem. Tylko tam, gdzie margines obok treści ma co najmniej
-       110 px (z prawej liczony bez paska ikon), więc nigdy nie wchodzą pod tekst. */
+       110 px (z prawej liczony bez paska ikon), więc nigdy nie wchodzą pod tekst. Szeroki margines
+       mieści do trzech tropów obok siebie, każdy innego zwierzęcia: duża łapa stawia rzadsze
+       kroki niż mała (--sz, --t na odcinku). Te same tropy chodzą po pustym tle u góry hero
+       (.hero-trails): pasem nad tekstem i bokami, nad akwarelą. */
     .side-trails { inset: auto 0 auto 0; z-index: 0; }
+    .side-trails .seg, .hero-trails .seg { position: absolute; }
+    .side-trails .seg i, .hero-trails .seg i { width: var(--sz, 36px); height: var(--sz, 36px); }
+    .hero-trails i { --paw-o: .7; animation-name: paw-step-long; }
     /* Gdzie chodzą tropy, stały wzór łapek znika: ta sama akwarela w obu warstwach zlewała się
        w jedno i animacji nie było widać. Węższe okna (bez tropów) zostają przy wzorze. */
     body.has-trails { background: var(--bg); }
-    .side-trails .seg:not(.go) i { animation-play-state: paused; }
+    .side-trails .seg:not(.go) i, .hero-trails .seg:not(.go) i { animation-play-state: paused; }
     .side-trails i { width: 36px; height: 36px; --paw-o: .72; animation-name: paw-step-long; }
     /* Wzdłuż strony ślad stoi dłużej niż w hero, więc naraz widać prawie cały odcinek. */
     @keyframes paw-step-long {
@@ -1208,18 +1214,65 @@
         }
       }
 
-      /* tropy wzdłuż strony */
-      var mainEl = document.querySelector('main');
+      /* tropy wzdłuż strony i w hero */
+      var mainEl = document.querySelector('main'), heroEl = document.querySelector('header.hero');
       var trailSecs = Array.prototype.slice.call(document.querySelectorAll('main > section:not(#download)'));
       var trails = document.createElement('div');
       trails.className = 'paw-trail side-trails'; trails.setAttribute('aria-hidden', 'true');
       document.body.appendChild(trails);
+      var heroTrails = document.createElement('div');
+      heroTrails.className = 'paw-trail hero-trails'; heroTrails.setAttribute('aria-hidden', 'true');
+      heroEl.insertBefore(heroTrails, heroEl.firstChild);
+      /* Trop jest pocięty na odcinki po ok. 8 kroków. Każdy rusza od pierwszego śladu, gdy sam wjedzie
+         w kadr, więc w środku długiej sekcji łapki nie czekają, aż zwierzę dojdzie z jej góry. Poza
+         kadrem odcinek stoi: setki śladów animowanych poza ekranem tylko obciążałyby przeglądarkę. */
       var trailObs = 'IntersectionObserver' in window ? new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) { if (e.isIntersecting) { e.target._segs.forEach(function (g) { g.classList.add('go'); }); trailObs.unobserve(e.target); } });
-      }, { threshold: 0.15 }) : null;
+        entries.forEach(function (e) { e.target.classList.toggle('go', e.isIntersecting); });
+      }, { threshold: 0 }) : null;
+      /* Zwierzęta: duża łapa (pies), mała (kot), średnia. Większa łapa stawia dłuższe i wolniejsze kroki. */
+      var PAWS = [{ sz: 42, step: 62, t: .62 }, { sz: 24, step: 38, t: .42 }, { sz: 32, step: 50, t: .52 }];
+      /* Jeden trop z (x0,y0) do (x1,y1): ślady na przemian lewa/prawa, z łagodnym wężykiem w poprzek drogi. */
+      function pawTrail(box, x0, y0, x1, y1, paw, amp, ph0, off) {
+        var dx = x1 - x0, dy = y1 - y0, len = Math.sqrt(dx * dx + dy * dy);
+        var n = Math.max(3, Math.floor(len / paw.step)), ux = dx / len, uy = dy / len;
+        var dir = Math.atan2(dy, dx) * 57.3 + 90, spread = paw.sz * 0.3, pts = [];
+        for (var k = 0; k < n; k++) {
+          var ph = k * 0.45 + ph0, foot = k % 2 ? 1 : -1, d = k * paw.step;
+          var side = Math.sin(ph) * amp + foot * spread;
+          var turn = Math.cos(ph) * amp * 0.45 / paw.step * 57.3; /* skręt za krzywą */
+          pts.push({ x: x0 + ux * d - uy * side, y: y0 + uy * d + ux * side, r: dir - turn + foot * 7 });
+        }
+        for (var c = 0; c < n; c += 8) {
+          var part = pts.slice(c, c + 8), m = paw.sz;
+          var bx = Math.min.apply(null, part.map(function (q) { return q.x; })) - m;
+          var by = Math.min.apply(null, part.map(function (q) { return q.y; })) - m;
+          var seg = document.createElement('span'), html = '';
+          part.forEach(function (q, k) {
+            html += '<i style="--i:' + k + ';--x:' + (q.x - bx).toFixed(1) + 'px;--y:' + (q.y - by).toFixed(1) +
+              'px;--r:' + q.r.toFixed(0) + 'deg"></i>';
+          });
+          seg.className = 'seg'; seg.innerHTML = html;
+          seg.style.left = bx.toFixed(1) + 'px'; seg.style.top = by.toFixed(1) + 'px';
+          seg.style.width = (Math.max.apply(null, part.map(function (q) { return q.x; })) - bx + m).toFixed(1) + 'px';
+          seg.style.height = (Math.max.apply(null, part.map(function (q) { return q.y; })) - by + m).toFixed(1) + 'px';
+          seg.style.setProperty('--sz', paw.sz + 'px'); seg.style.setProperty('--t', paw.t + 's');
+          seg.style.setProperty('--dur', (part.length * paw.t + 4).toFixed(1) + 's');
+          seg.style.setProperty('--off', off.toFixed(1) + 's');
+          box.appendChild(seg);
+          if (trailObs) trailObs.observe(seg); else seg.classList.add('go');
+        }
+      }
+      /* Margines dzielimy na pasy po ok. 110 px, maksymalnie trzy. */
+      function lanes(x, w) {
+        var c = Math.max(1, Math.min(3, Math.floor(w / 110))), lw = w / c, out = [];
+        for (var l = 0; l < c; l++) out.push({ cx: x + lw * (l + .5), w: lw });
+        return out;
+      }
       function drawTrails() {
+        var W = document.documentElement.clientWidth, rail = 70; /* pasek ikon po prawej zajmuje ok. 70 px */
+        if (trailObs) trailObs.disconnect();
+        drawHeroTrails(W, rail);
         trails.innerHTML = '';
-        var W = document.documentElement.clientWidth;
         var gut = mainEl.getBoundingClientRect().left + 24; /* main ma padding 24 px */
         var on = gut >= 110;
         document.body.classList.toggle('has-trails', on);
@@ -1227,32 +1280,40 @@
         if (!on) return;
         var top0 = mainEl.getBoundingClientRect().top + window.scrollY;
         trails.style.top = top0 + 'px'; trails.style.height = mainEl.offsetHeight + 'px';
-        var step = 54, rail = 70; /* pasek ikon po prawej zajmuje ok. 70 px */
-        var sides = [{ cx: gut / 2, w: gut }];
-        if (gut - rail >= 110) sides.push({ cx: W - rail - (gut - rail) / 2, w: gut - rail });
+        var cols = lanes(0, gut);
+        if (gut - rail >= 110) cols = cols.concat(lanes(W - gut, gut - rail));
         trailSecs.forEach(function (sec, si) {
           var st = sec.getBoundingClientRect().top + window.scrollY - top0;
           var y0 = st + 30, y1 = st + sec.offsetHeight - 10; /* odcinki stykają się, trop idzie bez przerw */
-          var n = Math.max(4, Math.floor((y1 - y0) / step));
-          var wasGoing = sec._segs && sec._segs[0].classList.contains('go');
-          sec._segs = sides.map(function (side, sd) {
-            var seg = document.createElement('span'), html = '', amp = Math.min(side.w * 0.16, 26);
-            seg.className = 'seg';
-            for (var k = 0; k < n; k++) {
-              var ph = k * 0.45 + si * 1.7 + sd * 2.4, foot = k % 2 ? 1 : -1;
-              var x = side.cx + Math.sin(ph) * amp + foot * 11;
-              var turn = Math.cos(ph) * amp * 0.45 / step * 57.3; /* skręt za krzywą */
-              html += '<i style="--i:' + k + ';--x:' + x.toFixed(1) + 'px;--y:' + (y0 + k * step) +
-                'px;--r:' + (180 - turn + foot * 7).toFixed(0) + 'deg"></i>';
-            }
-            seg.innerHTML = html;
-            seg.style.setProperty('--dur', (n * 0.55 + 4).toFixed(1) + 's');
-            seg.style.setProperty('--off', (sd * 2.2).toFixed(1) + 's');
-            if (wasGoing || !trailObs) seg.classList.add('go');
-            trails.appendChild(seg);
-            return seg;
+          cols.forEach(function (c, ci) {
+            /* pasy przesunięte w pionie, żeby ślady sąsiednich zwierząt nie szły ramię w ramię */
+            pawTrail(trails, c.cx, y0 + (ci % 3) * 17, c.cx, y1, PAWS[(ci + si) % PAWS.length],
+              Math.min(c.w * 0.16, 22), si * 1.7 + ci * 2.4, ci * 1.3);
           });
-          if (trailObs && !wasGoing) trailObs.observe(sec);
+        });
+      }
+      /* Hero: pas nad tekstem (w prawo, do telefonu) i oba boki (w dół, do akwareli). */
+      function drawHeroTrails(W, rail) {
+        heroTrails.innerHTML = '';
+        var hr = heroEl.getBoundingClientRect(), ir = heroEl.querySelector('.hero-inner').getBoundingClientRect();
+        var copy = heroEl.querySelector('.hero-copy').getBoundingClientRect();
+        var phone = heroEl.querySelector('.hero-phone').getBoundingClientRect();
+        var H = hr.height, art = W / 5.28; /* wysokość akwarelowego pasa (proporcja 5,28:1) */
+        var yEnd = H - art * 0.72, navH = 70;
+        function add() { pawTrail.apply(null, [heroTrails].concat([].slice.call(arguments))); }
+        var band = copy.top - hr.top - navH;
+        if (band >= 90) {
+          var by = navH + band / 2;
+          add(40, by, phone.left - hr.left - 50, by - 10, PAWS[0], Math.min(band / 5, 18), 0, 0);
+          if (band >= 130) add(ir.left - hr.left + 60, by + 34, phone.left - hr.left - 90, by + 26, PAWS[1], 10, 1.2, 2.5);
+        }
+        var left = ir.left - hr.left;
+        lanes(0, left).forEach(function (c, ci) {
+          if (c.w >= 70) add(c.cx, navH + 30 + ci * 40, c.cx, yEnd, PAWS[(ci + 1) % 3], Math.min(c.w * 0.16, 18), ci * 2.1, 1 + ci * 1.4);
+        });
+        var rx = Math.max(ir.right, phone.right) - hr.left + 10, rw = W - rail - rx;
+        lanes(rx, rw).forEach(function (c, ci) {
+          if (c.w >= 70) add(c.cx, navH + 10 + ci * 50, c.cx, yEnd, PAWS[(ci + 2) % 3], Math.min(c.w * 0.16, 18), 1 + ci * 1.9, .6 + ci * 1.1);
         });
       }
       drawTrails();
