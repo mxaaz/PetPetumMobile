@@ -4,9 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Polityka Prywatności - ApkaŁapka</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="/assets/fonts/fonts.css" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -35,178 +33,197 @@
     <p>ApkaŁapka - mobilna aplikacja do zarządzania zwierzętami domowymi</p>
   </header>
   <article>
-    <p class="meta">Ostatnia aktualizacja: sierpień 2026 &nbsp;|&nbsp; Obowiązuje od: maj 2026</p>
+    <p class="meta">Ostatnia aktualizacja: 12 października 2026</p>
 
-    <h2>1. Wprowadzenie</h2>
+    <h2>1. Kto jest administratorem Twoich danych</h2>
     <p>
-      ApkaŁapka (dawniej PetPetum) („Aplikacja", „my") jest tworzone i obsługiwane przez
-      <strong>Mateusz Sobstyl</strong> („Deweloper"). Niniejsza Polityka Prywatności wyjaśnia,
-      w jaki sposób zbieramy, wykorzystujemy, przechowujemy i chronimy informacje podczas
-      korzystania z ApkaŁapka na urządzeniach Android i iOS.
+      Administratorem danych osobowych przetwarzanych w aplikacji ApkaŁapka (dawniej PetPetum,
+      „Aplikacja”) i na stronie apkalapka.pl jest <strong>Mateusz Sobstyl</strong>, prowadzący
+      działalność gospodarczą pod firmą <strong>Mateusz Sobstyl IT Solution</strong>,
+      ul. Dożynkowa 38B/35, 20-223 Lublin, NIP 9462722229, REGON 523576956 („my”).
     </p>
     <p>
-      Korzystając z Aplikacji, zgadzasz się na praktyki opisane w tej polityce. Jeśli nie
-      akceptujesz, zaprzestań korzystania z Aplikacji.
+      Kontakt we wszystkich sprawach dotyczących danych:
+      <a href="mailto:apkalapka.support@gmail.com">apkalapka.support@gmail.com</a>.
+      Nie wyznaczyliśmy inspektora ochrony danych, bo nie mamy takiego obowiązku.
+    </p>
+    <p>
+      Ta polityka opisuje, jakie dane przetwarzamy, po co, na jakiej podstawie, komu je
+      powierzamy i jakie masz prawa. Ma charakter informacyjny: korzystanie z Aplikacji nie
+      oznacza zgody na cokolwiek. Tam, gdzie potrzebujemy Twojej zgody, prosimy o nią osobno.
     </p>
 
-    <h2>2. Informacje, które zbieramy</h2>
+    <h2>2. Jakie dane przetwarzamy</h2>
 
-    <h3>2.1 Informacje podane przez użytkownika</h3>
+    <h3>2.1 Dane, które wprowadzasz</h3>
     <ul>
-      <li><strong>Dane konta</strong> - adres e-mail i hasło przy rejestracji lub logowaniu przez Firebase Authentication (Google lub Apple).</li>
-      <li><strong>Dane o zwierzętach</strong> - imię, gatunek, rasa, data urodzenia, waga, zdjęcia, historia zdrowia, szczepień, leków, kontakty weterynarii oraz wydatki wprowadzane dla Twoich zwierząt.</li>
-      <li><strong>Zdjęcia</strong> - obrazy wykonane aparatem lub wybrane z galerii zdjęć dla profili zwierząt.</li>
-      <li><strong>Skan wyników weterynaryjnych</strong> - zdjęcie wyniku badania jest odczytywane przez mechanizm rozpoznawania tekstu działający wyłącznie na Twoim urządzeniu. Ani zdjęcie, ani odczytany tekst nie są w tym celu wysyłane na żadne serwery.</li>
+      <li><strong>Dane konta</strong>: adres e-mail i hasło (hasło przechowuje Firebase Authentication w postaci zabezpieczonej, my go nie widzimy). Przy logowaniu przez Google lub Apple dostajemy od nich identyfikator konta, adres e-mail oraz, jeśli je przekażą, imię i zdjęcie profilowe. Apple może przekazać ukryty adres przekierowujący.</li>
+      <li><strong>Dane pupili</strong>: imię, gatunek, rasa, data urodzenia, waga, zdjęcia, wizyty, szczepienia, leki, odrobaczanie, wyniki badań, objawy, karmienie, nawodnienie, kuweta, pielęgnacja, aktywność, wydatki, ubezpieczenie, zapasy i inne wpisy.</li>
+      <li><strong>Kontakty</strong>: dane weterynarzy i numery alarmowe, które sam/a wpisujesz. Jeśli wpisujesz dane innych osób, zrób to tylko wtedy, gdy masz do tego prawo.</li>
+      <li><strong>Zdjęcia i załączniki</strong>: zdjęcia z aparatu lub galerii oraz pliki dołączane do wpisów.</li>
+      <li><strong>Odczyt tekstu ze zdjęć</strong>: zdjęcie wyniku badania albo etykiety karmy jest odczytywane przez mechanizm rozpoznawania tekstu (Google ML Kit) działający wyłącznie na Twoim telefonie. Ani zdjęcie, ani odczytany tekst nie trafiają w tym celu na żadne serwery.</li>
     </ul>
 
-    <h3>2.2 Informacje zbierane automatycznie</h3>
+    <h3>2.2 Dane powstające podczas korzystania z Aplikacji</h3>
     <ul>
-      <li><strong>Lokalizacja (tylko podczas używania)</strong> - lokalizacja przybliżona lub dokładna, używana wyłącznie do wyświetlania pobliskich klinik weterynaryjnych na mapie. Zbierana tylko wtedy, gdy Aplikacja jest otwarta i gdy korzystasz z funkcji mapy. Nie zbieramy lokalizacji w tle.</li>
-      <li><strong>Identyfikatory urządzenia / reklamowe</strong> - używane przez Firebase oraz Google AdMob do celów analitycznych i reklamowych. Reklamy wyświetlane są wyłącznie użytkownikom wersji bezpłatnej; subskrybenci Premium nie widzą reklam. W Europejskim Obszarze Gospodarczym prosimy o Twoją zgodę (przez mechanizm zgód Google) przed wyświetlaniem reklam spersonalizowanych; możesz zrezygnować z reklam spersonalizowanych w dowolnym momencie.</li>
-      <li><strong>Raporty awarii</strong> - anonimowe dane o awariach i wydajności zbierane przez Firebase Crashlytics w celu poprawy stabilności.</li>
-      <li><strong>Analityka użytkowania</strong> - zagregowane statystyki użytkowania przez Firebase Analytics.</li>
+      <li><strong>Lokalizacja</strong>: tylko gdy otworzysz mapę klinik i udzielisz zgody systemowej. Współrzędne są wysyłane do usług OpenStreetMap (Nominatim, Overpass), żeby znaleźć kliniki w okolicy. Nie zapisujemy lokalizacji i nie zbieramy jej w tle.</li>
+      <li><strong>Wyszukiwanie karmy</strong>: gdy wyszukujesz karmę po kodzie kreskowym lub nazwie, kod albo nazwa trafiają do bazy Open Pet Food Facts. Gdy wklejasz link do sklepu, Aplikacja pobiera tę stronę bezpośrednio ze sklepu. W obu przypadkach nie wysyłamy danych o Tobie ani o pupilu.</li>
+      <li><strong>Statystyki użytkowania (tylko za zgodą)</strong>: Firebase Analytics zapisuje zdarzenia w rodzaju „otwarto funkcję X” razem z identyfikatorem instalacji, modelem urządzenia, wersją systemu i przybliżonym krajem. Nie wysyłamy treści wpisów, danych pupili ani treści wyszukiwań. Bez Twojej zgody statystyki są wyłączone.</li>
+      <li><strong>Raporty awarii</strong>: Firebase Crashlytics zbiera informacje o awarii (ślad błędu, model urządzenia, wersja systemu i Aplikacji, identyfikator instalacji). To dane pseudonimowe: nie zawierają Twojego e-maila ani wpisów.</li>
+      <li><strong>Weryfikacja aplikacji</strong>: Firebase App Check (Google Play Integrity na Androidzie, App Attest na iOS) sprawdza, czy z naszą chmurą łączy się prawdziwa Aplikacja. Chroni to Twoje dane przed nadużyciami.</li>
+      <li><strong>Reklamy (tylko wersja bezpłatna)</strong>: Google AdMob wyświetla reklamy i może używać identyfikatora reklamowego urządzenia. W Europejskim Obszarze Gospodarczym, Wielkiej Brytanii i Szwajcarii o zgodę na reklamy spersonalizowane pyta okno zgody Google. Na iOS system dodatkowo pyta o zgodę na śledzenie (App Tracking Transparency). Subskrybenci Premium nie widzą reklam.</li>
+      <li><strong>Zakupy</strong>: płatności obsługuje Google Play albo App Store. Nie widzimy danych Twojej karty. RevenueCat dostaje identyfikator Twojego konta w Aplikacji oraz historię i status zakupów, żeby odblokować Premium.</li>
     </ul>
 
-    <h3>2.3 Zakupy w aplikacji</h3>
-    <p>
-      Subskrypcje premium są przetwarzane przez Google Play lub Apple App Store. Nie
-      otrzymujemy ani nie przechowujemy danych Twojej karty płatniczej. Otrzymujemy jedynie
-      potwierdzenie statusu zakupu od platformy.
-    </p>
-
-    <h2>3. Jak wykorzystujemy Twoje informacje</h2>
+    <h3>2.3 Strona apkalapka.pl</h3>
     <ul>
-      <li>Zapewnienie i utrzymanie podstawowych funkcji Aplikacji (rekordy zwierząt, przypomnienia, śledzenie zdrowia).</li>
-      <li>Synchronizacja danych między urządzeniami przez Firebase Firestore (opcjonalne, wymaga logowania).</li>
-      <li>Wyświetlanie pobliskich klinik weterynaryjnych z wykorzystaniem bieżącej lokalizacji (na żądanie).</li>
-      <li>Przetwarzanie i weryfikacja statusu subskrypcji premium.</li>
-      <li>Analiza raportów awarii w celu naprawy błędów i ulepszenia Aplikacji.</li>
-      <li>Wyświetlanie reklam użytkownikom wersji bezpłatnej (subskrybenci Premium nie widzą reklam); możesz zrezygnować z reklam spersonalizowanych.</li>
-    </ul>
-    <p>
-      <strong>Podstawa prawna (RODO Art. 6):</strong> przetwarzamy Twoje dane na następujących
-      podstawach: <em>wykonanie umowy</em> (konto, synchronizacja w chmurze, weryfikacja
-      subskrypcji); <em>Twoja zgoda</em> (lokalizacja, reklamy spersonalizowane, opcjonalna
-      analityka), którą możesz wycofać w dowolnym momencie; oraz nasz <em>uzasadniony
-      interes</em> (raporty awarii i bezpieczeństwo, aby Aplikacja była stabilna i bezpieczna).
-    </p>
-
-    <h2>4. Przechowywanie danych</h2>
-    <p>
-      <strong>Lokalne przechowywanie:</strong> Wszystkie dane o zwierzętach są przechowywane
-      lokalnie na Twoim urządzeniu w zaszyfrowanej bazie danych (Hive z szyfrowaniem AES-256).
-      Dane nigdy nie są przesyłane bez Twojego wyraźnego działania (np. włączenia
-      synchronizacji z chmurą).
-    </p>
-    <p>
-      <strong>Przechowywanie w chmurze:</strong> Jeśli włączysz synchronizację z chmurą,
-      dane są przechowywane w Google Firebase Firestore. Firebase jest obsługiwane przez
-      Google LLC. Szczegóły:
-      <a href="https://firebase.google.com/support/privacy" target="_blank">Prywatność Firebase</a>.
-    </p>
-    <p>
-      <strong>Transfery międzynarodowe:</strong> niektórzy nasi procesorzy (Google / Firebase,
-      RevenueCat) mają siedzibę w USA, więc Twoje dane mogą być przekazywane i przetwarzane
-      poza Europejskim Obszarem Gospodarczym. Takie transfery opierają się na odpowiednich
-      zabezpieczeniach, takich jak Standardowe Klauzule Umowne Komisji Europejskiej oraz, w
-      stosownych przypadkach, ramy ochrony danych UE-USA (Data Privacy Framework).
-    </p>
-
-    <h2>5. Usługi podmiotów trzecich</h2>
-    <ul>
-      <li><strong>Firebase (Google LLC)</strong> - uwierzytelnianie, Firestore, Storage, Crashlytics, Analytics. <a href="https://policies.google.com/privacy" target="_blank">Polityka prywatności Google</a>.</li>
-      <li><strong>Google AdMob</strong> - SDK reklamowy, reklamy wyświetlane użytkownikom wersji bezpłatnej. Może używać identyfikatorów urządzenia / reklamowych do dostarczania i personalizacji reklam. Reklamy spersonalizowane w EOG wymagają Twojej zgody; możesz zrezygnować przez wbudowane okno zgody lub ustawienia urządzenia. <a href="https://support.google.com/admob/answer/6128543" target="_blank">AdMob a prywatność</a>.</li>
-      <li><strong>RevenueCat</strong> - zarządza statusem subskrypcji Premium. Otrzymuje anonimowy identyfikator użytkownika aplikacji oraz status zakupu (brak danych karty płatniczej). <a href="https://www.revenuecat.com/privacy" target="_blank">Prywatność RevenueCat</a>.</li>
-      <li><strong>Google Play / Apple App Store</strong> - przetwarzanie zakupów w aplikacji.</li>
-      <li><strong>OpenStreetMap / Nominatim / Overpass</strong> - dane mapowe i lokalizacje klinik (brak wysyłania danych osobowych, tylko współrzędne).</li>
+      <li><strong>Hosting</strong>: stronę udostępnia GitHub Pages (GitHub, Inc.). Serwer, jak każdy serwer WWW, technicznie przetwarza adres IP odwiedzającego.</li>
+      <li><strong>Statystyki strony</strong>: Cloudflare Web Analytics liczy odwiedziny bez plików cookie i bez identyfikowania osób.</li>
+      <li><strong>Fonty</strong> ładujemy z naszego serwera, nie z serwerów Google.</li>
+      <li><strong>Kontakt e-mail</strong>: gdy do nas piszesz, przetwarzamy Twój adres i treść wiadomości, żeby odpowiedzieć.</li>
     </ul>
 
-    <h2>6. Udostępnianie pupila między użytkownikami</h2>
-    <p>
-      Aplikacja umożliwia udostępnienie pupila innemu użytkownikowi (np. członkowi rodziny lub
-      weterynarzowi) przez zaproszenie e-mail albo kod QR / link zapraszający. Po udostępnieniu
-      zaproszony użytkownik może przeglądać dane tego pupila na swoim koncie, w zakresie
-      ograniczonym do wybranego przez Ciebie poziomu dostępu (np. rola weterynarza pozwala
-      przeglądać wyłącznie dane medyczne: wizyty, szczepienia, leki, badania krwi i wagę).
-      To Ty decydujesz, kogo zaprosić, i możesz cofnąć dostęp w dowolnym momencie. Odpowiadasz
-      za wybór osób, którym udzielasz dostępu; nie odpowiadamy za sposób, w jaki zaproszony
-      użytkownik wykorzysta udostępnione dane. Udostępnianie wymaga włączonej synchronizacji
-      z chmurą (Firebase).
-    </p>
-
-    <h2>7. Twoje prawa (RODO)</h2>
-    <p>Jeśli jesteś w Europejskim Obszarze Gospodarczym (EOG), masz następujące prawa:</p>
+    <h2>3. Cele i podstawy prawne</h2>
     <ul>
-      <li><strong>Prawo dostępu</strong> - żądanie kopii wszystkich danych osobowych, które posiadamy o Tobie.</li>
-      <li><strong>Prawo do usunięcia</strong> - żądanie usunięcia wszystkich Twoich danych (patrz Polityka usuwania konta).</li>
-      <li><strong>Prawo do przenoszenia</strong> - otrzymanie danych w formacie nadającym się do odczytu maszynowego.</li>
-      <li><strong>Prawo do sprostowania</strong> - korygowanie niedokładnych lub niekompletnych danych.</li>
-      <li><strong>Prawo do ograniczenia przetwarzania</strong> - ograniczenie sposobu używania Twoich danych.</li>
-      <li><strong>Prawo do sprzeciwu</strong> - sprzeciw wobec przetwarzania w celach marketingu bezpośredniego.</li>
+      <li><strong>Działanie Aplikacji, konto, synchronizacja w chmurze, udostępnianie pupila, Premium, mapa klinik, wyszukiwanie karmy</strong>: wykonanie umowy o świadczenie usługi (art. 6 ust. 1 lit. b RODO).</li>
+      <li><strong>Statystyki użytkowania i reklamy spersonalizowane</strong>: Twoja zgoda (art. 6 ust. 1 lit. a RODO). Zgodę możesz w każdej chwili wycofać w Ustawieniach Aplikacji. Wycofanie nie wpływa na zgodność z prawem przetwarzania sprzed wycofania.</li>
+      <li><strong>Raporty awarii, weryfikacja aplikacji, bezpieczeństwo, reklamy niespersonalizowane w wersji bezpłatnej</strong>: nasz prawnie uzasadniony interes (art. 6 ust. 1 lit. f RODO), czyli stabilna i bezpieczna Aplikacja oraz finansowanie darmowej wersji.</li>
+      <li><strong>Odpowiedzi na wiadomości, obsługa reklamacji, dochodzenie i obrona roszczeń</strong>: nasz prawnie uzasadniony interes (art. 6 ust. 1 lit. f RODO).</li>
+      <li><strong>Obowiązki księgowe i podatkowe</strong> związane ze sprzedażą: obowiązek prawny (art. 6 ust. 1 lit. c RODO).</li>
     </ul>
-    <p>Aby skorzystać z tych praw, skontaktuj się pod adresem <a href="mailto:mateusz33825@gmail.com">mateusz33825@gmail.com</a>. Odpowiemy w ciągu 30 dni.</p>
-
-    <h2>8. Prawa mieszkańców Kalifornii (CCPA)</h2>
     <p>
-      Jeśli jesteś mieszkańcem Kalifornii, masz dodatkowe prawa na mocy California Consumer
-      Privacy Act (CCPA):
+      Podanie danych jest dobrowolne. Bez adresu e-mail nie założysz konta, ale możesz
+      korzystać z Aplikacji w trybie gościa, wtedy dane zostają wyłącznie na telefonie.
+    </p>
+    <p>
+      Nie podejmujemy wobec Ciebie decyzji opartych wyłącznie na zautomatyzowanym
+      przetwarzaniu, które wywoływałyby skutki prawne. Wyliczenia w Aplikacji (np. kalorie,
+      trendy wagi, zakresy wyników badań) mają charakter wyłącznie informacyjny.
+    </p>
+
+    <h2>4. Gdzie są przechowywane dane</h2>
+    <p>
+      <strong>Na telefonie</strong>: baza danych Aplikacji jest szyfrowana (AES-256).
+      Zdjęcia, załączniki i automatyczne cotygodniowe kopie zapasowe są zapisywane w
+      prywatnym katalogu Aplikacji, chronionym przez system telefonu, ale nie są dodatkowo
+      szyfrowane przez Aplikację. Plik eksportu, który sam/a utworzysz, nie jest szyfrowany:
+      przechowuj go rozważnie.
+    </p>
+    <p>
+      <strong>W chmurze</strong>: gdy jesteś zalogowany/a, dane pupili i zdjęcia są
+      synchronizowane z Google Firebase (Firestore i Storage). Dostęp do nich mają tylko Ty
+      i osoby, którym udostępnisz pupila. Połączenia są szyfrowane (TLS).
+    </p>
+
+    <h2>5. Komu powierzamy dane</h2>
+    <ul>
+      <li><strong>Google</strong> (Google Ireland Ltd / Google LLC): Firebase Authentication, Firestore, Storage, Crashlytics, Analytics, App Check, AdMob, ML Kit (działa na telefonie), logowanie Google. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase a prywatność</a>, <a href="https://policies.google.com/privacy" target="_blank">Polityka prywatności Google</a>.</li>
+      <li><strong>Apple</strong>: logowanie przez Apple, App Store, App Tracking Transparency.</li>
+      <li><strong>RevenueCat, Inc.</strong>: obsługa subskrypcji. <a href="https://www.revenuecat.com/privacy" target="_blank">Prywatność RevenueCat</a>.</li>
+      <li><strong>OpenStreetMap Foundation</strong> i serwery Overpass: mapa i wyszukiwanie klinik (tylko współrzędne).</li>
+      <li><strong>Open Pet Food Facts</strong>: baza karm (tylko kod kreskowy lub nazwa produktu).</li>
+      <li><strong>GitHub, Inc.</strong> i <strong>Cloudflare, Inc.</strong>: hosting i statystyki strony.</li>
+      <li><strong>Osoby, którym udostępnisz pupila</strong> (sekcja 6).</li>
+      <li><strong>Organy publiczne</strong>, gdy zobowiązuje nas do tego prawo.</li>
+    </ul>
+    <p>
+      Nie sprzedajemy Twoich danych.
+    </p>
+    <p>
+      <strong>Przekazywanie poza EOG</strong>: Google, Apple, RevenueCat, GitHub i Cloudflare
+      mogą przetwarzać dane w USA. Opieramy się na decyzji Komisji Europejskiej o
+      odpowiednim stopniu ochrony (EU-US Data Privacy Framework) w przypadku firm, które do
+      niego przystąpiły, oraz na standardowych klauzulach umownych Komisji Europejskiej.
+      Kopię zabezpieczeń możesz uzyskać, pisząc do nas.
+    </p>
+
+    <h2>6. Udostępnianie pupila innym osobom</h2>
+    <p>
+      Z Premium możesz udostępnić pupila innej osobie z kontem w Aplikacji: przez adres
+      e-mail albo kod QR, link lub kod do przepisania. Wybierasz rolę:
     </p>
     <ul>
-      <li><strong>Prawo do wiedzy</strong> - kategorie i konkretne informacje osobowe, które zebraliśmy o Tobie.</li>
-      <li><strong>Prawo do usunięcia</strong> - żądanie usunięcia zebranych informacji osobowych.</li>
-      <li><strong>Prawo do rezygnacji ze sprzedaży</strong> - nie sprzedajemy Twoich danych osobowych podmiotom trzecim.</li>
-      <li><strong>Prawo do niedyskryminacji</strong> - nie będziemy dyskryminować Cię za korzystanie z praw CCPA.</li>
+      <li><strong>Rodzina</strong> i <strong>Opiekun</strong>: podgląd wszystkich danych pupila (dla opiekuna można ustawić termin wygaśnięcia).</li>
+      <li><strong>Weterynarz</strong>: podgląd tylko danych medycznych (wizyty, szczepienia, leki, wyniki badań, waga, odrobaczanie, plany żywienia, pielęgnacja).</li>
     </ul>
-    <p>Aby złożyć wniosek CCPA, napisz na <a href="mailto:mateusz33825@gmail.com">mateusz33825@gmail.com</a>.</p>
-
-    <h2>9. Okres przechowywania danych</h2>
     <p>
-      Dane lokalne są przechowywane do momentu ich usunięcia lub odinstalowania Aplikacji.
-      Dane w chmurze (Firebase) są przechowywane do momentu usunięcia konta. Po usunięciu
-      konta dane są trwale usuwane z serwerów Firebase w ciągu 30 dni.
+      Zaproszona osoba widzi Twój adres e-mail i imię pupila. Udostępnienie daje wyłącznie
+      podgląd, bez edycji. Dostęp możesz cofnąć w każdej chwili. Odpowiadasz za wybór osób,
+      które zapraszasz; za to, co zaproszona osoba zrobi z danymi, które zobaczyła, odpowiada
+      ona sama.
     </p>
 
-    <h2>10. Prywatność dzieci</h2>
+    <h2>7. Jak długo przechowujemy dane</h2>
+    <ul>
+      <li><strong>Dane na telefonie</strong>: do czasu ich usunięcia w Aplikacji, usunięcia konta albo odinstalowania Aplikacji.</li>
+      <li><strong>Dane w chmurze</strong>: do czasu usunięcia konta. Usunięcie konta kasuje dane pupili, zdjęcia, zaproszenia i udostępnienia z naszej chmury od razu; z kopii zapasowych Google znikają w cyklu ich rotacji.</li>
+      <li><strong>Statystyki użytkowania</strong>: nie dłużej niż 14 miesięcy.</li>
+      <li><strong>Raporty awarii</strong>: do 90 dni.</li>
+      <li><strong>Dane zakupów</strong> w RevenueCat: do czasu usunięcia konta, a na Twoje żądanie usuwamy je wcześniej. Historię transakcji przechowują też Google i Apple według swoich zasad. Dane potrzebne do rozliczeń podatkowych przechowujemy przez okres wymagany przepisami.</li>
+      <li><strong>Korespondencja</strong>: do 3 lat od zakończenia sprawy, ze względu na możliwe roszczenia.</li>
+    </ul>
+
+    <h2>8. Twoje prawa</h2>
+    <ul>
+      <li><strong>Dostęp do danych i ich kopia</strong>: Ustawienia → Kopia zapasowa → Eksportuj moje dane albo e-mail do nas.</li>
+      <li><strong>Sprostowanie</strong>: edytujesz dowolny wpis w Aplikacji.</li>
+      <li><strong>Usunięcie</strong>: Ustawienia → Usuń konto, albo przez <a href="account-deletion.html">stronę usuwania konta</a>.</li>
+      <li><strong>Ograniczenie przetwarzania.</strong></li>
+      <li><strong>Przenoszenie danych</strong>: eksport w formacie JSON.</li>
+      <li><strong>Sprzeciw</strong> wobec przetwarzania opartego na naszym uzasadnionym interesie (np. raporty awarii), z przyczyn związanych z Twoją szczególną sytuacją.</li>
+      <li><strong>Wycofanie zgody</strong> na statystyki i reklamy spersonalizowane: w Ustawieniach Aplikacji, w każdej chwili.</li>
+      <li><strong>Skarga do organu nadzorczego</strong>: Prezes Urzędu Ochrony Danych Osobowych, ul. Stawki 2, 00-193 Warszawa, <a href="https://uodo.gov.pl" target="_blank">uodo.gov.pl</a>.</li>
+    </ul>
     <p>
-      Aplikacja nie jest przeznaczona dla dzieci poniżej 13 lat (lub 16 lat w EOG). Nie
-      zbieramy świadomie danych osobowych od dzieci. Jeśli uważasz, że dziecko podało dane
-      osobowe, skontaktuj się z nami pod adresem <a href="mailto:mateusz33825@gmail.com">mateusz33825@gmail.com</a>,
-      a usuniemy je niezwłocznie.
+      Żądania wysyłaj na <a href="mailto:apkalapka.support@gmail.com">apkalapka.support@gmail.com</a>.
+      Odpowiadamy w ciągu miesiąca. Możemy poprosić o potwierdzenie, że jesteś właścicielem
+      konta, np. odpowiedzią z adresu, na który jest zarejestrowane.
+    </p>
+
+    <h2>9. Mieszkańcy Kalifornii (CCPA)</h2>
+    <p>
+      Masz prawo wiedzieć, jakie dane o Tobie zebraliśmy, żądać ich usunięcia i nie być
+      dyskryminowanym/ą za korzystanie z tych praw. Nie sprzedajemy danych osobowych.
+      Wnioski wysyłaj na <a href="mailto:apkalapka.support@gmail.com">apkalapka.support@gmail.com</a>.
+    </p>
+
+    <h2>10. Dzieci</h2>
+    <p>
+      Aplikacja nie jest przeznaczona dla dzieci poniżej 13 lat. Osoby poniżej 16 lat mogą
+      korzystać z niej tylko za zgodą rodzica lub opiekuna prawnego. Jeśli uważasz, że
+      dziecko przekazało nam dane bez takiej zgody, napisz do nas, a usuniemy je.
     </p>
 
     <h2>11. Bezpieczeństwo</h2>
     <p>
-      Stosujemy standardowe branżowe środki bezpieczeństwa, w tym szyfrowanie AES-256 dla
-      danych lokalnych, szyfrowanie TLS dla danych w tranzycie oraz bezpieczne
-      przechowywanie kluczy. Żadna metoda przesyłu elektronicznego nie jest jednak w 100%
-      bezpieczna.
+      Stosujemy szyfrowanie bazy danych na telefonie (AES-256), szyfrowanie połączeń (TLS),
+      reguły dostępu w chmurze ograniczające odczyt do właściciela i osób, którym udostępnił
+      pupila, oraz weryfikację aplikacji (App Check). Żadna metoda nie daje jednak stuprocentowej
+      pewności.
     </p>
     <p>
-      <strong>Powiadomienie o naruszeniu danych:</strong> w przypadku naruszenia ochrony
-      danych osobowych, które może Cię dotyczyć, bez zbędnej zwłoki (w miarę możliwości w
-      ciągu 72 godzin) powiadomimy właściwy organ nadzorczy (w Polsce Prezesa Urzędu Ochrony
-      Danych Osobowych, UODO), a gdy naruszenie może powodować wysokie ryzyko dla Twoich praw,
-      bez zbędnej zwłoki poinformujemy poszkodowanych użytkowników (RODO Art. 33-34) wraz z
-      informacją o podjętych działaniach naprawczych.
+      <strong>Naruszenie ochrony danych</strong>: jeśli dojdzie do naruszenia, które może
+      Cię dotyczyć, zgłosimy je Prezesowi UODO w ciągu 72 godzin od jego stwierdzenia, a gdy
+      może powodować wysokie ryzyko dla Twoich praw, bez zbędnej zwłoki poinformujemy też
+      Ciebie (art. 33 i 34 RODO).
     </p>
 
-    <h2>12. Zmiany w polityce</h2>
+    <h2>12. Zmiany polityki</h2>
     <p>
-      Możemy od czasu do czasu aktualizować niniejszą Politykę Prywatności. Zmiany zostaną
-      opublikowane na tej stronie z zaktualizowaną datą. Dalsze korzystanie z Aplikacji po
-      zmianach oznacza akceptację nowej polityki.
+      Gdy zmieni się sposób przetwarzania danych, zaktualizujemy tę stronę i datę na górze.
+      O istotnych zmianach poinformujemy w Aplikacji z wyprzedzeniem. Jeśli zmiana wymaga
+      Twojej zgody, poprosimy o nią osobno.
     </p>
 
     <h2>13. Kontakt</h2>
     <p>
-      W przypadku pytań dotyczących niniejszej Polityki Prywatności lub chęci skorzystania
-      z praw, skontaktuj się:<br /><br />
-      <strong>Mateusz Sobstyl</strong><br />
-      E-mail: <a href="mailto:mateusz33825@gmail.com">mateusz33825@gmail.com</a>
+      Mateusz Sobstyl IT Solution<br />
+      ul. Dożynkowa 38B/35, 20-223 Lublin<br />
+      E-mail: <a href="mailto:apkalapka.support@gmail.com">apkalapka.support@gmail.com</a>
     </p>
   </article>
   <footer>
-    &copy; 2025 ApkaŁapka &nbsp;|&nbsp;
+    &copy; 2026 ApkaŁapka &nbsp;|&nbsp;
     <a href="index.html">Powrót do dokumentów prawnych</a>
   </footer>
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "678e0ee451344f30a68a795309e4bb32"}'></script><!-- End Cloudflare Web Analytics -->

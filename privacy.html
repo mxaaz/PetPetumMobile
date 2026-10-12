@@ -4,9 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy - ApkaŁapka</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="/assets/fonts/fonts.css" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -35,175 +33,196 @@
     <p>ApkaŁapka - mobile application for pet management</p>
   </header>
   <article>
-    <p class="meta">Last updated: August 2026 &nbsp;|&nbsp; Effective: May 2026</p>
+    <p class="meta">Last updated: 12 October 2026</p>
 
-    <h2>1. Introduction</h2>
+    <h2>1. Who controls your data</h2>
     <p>
-      ApkaŁapka (formerly PetPetum) ("the App", "we", "our") is developed and operated by
-      <strong>Mateusz Sobstyl</strong> ("Developer"). This Privacy Policy explains how we
-      collect, use, store, and protect information when you use ApkaŁapka on Android
-      and iOS devices.
+      The controller of personal data processed in the ApkaŁapka app (formerly PetPetum,
+      the “App”) and on apkalapka.pl is <strong>Mateusz Sobstyl</strong>, running a business
+      as <strong>Mateusz Sobstyl IT Solution</strong>, ul. Dożynkowa 38B/35, 20-223 Lublin,
+      Poland, NIP (tax ID) 9462722229, REGON 523576956 (“we”).
     </p>
     <p>
-      By using the App you agree to the practices described in this policy. If you do not
-      agree, please discontinue use of the App.
+      Contact for all data matters:
+      <a href="mailto:apkalapka.support@gmail.com">apkalapka.support@gmail.com</a>.
+      We have not appointed a data protection officer, as we are not required to.
+    </p>
+    <p>
+      This policy explains what data we process, why, on what legal basis, who we share it
+      with and what your rights are. It is for information only: using the App does not mean
+      you consent to anything. Where we need your consent, we ask for it separately.
     </p>
 
-    <h2>2. Information We Collect</h2>
+    <h2>2. What data we process</h2>
 
-    <h3>2.1 Information You Provide</h3>
+    <h3>2.1 Data you enter</h3>
     <ul>
-      <li><strong>Account data</strong> - email address and password when you register or sign in via Firebase Authentication (Google or Apple sign-in).</li>
-      <li><strong>Pet data</strong> - name, species, breed, date of birth, weight, photos, health records, vaccination history, medications, vet contacts, and expenses you enter for your pets.</li>
-      <li><strong>Photos</strong> - images you capture with the camera or select from your photo library for your pet profiles.</li>
-      <li><strong>Veterinary lab result scan</strong> - a photo of a lab result is read by on-device text recognition that runs entirely on your phone. Neither the photo nor the recognised text is sent to any server for this purpose.</li>
+      <li><strong>Account data</strong>: email address and password (the password is stored securely by Firebase Authentication; we never see it). When you sign in with Google or Apple, we receive an account identifier, your email address and, if they provide it, your name and profile photo. Apple may provide a private relay address.</li>
+      <li><strong>Pet data</strong>: name, species, breed, date of birth, weight, photos, visits, vaccinations, medications, deworming, test results, symptoms, feeding, hydration, litter box, grooming, activity, expenses, insurance, supplies and other entries.</li>
+      <li><strong>Contacts</strong>: vet details and emergency numbers you enter. Only enter other people's details if you are entitled to do so.</li>
+      <li><strong>Photos and attachments</strong>: photos from your camera or gallery and files attached to entries.</li>
+      <li><strong>Reading text from photos</strong>: a photo of a test result or a food label is read by a text recognition engine (Google ML Kit) that runs only on your phone. Neither the photo nor the recognised text is sent to any server for this purpose.</li>
     </ul>
 
-    <h3>2.2 Information Collected Automatically</h3>
+    <h3>2.2 Data generated while you use the App</h3>
     <ul>
-      <li><strong>Location (When In Use)</strong> - approximate or precise location used solely to display nearby veterinary clinics on the map. Collected only while the App is open and only when you use the map feature. We do not collect location in the background.</li>
-      <li><strong>Device / advertising identifiers</strong> - used by Firebase and by Google AdMob for analytics and advertising purposes. Advertisements are shown only to free-tier users; Premium subscribers see no ads. Within the European Economic Area we request your consent (via Google's consent management) before serving personalised ads, and you may opt out of personalised ads at any time.</li>
-      <li><strong>Crash reports</strong> - anonymised crash and performance data collected via Firebase Crashlytics to improve stability.</li>
-      <li><strong>Usage analytics</strong> - aggregate usage statistics via Firebase Analytics to understand feature adoption.</li>
+      <li><strong>Location</strong>: only when you open the clinic map and grant the system permission. Coordinates are sent to OpenStreetMap services (Nominatim, Overpass) to find nearby clinics. We do not store your location and never collect it in the background.</li>
+      <li><strong>Food search</strong>: when you search for food by barcode or name, the barcode or name is sent to the Open Pet Food Facts database. When you paste a shop link, the App downloads that page directly from the shop. In both cases no data about you or your pet is sent.</li>
+      <li><strong>Usage statistics (only with consent)</strong>: Firebase Analytics records events such as “feature X opened” together with an installation identifier, device model, OS version and approximate country. We do not send the content of your entries, pet data or search queries. Without your consent statistics are switched off.</li>
+      <li><strong>Crash reports</strong>: Firebase Crashlytics collects crash information (stack trace, device model, OS and App version, installation identifier). This is pseudonymous data: it contains neither your email nor your entries.</li>
+      <li><strong>App verification</strong>: Firebase App Check (Google Play Integrity on Android, App Attest on iOS) checks that it is the genuine App connecting to our cloud. This protects your data from abuse.</li>
+      <li><strong>Ads (free version only)</strong>: Google AdMob shows ads and may use your device's advertising identifier. In the European Economic Area, the UK and Switzerland, Google's consent dialog asks for consent to personalised ads. On iOS the system also asks for tracking permission (App Tracking Transparency). Premium subscribers see no ads.</li>
+      <li><strong>Purchases</strong>: payments are handled by Google Play or the App Store. We never see your card details. RevenueCat receives your App account identifier and your purchase history and status in order to unlock Premium.</li>
     </ul>
 
-    <h3>2.3 In-App Purchase Information</h3>
-    <p>
-      Premium subscriptions are processed by Google Play or the Apple App Store. We do not
-      receive or store your payment card details. We receive only a confirmation of purchase
-      status from the platform.
-    </p>
-
-    <h2>3. How We Use Your Information</h2>
+    <h3>2.3 The apkalapka.pl website</h3>
     <ul>
-      <li>Provide and maintain the App's core functionality (pet records, reminders, health tracking).</li>
-      <li>Sync your data across devices via Firebase Firestore (optional, requires sign-in).</li>
-      <li>Show nearby veterinary clinics using your current location (on-demand).</li>
-      <li>Process and verify premium subscription status.</li>
-      <li>Analyse crash reports to fix bugs and improve the App.</li>
-      <li>Display advertisements to free-tier users (Premium subscribers see no ads); you may opt out of personalised ads.</li>
-    </ul>
-    <p>
-      <strong>Legal basis (GDPR Art. 6):</strong> we process your data on the following
-      bases: <em>performance of a contract</em> (account, cloud sync, subscription
-      verification); <em>your consent</em> (location, personalised advertising, optional
-      analytics), which you may withdraw at any time; and our <em>legitimate interests</em>
-      (crash reporting and security, to keep the App stable and safe).
-    </p>
-
-    <h2>4. Data Storage</h2>
-    <p>
-      <strong>Local storage:</strong> All pet data is stored locally on your device using an
-      encrypted database (Hive with AES-256 encryption). Data is never transmitted without
-      your explicit action (e.g. enabling cloud sync).
-    </p>
-    <p>
-      <strong>Cloud storage:</strong> If you enable cloud sync, data is stored in Google
-      Firebase Firestore (region: EU or US, depending on project configuration). Firebase is
-      operated by Google LLC. For details see
-      <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a>.
-    </p>
-    <p>
-      <strong>International transfers:</strong> some of our processors (Google / Firebase,
-      RevenueCat) are based in the United States, so your data may be transferred to and
-      processed outside the European Economic Area. Such transfers rely on appropriate
-      safeguards, such as the European Commission's Standard Contractual Clauses and, where
-      applicable, the EU-US Data Privacy Framework.
-    </p>
-
-    <h2>5. Third-Party Services</h2>
-    <ul>
-      <li><strong>Firebase (Google LLC)</strong> - Authentication, Firestore, Storage, Crashlytics, Analytics. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</li>
-      <li><strong>Google AdMob</strong> - advertising SDK shown to free-tier users. May use device / advertising identifiers for ad delivery and personalisation. Personalised ads in the EEA require your consent; you can opt out via the in-app consent prompt or your device settings. <a href="https://support.google.com/admob/answer/6128543" target="_blank">AdMob &amp; privacy</a>.</li>
-      <li><strong>RevenueCat</strong> - manages Premium subscription status. Receives an anonymous app user identifier and purchase status (no payment card data). <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy</a>.</li>
-      <li><strong>Google Play / Apple App Store</strong> - in-app purchase processing.</li>
-      <li><strong>OpenStreetMap / Nominatim / Overpass</strong> - map data and vet clinic locations (no personal data sent, only coordinates).</li>
+      <li><strong>Hosting</strong>: the site is served by GitHub Pages (GitHub, Inc.). Like any web server, it technically processes the visitor's IP address.</li>
+      <li><strong>Site statistics</strong>: Cloudflare Web Analytics counts visits without cookies and without identifying individuals.</li>
+      <li><strong>Fonts</strong> are served from our own server, not from Google.</li>
+      <li><strong>Email</strong>: when you write to us, we process your address and message to reply.</li>
     </ul>
 
-    <h2>6. Pet Sharing Between Users</h2>
-    <p>
-      The App lets you share a pet with another user (for example a family member or your
-      veterinarian) by email invitation or by a QR code / invite link. When you share a pet,
-      the invited user can view that pet's data on their own account, limited to the access
-      level you choose (for example, a veterinarian role can view only medical records such as
-      visits, vaccinations, medications, blood tests, and weight). You decide whom to invite
-      and you can revoke access at any time. You are responsible for choosing whom you grant
-      access to, and we are not responsible for how an invited user handles data you have
-      shared with them. Sharing requires cloud sync (Firebase) to be enabled.
-    </p>
-
-    <h2>7. Your Rights (GDPR)</h2>
-    <p>If you are in the European Economic Area (EEA), you have the following rights:</p>
+    <h2>3. Purposes and legal bases</h2>
     <ul>
-      <li><strong>Right of access</strong> - request a copy of all personal data we hold about you.</li>
-      <li><strong>Right to erasure</strong> - request deletion of all your data (see Account Deletion Policy).</li>
-      <li><strong>Right to portability</strong> - receive your data in a machine-readable format.</li>
-      <li><strong>Right to rectification</strong> - correct inaccurate or incomplete data.</li>
-      <li><strong>Right to restrict processing</strong> - limit how we use your data.</li>
-      <li><strong>Right to object</strong> - object to processing for direct marketing.</li>
+      <li><strong>Running the App, account, cloud sync, pet sharing, Premium, clinic map, food search</strong>: performance of the service contract (Art. 6(1)(b) GDPR).</li>
+      <li><strong>Usage statistics and personalised ads</strong>: your consent (Art. 6(1)(a) GDPR). You can withdraw it at any time in the App Settings. Withdrawal does not affect processing carried out before it.</li>
+      <li><strong>Crash reports, app verification, security, non-personalised ads in the free version</strong>: our legitimate interest (Art. 6(1)(f) GDPR) in a stable and secure App and in funding the free version.</li>
+      <li><strong>Replying to messages, handling complaints, establishing and defending claims</strong>: our legitimate interest (Art. 6(1)(f) GDPR).</li>
+      <li><strong>Accounting and tax obligations</strong> related to sales: legal obligation (Art. 6(1)(c) GDPR).</li>
     </ul>
-    <p>To exercise any of these rights, contact us at <a href="mailto:mateusz33825@gmail.com">mateusz33825@gmail.com</a>. We will respond within 30 days.</p>
-
-    <h2>8. California Privacy Rights (CCPA)</h2>
     <p>
-      If you are a California resident, you have additional rights under the California
-      Consumer Privacy Act (CCPA):
+      Providing data is voluntary. You cannot create an account without an email address,
+      but you can use the App in guest mode, in which case your data stays on your phone only.
+    </p>
+    <p>
+      We do not make decisions about you based solely on automated processing that produce
+      legal effects. Calculations in the App (e.g. calories, weight trends, test result
+      ranges) are for information only.
+    </p>
+
+    <h2>4. Where data is stored</h2>
+    <p>
+      <strong>On your phone</strong>: the App database is encrypted (AES-256). Photos,
+      attachments and automatic weekly backups are stored in the App's private folder,
+      protected by the phone's operating system, but not additionally encrypted by the App.
+      An export file you create yourself is not encrypted: keep it safe.
+    </p>
+    <p>
+      <strong>In the cloud</strong>: when you are signed in, pet data and photos are synced to
+      Google Firebase (Firestore and Storage). Only you and the people you share a pet with
+      can access them. Connections are encrypted (TLS).
+    </p>
+
+    <h2>5. Who we share data with</h2>
+    <ul>
+      <li><strong>Google</strong> (Google Ireland Ltd / Google LLC): Firebase Authentication, Firestore, Storage, Crashlytics, Analytics, App Check, AdMob, ML Kit (runs on the phone), Google sign-in. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase privacy</a>, <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</li>
+      <li><strong>Apple</strong>: Sign in with Apple, App Store, App Tracking Transparency.</li>
+      <li><strong>RevenueCat, Inc.</strong>: subscription management. <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat privacy</a>.</li>
+      <li><strong>OpenStreetMap Foundation</strong> and Overpass servers: map and clinic search (coordinates only).</li>
+      <li><strong>Open Pet Food Facts</strong>: food database (barcode or product name only).</li>
+      <li><strong>GitHub, Inc.</strong> and <strong>Cloudflare, Inc.</strong>: website hosting and statistics.</li>
+      <li><strong>People you share a pet with</strong> (section 6).</li>
+      <li><strong>Public authorities</strong>, where required by law.</li>
+    </ul>
+    <p>
+      We do not sell your data.
+    </p>
+    <p>
+      <strong>Transfers outside the EEA</strong>: Google, Apple, RevenueCat, GitHub and
+      Cloudflare may process data in the USA. We rely on the European Commission's adequacy
+      decision (EU-US Data Privacy Framework) for companies certified under it and on the
+      European Commission's Standard Contractual Clauses. You can request a copy of these
+      safeguards by writing to us.
+    </p>
+
+    <h2>6. Sharing a pet with other people</h2>
+    <p>
+      With Premium you can share a pet with another person who has an App account: by email,
+      or with a QR code, link or code to type in. You choose a role:
     </p>
     <ul>
-      <li><strong>Right to know</strong> - the categories and specific pieces of personal information we have collected about you.</li>
-      <li><strong>Right to delete</strong> - request deletion of personal information we have collected from you.</li>
-      <li><strong>Right to opt out of sale</strong> - we do not sell your personal information to third parties. If this changes, we will update this policy and provide an opt-out mechanism.</li>
-      <li><strong>Right to non-discrimination</strong> - we will not discriminate against you for exercising your CCPA rights.</li>
+      <li><strong>Family</strong> and <strong>Sitter</strong>: view all of the pet's data (a sitter's access can have an expiry date).</li>
+      <li><strong>Vet</strong>: view medical data only (visits, vaccinations, medications, test results, weight, deworming, meal plans, grooming).</li>
     </ul>
-    <p>To submit a CCPA request, email us at <a href="mailto:mateusz33825@gmail.com">mateusz33825@gmail.com</a>.</p>
-
-    <h2>9. Data Retention</h2>
     <p>
-      Local data is retained until you delete it or uninstall the App. Cloud data (Firebase)
-      is retained until you delete your account. After account deletion, data is permanently
-      removed within 30 days from Firebase servers.
+      The invited person sees your email address and the pet's name. Sharing gives view-only
+      access, without editing. You can revoke access at any time. You are responsible for
+      choosing whom to invite; the invited person is responsible for what they do with the
+      data they have seen.
     </p>
 
-    <h2>10. Children's Privacy</h2>
+    <h2>7. How long we keep data</h2>
+    <ul>
+      <li><strong>Data on your phone</strong>: until you delete it in the App, delete your account or uninstall the App.</li>
+      <li><strong>Cloud data</strong>: until you delete your account. Account deletion immediately removes pet data, photos, invitations and shares from our cloud; Google's backups are cleared as part of their rotation cycle.</li>
+      <li><strong>Usage statistics</strong>: no longer than 14 months.</li>
+      <li><strong>Crash reports</strong>: up to 90 days.</li>
+      <li><strong>Purchase data</strong> at RevenueCat: until your account is deleted, or earlier at your request. Google and Apple also keep transaction history under their own rules. Data needed for tax settlements is kept for the period required by law.</li>
+      <li><strong>Correspondence</strong>: up to 3 years after the matter is closed, because of possible claims.</li>
+    </ul>
+
+    <h2>8. Your rights</h2>
+    <ul>
+      <li><strong>Access and a copy of your data</strong>: Settings → Backup → Export my data, or email us.</li>
+      <li><strong>Rectification</strong>: edit any entry in the App.</li>
+      <li><strong>Erasure</strong>: Settings → Delete account, or via the <a href="account-deletion.html">account deletion page</a>.</li>
+      <li><strong>Restriction of processing.</strong></li>
+      <li><strong>Data portability</strong>: JSON export.</li>
+      <li><strong>Objection</strong> to processing based on our legitimate interest (e.g. crash reports), on grounds relating to your particular situation.</li>
+      <li><strong>Withdrawal of consent</strong> to statistics and personalised ads: in the App Settings, at any time.</li>
+      <li><strong>Complaint to a supervisory authority</strong>: in Poland the President of the Personal Data Protection Office (UODO), ul. Stawki 2, 00-193 Warszawa, <a href="https://uodo.gov.pl" target="_blank">uodo.gov.pl</a>, or the authority in your EU country of residence.</li>
+    </ul>
     <p>
-      The App is not directed to children under 13 (or 16 in the EEA). We do not knowingly
-      collect personal information from children. If you believe a child has provided personal
-      information, contact us at <a href="mailto:mateusz33825@gmail.com">mateusz33825@gmail.com</a> and we will
-      delete it promptly.
+      Send requests to <a href="mailto:apkalapka.support@gmail.com">apkalapka.support@gmail.com</a>.
+      We reply within one month. We may ask you to confirm that you own the account, e.g. by
+      replying from the address it is registered to.
+    </p>
+
+    <h2>9. California residents (CCPA)</h2>
+    <p>
+      You have the right to know what personal information we have collected about you, to
+      request its deletion and not to be discriminated against for exercising these rights.
+      We do not sell personal information. Send requests to
+      <a href="mailto:apkalapka.support@gmail.com">apkalapka.support@gmail.com</a>.
+    </p>
+
+    <h2>10. Children</h2>
+    <p>
+      The App is not intended for children under 13. People under 16 may use it only with
+      the consent of a parent or legal guardian. If you believe a child has given us data
+      without such consent, write to us and we will delete it.
     </p>
 
     <h2>11. Security</h2>
     <p>
-      We implement industry-standard security measures including AES-256 encryption for local
-      data, TLS encryption for data in transit, and secure key storage. However, no method
-      of electronic storage or transmission is 100% secure.
+      We use database encryption on the phone (AES-256), encrypted connections (TLS), cloud
+      access rules limiting reads to the owner and the people they share a pet with, and app
+      verification (App Check). No method is, however, 100% secure.
     </p>
     <p>
-      <strong>Data breach notification:</strong> in the event of a personal data breach
-      likely to affect you, we will notify the competent supervisory authority (in Poland,
-      the President of the Personal Data Protection Office, UODO) without undue delay and
-      where feasible within 72 hours, and we will inform affected users without undue delay
-      when the breach is likely to result in a high risk to their rights (GDPR Art. 33-34),
-      together with the steps taken to mitigate it.
+      <strong>Data breaches</strong>: if a breach occurs that may affect you, we will report it
+      to the Polish supervisory authority (UODO) within 72 hours of becoming aware of it and,
+      where it is likely to result in a high risk to your rights, inform you without undue
+      delay (Articles 33 and 34 GDPR).
     </p>
 
-    <h2>12. Changes to This Policy</h2>
+    <h2>12. Changes to this policy</h2>
     <p>
-      We may update this Privacy Policy from time to time. Changes will be posted on this
-      page with an updated date. Continued use of the App after changes constitutes
-      acceptance of the new policy.
+      When the way we process data changes, we will update this page and the date at the top.
+      We will announce significant changes in the App in advance. If a change requires your
+      consent, we will ask for it separately.
     </p>
 
     <h2>13. Contact</h2>
     <p>
-      If you have questions about this Privacy Policy or wish to exercise your rights,
-      contact:<br /><br />
-      <strong>Mateusz Sobstyl</strong><br />
-      Email: <a href="mailto:mateusz33825@gmail.com">mateusz33825@gmail.com</a>
+      Mateusz Sobstyl IT Solution<br />
+      ul. Dożynkowa 38B/35, 20-223 Lublin, Poland<br />
+      Email: <a href="mailto:apkalapka.support@gmail.com">apkalapka.support@gmail.com</a>
     </p>
   </article>
   <footer>
-    &copy; 2025 ApkaŁapka &nbsp;|&nbsp;
+    &copy; 2026 ApkaŁapka &nbsp;|&nbsp;
     <a href="index.html">Back to Legal Documents</a>
   </footer>
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "678e0ee451344f30a68a795309e4bb32"}'></script><!-- End Cloudflare Web Analytics -->
