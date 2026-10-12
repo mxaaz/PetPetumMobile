@@ -232,14 +232,15 @@ układ, **nigdy tekstów ani grafik**.
   skrypt rysuje dla każdej sekcji `main` (bez `#download`) trop schodzący w dół lewym marginesem
   i drugi, z opóźnieniem, prawym. Odcinki się stykają, więc trop idzie przez całą stronę. Działa tylko przy
   marginesie ≥ 110 px (z prawej liczonym bez paska ikon), czyli od ok. 1180 px szerokości.
-  **Zagęszczenie i rozmiary** (user 2026-10-12, „więcej, większe i mniejsze”): margines dzieli się na
-  pasy po ok. 110 px (do 3 na stronę, przy 1920 px po 3 z każdej), w każdym inne zwierzę z `PAWS`:
-  duża łapa 42 px (krok 62 px), mała 24 px (38 px), średnia 32 px (50 px); zwierzęta zmieniają się
-  między sekcjami. Rozmiar jest stały w obrębie jednego tropu, bo jedno zwierzę ma jedną wielkość łapy.
+  **Zagęszczenie i rozmiary** (user 2026-10-12): margines dzieli się na pasy po ok. 170 px, najwyżej
+  dwa na stronę (przy 1920 px po dwa z każdej, przy 1440 px po jednym), krok co 60 px. Łapki mają trzy
+  rozmiary (42, 32, 24 px) **wymieszane w obrębie każdego tropu** (losowanie z ziarnem, stały układ po
+  resize). Pierwsza wersja miała do trzech pasów, każdy z łapką jednego rozmiaru: user ocenił, że za
+  gęsto i że „ślaczek małych, ślaczek średnich, ślaczek dużych” wygląda słabo.
   Trop jest pocięty na odcinki po 8 kroków i każdy rusza sam, gdy wjedzie w kadr (a stoi poza kadrem):
   wcześniej cały odcinek sekcji startował od jej góry i w środku długiej sekcji długo nie było nic.
   **W hero** te same tropy (`.hero-trails`, rysuje je ten sam skrypt) chodzą po pustym tle nad akwarelą:
-  pasem między nawigacją a ikoną (w prawo, do telefonu) i bokami w dół, kończąc nad akwarelowym pasem.
+  jednym tropem między nawigacją a ikoną (w prawo, do telefonu) i bokami w dół, kończąc nad akwarelowym pasem.
   Stare statyczne tropy przy kocie i psie zostały.
   **Tam, gdzie są tropy, stały wzór `page-paws.webp` na stronie głównej znika** (`body.has-trails`):
   ta sama akwarela w obu warstwach zlewała się i animacji nie było widać. Węższe okna i blog mają

@@ -250,8 +250,7 @@
        sekcji), a każdy odcinek rusza dopiero, gdy jego sekcja wjedzie w kadr. Drugi trop idzie
        przeciwnym marginesem z opóźnieniem. Tylko tam, gdzie margines obok treści ma co najmniej
        110 px (z prawej liczony bez paska ikon), więc nigdy nie wchodzą pod tekst. Szeroki margines
-       mieści do trzech tropów obok siebie, każdy innego zwierzęcia: duża łapa stawia rzadsze
-       kroki niż mała (--sz, --t na odcinku). Te same tropy chodzą po pustym tle u góry hero
+       mieści dwa tropy obok siebie; łapki w trzech rozmiarach mieszają się w każdym (--sz na śladzie). Te same tropy chodzą po pustym tle u góry hero
        (.hero-trails): pasem nad tekstem i bokami, nad akwarelą. */
     .side-trails { inset: auto 0 auto 0; z-index: 0; }
     .side-trails .seg, .hero-trails .seg { position: absolute; }
@@ -1229,48 +1228,51 @@
       var trailObs = 'IntersectionObserver' in window ? new IntersectionObserver(function (entries) {
         entries.forEach(function (e) { e.target.classList.toggle('go', e.isIntersecting); });
       }, { threshold: 0 }) : null;
-      /* Zwierzęta: duża łapa (pies), mała (kot), średnia. Większa łapa stawia dłuższe i wolniejsze kroki. */
-      var PAWS = [{ sz: 42, step: 62, t: .62 }, { sz: 24, step: 38, t: .42 }, { sz: 32, step: 50, t: .52 }];
+      /* Łapki w trzech rozmiarach, wymieszane w każdym tropie, jak we wzorze tła na reszcie strony.
+         Losowanie z ziarnem, więc po zmianie rozmiaru okna układ się nie przetasowuje. */
+      var SIZES = [42, 32, 24], WALK = { step: 60, t: .55 }, seed = 7;
+      function pickSize() { seed = (seed * 9301 + 49297) % 233280; return SIZES[Math.floor(seed / 233280 * 3)]; }
       /* Jeden trop z (x0,y0) do (x1,y1): ślady na przemian lewa/prawa, z łagodnym wężykiem w poprzek drogi. */
       function pawTrail(box, x0, y0, x1, y1, paw, amp, ph0, off) {
         var dx = x1 - x0, dy = y1 - y0, len = Math.sqrt(dx * dx + dy * dy);
         var n = Math.max(3, Math.floor(len / paw.step)), ux = dx / len, uy = dy / len;
-        var dir = Math.atan2(dy, dx) * 57.3 + 90, spread = paw.sz * 0.3, pts = [];
+        var dir = Math.atan2(dy, dx) * 57.3 + 90, spread = 10, pts = [];
         for (var k = 0; k < n; k++) {
           var ph = k * 0.45 + ph0, foot = k % 2 ? 1 : -1, d = k * paw.step;
           var side = Math.sin(ph) * amp + foot * spread;
           var turn = Math.cos(ph) * amp * 0.45 / paw.step * 57.3; /* skręt za krzywą */
-          pts.push({ x: x0 + ux * d - uy * side, y: y0 + uy * d + ux * side, r: dir - turn + foot * 7 });
+          pts.push({ x: x0 + ux * d - uy * side, y: y0 + uy * d + ux * side, r: dir - turn + foot * 7, sz: pickSize() });
         }
         for (var c = 0; c < n; c += 8) {
-          var part = pts.slice(c, c + 8), m = paw.sz;
+          var part = pts.slice(c, c + 8), m = SIZES[0];
           var bx = Math.min.apply(null, part.map(function (q) { return q.x; })) - m;
           var by = Math.min.apply(null, part.map(function (q) { return q.y; })) - m;
           var seg = document.createElement('span'), html = '';
           part.forEach(function (q, k) {
-            html += '<i style="--i:' + k + ';--x:' + (q.x - bx).toFixed(1) + 'px;--y:' + (q.y - by).toFixed(1) +
+            html += '<i style="--i:' + k + ';--sz:' + q.sz + 'px;--x:' + (q.x - bx).toFixed(1) + 'px;--y:' + (q.y - by).toFixed(1) +
               'px;--r:' + q.r.toFixed(0) + 'deg"></i>';
           });
           seg.className = 'seg'; seg.innerHTML = html;
           seg.style.left = bx.toFixed(1) + 'px'; seg.style.top = by.toFixed(1) + 'px';
           seg.style.width = (Math.max.apply(null, part.map(function (q) { return q.x; })) - bx + m).toFixed(1) + 'px';
           seg.style.height = (Math.max.apply(null, part.map(function (q) { return q.y; })) - by + m).toFixed(1) + 'px';
-          seg.style.setProperty('--sz', paw.sz + 'px'); seg.style.setProperty('--t', paw.t + 's');
+          seg.style.setProperty('--t', paw.t + 's');
           seg.style.setProperty('--dur', (part.length * paw.t + 4).toFixed(1) + 's');
           seg.style.setProperty('--off', off.toFixed(1) + 's');
           box.appendChild(seg);
           if (trailObs) trailObs.observe(seg); else seg.classList.add('go');
         }
       }
-      /* Margines dzielimy na pasy po ok. 110 px, maksymalnie trzy. */
+      /* Margines dzielimy na pasy po ok. 170 px, maksymalnie dwa. */
       function lanes(x, w) {
-        var c = Math.max(1, Math.min(3, Math.floor(w / 110))), lw = w / c, out = [];
+        var c = Math.max(1, Math.min(2, Math.floor(w / 170))), lw = w / c, out = [];
         for (var l = 0; l < c; l++) out.push({ cx: x + lw * (l + .5), w: lw });
         return out;
       }
       function drawTrails() {
         var W = document.documentElement.clientWidth, rail = 70; /* pasek ikon po prawej zajmuje ok. 70 px */
         if (trailObs) trailObs.disconnect();
+        seed = 7;
         drawHeroTrails(W, rail);
         trails.innerHTML = '';
         var gut = mainEl.getBoundingClientRect().left + 24; /* main ma padding 24 px */
@@ -1287,7 +1289,7 @@
           var y0 = st + 30, y1 = st + sec.offsetHeight - 10; /* odcinki stykają się, trop idzie bez przerw */
           cols.forEach(function (c, ci) {
             /* pasy przesunięte w pionie, żeby ślady sąsiednich zwierząt nie szły ramię w ramię */
-            pawTrail(trails, c.cx, y0 + (ci % 3) * 17, c.cx, y1, PAWS[(ci + si) % PAWS.length],
+            pawTrail(trails, c.cx, y0 + ci * 23, c.cx, y1, WALK,
               Math.min(c.w * 0.16, 22), si * 1.7 + ci * 2.4, ci * 1.3);
           });
         });
@@ -1304,16 +1306,15 @@
         var band = copy.top - hr.top - navH;
         if (band >= 90) {
           var by = navH + band / 2;
-          add(40, by, phone.left - hr.left - 50, by - 10, PAWS[0], Math.min(band / 5, 18), 0, 0);
-          if (band >= 130) add(ir.left - hr.left + 60, by + 34, phone.left - hr.left - 90, by + 26, PAWS[1], 10, 1.2, 2.5);
+          add(40, by, phone.left - hr.left - 50, by - 10, WALK, Math.min(band / 5, 18), 0, 0);
         }
         var left = ir.left - hr.left;
         lanes(0, left).forEach(function (c, ci) {
-          if (c.w >= 70) add(c.cx, navH + 30 + ci * 40, c.cx, yEnd, PAWS[(ci + 1) % 3], Math.min(c.w * 0.16, 18), ci * 2.1, 1 + ci * 1.4);
+          if (c.w >= 70) add(c.cx, navH + 30 + ci * 40, c.cx, yEnd, WALK, Math.min(c.w * 0.16, 18), ci * 2.1, 1 + ci * 1.4);
         });
         var rx = Math.max(ir.right, phone.right) - hr.left + 10, rw = W - rail - rx;
         lanes(rx, rw).forEach(function (c, ci) {
-          if (c.w >= 70) add(c.cx, navH + 10 + ci * 50, c.cx, yEnd, PAWS[(ci + 2) % 3], Math.min(c.w * 0.16, 18), 1 + ci * 1.9, .6 + ci * 1.1);
+          if (c.w >= 70) add(c.cx, navH + 10 + ci * 50, c.cx, yEnd, WALK, Math.min(c.w * 0.16, 18), 1 + ci * 1.9, .6 + ci * 1.1);
         });
       }
       drawTrails();
