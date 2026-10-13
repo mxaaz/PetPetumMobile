@@ -148,6 +148,31 @@ img { max-width: 100%; display: block; }
 .back-link { display: inline-block; margin: 0 0 10px; color: var(--green-dark); font-weight: 600; text-decoration: none; }
 .back-link:hover { text-decoration: underline; }
 
+/* ---------- tropy łapek wzdłuż podstron ----------
+   Te same tropy co na stronie głównej (`.side-trails` w `index.html`), rysuje je
+   `assets/js/paw-trails.js`. Chodzą marginesem obok kolumny treści, tylko gdy ma on
+   co najmniej 110 px, i wtedy stały wzór łapek w tle znika (body.has-trails), bo ta sama
+   akwarela w dwóch warstwach zlewała się i animacji nie było widać. */
+.paw-trail { position: absolute; inset: auto 0 auto 0; pointer-events: none; z-index: 0; }
+.paw-trail .seg { position: absolute; }
+.paw-trail i {
+  position: absolute; left: var(--x); top: var(--y); width: var(--sz, 36px); height: var(--sz, 36px);
+  background: url('../paw.webp') center / contain no-repeat;
+  transform: translate(-50%, -50%) rotate(var(--r)); scale: .8; opacity: 0; --paw-o: .72;
+  animation: paw-step-long var(--dur, 11s) ease-in-out infinite; animation-delay: calc(var(--i) * var(--t, .55s) + var(--off, 0s));
+}
+.paw-trail .seg:not(.go) i { animation-play-state: paused; }
+@keyframes paw-step-long {
+  0% { opacity: 0; scale: .8; }
+  4% { opacity: var(--paw-o, .55); scale: 1; }
+  78% { opacity: var(--paw-o, .55); scale: 1; }
+  90%, 100% { opacity: 0; scale: 1; }
+}
+body.has-trails { background: var(--bg); }
+@media (prefers-reduced-motion: reduce) {
+  .paw-trail i { animation: none; opacity: .3; scale: 1; }
+}
+
 /* ---------- footer (z landingu) ---------- */
 footer { background: #1F2A23; color: #C7D0C7; padding: 46px 24px 34px; margin-top: 20px; }
 .footer-inner { max-width: 1080px; margin: 0 auto; }

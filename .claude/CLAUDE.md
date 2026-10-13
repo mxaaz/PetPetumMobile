@@ -243,8 +243,13 @@ układ, **nigdy tekstów ani grafik**.
   jednym tropem między nawigacją a ikoną (w prawo, do telefonu) i bokami w dół, kończąc nad akwarelowym pasem.
   Stare statyczne tropy przy kocie i psie zostały.
   **Tam, gdzie są tropy, stały wzór `page-paws.webp` na stronie głównej znika** (`body.has-trails`):
-  ta sama akwarela w obu warstwach zlewała się i animacji nie było widać. Węższe okna i blog mają
-  wzór jak dawniej.
+  ta sama akwarela w obu warstwach zlewała się i animacji nie było widać. Węższe okna mają wzór
+  jak dawniej.
+  **Na podstronach** (blog, wpisy, Nowości, Poznajcie pupili, FAQ, 404, od 2026-10-13, zgłoszenie
+  usera „na blogu łapki stoją”) te same tropy rysuje `assets/js/paw-trails.js`, podpięty w
+  `_layouts/default.html`, a style siedzą w `assets/css/blog.css`. Margines liczony od kolumny
+  1080 px (`.wrap`, `.related`), więc tropy ruszają od ok. 1260 px szerokości; we wpisie startują
+  pod kolorową okładką. Skrypt jest kopią logiki z `index.html`: zmieniasz jeden, zmień drugi.
 - **Telefon w hero** przewija 6 ekranów co 3,2 s (kropki pod spodem), stoi pod kursorem i przy
   `prefers-reduced-motion`.
 - **Zrzuty 2026-10-11** (z `ApkaLapkaMarketing/Media/Aplikacja/nowe/`): nowe `pl-today`, `pl-calendar`,
