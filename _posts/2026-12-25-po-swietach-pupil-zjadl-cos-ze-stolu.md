@@ -3,47 +3,38 @@ title: "Po świętach: pupil zjadł coś ze stołu. Co teraz?"
 date: 2026-12-25 09:00:00 +0200
 categories: [zdrowie]
 category_label: "Zdrowie pupila"
-cover_style: grad-a
+cover_style: grad-b
 emoji: "🩺"
-read_time: 5
+read_time: 4
 excerpt_text: "Kawałek karpia, ciasto z czekoladą albo cały talerz resztek. Co zanotować, kiedy dzwonić do weterynarza i jakie objawy nie mogą czekać."
 description: "Pies lub kot zjadł resztki ze świątecznego stołu: co zanotować, kiedy skontaktować się z weterynarzem, objawy alarmowe, tłuste jedzenie i trzustka, kość i ość, dyżur weterynaryjny w święta."
 ---
 
-Święta mają swoje drugie dno: pupil, który zdążył coś zjeść, gdy nikt nie patrzył. **Najważniejsze to nie panikować, ale też nie zwlekać, jeśli zjedzone jedzenie należy do groźnych albo pupil źle wygląda.**
+Krótka odpowiedź: nie panikuj, ale też nie zwlekaj. Jeśli zjedzone jedzenie należy do groźnych albo pupil źle wygląda, dzwoń do weterynarza od razu. A teraz po kolei, co zrobić w pierwszych minutach.
 
-## Pierwsze kroki
+## Pierwsze pięć minut
 
 - 📝 **Zapisz, co pupil zjadł, ile mniej więcej i o której:** to pierwsze pytanie weterynarza
 - 📸 **Zrób zdjęcie opakowania lub składu:** przy słodyczach i wypiekach ksylitol i czekolada mają znaczenie
 - 🧹 **Zabierz resztki i odsuń pupila od stołu:** żeby nie zjadł więcej
-- ☎️ **Zadzwoń do weterynarza lub na dyżur całodobowy:** jeśli to coś z listy groźnych: czekolada, rodzynki, cebula, ksylitol, kości, alkohol
-- 🚫 **Nie wywołuj wymiotów na własną rękę:** to może zaszkodzić, zależy od tego, co zjadł
+- ☎️ **Dzwoń, jeśli to coś z groźnej listy:** czekolada, rodzynki, cebula, ksylitol, kości, alkohol
+- 🚫 **Nie wywołuj wymiotów na własną rękę:** w zależności od tego, co zjadł, może to zaszkodzić
 
-## Kiedy nie zwlekać
+Dlaczego akurat te produkty, wyjaśniamy we wpisie o [świątecznym stole](/blog/swiateczny-stol-czego-nie-dawac-pupilowi/).
 
-- 🤮 **Powtarzające się wymioty lub biegunka:** zwłaszcza z krwią
-- 😣 **Ból brzucha:** pupil garbi się, skomli, nie pozwala się dotknąć
-- 🎈 **Wzdęty, twardy brzuch**
-- 😪 **Apatia i osłabienie:** pupil, który nie ma ochoty na nic
-- 🐈 **Kot, który przestał jeść:** u kotów brak apetytu to powód do szybkiego kontaktu z weterynarzem
-- ⚡ **Drżenia, drgawki, chwiejny chód:** możliwe zatrucie
-- 🦴 **Duszenie się, kaszel, ślinienie po kości lub ości**
+## Objawy, z którymi nie czekasz
 
-<div class="pullquote">
-Po tłustym posiłku problem może pojawić się dopiero po dniu lub dwóch. Nie zakładaj, że skoro pupil wygląda dobrze, sprawa jest zamknięta.
-</div>
+Powtarzające się wymioty albo biegunka, zwłaszcza z krwią. Ból brzucha: pupil garbi się, skomli, nie pozwala się dotknąć. Wzdęty, twardy brzuch. Apatia i osłabienie. Drżenia, drgawki, chwiejny chód, które mogą oznaczać zatrucie. Duszenie się, kaszel albo ślinienie po kości czy ości.
 
-## Tłuste jedzenie i trzustka
+U kota osobnym sygnałem jest brak apetytu. Kot, który przestał jeść, wymaga szybkiego kontaktu z weterynarzem.
 
-Świąteczne dania są często tłuste. Po obfitym, tłustym posiłku u niektórych psów rozwija się zapalenie trzustki, które daje wymioty, brak apetytu i ból brzucha. Objawy mogą pojawić się z opóźnieniem, dlatego obserwuj pupila także w kolejnych dniach.
+## Dlaczego obserwujesz także jutro
 
-## Co robić w drugim dniu świąt, gdy gabinety są zamknięte
+Świąteczne dania są często tłuste. Po obfitym, tłustym posiłku u niektórych psów rozwija się zapalenie trzustki, które daje wymioty, brak apetytu i ból brzucha. Objawy mogą pojawić się dopiero po dniu albo dwóch, więc to, że pupil wygląda dobrze wieczorem, nie zamyka sprawy. Jak rozpoznać, kiedy wymioty i biegunka wymagają wizyty, opisaliśmy w [osobnym tekście](/blog/biegunka-i-wymioty-u-psa-i-kota-kiedy-do-weterynarza/).
 
-- 📞 **Sprawdź wcześniej, kto pełni dyżur:** klinika całodobowa w okolicy albo telefoniczna konsultacja
-- 🌡️ **Obserwuj pupila:** apetyt, wypróżnienia, aktywność, wymioty
-- 💧 **Zapewnij dostęp do wody:** przy rozstroju łatwo o odwodnienie
-- 🍽️ **Zapytaj weterynarza, czy i czym karmić:** nie podawaj na własną rękę lekkich dań ani domowych sposobów
+## Gdy gabinety są zamknięte
+
+W święta najlepiej wiedzieć zawczasu, kto pełni dyżur: klinika całodobowa w okolicy albo konsultacja telefoniczna. Do tego czasu obserwuj apetyt, wypróżnienia, aktywność i wymioty, a pupil niech ma stały dostęp do wody, bo przy rozstroju łatwo o odwodnienie. Czy i czym karmić, zapytaj weterynarza. Nie podawaj na własną rękę lekkich dań ani domowych sposobów.
 
 <div class="callout warn">
 Kiedy pupil zjadł czekoladę, rodzynki, cebulę, ksylitol albo kość, nie czekaj na objawy. Dzwoń od razu.

@@ -3,42 +3,43 @@ title: "Choinka i świąteczne ozdoby: jak zabezpieczyć dom przed pupilem"
 date: 2026-12-05 09:00:00 +0200
 categories: [zdrowie]
 category_label: "Zdrowie pupila"
-cover_style: grad-d
+cover_style: grad-a
 emoji: "🎄"
 read_time: 5
 excerpt_text: "Błyszczące bombki, łańcuchy i lampki to dla kota i psa jedna wielka zabawka. Kilka prostych ruchów przy dekorowaniu ogranicza ryzyko."
 description: "Bezpieczna choinka i ozdoby świąteczne w domu z psem i kotem: lametta i łańcuchy, szklane bombki, światełka, woda ze stojaka, rośliny toksyczne: lilie, jemioła, ostrokrzew."
 ---
 
-Choinka wnosi do domu zapach, światło i mnóstwo rzeczy, które ciekawski pupil chce sprawdzić. **Największe ryzyko to nie sama choinka, ale to, co na niej wisi, i to, co stoi pod nią.**
+Choinka stoi w salonie od kwadransa. Pies obwąchał już stojak, a kot siedzi pod najniższą gałęzią i patrzy w górę, jakby liczył bombki. Dla obojga to nowa, pachnąca i błyszcząca zabawka. **Największe ryzyko to jednak nie sama choinka, tylko to, co na niej zawiśnie, i to, co stanie pod nią.**
+
+## Zanim zaczniesz ubierać
+
+Daj pupilowi obejrzeć drzewko, zanim pojawią się ozdoby. Ciekawość zwykle maleje po pierwszym dniu. Sprawdź, czy stojak jest stabilny, bo choinka przewrócona przez skaczącego kota to realny wypadek. Przy żywej choince zabezpiecz osłoną miskę z wodą: może zawierać żywicę i bakterie, a igły drażnią przewód pokarmowy i łapy.
 
 ## Na choince
 
-- ✨ **Lametta i łańcuchy:** dla kota szczególnie groźne, bo połknięta nić może uszkodzić jelita i wymaga pilnej pomocy, dlatego lepiej z nich zrezygnować
-- 🔮 **Szklane i kruche bombki:** rozbite dają ostre odłamki, które kaleczą łapy i pysk, więc dolne gałęzie warto zdobić ozdobami niełamliwymi
-- 💡 **Światełka i kable:** przegryziony przewód to ryzyko porażenia i pożaru, dlatego prowadź kable pod osłonami i wyłączaj lampki, gdy wychodzisz
+- ✨ **Lametta i łańcuchy:** dla kota szczególnie groźne, bo połknięta nić może uszkodzić jelita i wymaga pilnej pomocy, najlepiej z nich zrezygnować
+- 🔮 **Szklane i kruche bombki:** rozbite dają ostre odłamki, które kaleczą łapy i pysk, więc dolne gałęzie zdobią ozdoby niełamliwe
+- 💡 **Światełka i kable:** przegryziony przewód to ryzyko porażenia i pożaru, dlatego kable prowadź pod osłonami, a lampki wyłączaj, gdy wychodzisz
 - 🍪 **Ozdoby jadalne:** pierniki, cukierki i czekoladowe łańcuchy przyciągają psy, a wiele składników jest dla nich niebezpiecznych
-- 🕯️ **Prawdziwe świeczki:** przy pupilu pod choinką lepiej zamienić na ozdoby elektryczne
+- 🕯️ **Prawdziwe świeczki:** przy pupilu lepiej zamienić je na elektryczne
 
-## Pod choinką i wokół niej
-
-- 🌲 **Żywa choinka:** igły drażnią przewód pokarmowy i łapy, a woda ze stojaka może zawierać żywicę i bakterie, więc zabezpiecz miskę osłoną
-- 🧱 **Stabilny stojak:** choinka przewrócona przez skaczącego kota to realny wypadek
-- 🎁 **Prezenty:** pod choinką stawiaj bez jedzenia, a opakowania sprzątaj po rozpakowaniu
-- 🌺 **Bukiety i rośliny świąteczne:** lilie są bardzo groźne dla kotów, a jemioła i ostrokrzew również mogą zaszkodzić, dlatego trzymaj je poza zasięgiem lub zrezygnuj
+O świecach i innych źródłach ciepła w domu pisaliśmy więcej w tekście o [grzejnikach, kominkach i świecach](/blog/grzejniki-kominki-swiece-bezpieczne-cieplo/), a dlaczego czekolada jest dla psa groźna, wyjaśnia wpis [czego nie może jeść pies i kot](/blog/czego-nie-moze-jesc-pies-i-kot-toksyczne-pokarmy/).
 
 <div class="pullquote">
-Dekorowanie zaczyna się od pytania: co się stanie, jeśli pupil to połknie albo przewróci? Wszystko, co brzmi ryzykownie, powinno wisieć wyżej lub nie wisieć wcale.
+Dekorowanie zaczyna się od pytania: co się stanie, jeśli pupil to połknie albo przewróci? Wszystko, co brzmi ryzykownie, wisi wyżej albo nie wisi wcale.
 </div>
 
-## Jak wprowadzić pupila do choinki
+## Pod choinką i dookoła
 
-- 👀 **Pozwól obejrzeć, zanim ozdobisz:** ciekawość zwykle maleje po pierwszym dniu
-- 🚪 **Zamykaj pupila poza pokojem, gdy nie możesz go pilnować:** to najprostszy sposób zapobiegania wypadkom
-- 🧪 **Sprawdź listę roślin:** przed zakupem bukietu lub roślin doniczkowych sprawdź ich toksyczność dla psów i kotów
+Prezenty stawiaj pod choinką bez jedzenia, a opakowania sprzątaj od razu po rozpakowaniu. Jak wybrać dla pupila bezpieczny prezent, opisaliśmy we wpisie o [Mikołajkach i zabawkach](/blog/mikolajki-prezenty-dla-pupila-bezpieczne-zabawki/).
+
+Uważaj na świąteczne bukiety i rośliny. Lilie są bardzo groźne dla kotów, a jemioła i ostrokrzew też mogą zaszkodzić, więc trzymaj je poza zasięgiem albo zrezygnuj. Zanim kupisz bukiet czy roślinę doniczkową, sprawdź jej toksyczność dla psów i kotów.
+
+Gdy nie możesz pilnować pupila, zamykaj go poza pokojem z choinką. To najprostszy sposób zapobiegania wypadkom.
 
 <div class="callout warn">
-Wymioty, ślinienie, apatia, ból brzucha, odmowa jedzenia lub próby wyplucia nitki po zabawie ozdobami to powód do pilnej wizyty. Przy podejrzeniu zjedzenia lilii przez kota jedź do weterynarza od razu, bez czekania na objawy.
+Wymioty, ślinienie, apatia, ból brzucha, odmowa jedzenia albo próby wyplucia nitki po zabawie ozdobami to powód do pilnej wizyty. Przy podejrzeniu zjedzenia lilii przez kota jedź do weterynarza od razu, bez czekania na objawy.
 </div>
 
 <div class="callout vet">
@@ -49,4 +50,4 @@ Ten wpis pomaga zapobiegać i rozpoznawać ryzyko, a nie diagnozować. Każdą s
 Zanim zaczną się święta, sprawdź w ApkaŁapce, czy masz zapisany numer swojej kliniki i najbliższego dyżuru całodobowego. Przy zamkniętych gabinetach w święta wygodnie mieć go pod ręką.
 </div>
 
-Ładna choinka i bezpieczny pupil da się połączyć, trzeba tylko zacząć od tego drugiego. 🐾
+Ładną choinkę i bezpiecznego pupila da się połączyć. Trzeba tylko zacząć od tego drugiego.

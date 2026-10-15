@@ -3,41 +3,37 @@ title: "Nowy rok z pupilem: przegląd terminów i zdrowia w jeden wieczór"
 date: 2026-12-29 09:00:00 +0200
 categories: [porady]
 category_label: "Porady"
-cover_style: grad-b
+cover_style: grad-c
 emoji: "📅"
-read_time: 5
+read_time: 4
 excerpt_text: "Zamiast postanowień, które znikają w styczniu, zrób jedną rzecz: przejrzyj wszystkie terminy pupila i wpisz je tam, gdzie ich nie przegapisz."
 description: "Plan na nowy rok dla właściciela psa i kota: przegląd szczepień, odrobaczania, kontroli, wagi, zapasów karmy i leków, polisy i kosztów oraz kalendarz terminów na 12 miesięcy."
 ---
 
-Koniec roku to dobry moment na krótki przegląd, bo wszystko, co ważne dla pupila, dzieje się w ciągu kilku tygodni: wizyta kontrolna, szczepienie, kolejny zabieg. **Godzina spokojnego przeglądu w grudniu oszczędza szukania dokumentów w środku roku.**
+Zamiast postanowień, które znikają w połowie stycznia, proponujemy jedną rzecz na koniec roku: godzinę z kalendarzem pupila. Wszystko, co ważne, i tak dzieje się w rytmie kilku terminów: wizyta kontrolna, szczepienie, kolejny zabieg. **Spokojny przegląd w grudniu oszczędza szukania dokumentów w środku roku.**
 
-## Co przejrzeć
+## Lista na jeden wieczór
 
-- 💉 **Szczepienia:** kiedy było ostatnie i kiedy wypada następne, wraz z zaświadczeniem
+- 💉 **Szczepienia:** kiedy było ostatnie i kiedy wypada następne, razem z zaświadczeniem
 - 🪱 **Odrobaczanie i ochrona przed pchłami i kleszczami:** daty ostatnich zabiegów i terminy kolejnych
 - 🩺 **Wizyta kontrolna:** czy w tym roku była i kiedy zaplanować następną, zwłaszcza u seniora
-- ⚖️ **Waga:** porównaj z początkiem roku
-- 🦷 **Zęby, uszy, pazury:** czy coś wymagało uwagi i czy warto o tym wspomnieć weterynarzowi
-- 💊 **Leki i suplementy:** ile zostało i do kiedy wystarczy
-- 🥣 **Zapas karmy i żwirku:** na ile dni jeszcze starczy
-- 📄 **Dokumenty:** wyniki badań, książeczka, polisa i jej data wygaśnięcia
+- ⚖️ **Waga:** porównana z początkiem roku
+- 🦷 **Zęby, uszy, pazury:** czy coś wymagało uwagi i czy warto wspomnieć o tym weterynarzowi
+- 💊 **Leki i suplementy:** ile zostało i na jak długo wystarczy
+- 🥣 **Karma i żwirek:** na ile dni jeszcze starczy zapas
+- 📄 **Dokumenty:** wyniki badań, książeczka, polisa i data jej wygaśnięcia
 
-<div class="pullquote">
-Przegląd nie musi być idealny. Wystarczy, że każdy ważny termin ma datę i wiesz, gdzie ją znaleźć.
-</div>
+Jeśli nie masz pewności, jak często robić kontrole, zajrzyj do wpisu [jak często z psem i kotem na badania kontrolne](/blog/jak-czesto-z-psem-i-kotem-na-badania-kontrolne/). A gdy papiery pupila leżą w trzech szufladach, przyda się tekst [dokumenty pupila w jednym miejscu](/blog/dokumenty-pupila-w-jednym-miejscu/).
 
-## Dwa pytania na koniec
+## Dwa pytania do siebie
 
-- 💰 **Ile kosztowała opieka w tym roku?** Warto wiedzieć, żeby zaplanować budżet na następny
-- 🐾 **Co poszło dobrze, a co następnym razem zrobić inaczej?** Krótka lista wystarczy, a wraca przy pierwszej wizycie
+Ile kosztowała opieka w tym roku? Warto to wiedzieć, żeby zaplanować budżet na kolejny. Jak to policzyć, podpowiada wpis [ile kosztuje opieka nad pupilem](/blog/ile-kosztuje-opieka-nad-pupilem-budzet/).
 
-## Jak utrzymać porządek w kolejnych miesiącach
+Co poszło dobrze, a co następnym razem zrobić inaczej? Wystarczy krótka lista. Przyda się przy pierwszej wizycie w nowym roku.
 
-- 📅 **Wpisz terminy w jednym miejscu:** kalendarz z przypomnieniami zamiast kartek
-- ✅ **Oznaczaj zabiegi od razu po wykonaniu:** wtedy kolejny termin liczy się od właściwej daty
-- 🗓️ **Krótki przegląd co kwartał:** ta sama lista, kilka minut
-- 📨 **Zapisuj notatki po wizycie:** zalecenia lekarza szybko wylatują z głowy
+## Żeby porządek przetrwał do grudnia
+
+Wpisz terminy w jednym miejscu, w kalendarzu z przypomnieniami zamiast na kartkach. Zabiegi oznaczaj od razu po wykonaniu, bo wtedy kolejny termin liczy się od właściwej daty. Raz na kwartał zrób kilkuminutowy przegląd według tej samej listy, a po każdej wizycie zapisz notatkę, bo zalecenia lekarza szybko wylatują z głowy.
 
 <div class="callout vet">
 Ten wpis pomaga uporządkować terminy, nie ustalać ich. Kiedy szczepić, odrobaczać i kontrolować pupila, decyduje weterynarz na podstawie jego wieku, stanu zdrowia i stylu życia.
@@ -47,4 +43,4 @@ Ten wpis pomaga uporządkować terminy, nie ustalać ich. Kiedy szczepić, odrob
 W ApkaŁapce terminy szczepień, odrobaczeń i wizyt widać na jednym kalendarzu z kropkami przy dniach, więc przegląd roku sprowadza się do przewinięcia kilku miesięcy.
 </div>
 
-Nowy rok zaczyna się od kilku minut z kalendarzem. Reszta to już zwykłe, spokojne dni z pupilem. 🐾
+Przegląd nie musi być idealny. Wystarczy, że każdy ważny termin ma datę i wiesz, gdzie ją znaleźć.
