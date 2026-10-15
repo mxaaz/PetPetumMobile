@@ -104,6 +104,10 @@ img { max-width: 100%; display: block; }
 .post-hero.grad-b { background: linear-gradient(140deg, #7FA08A, #4E7360); }
 .post-hero.grad-c { background: linear-gradient(140deg, #C97B5A, #A85E40); }
 .post-hero.grad-d { background: linear-gradient(140deg, #C9A24E, #B98A3E); }
+.post-hero .crumbs { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 8px; font-size: .84rem; margin: 0 auto 14px; max-width: 760px; }
+.post-hero .crumbs a { color: rgba(255,255,255,.88); text-decoration: none; }
+.post-hero .crumbs a:hover { color: #fff; text-decoration: underline; }
+.post-hero .crumbs span { opacity: .6; }
 .post-hero .badge { display: inline-block; background: rgba(255,255,255,.22); color: #fff; font-weight: 700; font-size: .74rem; letter-spacing: .4px; text-transform: uppercase; padding: 6px 14px; border-radius: 999px; margin-bottom: 16px; }
 .post-hero h1 { font-size: 2.3rem; line-height: 1.15; letter-spacing: -.5px; max-width: 760px; margin: 0 auto 14px; }
 .post-hero .post-meta { opacity: .9; font-size: .92rem; }
