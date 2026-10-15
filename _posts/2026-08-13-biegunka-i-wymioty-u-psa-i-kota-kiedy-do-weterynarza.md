@@ -7,7 +7,7 @@ cover_style: grad-d
 emoji: "🚨"
 read_time: 5
 excerpt_text: "Pojedynczy epizod zwykle nie jest dramatem. Ale kilka konkretnych sygnałów zmienia 'obserwuję w domu' w 'jedziemy teraz'. Sprawdź, które to sygnały."
-description: "Biegunka i wymioty u psa i kota: kiedy można obserwować w domu, jakie czerwone flagi oznaczają pilną wizytę u weterynarza i jakie informacje przygotować dla lekarza."
+description: "Biegunka i wymioty u psa i kota: kiedy można obserwować w domu, jakie czerwone flagi oznaczają pilną wizytę i co przygotować dla lekarza."
 ---
 
 To jeden z najczęstszych dylematów opiekuna: sprzątasz i zastanawiasz się, czy to już powód do niepokoju. **Pojedynczy epizod u zdrowego dorosłego zwierzęcia zwykle nie jest dramatem, ale kilka konkretnych sygnałów zmienia "obserwuję" w "jedziemy teraz".**

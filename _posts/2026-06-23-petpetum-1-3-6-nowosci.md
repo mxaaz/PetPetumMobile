@@ -7,7 +7,7 @@ cover_style: grad-a
 emoji: "📷"
 read_time: 3
 excerpt_text: "Zrób zdjęcie kartki z wynikami od weterynarza, a aplikacja przepisze parametry za Ciebie, bez wysyłania do chmury. Do tego lepszy widok zaległych wizyt i wygodne udostępnianie weterynarzowi."
-description: "Co nowego w ApkaŁapka 1.3.6: skanowanie wyników weterynaryjnych ze zdjęcia z rozpoznawaniem na telefonie, zaległe wizyty w sekcji Nadchodzące, udostępnianie weterynarzowi i klikalne wyniki w widoku udostępnionym."
+description: "Co nowego w ApkaŁapka 1.3.6: skanowanie wyników weterynaryjnych ze zdjęcia, zaległe wizyty w Nadchodzących i udostępnianie weterynarzowi."
 ---
 
 W wersji 1.3.6 zajęliśmy się rzeczą, która zabierała najwięcej czasu: ręcznym przepisywaniem wyników od weterynarza. Teraz wystarczy zdjęcie.

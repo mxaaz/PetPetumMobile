@@ -7,7 +7,7 @@ cover_style: grad-a
 emoji: "🐾"
 read_time: 3
 excerpt_text: "Aktywność liczy teraz tak samo jak picie i kuweta: tydzień z normą Twojego pupila i wpisy po dniach. Do tego ikony zwierząt i statystyki użycia tylko za zgodą."
-description: "ApkaŁapka 2.5.4: nowa Aktywność z tygodniem i normą pupila, wpis dopasowany do psa i kota z godziną i edycją, ikony zwierząt oraz statystyki użycia tylko za zgodą."
+description: "ApkaŁapka 2.5.4: nowa Aktywność z tygodniem i normą pupila, wpis dopasowany do psa i kota, ikony zwierząt i statystyki użycia tylko za zgodą."
 ---
 
 Tym razem przerobiliśmy Aktywność. Liczyła po swojemu: w poniedziałek pokazywała „0 minut w tym tygodniu”, obok liczbę sesji z miesiąca i dystans, który przy kocie nic nie znaczył. Teraz działa tak samo jak Nawodnienie i Kuweta. 🐾

@@ -7,7 +7,7 @@ cover_style: grad-d
 emoji: "🔥"
 read_time: 5
 excerpt_text: "Kot na kaloryferze to widok z pocztówki, ale kominek, piecyk i świeca w zasięgu łapy to już ryzyko. Przegląd domu przed sezonem zajmie chwilę."
-description: "Bezpieczeństwo pupila w sezonie grzewczym: oparzenia od kominka, piecyków i grzejników elektrycznych, świece, olejki eteryczne, kable i czujnik czadu w domu z psem i kotem."
+description: "Pupil w sezonie grzewczym: oparzenia od kominka, pieca i grzejników, świece, olejki eteryczne, kable i czujnik czadu w domu z psem i kotem."
 ---
 
 Zimą pupil szuka ciepła tak samo jak my, tylko nie ocenia ryzyka. Najczęstsze kłopoty sezonu grzewczego to oparzenia, przegryzione kable i świece zrzucone łapą. Większości z nich da się uniknąć jednym spacerem po mieszkaniu, więc zróbmy go razem, pokój po pokoju.

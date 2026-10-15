@@ -7,7 +7,7 @@ cover_style: grad-a
 emoji: "🎄"
 read_time: 5
 excerpt_text: "Błyszczące bombki, łańcuchy i lampki to dla kota i psa jedna wielka zabawka. Kilka prostych ruchów przy dekorowaniu ogranicza ryzyko."
-description: "Bezpieczna choinka i ozdoby świąteczne w domu z psem i kotem: lametta i łańcuchy, szklane bombki, światełka, woda ze stojaka, rośliny toksyczne: lilie, jemioła, ostrokrzew."
+description: "Bezpieczna choinka w domu z psem i kotem: lametta, szklane bombki, światełka, woda ze stojaka i rośliny toksyczne: lilie, jemioła, ostrokrzew."
 ---
 
 Choinka stoi w salonie od kwadransa. Pies obwąchał już stojak, a kot siedzi pod najniższą gałęzią i patrzy w górę, jakby liczył bombki. Dla obojga to nowa, pachnąca i błyszcząca zabawka. **Największe ryzyko to jednak nie sama choinka, tylko to, co na niej zawiśnie, i to, co stanie pod nią.**

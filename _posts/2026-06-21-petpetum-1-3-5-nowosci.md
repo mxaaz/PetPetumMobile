@@ -7,7 +7,7 @@ cover_style: grad-a
 emoji: "✨"
 read_time: 3
 excerpt_text: "Proaktywne podpowiedzi z Twoich danych, powiązanie wyników z wizytą, eksport trendów do PDF, śledzenie fosforu i automatyczna kopia zapasowa. Plus stabilniejsze udostępnianie i mniej awarii."
-description: "Co nowego w ApkaŁapka 1.3.5: podpowiedzi Warto sprawdzić, powiązanie wyników weterynaryjnych z wizytą, eksport trendów do PDF, śledzenie fosforu przy chorobach nerek, automatyczna kopia zapasowa i stabilniejsze udostępnianie pupila."
+description: "Co nowego w ApkaŁapka 1.3.5: podpowiedzi Warto sprawdzić, wyniki powiązane z wizytą, eksport trendów, fosfor przy chorobach nerek i automatyczna kopia."
 ---
 
 Po dużej aktualizacji 1.3.3 skupiliśmy się na wygładzeniu i drobnych, ale wygodnych narzędziach. Oto co dostajesz w wersji 1.3.5.

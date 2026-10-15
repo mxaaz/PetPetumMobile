@@ -7,7 +7,7 @@ cover_style: grad-c
 emoji: "🛒"
 read_time: 4
 excerpt_text: "Wielki worek w promocji wygląda jak okazja. Ale karma ma termin przydatności, a pupil ma własne zdanie i wrażliwy żołądek."
-description: "Jak kupować karmę dla psa i kota na zapas w czasie promocji: termin przydatności, przechowywanie, ryzyko zmiany karmy, porównywanie kosztu dnia i planowanie zapasów."
+description: "Karma dla psa i kota na zapas w promocji: termin przydatności, przechowywanie, ryzyko zmiany karmy i porównywanie kosztu dnia karmienia."
 ---
 
 Listopadowe wyprzedaże kuszą dużymi workami karmy. **Oszczędność jest prawdziwa tylko wtedy, gdy karma zdąży się zużyć przed terminem, pupil ją lubi i dobrze toleruje, a Ty masz gdzie ją przechować.** Zanim klikniesz „do koszyka”, odpowiedz sobie na kilka pytań.

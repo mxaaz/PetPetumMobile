@@ -7,7 +7,7 @@ cover_style: grad-a
 emoji: "✨"
 read_time: 4
 excerpt_text: "Największa aktualizacja ApkaŁapka: odświeżony, spokojniejszy wygląd całej aplikacji, konfigurowalny panel „Dziś”, nowy kalendarz, przypomnienia z gestem oraz wygodniejsze karmienie ze skanem kodu i trybem automatycznego karmnika."
-description: "Co nowego w ApkaŁapka 2.0: nowy wygląd Natura, panel Dziś układany po swojemu, przeprojektowany kalendarz, przypomnienia z gestem odbyte/podane, drzemka karmienia, automatyczny karmnik, skan kodu i etykiety karmy oraz przypomnienie zamów zapas."
+description: "Co nowego w ApkaŁapka 2.0: wygląd Natura, panel Dziś układany po swojemu, nowy kalendarz, przypomnienia z gestem i skan etykiety karmy."
 ---
 
 To nasza największa aktualizacja od premiery. Przenieśliśmy ApkaŁapka na zupełnie nowy, spokojniejszy wygląd i dołożyliśmy narzędzia, które upraszczają codzienną opiekę. Oto co dostajesz w wersji 2.0.

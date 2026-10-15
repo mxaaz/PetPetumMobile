@@ -7,7 +7,7 @@ cover_style: grad-d
 emoji: "🐱"
 read_time: 5
 excerpt_text: "Przewlekła choroba nerek długo nie daje wyraźnych objawów. Zobacz, na jakie drobne zmiany warto zwrócić uwagę i jak obserwacja w domu pomaga weterynarzowi."
-description: "Wczesne sygnały przewlekłej choroby nerek (CKD) u kota: zwiększone pragnienie, chudnięcie, zmiany w kuwecie i apetycie. Jak obserwacja w domu wspiera diagnozę weterynaryjną."
+description: "Wczesne sygnały przewlekłej choroby nerek (CKD) u kota: pragnienie, chudnięcie, zmiany w kuwecie i apetycie. Jak obserwacja w domu wspiera diagnozę."
 ---
 
 Przewlekła choroba nerek (CKD) to jedna z częstszych dolegliwości starszych kotów. Jej podstępność polega na tym, że **długo nie daje wyraźnych objawów**. Kot potrafi wyglądać normalnie, a w tle coś się powoli zmienia.

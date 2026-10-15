@@ -7,7 +7,7 @@ cover_style: grad-a
 emoji: "🛠️"
 read_time: 3
 excerpt_text: "Wydanie porządkowe: aplikacja przestaje zamykać się w kilku konkretnych momentach, a choroby przewlekłe trafiły wreszcie na jedną listę z usuwaniem."
-description: "ApkaŁapka 2.4.2: choroby przewlekłe na jednej liście z cofnięciem, brakujące zdjęcia załączników i awatar bez internetu nie zamykają już aplikacji, stabilniejszy widget i okno zakupu premium."
+description: "ApkaŁapka 2.4.2: choroby przewlekłe na jednej liście z cofnięciem, stabilniejszy widget i okno zakupu premium oraz poprawki działania bez internetu."
 ---
 
 Poprzednia aktualizacja dołożyła sporo nowego. Ta zajmuje się czymś mniej efektownym, ale bardziej dokuczliwym na co dzień: momentami, w których aplikacja potrafiła zamknąć się bez ostrzeżenia. Zgłoszenia zbierają się u nas automatycznie, więc wiemy, gdzie dokładnie to się działo. 🐾

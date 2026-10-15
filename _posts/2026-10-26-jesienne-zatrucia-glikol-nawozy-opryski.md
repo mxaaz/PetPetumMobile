@@ -7,7 +7,7 @@ cover_style: grad-d
 emoji: "⚠️"
 read_time: 5
 excerpt_text: "Jesienią w garażach i ogrodach pojawiają się substancje, które dla pupila są śmiertelnie groźne. Najgorsza z nich smakuje słodko."
-description: "Zatrucie glikolem, nawozami i trutką na gryzonie u psa i kota: dlaczego płyn chłodniczy jest tak groźny, jakie są objawy zatrucia i co robić przed dojazdem do weterynarza."
+description: "Zatrucie glikolem, nawozami i trutką u psa i kota: dlaczego płyn chłodniczy jest tak groźny, objawy zatrucia i co robić przed dojazdem do weterynarza."
 ---
 
 Jesień to sezon wymiany płynów w samochodach, nawożenia trawników i wykładania trutek przed zimą. Wszystkie te rzeczy trafiają w miejsca, do których pupil ma dostęp. **A jedna z nich, płyn chłodniczy, jest jednocześnie bardzo groźna i słodka w smaku.**

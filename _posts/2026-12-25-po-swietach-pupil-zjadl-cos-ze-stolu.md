@@ -7,7 +7,7 @@ cover_style: grad-b
 emoji: "🩺"
 read_time: 4
 excerpt_text: "Kawałek karpia, ciasto z czekoladą albo cały talerz resztek. Co zanotować, kiedy dzwonić do weterynarza i jakie objawy nie mogą czekać."
-description: "Pies lub kot zjadł resztki ze świątecznego stołu: co zanotować, kiedy skontaktować się z weterynarzem, objawy alarmowe, tłuste jedzenie i trzustka, kość i ość, dyżur weterynaryjny w święta."
+description: "Pies lub kot zjadł resztki ze świątecznego stołu: co zanotować, kiedy dzwonić do weterynarza, objawy alarmowe, trzustka i dyżur w święta."
 ---
 
 Krótka odpowiedź: nie panikuj, ale też nie zwlekaj. Jeśli zjedzone jedzenie należy do groźnych albo pupil źle wygląda, dzwoń do weterynarza od razu. A teraz po kolei, co zrobić w pierwszych minutach.

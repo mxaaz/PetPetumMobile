@@ -7,7 +7,7 @@ cover_style: grad-a
 emoji: "🥣"
 read_time: 4
 excerpt_text: "Planer odlicza zapas karmy i podpowiada, czym ją zastąpić. Kalorie policzysz z analizy na etykiecie, a picie zapiszesz, przesuwając wodę na rysunku miski."
-description: "ApkaŁapka 2.5.3: odliczanie zapasu karmy i leków, przełączanie karmy z porcją przeliczoną po kaloriach, kalorie z analizy na etykiecie, analiza żywienia, prostsze zapisywanie picia i zapis bez internetu."
+description: "ApkaŁapka 2.5.3: odliczanie zapasu karmy i leków, zmiana karmy z porcją przeliczoną po kaloriach, analiza żywienia i zapis bez internetu."
 ---
 
 Ta aktualizacja to głównie planer karmienia i nawodnienie. Oba miejsca przerobiliśmy po Waszych uwagach: worek karmy potrafił „skończyć się” po cichu, a zapisywanie picia miało za dużo kroków. 🐾

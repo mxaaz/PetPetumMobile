@@ -7,7 +7,7 @@ cover_style: grad-a
 emoji: "🐈"
 read_time: 4
 excerpt_text: "Kuwetę zapisujesz przy sprzątaniu, licząc siusiu i kupy. Picie zmierzysz miską, a aplikacja porówna je z tym, co zwykle robi Twój pupil."
-description: "ApkaŁapka 2.5.1: kuweta z licznikami siusiu i kup, kolor i krew osobno dla moczu i kału, alert parcia bez efektu u kota, tydzień i norma pupila, pomiar picia z miski w ml albo gramach i woda z mokrej karmy."
+description: "ApkaŁapka 2.5.1: kuweta z licznikami siusiu i kup, alert parcia bez efektu u kota, tydzień i norma pupila oraz pomiar picia z miski."
 ---
 
 Ta aktualizacja powstała z Waszych wiadomości. Kuwetę zapisuje się zwykle przy sprzątaniu, a nie po każdej wizycie kota, więc jeden wpis „siusiu” mówił za mało. Przy piciu z kolei „mało, normalnie, dużo” nie wystarcza, gdy weterynarz prosi o liczby. 🐾

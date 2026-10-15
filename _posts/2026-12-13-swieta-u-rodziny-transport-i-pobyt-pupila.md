@@ -7,7 +7,7 @@ cover_style: grad-c
 emoji: "🚗"
 read_time: 5
 excerpt_text: "Jedziesz do rodziców z psem albo kotem? Dobra podróż zaczyna się kilka dni wcześniej, a udany pobyt od przygotowania jednego pokoju."
-description: "Podróż z psem i kotem na święta do rodziny: transporter i pasy w aucie, przerwy, choroba lokomocyjna, dane na obroży i chip, bezpieczny pokój na miejscu, inne zwierzęta i alternatywa: opiekun w domu."
+description: "Święta u rodziny z psem i kotem: transporter i pasy w aucie, przerwy, dane na obroży i chip, spokojny pokój na miejscu i inne zwierzęta w domu."
 ---
 
 Święta u rodziców czy dziadków to dla pupila zmiana miejsca, zapachów i rytmu dnia. Spokojny pobyt zaczyna się od przygotowania kilka dni wcześniej, a nie od pakowania samochodu w wigilijny poranek.

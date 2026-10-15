@@ -7,7 +7,7 @@ cover_style: grad-d
 emoji: "🎁"
 read_time: 4
 excerpt_text: "Prezent dla pupila powinien cieszyć, a nie kończyć się wizytą u weterynarza. Kilka zasad wyboru zabawki i gryzaka oszczędzi nerwów."
-description: "Jak wybrać bezpieczny prezent dla psa i kota na Mikołajki i święta: dopasowanie zabawki do rozmiaru, gryzaki, sznurki i wstążki, zabawki interaktywne i opakowania."
+description: "Bezpieczny prezent dla psa i kota na Mikołajki i święta: rozmiar zabawki, gryzaki, sznurki i wstążki, zabawki interaktywne i opakowania."
 ---
 
 Mikołajki i święta to sezon prezentów, także dla zwierząt. Najlepszy prezent pasuje do rozmiaru, wieku i sposobu zabawy pupila. Ten, który wygląda najładniej na półce, nie zawsze spełnia te warunki.

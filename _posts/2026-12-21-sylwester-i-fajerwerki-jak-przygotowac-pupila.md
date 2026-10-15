@@ -7,7 +7,7 @@ cover_style: grad-a
 emoji: "🎆"
 read_time: 5
 excerpt_text: "Dla wielu psów i kotów sylwester to najtrudniejsza noc w roku. Najwięcej da się zrobić wcześniej, dlatego lepiej zacząć już teraz."
-description: "Sylwester i petardy a pies i kot: bezpieczne miejsce, spacer przed zmierzchem, dane kontaktowe i chip, zamknięte okna, rozmowa z weterynarzem o lęku i czego nie robić w noc fajerwerków."
+description: "Sylwester a pies i kot: bezpieczne miejsce, spacer przed zmierzchem, chip i dane kontaktowe, rozmowa z weterynarzem o lęku i czego nie robić tej nocy."
 ---
 
 Huk petard, błyski i wibracje potrafią przestraszyć nawet spokojnego pupila. Zwierzę spanikowane fajerwerkami może uciec, zranić się albo przez wiele godzin cierpieć. **Dlatego sylwester dla opiekuna zaczyna się nie 31 grudnia, tylko kilka dni wcześniej.**

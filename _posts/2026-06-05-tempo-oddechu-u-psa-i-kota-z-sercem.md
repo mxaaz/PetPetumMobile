@@ -7,7 +7,7 @@ cover_style: grad-b
 emoji: "🫁"
 read_time: 4
 excerpt_text: "U pupili z chorobą serca liczba oddechów w spoczynku to jeden z najprostszych domowych wskaźników. Zobacz, jak go mierzyć i kiedy reagować."
-description: "Tempo oddechu w spoczynku u psa i kota z chorobą serca: jak prawidłowo liczyć oddechy, dlaczego to ważny domowy wskaźnik i kiedy skontaktować się z weterynarzem."
+description: "Tempo oddechu w spoczynku u psa i kota z chorobą serca: jak liczyć oddechy, dlaczego to ważny domowy wskaźnik i kiedy dzwonić do weterynarza."
 ---
 
 Jeśli Twój pies albo kot ma rozpoznaną chorobę serca, weterynarz mógł wspomnieć o liczeniu **oddechów w spoczynku**. To jeden z najprostszych, a zarazem najbardziej przydatnych domowych wskaźników, jakie masz pod ręką.

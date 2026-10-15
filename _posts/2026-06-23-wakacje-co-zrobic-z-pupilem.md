@@ -7,7 +7,7 @@ cover_style: grad-c
 emoji: "🧳"
 read_time: 4
 excerpt_text: "Zabrać ze sobą, zostawić pod opieką czy oddać do hotelu? Każda opcja ma plusy. Zobacz, jak wybrać i jak przygotować wszystko tak, by pupil był bezpieczny."
-description: "Wakacje a pupil: zabrać ze sobą, opiekun w domu czy hotel dla zwierząt. Jak wybrać najlepszą opcję i jak przekazać opiekunowi komplet informacji o psie lub kocie."
+description: "Wakacje a pupil: zabrać ze sobą, opiekun w domu czy hotel dla zwierząt. Jak wybrać i jak przekazać opiekunowi komplet informacji o psie lub kocie."
 ---
 
 Sezon urlopowy rusza i wraca odwieczne pytanie: **co z pupilem**. Zabrać ze sobą? Zostawić pod opieką? Oddać do hotelu dla zwierząt? Nie ma jednej dobrej odpowiedzi, jest za to kilka rzeczy, które warto przemyśleć wcześniej.

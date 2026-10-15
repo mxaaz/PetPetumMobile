@@ -7,7 +7,7 @@ cover_style: grad-d
 emoji: "🫁"
 read_time: 5
 excerpt_text: "Jedno kaszlnięcie po szybkim piciu to nic. Kaszel, który wraca co wieczór, mówi coś zupełnie innego. Zobacz, co warto zauważyć, zanim pójdziesz do weterynarza."
-description: "Kaszel u psa i kota: możliwe przyczyny, różnice między kaszlem suchym, mokrym i napadowym, dlaczego u kota bywa mylony z kulą włosową i kiedy jechać do weterynarza."
+description: "Kaszel u psa i kota: możliwe przyczyny, kaszel suchy, mokry i napadowy, dlaczego u kota bywa mylony z kulą włosową i kiedy jechać do weterynarza."
 ---
 
 Kaszel jest odruchem obronnym i sam w sobie nie musi oznaczać choroby. **Znaczenie ma to, jak często wraca, jak brzmi i co mu towarzyszy. Pojedyncze kaszlnięcie po łapczywym piciu to jedno, a kaszel powtarzający się przez kilka dni to zupełnie inna historia.**

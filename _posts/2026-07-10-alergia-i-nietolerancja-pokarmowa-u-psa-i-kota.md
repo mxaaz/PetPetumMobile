@@ -7,7 +7,7 @@ cover_style: grad-a
 emoji: "🍗"
 read_time: 5
 excerpt_text: "Ciągłe drapanie, problemy skórne albo powracająca biegunka bywają związane z tym, co ląduje w misce. Zobacz, jak obserwować reakcje pupila na karmę."
-description: "Alergia i nietolerancja pokarmowa u psa i kota: objawy skórne i pokarmowe, najczęstsze składniki i jak notować reakcje pupila na karmę przed wizytą u weterynarza."
+description: "Alergia i nietolerancja pokarmowa u psa i kota: objawy skórne i pokarmowe, najczęstsze składniki i jak notować reakcje na karmę przed wizytą."
 ---
 
 Kiedy pupil bez końca się drapie albo wraca do niego biegunka, **czasem odpowiedź kryje się w misce, a nie w otoczeniu**. Reakcje na składniki karmy potrafią być mylące, bo objawy nakładają się na inne problemy.

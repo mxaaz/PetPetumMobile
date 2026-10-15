@@ -7,7 +7,7 @@ cover_style: grad-b
 emoji: "🏷️"
 read_time: 5
 excerpt_text: "Na froncie opakowania jest kurczak i zdjęcie szczęśliwego psa. Prawdziwa informacja jest z tyłu, drobnym drukiem. Zobacz, jak ją odczytać."
-description: "Jak czytać skład karmy dla psa i kota: kolejność składników, co znaczą procenty mięsa, analiza podstawowa i dlaczego mokrej karmy nie porównuje się wprost z suchą."
+description: "Jak czytać skład karmy dla psa i kota: kolejność składników, procenty mięsa, analiza podstawowa i dlaczego mokrej nie porównuje się wprost z suchą."
 ---
 
 Front opakowania sprzedaje, tył informuje. **Cała użyteczna wiedza o karmie mieści się w dwóch miejscach z tyłu puszki albo worka: w składzie i w analizie podstawowej. Kiedy raz nauczysz się je czytać, wybór karmy przestaje być loterią.**

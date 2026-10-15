@@ -7,7 +7,7 @@ cover_style: grad-a
 emoji: "🐕"
 read_time: 4
 excerpt_text: "Pory spacerów z przypomnieniem, każdy zabieg pielęgnacyjny w swoim rytmie i do czterech misek z wodą. Do tego przypomnienia, które milkną, gdy coś już odhaczysz."
-description: "ApkaŁapka 2.6.0: plan spacerów i zabawy z przypomnieniami, pielęgnacja z rytmem per zabieg i kaflem na Pulpicie, kilka misek w nawodnieniu oraz ciszej po odhaczeniu."
+description: "ApkaŁapka 2.6.0: plan spacerów i zabawy z przypomnieniami, pielęgnacja z rytmem i kaflem na Pulpicie oraz kilka misek w nawodnieniu."
 ---
 
 To wydanie jest o rytmie dnia pupila: kiedy spacer, kiedy zęby, ile wody w której misce. I o tym, żeby aplikacja nie przypominała o czymś, co już zrobiłeś. 🐾

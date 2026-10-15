@@ -7,7 +7,7 @@ cover_style: grad-a
 emoji: "🔎"
 read_time: 8
 excerpt_text: "Jedno pole, które znajduje wpisy, funkcje i pierwszą pomoc. Analiza żywienia z przysmakami, ocena sylwetki w trzech pytaniach, karty karm ze zdjęciem i raport PDF, który zbiera to, o co pyta weterynarz."
-description: "ApkaŁapka 2.5.0: wyszukiwarka, analiza żywienia, przysmaki, jeden kreator planu żywienia, ocena sylwetki, waga względem wzorca rasy, karty karm ze zdjęciem, Cofnij po usunięciu wpisu, podgląd raportu PDF i zestaw na wizytę u weterynarza."
+description: "ApkaŁapka 2.5.0: wyszukiwarka, analiza żywienia, przysmaki, ocena sylwetki, waga względem wzorca rasy, karty karm ze zdjęciem i zestaw na wizytę."
 ---
 
 To największe wydanie w historii ApkaŁapki. Zebrało kilka wersji, które nie trafiły osobno do sklepów, i sporo próśb od osób, które piszą do nas, czego im brakuje. Trzy filary: łatwiej coś znaleźć, dokładniej widać, co pupil je, i łatwiej pokazać to wszystko weterynarzowi. 🐾

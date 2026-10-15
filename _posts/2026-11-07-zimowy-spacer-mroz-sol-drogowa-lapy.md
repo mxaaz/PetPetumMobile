@@ -7,7 +7,7 @@ cover_style: grad-c
 emoji: "❄️"
 read_time: 4
 excerpt_text: "Pierwsze przymrozki to moment, żeby zmienić rutynę spacerów. Sól na chodnikach i lód między palcami robią więcej szkody, niż się wydaje."
-description: "Zimowy spacer z psem i kotem: sól drogowa i środki odladzające na łapach, grudki lodu między palcami, mróz, ciepły silnik samochodu i jak dostosować spacery do pogody."
+description: "Zimowy spacer z psem: sól drogowa i środki odladzające na łapach, lód między palcami, mróz i jak dostosować spacery do pogody."
 ---
 
 Wracacie z porannego spaceru. Pies otrząsa się w przedpokoju, idzie prosto na legowisko i zaczyna dokładnie wylizywać łapy. Wygląda niewinnie, ale właśnie zlizuje wszystko, co przyniósł z chodnika: sól, środki odladzające i brud. Pierwsze przymrozki zmieniają spacery szybciej, niż zdążymy zmienić nawyki.

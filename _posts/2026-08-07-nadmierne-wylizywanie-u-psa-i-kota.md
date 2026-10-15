@@ -7,7 +7,7 @@ cover_style: grad-a
 emoji: "🐈"
 read_time: 4
 excerpt_text: "Mycie się to norma, ale natrętne lizanie jednego miejsca to często pierwszy widoczny sygnał problemu: od pcheł, przez ból, po stres."
-description: "Nadmierne wylizywanie u psa i kota: kiedy pielęgnacja przestaje być normalna, najczęstsze przyczyny (pasożyty, alergia, ból, stres) i co obserwować przed wizytą."
+description: "Nadmierne wylizywanie u psa i kota: kiedy pielęgnacja przestaje być normalna, najczęstsze przyczyny i co obserwować przed wizytą."
 ---
 
 Koty potrafią spędzać na pielęgnacji dużą część dnia, psy też dbają o sierść. **Granica między normalnym myciem a problemem przebiega tam, gdzie lizanie staje się natrętne, skupione na jednym miejscu albo zostawia ślady na skórze i sierści.**

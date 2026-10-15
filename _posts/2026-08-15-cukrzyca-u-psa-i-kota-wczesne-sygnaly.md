@@ -7,7 +7,7 @@ cover_style: grad-a
 emoji: "🩸"
 read_time: 5
 excerpt_text: "Pije więcej, chudnie mimo apetytu, częściej odwiedza kuwetę. Cukrzyca rozwija się po cichu, a jej pierwsze sygnały łatwo złożyć na karb wieku."
-description: "Cukrzyca u psa i kota: wczesne objawy (wzmożone pragnienie, chudnięcie mimo apetytu, apatia), kto jest w grupie ryzyka i dlaczego wczesne rozpoznanie tyle zmienia."
+description: "Cukrzyca u psa i kota: wczesne objawy (pragnienie, chudnięcie mimo apetytu, apatia), grupa ryzyka i dlaczego wczesne rozpoznanie tyle zmienia."
 ---
 
 Cukrzyca kojarzy się z ludźmi, ale chorują na nią także psy i koty. **Rozwija się po cichu, a jej wczesne sygnały łatwo złożyć na karb wieku, upałów albo "takiego uroku"**. Tymczasem to właśnie wczesne wychwycenie robi największą różnicę w leczeniu.

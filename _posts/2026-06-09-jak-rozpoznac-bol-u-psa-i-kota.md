@@ -7,7 +7,7 @@ cover_style: grad-d
 emoji: "😿"
 read_time: 4
 excerpt_text: "Zwierzęta rzadko skarżą się wprost. Ból częściej widać w zachowaniu niż w jęku. Zobacz, na jakie zmiany zwrócić uwagę i kiedy ruszyć do weterynarza."
-description: "Jak rozpoznać ból u psa i kota: zmiany w zachowaniu, apetycie, ruchu i pielęgnacji. Sygnały bólu, które łatwo przeoczyć, i kiedy skontaktować się z weterynarzem."
+description: "Jak rozpoznać ból u psa i kota: zmiany w zachowaniu, apetycie, ruchu i pielęgnacji, sygnały łatwe do przeoczenia i kiedy iść do weterynarza."
 ---
 
 Pies nie powie, że boli go łapa. Kot nie poskarży się na ząb. Zwierzęta ukrywają ból, bo w naturze słabość bywała niebezpieczna. Dlatego o cierpieniu pupila najczęściej mówi **zachowanie, nie głos**.

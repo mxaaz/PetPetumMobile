@@ -7,7 +7,7 @@ cover_style: grad-c
 emoji: "☀️"
 read_time: 4
 excerpt_text: "Zwierzęta nie chłodzą się tak jak my i przegrzewają się szybciej, niż myślisz. Zobacz, jak rozpoznać udar cieplny, jak pomóc i jak go w ogóle uniknąć."
-description: "Upały a psy i koty: jak chronić pupila przed przegrzaniem, jak rozpoznać objawy udaru cieplnego, pierwsza pomoc i czego nigdy nie robić. Praktyczny przewodnik na gorące dni."
+description: "Upały a psy i koty: jak chronić pupila przed przegrzaniem, jak rozpoznać udar cieplny, pierwsza pomoc i czego nigdy nie robić."
 ---
 
 Gdy słupek rtęci idzie w górę, dla psów i kotów robi się naprawdę groźnie. Zwierzęta **nie pocą się tak jak my**, chłodzą się głównie przez dyszenie, więc przegrzewają się szybciej, niż się wydaje. Udar cieplny potrafi rozwinąć się w kilka, kilkanaście minut i zagraża życiu.

@@ -7,7 +7,7 @@ cover_style: grad-b
 emoji: "🔍"
 read_time: 5
 excerpt_text: "Skoro za oknem mróz, pcheł być nie powinno. Ale w ogrzewanym mieszkaniu mają idealne warunki, a kot niewychodzący też nie jest bezpieczny."
-description: "Pchły u psa i kota zimą: dlaczego rozwijają się w ogrzewanym domu, jak rozpoznać świąd i ślady w sierści, dlaczego trzeba leczyć też otoczenie i czego nie wolno podawać kotu."
+description: "Pchły u psa i kota zimą: dlaczego rozwijają się w ogrzewanym domu, jak je rozpoznać, dlaczego trzeba zająć się mieszkaniem i czego nie podawać kotu."
 ---
 
 Wielu opiekunów kończy zabiegi przeciwpchelne razem z sezonem kleszczy. Tymczasem w ogrzewanym mieszkaniu pchły mogą rozwijać się przez cały rok, a zimą problem często wychodzi na jaw dopiero po tygodniach. Zacznijmy od przekonań, przez które tak się dzieje.

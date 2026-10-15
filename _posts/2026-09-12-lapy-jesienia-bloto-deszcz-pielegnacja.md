@@ -7,7 +7,7 @@ cover_style: grad-d
 emoji: "🐾"
 read_time: 4
 excerpt_text: "Jesienne łapy to nie tylko brudna podłoga. Wilgoć zamknięta między palcami potrafi zamienić się w podrażnienie, którego długo nie widać."
-description: "Pielęgnacja łap psa jesienią: mycie po spacerze w błocie, przestrzenie międzypalcowe, sierść między poduszkami, pękające poduszki i kiedy iść z tym do weterynarza."
+description: "Pielęgnacja łap psa jesienią: mycie po spacerze w błocie, przestrzenie między palcami, pękające poduszki i kiedy iść z tym do weterynarza."
 ---
 
 Po jesiennym spacerze pies wraca z łapami, których nie da się zignorować. **Najważniejsze jednak nie jest to, co widać na podłodze, tylko to, co zostaje między palcami: wilgoć, piach i drobiny, które przez kilka dni cicho drażnią skórę.**

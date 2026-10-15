@@ -7,7 +7,7 @@ cover_style: grad-c
 emoji: "💧"
 read_time: 4
 excerpt_text: "Nie chodzi o jedną idealną liczbę mililitrów. Najważniejsza jest zmiana względem normy Twojego pupila. Zobacz, co wpływa na pragnienie i kiedy się zaniepokoić."
-description: "Ile wody powinien pić pies i kot: od czego zależy zapotrzebowanie, dlaczego liczy się zmiana względem normy, kiedy zwiększone lub zmniejszone picie to sygnał dla weterynarza."
+description: "Ile wody powinien pić pies i kot: od czego zależy zapotrzebowanie, dlaczego liczy się zmiana względem normy i kiedy picie to sygnał dla weterynarza."
 ---
 
 "Czy mój kot pije za dużo?" to częste i bardzo sensowne pytanie. Nie ma jednak jednej magicznej liczby mililitrów dla każdego zwierzęcia. Najważniejsze jest co innego: **zmiana względem tego, ile pupil pije normalnie**.

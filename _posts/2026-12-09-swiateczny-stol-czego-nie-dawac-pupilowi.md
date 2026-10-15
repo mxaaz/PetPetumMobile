@@ -7,7 +7,7 @@ cover_style: grad-b
 emoji: "🍽️"
 read_time: 5
 excerpt_text: "Pierogi, karp, piernik i makowiec. Prawie wszystko z wigilijnego stołu ma swój powód, dla którego pupil nie powinien tego dostać."
-description: "Świąteczne potrawy niebezpieczne dla psa i kota: czekolada, rodzynki, cebula, ksylitol, kości rybne i drobiowe, tłuste dania, alkohol i jak poprosić gości, żeby nie dokarmiali."
+description: "Świąteczne potrawy groźne dla psa i kota: czekolada, rodzynki, cebula, ksylitol, ości i kości, tłuste dania, alkohol i jak prosić gości o niedokarmianie."
 ---
 
 W święta jedzenie jest wszędzie, a domowników i gości więcej niż zwykle. Każdy chce dać pupilowi „coś od siebie”, a dzieci przemycają kąski pod stołem. Tymczasem nawet drobny kęs z talerza może być problemem, a najgroźniejsze rzeczy często wyglądają zupełnie niewinnie.

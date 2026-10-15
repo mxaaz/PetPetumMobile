@@ -7,7 +7,7 @@ cover_style: grad-c
 emoji: "🎾"
 read_time: 4
 excerpt_text: "Dwa krótkie wyjścia na siku to nie spacer. Zobacz, ile ruchu potrzebuje pupil, czym różni się zmęczenie fizyczne od psychicznego i po czym poznać, że jest go za mało."
-description: "Ile ruchu dziennie potrzebuje pies i kot: jak dobrać aktywność do wieku i rasy, dlaczego węszenie męczy bardziej niż bieganie i jakie są objawy niedostatku ruchu."
+description: "Ile ruchu dziennie potrzebuje pies i kot: jak dobrać aktywność do wieku i rasy, dlaczego węszenie męczy bardziej niż bieganie i objawy niedoboru ruchu."
 ---
 
 Pytanie "ile spaceru wystarczy" nie ma jednej odpowiedzi, bo młody owczarek i starszy mops żyją w zupełnie innych światach. **Jest za to prosta zasada: ruch ma zmęczyć pupila, nie tylko przewietrzyć. Krótkie wyjście, żeby załatwił potrzeby, spacerem nie jest.**

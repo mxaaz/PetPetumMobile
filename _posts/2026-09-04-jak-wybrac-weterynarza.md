@@ -7,7 +7,7 @@ cover_style: grad-d
 emoji: "🏥"
 read_time: 4
 excerpt_text: "Najgorszy moment na szukanie lecznicy to ten, w którym musisz jechać natychmiast. Warto wybrać wcześniej, na spokojnie."
-description: "Jak wybrać lecznicę weterynaryjną dla psa i kota: na co zwrócić uwagę przy pierwszej wizycie, o co zapytać, dlaczego warto znać dyżur całodobowy i kiedy zmienić lekarza."
+description: "Jak wybrać lecznicę dla psa i kota: na co zwrócić uwagę przy pierwszej wizycie, o co zapytać, po co znać dyżur całodobowy i kiedy zmienić lekarza."
 ---
 
 Większość opiekunów wybiera lecznicę przypadkiem: bo jest najbliżej albo bo ktoś polecił w komentarzu. **A najgorszy moment na szukanie weterynarza to ten, w którym trzeba jechać natychmiast. Wybór zrobiony wcześniej, na spokojnie, oszczędza potem bardzo dużo stresu.**

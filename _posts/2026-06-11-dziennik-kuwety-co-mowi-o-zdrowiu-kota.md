@@ -7,7 +7,7 @@ cover_style: grad-c
 emoji: "🚽"
 read_time: 4
 excerpt_text: "Kuweta to jeden z najlepszych domowych wskaźników zdrowia kota. Zobacz, jakie zmiany warto zauważyć i kiedy nie zwlekać z wizytą u weterynarza."
-description: "Dziennik kuwety: co zmiany w kuwecie mówią o zdrowiu kota, na co zwracać uwagę, kiedy brak moczu lub krew to sygnał alarmowy. Praktyczny przewodnik dla opiekunów."
+description: "Dziennik kuwety: co zmiany w kuwecie mówią o zdrowiu kota, na co zwracać uwagę i kiedy brak moczu lub krew to sygnał alarmowy."
 ---
 
 Brzmi mało elegancko, ale to prawda: **kuweta to jeden z najlepszych domowych wskaźników zdrowia kota**. Koty świetnie ukrywają, że coś im dolega, a to, co zostawiają w kuwecie, mówi sporo.

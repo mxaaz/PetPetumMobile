@@ -7,7 +7,7 @@ cover_style: grad-a
 emoji: "🪱"
 read_time: 4
 excerpt_text: "Częstotliwość odrobaczania zależy od trybu życia pupila, a nie od kalendarza z internetu. Zobacz, co bierze pod uwagę weterynarz i jak nie przegapić terminu."
-description: "Jak często odrobaczać kota i psa: od czego zależy częstotliwość, kiedy odrobaczać szczeniaka i kociaka, na co zwrócić uwagę. Praktyczny przewodnik dla opiekunów."
+description: "Jak często odrobaczać kota i psa: od czego zależy częstotliwość, kiedy odrobaczać szczeniaka i kociaka i na co zwrócić uwagę."
 ---
 
 "Co ile odrobaczać?" to jedno z najczęstszych pytań opiekunów. Zła wiadomość: nie ma jednej liczby dla wszystkich. Dobra: ustalenie właściwego rytmu jest prostsze, niż się wydaje.

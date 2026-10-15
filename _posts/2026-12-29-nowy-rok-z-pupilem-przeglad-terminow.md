@@ -7,7 +7,7 @@ cover_style: grad-c
 emoji: "📅"
 read_time: 4
 excerpt_text: "Zamiast postanowień, które znikają w styczniu, zrób jedną rzecz: przejrzyj wszystkie terminy pupila i wpisz je tam, gdzie ich nie przegapisz."
-description: "Plan na nowy rok dla właściciela psa i kota: przegląd szczepień, odrobaczania, kontroli, wagi, zapasów karmy i leków, polisy i kosztów oraz kalendarz terminów na 12 miesięcy."
+description: "Plan na nowy rok z psem i kotem: przegląd szczepień, odrobaczania, kontroli, wagi, zapasów, polisy i kosztów w jeden wieczór."
 ---
 
 Zamiast postanowień, które znikają w połowie stycznia, proponujemy jedną rzecz na koniec roku: godzinę z kalendarzem pupila. Wszystko, co ważne, i tak dzieje się w rytmie kilku terminów: wizyta kontrolna, szczepienie, kolejny zabieg. **Spokojny przegląd w grudniu oszczędza szukania dokumentów w środku roku.**

@@ -7,7 +7,7 @@ cover_style: grad-c
 emoji: "👂"
 read_time: 4
 excerpt_text: "Zdrowe ucho zwykle nie potrzebuje częstego czyszczenia. Szkodzi i zaniedbanie, i nadgorliwość. Zobacz, jak czyścić bezpiecznie i kiedy odpuścić."
-description: "Czyszczenie uszu psa i kota: jak często sprawdzać uszy, jak czyścić bezpiecznie płynem dla zwierząt, czego nie robić patyczkami i jakie objawy oznaczają zapalenie."
+description: "Czyszczenie uszu psa i kota: jak często sprawdzać uszy, jak czyścić bezpiecznie, czego nie robić patyczkami i jakie objawy oznaczają zapalenie."
 ---
 
 Uszy pupila to jedno z tych miejsc, gdzie łatwo przesadzić w obie strony. **Zdrowe ucho w dużej mierze czyści się samo i częste "profilaktyczne" czyszczenie potrafi bardziej zaszkodzić niż pomóc.** Kluczem jest regularne zaglądanie, a czyszczenie tylko wtedy, gdy naprawdę jest co czyścić.

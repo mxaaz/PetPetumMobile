@@ -7,7 +7,7 @@ cover_style: grad-a
 emoji: "🗺️"
 read_time: 4
 excerpt_text: "Klinikę z mapy zapiszesz jako kontakt jednym tapnięciem, zaległe wpisy odhaczysz na jednym ekranie, a powiadomień jest mniej, nie więcej."
-description: "ApkaŁapka 2.4.0: mapa klinik weterynaryjnych z zapisem kontaktu, wyszukiwanie po nazwie, ekran Do potwierdzenia, mniej powiadomień, kreator pupila, diety weterynaryjne i poprawki synchronizacji."
+description: "ApkaŁapka 2.4.0: mapa klinik weterynaryjnych, wyszukiwanie po nazwie, ekran Do potwierdzenia, mniej powiadomień, kreator pupila i diety weterynaryjne."
 ---
 
 Poprzednia duża aktualizacja przebudowała przypomnienia. Ta zajmuje się tym, co dzieje się wokół nich: szukaniem kliniki, nadrabianiem zaległości i wyciszaniem tego, co nie musi się odzywać. 🐾

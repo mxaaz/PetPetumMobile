@@ -7,7 +7,7 @@ cover_style: grad-d
 emoji: "🛋️"
 read_time: 4
 excerpt_text: "Dla nas to rodzinna kolacja, dla pupila tłum obcych, głośne rozmowy i drzwi, które otwierają się co chwilę. Kilka zasad to duża różnica."
-description: "Jak zadbać o psa i kota, gdy w domu są goście: bezpieczna kryjówka, sygnały stresu, zasady dla dzieci i gości, ucieczki przez drzwi i zachowanie rutyny w święta."
+description: "Pies i kot, gdy w domu są goście: bezpieczna kryjówka, sygnały stresu, zasady dla dzieci i gości, ucieczki przez drzwi i rutyna w święta."
 ---
 
 Kiedy w domu robi się tłoczno, nawet najbardziej towarzyski pupil w pewnym momencie ma dość. Kot znika pod łóżkiem, pies chodzi za Tobą krok w krok albo wciska się pod stół. To nie jest złe zachowanie, tylko sposób, w jaki zwierzę mówi: potrzebuję chwili spokoju. Dobra wiadomość jest taka, że wystarczy mu w tym trochę pomóc.
