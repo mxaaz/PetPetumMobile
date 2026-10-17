@@ -40,12 +40,23 @@ layout: default
     </div>
   </section>
 
-  {% assign related = site.posts | where_exp: "p", "p.url != page.url" %}
+  {% comment %} Najpierw wpisy z tej samej kategorii (najnowsze), resztę do trzech dopełniają
+     najnowsze z innych kategorii. Wcześniej szły po prostu 3 najnowsze wpisy, więc pod artykułem
+     o zdrowiu potrafił wisieć changelog. {% endcomment %}
+  {% assign main_cat = page.categories | first %}
+  {% assign pool = site.posts | where_exp: "p", "p.url != page.url" %}
+  {% assign related = pool | where_exp: "p", "p.categories contains main_cat" | slice: 0, 3 %}
+  {% if related.size < 3 %}
+    {% for p in pool %}
+      {% if related.size >= 3 %}{% break %}{% endif %}
+      {% unless p.categories contains main_cat %}{% assign related = related | push: p %}{% endunless %}
+    {% endfor %}
+  {% endif %}
   {% if related.size > 0 %}
   <section class="related">
     <h2>Przeczytaj też</h2>
     <div class="post-grid">
-      {% for post in related limit: 3 %}
+      {% for post in related %}
         {% assign rgrad = post.cover_style | default: "grad-b" %}
         <a class="post-card" href="{{ post.url | relative_url }}">
           <div class="cover {{ rgrad }}"{% if post.cover_image %} style="background-image:url('{{ post.cover_image | relative_url }}')"{% endif %}>
@@ -70,6 +81,7 @@ layout: default
   "headline": {{ page.title | jsonify }},
   "datePublished": "{{ page.date | date_to_xmlschema }}",
   "dateModified": "{{ page.date | date_to_xmlschema }}",
+  "image": "{{ page.image | default: '/assets/og-image.jpg' | absolute_url }}",
   "author": { "@type": "Organization", "name": "ApkaŁapka" },
   "publisher": {
     "@type": "Organization",

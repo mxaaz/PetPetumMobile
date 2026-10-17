@@ -2,6 +2,7 @@ title: ApkaŁapka
 description: Aplikacja do opieki nad psem i kotem. Porady, zdrowie pupila i nowości w aplikacji.
 url: "https://apkalapka.pl"
 lang: pl
+locale: pl_PL
 
 permalink: /blog/:title/
 
@@ -25,6 +26,12 @@ feed:
 
 # Domyślne front-matter dla wpisów
 defaults:
+  # Obrazek do udostępniania (og:image) dla każdej strony, która nie ma własnego `image:`.
+  # 1200x630 z akwareli hero, odtwarzany przez scripts/og_image.py. Bez niego linki z FB szły bez obrazka.
+  - scope:
+      path: ""
+    values:
+      image: /assets/og-image.jpg
   - scope:
       path: "_posts"
       type: posts
@@ -40,6 +47,11 @@ exclude:
   - vendor
   - scripts
   - .gitignore
+  # Źródła grafik: trzymane w repo, ale nic ich nie ładuje, więc nie idą na stronę.
+  - hero.jpg
+  - hero2.jpeg
+  - assets/hero-pattern.svg
+  - "screens/*.jpg"
 
 # Kategorie (do filtrowania / changelog)
 category_labels:

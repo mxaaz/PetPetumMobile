@@ -183,7 +183,10 @@ jest tam już spójny ze stroną główną - nic nie trzeba migrować.
   PL i EN były identyczne (oba po polsku). Angielski zrzut podmienia się jako `en-<nazwa>.webp`.
 - Każdy `<img>` zrzutu ma `width`/`height` i `loading="lazy"`, oprócz polskiego zrzutu w hero
   (`fetchpriority="high"`). Bez lazy przeglądarka ściągała też ukryte makiety i drugi język.
-- `icon.png` (512 px) zostaje do `og:image` i logo w JSON-LD. Na stronie wisi `icon-180.png`
+- `icon.png` (512 px) zostaje do logo w JSON-LD. **`og:image` to `assets/og-image.jpg`** (1200x630,
+  akwarela z hero, od 2026-10-17): domyślne dla wszystkich stron przez `defaults` w `_config.yml`,
+  na stronie głównej wpisane ręcznie w `<head>`. Odtwarzasz skryptem `scripts/og_image.py`.
+  Wpis może mieć własne `image:` w front matter i wtedy ono wygrywa. Na stronie wisi `icon-180.png`
   (nawigacja, hero, apple-touch) i `icon-64.png` (favicona, stopka).
 
 ## Konwencje
