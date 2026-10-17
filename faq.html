@@ -56,12 +56,12 @@ permalink: /faq.html
 <div class="wrap">
   <div class="article">
     <div class="lang-switcher">
-      <button class="lang-btn active" onclick="switchLang('en', this)">English</button>
-      <button class="lang-btn" onclick="switchLang('pl', this)">Polski</button>
+      <button class="lang-btn active" data-lang="pl" onclick="switchLang('pl')">Polski</button>
+      <button class="lang-btn" data-lang="en" onclick="switchLang('en')">English</button>
     </div>
 
     <!-- ============ ENGLISH ============ -->
-    <div id="lang-en" class="lang-section active">
+    <div id="lang-en" class="lang-section" lang="en">
 
       <h2>Account &amp; Data</h2>
 
@@ -221,7 +221,7 @@ permalink: /faq.html
     </div>
 
     <!-- ============ POLISH ============ -->
-    <div id="lang-pl" class="lang-section">
+    <div id="lang-pl" class="lang-section active">
 
       <h2>Konto i dane</h2>
 
@@ -383,10 +383,14 @@ permalink: /faq.html
 </div>
 
 <script>
-  function switchLang(lang, btn) {
-    document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
-    document.getElementById('lang-' + lang).classList.add('active');
-    btn.classList.add('active');
+  /* Domyślnie polski (strona i dane strukturalne FAQ są po polsku). Angielski, gdy adres kończy się
+     na #en (link z /en/) albo gdy ktoś wybrał EN na stronie głównej (apkalapka_lang). */
+  function switchLang(lang) {
+    document.querySelectorAll('.lang-section').forEach(el => el.classList.toggle('active', el.id === 'lang-' + lang));
+    document.querySelectorAll('.lang-btn').forEach(el => el.classList.toggle('active', el.dataset.lang === lang));
   }
+  (function () {
+    var saved = null; try { saved = localStorage.getItem('apkalapka_lang'); } catch (e) {}
+    if (location.hash === '#en' || (location.hash !== '#pl' && saved === 'en')) switchLang('en');
+  })();
 </script>

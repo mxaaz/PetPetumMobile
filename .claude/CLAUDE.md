@@ -49,7 +49,7 @@ słowami na podstawie faktów od opiekuna, bez kopiowania ich opisów z Instagra
 Strona ma dwie strefy i dwa głosy. Granica: czy po drugiej stronie stoi narzędzie, czy człowiek
 z firmy.
 
-**Strefa produktowa** (`index.html`, listingi bloga i changelogu): podmiotem czynności jest
+**Strefa produktowa** (strona główna, listingi bloga i changelogu): podmiotem czynności jest
 **ApkaŁapka**, adresatem **Ty**.
 
 - ✅ „ApkaŁapka porządkuje terminy, przypomina w porę i pokazuje trendy w zdrowiu pupila."
@@ -67,9 +67,9 @@ odpowiadać w ciągu 24 godzin".
 **Emoji: nie w nagłówkach.** Zero emoji w `h1`, `h2` i w eyebrow. Wolno w kaflach, tagach, chipach
 i na okładkach wpisów, bo tam niosą lekkość, a nie nadają tonu.
 
-**Zmieniasz copy? Zmień OBIE wersje językowe.** `index.html` trzyma PL i EN w jednym pliku
-(`<span class="pl">` / `<span class="en">`), a `faq.html` w dwóch osobnych sekcjach `#lang-en`
-i `#lang-pl`. Zgubiona para zostawia polskie zdanie na angielskiej wersji strony.
+**Zmieniasz copy? Zmień OBIE wersje językowe.** Strona główna (`_includes/home.html`) trzyma PL i EN
+w jednym pliku (`<span class="pl">` / `<span class="en">`), a `faq.html` w dwóch osobnych sekcjach
+`#lang-en` i `#lang-pl`. Zgubiona para zostawia polskie zdanie na angielskiej wersji strony.
 
 ## Reguły treści (te same co w marketingu)
 
@@ -139,7 +139,7 @@ się nieczytelna (zgłoszenie usera 2026-09-03).
 `min(23%, calc(50% - 400px))` i `max(77%, calc(50% + 400px))` (analogicznie 7%/93% z ±500 px):
 pełne krycie nigdy nie jest węższe niż 800 px wokół środka. Poniżej ~800 px zasłona kryje całą
 szerokość, powyżej ~1480 px działają same procenty, więc desktop wygląda jak wcześniej. Ten sam
-blok siedzi w `index.html` i `assets/css/blog.css`: zmieniasz jeden, zmień drugi.
+blok siedzi w `_includes/home.html` i `assets/css/blog.css`: zmieniasz jeden, zmień drugi.
 
 **Nie rysuj tu łapki wektorowo.** Próbowaliśmy (SVG z czterech kółek i owalu, krycie 0,02, potem
 0,30) i za każdym razem gryzło się z hero: akwarela ma wydłużone paluchy, nieregularną poduszkę
@@ -185,7 +185,7 @@ jest tam już spójny ze stroną główną - nic nie trzeba migrować.
   (`fetchpriority="high"`). Bez lazy przeglądarka ściągała też ukryte makiety i drugi język.
 - `icon.png` (512 px) zostaje do logo w JSON-LD. **`og:image` to `assets/og-image.jpg`** (1200x630,
   akwarela z hero, od 2026-10-17): domyślne dla wszystkich stron przez `defaults` w `_config.yml`,
-  na stronie głównej wpisane ręcznie w `<head>`. Odtwarzasz skryptem `scripts/og_image.py`.
+  na stronie głównej wpisane ręcznie w `<head>`. Angielska strona główna ma `og-image-en.jpg`. Obie odtwarzasz skryptem `scripts/og_image.py`.
   Wpis może mieć własne `image:` w front matter i wtedy ono wygrywa. Na stronie wisi `icon-180.png`
   (nawigacja, hero, apple-touch) i `icon-64.png` (favicona, stopka).
 
@@ -196,6 +196,18 @@ jest tam już spójny ze stroną główną - nic nie trzeba migrować.
 - Zdjęcia i grafiki do wpisów: tylko materiał od usera (`ApkaLapkaMarketing/Media/`), nigdy generowane.
 
 ## Strona główna: układ od 2026-10-11
+
+**Dwa adresy, jeden plik** (od 2026-10-17): `/` po polsku, `/en/` po angielsku. Całą treść trzyma
+`_includes/home.html`, a `index.html` i `en/index.html` tylko go wołają z `lang="pl"` / `"en"`.
+Edytujesz `_includes/home.html`, nigdy dwóch kopii. Od języka zależą: `<head>` (tytuł, opis, canonical,
+og, obrazek `og-image.jpg` / `og-image-en.jpg`), `body[data-lang]` ustawione w HTML-u, priorytet zrzutu
+w hero i link do FAQ (`/faq.html#en` z wersji EN). `hreflang` wskazuje oba adresy, `x-default` na `/en/`.
+Ścieżki zasobów muszą być od korzenia (`/screens/…`, `/assets/…`), bo względne psują się pod `/en/`.
+Przełącznik PL/EN przechodzi na drugi adres i zapamiętuje wybór w `apkalapka_lang`. **Nie dodawaj
+przekierowania po języku przeglądarki:** robot Google ma przeglądarkę po angielsku i nie zobaczyłby
+polskiej strony. Zamiast tego, gdy język przeglądarki nie pasuje do adresu, na dole wyskakuje
+podpowiedź z linkiem do drugiej wersji. FAQ jest domyślnie po polsku (jak jego dane strukturalne),
+po angielsku przy `#en` albo zapamiętanym `apkalapka_lang=en`.
 
 Kolejność: hero → pasek → **Sytuacje** (`#sytuacje`, 4 pytania opiekuna i odpowiedź aplikacji) →
 **Co jest w środku** (`#features`, 12 kafli + telefon) → **Opinie** (`#opinie`) → **Od twórcy**
@@ -252,7 +264,7 @@ układ, **nigdy tekstów ani grafik**.
   usera „na blogu łapki stoją”) te same tropy rysuje `assets/js/paw-trails.js`, podpięty w
   `_layouts/default.html`, a style siedzą w `assets/css/blog.css`. Margines liczony od kolumny
   1080 px (`.wrap`, `.related`), więc tropy ruszają od ok. 1260 px szerokości; we wpisie startują
-  pod kolorową okładką. Skrypt jest kopią logiki z `index.html`: zmieniasz jeden, zmień drugi.
+  pod kolorową okładką. Skrypt jest kopią logiki z `_includes/home.html`: zmieniasz jeden, zmień drugi.
 - **Telefon w hero** przewija 6 ekranów co 3,2 s (kropki pod spodem), stoi pod kursorem i przy
   `prefers-reduced-motion`.
 - **Zrzuty 2026-10-11** (z `ApkaLapkaMarketing/Media/Aplikacja/nowe/`): nowe `pl-today`, `pl-calendar`,
@@ -261,4 +273,7 @@ układ, **nigdy tekstów ani grafik**.
   Bozita) w kadrze: user kazał wrzucić bez kadrowania. `en-supplies` zostaje stary, po angielsku.
   Planer i przypomnienia nadal stare (nowe też pokazują marki, decyzja usera).
 - Lokalny `jekyll build` nie działa (2026-10-11: brak gemu `eventmachine` po aktualizacji Ruby).
-  Podgląd: kopia `index.html` bez bloku Liquid bloga, otwarta z `file://`.
+  Podgląd strony głównej: wyrenderuj `_includes/home.html` samym Liquidem 4.0.4 (gem do katalogu
+  tymczasowego, filtry `relative_url`/`absolute_url` jako proste funkcje, `include.lang` = `pl`/`en`)
+  i porównaj z renderem sprzed zmiany. Ścieżki w pliku są od korzenia (`/screens/…`), więc z `file://`
+  obrazki się nie załadują.
