@@ -50,6 +50,7 @@ Pulpit pokazuje sprawy wybranego pupila. Przy dwóch i więcej pupilach w „Moi
 
 ## Co jeszcze nowego
 
+- Gdy lek się skończy, ApkaŁapka pyta, czy podajesz go dalej: dokupione opakowanie albo zakończenie kuracji jednym stuknięciem, także prosto z powiadomienia.
 - Dwa tryby powiadomień: „Tylko najważniejsze” albo „Zalecane”, jednym wyborem.
 - Załączniki przyjmują pliki PDF i Word.
 - Usunięcie planu posiłków albo posiłku można cofnąć.
