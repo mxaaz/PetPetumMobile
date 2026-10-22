@@ -5,7 +5,7 @@ categories: [changelog]
 category_label: "Nowości"
 cover_style: grad-a
 emoji: "💊"
-read_time: 3
+read_time: 4
 excerpt_text: "Plan na dziś z każdą dawką osobno, rytm co tydzień i co drugi dzień, połówki tabletek, wyniki z laboratorium z PDF i karta „Do omówienia z weterynarzem”."
 description: "ApkaŁapka 2.7.0: przebudowane leki z planem dnia i połówkami tabletek, wyniki z laboratorium z PDF, dwa tryby powiadomień."
 ---
@@ -32,11 +32,21 @@ Na pulpicie kafel leków liczy dawki („2/4”), a stuknięcie otwiera listę d
 
 Wyniki wczytasz ze zdjęcia kartki albo z pliku PDF od laboratorium. Każda wartość jest porównana z normą wydrukowaną przez laboratorium, a przy parametrach widać zmianę od poprzedniego badania. Oryginał kartki zostaje przy badaniu.
 
+Wynik i norma zapisują się w jednostkach z kartki. Gdy parametr bywa podawany w dwóch jednostkach, przełączasz je przy polu wartości, a wynik i norma przeliczają się same.
+
 <div class="callout vet">To zestawienie liczb, nie diagnoza. Wyniki zawsze omawiaj z weterynarzem, który zna Twojego pupila.</div>
 
 ## Do omówienia z weterynarzem
 
 W dziennikach kuwety, picia, nastroju i aktywności pojawia się karta z tym, co w wybranym okresie odbiegało od zwykłego, z datą i godzinami wpisów. Karta z pulpitu może zniknąć, a ślad zostaje. W Premium wszystkie zdarzenia są na osi czasu i w raporcie PDF na wizytę.
+
+## Kolejna wizyta bez dubli
+
+Kolejną wizytę zapisujesz przyciskiem „Umów kolejną wizytę”. Powstaje osobny wpis z własnym przypomnieniem, a obie wizyty są ze sobą połączone, więc z jednej przejdziesz do drugiej. Lista dzieli wizyty na nadchodzące i odbyte, a wizyta, której termin minął, a nie została oznaczona jako odbyta, jest zaległa. Wizyty, szczepienia i odrobaczania przypominają zawsze.
+
+## Kilka pupili: zakładka „Do zrobienia”
+
+Pulpit pokazuje sprawy wybranego pupila. Przy dwóch i więcej pupilach w „Moich pupilach” pojawia się zakładka „Do zrobienia”: sprawy wszystkich zwierząt na jednej liście, w grupach zaległe, dziś, ten tydzień, później i zapasy. To samo szczepienie u dwóch pupili jest jednym wierszem, który odhaczasz za wszystkich naraz, a kolejny termin każdy dostaje według swojego rytmu.
 
 ## Co jeszcze nowego
 
