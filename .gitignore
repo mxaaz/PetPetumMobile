@@ -1,3 +1,6 @@
 # nested user-pages repo (mxaaz.github.io) — served separately, not part of this site
 app-ads/
 .DS_Store
+
+# Notatki i ustawienia asystenta: repo jest publiczne (GitHub Pages), więc nie idą do gita.
+.claude/

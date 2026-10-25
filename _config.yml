@@ -43,7 +43,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - app-ads
+  - app-ads/  # ze slashem! bez niego Jekyll wycina też app-ads.txt (dopasowanie po prefiksie)
   - vendor
   - scripts
   - .gitignore
