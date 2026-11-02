@@ -22,6 +22,10 @@ layout: default
 
   <div class="article">
     <a class="back-link" href="{{ '/blog/' | relative_url }}">← Wszystkie wpisy</a>
+    {% comment %} Oznaczenie z art. 50 ust. 4 AI Act: tekst o zdrowiu lub bezpieczeństwie wygenerowany
+       z AI i bez kontroli redakcyjnej (`reviewed_by` + `reviewed_at`). Zasady:
+       PetPetumMobile/.claude/reference/ai-act.md. Musi być widoczne przed treścią. {% endcomment %}
+    {% if page.ai_generated %}<p class="ai-note">Ten tekst powstał z pomocą sztucznej inteligencji (AI). Ma charakter ogólny i nie zastępuje porady weterynarza.</p>{% endif %}
     {{ content }}
   </div>
 

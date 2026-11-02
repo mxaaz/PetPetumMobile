@@ -151,6 +151,7 @@ img { max-width: 100%; display: block; }
 .related h2 { font-size: 1.4rem; margin-bottom: 20px; text-align: center; }
 .back-link { display: inline-block; margin: 0 0 10px; color: var(--green-dark); font-weight: 600; text-decoration: none; }
 .back-link:hover { text-decoration: underline; }
+.ai-note { margin: 0 0 18px; padding: 10px 14px; border-left: 4px solid var(--green-dark); background: rgba(0,0,0,.04); border-radius: 6px; font-size: .92rem; }
 
 /* ---------- tropy łapek wzdłuż podstron ----------
    Te same tropy co na stronie głównej (`.side-trails` w `index.html`), rysuje je

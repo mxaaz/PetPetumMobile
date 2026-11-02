@@ -8,6 +8,7 @@ emoji: "🧓"
 read_time: 5
 excerpt_text: "Starszy pupil zmienia się powoli, dzień po dniu, więc najtrudniej zauważyć to osobie, która widzi go codziennie."
 description: "Starszy pies i kot: kiedy pupil staje się seniorem, jakie zmiany są normalne, które objawy wymagają wizyty i jak dostosować dom i badania."
+ai_generated: true          # art. 50 ust. 4 AI Act: brak kontroli redakcyjnej (reviewed_by), decyzja usera 2026-11-02
 ---
 
 Znajomi przychodzą raz na kilka miesięcy i mówią: „ale się postarzał”. Ty tego nie widzisz, bo patrzysz na niego codziennie. Pupil nie budzi się pewnego dnia jako senior, zmienia się stopniowo i właśnie dlatego opiekun zauważa to najpóźniej. Pomaga jedno: świadomie patrzeć na kilka konkretnych rzeczy, zamiast czekać, aż coś rzuci się w oczy.
