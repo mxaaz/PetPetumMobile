@@ -1,0 +1,4 @@
+Contact: mailto:apkalapka.support@gmail.com
+Expires: 2027-11-10T00:00:00Z
+Preferred-Languages: pl, en
+Canonical: https://apkalapka.pl/.well-known/security.txt

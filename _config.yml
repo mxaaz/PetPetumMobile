@@ -38,6 +38,10 @@ defaults:
     values:
       layout: post
 
+# Jekyll pomija katalogi z kropką; ten trzyma security.txt (kontakt dla zgłoszeń błędów bezpieczeństwa).
+include:
+  - .well-known
+
 # Nie przetwarzaj plików niepotrzebnych przez Jekyll
 exclude:
   - Gemfile
