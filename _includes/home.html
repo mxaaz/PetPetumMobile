@@ -545,6 +545,8 @@
       <g id="i-lungs" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v7"/><path d="M12 10c-1.3 0-1.8-1-3.2-1C6.5 9 5 11 5 14.5 5 18 6.5 20 8.5 20c1 0 1.5-.5 2-1.5.5-1 .5-2 .5-3.5V10z"/><path d="M12 10c1.3 0 1.8-1 3.2-1 2.3 0 3.8 2 3.8 5.5 0 3.5-1.5 5.5-3.5 5.5-1 0-1.5-.5-2-1.5-.5-1-.5-2-.5-3.5V10z"/></g>
       <g id="i-phone2" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></g>
       <g id="i-check" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></g>
+      <g id="i-pill" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 20.5a5 5 0 0 1-7-7l6-6a5 5 0 0 1 7 7z"/><path d="M8.5 8.5l7 7"/></g>
+      <g id="i-list" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6h10M10 12h10M10 18h10"/><path d="M4 6l1.2 1.2L7.5 5M4 12l1.2 1.2L7.5 11M4 18l1.2 1.2L7.5 17"/></g>
       <g id="i-phone" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></g>
       <g id="i-wallet" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M16 14.5h2"/></g>
       <g id="i-scissors" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.1 8.1L20 20M8.1 15.9L20 4"/></g>
@@ -686,7 +688,7 @@
   <main>
     <!-- SYTUACJE: prawdziwe pytania opiekuna i to, co na nie odpowiada aplikacja.
          Każde twierdzenie sprawdzone w PetPetumMobile/.claude/features/ (2026-10-11):
-         hydration.md (norma z 14 dni), food-stock.md + supplies.md, litter_box.md (ostatnie siusiu, norma, karty „Warto sprawdzić”),
+         hydration.md (norma z 14 dni), medications.md (plan „Dziś”, rytmy, połówki, zapas; 2026-10-22), litter_box.md (ostatnie siusiu, norma, karty „Warto sprawdzić”),
          pdf_report.md (sekcje, okres 3 mies.–cała historia, premium, 1 raport za darmo). Zmieniasz zdanie? Sprawdź je tam ponownie. -->
     <section id="sytuacje">
       <div class="section-head reveal">
@@ -700,9 +702,9 @@
           <p class="sit-a"><span class="pl"><b>ApkaŁapka</b> liczy normę Twojego pupila z ostatnich dwóch tygodni i oznacza dzień, w którym pił więcej niż zwykle. Na wizycie pokazujesz wykres, a nie wrażenie.</span><span class="en"><b>ApkaŁapka</b> works out your pet's own normal from the last two weeks and marks any day they drank more than usual. At the vet you show a chart, not a hunch.</span></p>
         </article>
         <article class="sit-card reveal">
-          <span class="sit-ic"><svg viewBox="0 0 24 24"><use href="#i-bowl"/></svg></span>
-          <p class="sit-q"><span class="pl">„Na ile starczy karmy?”</span><span class="en">“How long will the food last?”</span></p>
-          <p class="sit-a"><span class="pl"><b>ApkaŁapka</b> liczy każdą porcję, pokazuje, na ile dni jeszcze wystarczy karmy, i przypomina o zakupie, zanim zapas się skończy. Żwirek i leki liczy tak samo.</span><span class="en"><b>ApkaŁapka</b> counts every portion, shows how many days of food are left and reminds you to buy more before the stock runs out. Litter and meds work the same way.</span></p>
+          <span class="sit-ic"><svg viewBox="0 0 24 24"><use href="#i-pill"/></svg></span>
+          <p class="sit-q"><span class="pl">„Czy kot dostał już wieczorną tabletkę?”</span><span class="en">“Has the cat had the evening pill yet?”</span></p>
+          <p class="sit-a"><span class="pl">Odhaczasz każdą dawkę osobno, a <b>ApkaŁapka</b> pokazuje plan na dziś według godzin i cały tydzień podawania. Lek raz w tygodniu albo co drugi dzień przypomina tylko w swoje dni, a zapas liczy się nawet z połówkami tabletek.</span><span class="en">You tick off each dose on its own, and <b>ApkaŁapka</b> shows today's plan by the hour and the whole week of doses. A weekly or every-other-day med reminds you only on its days, and the stock counts even half tablets.</span></p>
         </article>
         <article class="sit-card reveal">
           <span class="sit-ic"><svg viewBox="0 0 24 24"><use href="#i-litter"/></svg></span>
@@ -742,9 +744,17 @@
           <div class="tile reveal" data-screen="reminders">
             <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-bell"/></svg></span>
             <h3><span class="pl">Przypomnienia</span><span class="en">Reminders</span></h3>
-            <p><span class="pl">Szczepienia, odrobaczanie, wizyty, leki, posiłki, pielęgnacja i ważenie. Sam ustawiasz, ile dni wcześniej, a z powiadomienia odhaczasz jednym dotknięciem.</span><span class="en">Vaccinations, deworming, vet visits, meds, meals, grooming and weigh-ins. You choose how many days ahead, and tick it off straight from the notification.</span></p>
+            <p><span class="pl">Szczepienia, odrobaczanie, wizyty, leki, posiłki, pielęgnacja i ważenie. Sam ustawiasz, ile dni wcześniej, a z powiadomienia odhaczasz jednym dotknięciem. Zamiast wielu przełączników wybierasz tryb: „Tylko najważniejsze” albo „Zalecane”.</span><span class="en">Vaccinations, deworming, vet visits, meds, meals, grooming and weigh-ins. You choose how many days ahead, and tick it off straight from the notification. Instead of many switches, pick a mode: “Essentials only” or “Recommended”.</span></p>
             <img class="inline-shot pl" src="/screens/pl-reminders.webp" alt="Lista przypomnień o szczepieniach, lekach i wizytach w ApkaŁapce" loading="lazy" width="600" height="1300" />
             <img class="inline-shot en" src="/screens/en-reminders.webp" alt="Reminders list for vaccinations, medications and vet visits in ApkaŁapka" loading="lazy" width="600" height="1300" />
+            <span class="prog" aria-hidden="true"></span>
+          </div>
+          <div class="tile reveal" data-screen="meds">
+            <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-pill"/></svg></span>
+            <h3><span class="pl">Leki</span><span class="en">Medications</span></h3>
+            <p><span class="pl">Plan na dziś: każda dawka według godzin, odhaczana osobno, także z powiadomienia. Lek codziennie, co drugi dzień, raz w tygodniu albo w razie potrzeby, pół tabletki na raz i zapas, który mówi, na ile dni starczy. Pod spodem tydzień podawania na jednej karcie.</span><span class="en">Today's plan: every dose by the hour, ticked off on its own, also from the notification. Daily, every other day, weekly or as needed, half a tablet at a time, and a stock that shows how many days it will last. Below, the week of doses on one card.</span></p>
+            <img class="inline-shot pl" src="/screens/pl-meds.webp" alt="Plan dawek leków na dziś w ApkaŁapce" loading="lazy" width="600" height="1300" />
+            <img class="inline-shot en" src="/screens/pl-meds.webp" alt="Today's medication doses in ApkaŁapka" loading="lazy" width="600" height="1300" />
             <span class="prog" aria-hidden="true"></span>
           </div>
           <div class="tile reveal" data-screen="calendar">
@@ -753,6 +763,15 @@
             <p><span class="pl">Miesiąc z zaznaczonymi wizytami, szczepieniami i odrobaczaniem. Dotykasz dnia i widzisz jego plan: karmienia, leki, pielęgnację, przy kilku pupilach dla wszystkich naraz.</span><span class="en">A month view with vet visits, vaccinations and deworming marked. Tap a day to see its plan: feedings, meds, grooming, for all your pets at once.</span></p>
             <img class="inline-shot pl" src="/screens/pl-calendar.webp" alt="Kalendarz opieki nad pupilem w ApkaŁapce" loading="lazy" width="600" height="1300" />
             <img class="inline-shot en" src="/screens/en-calendar.webp" alt="Pet care calendar in ApkaŁapka" loading="lazy" width="600" height="1300" />
+            <span class="prog" aria-hidden="true"></span>
+          </div>
+          <div class="tile reveal" data-screen="todo">
+            <span class="badge-premium">Premium</span>
+            <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-list"/></svg></span>
+            <h3><span class="pl">Do zrobienia</span><span class="en">To do</span></h3>
+            <p><span class="pl">Przy kilku pupilach jedna lista spraw wszystkich: zaległe, dziś, ten tydzień i zapasy. To samo szczepienie albo odrobaczanie u kilku pupili odhaczasz za wszystkich naraz, a kolejny termin każdy dostaje według swojego rytmu.</span><span class="en">With several pets, one list of everything for all of them: overdue, today, this week and supplies. Tick off the same vaccination or deworming for several pets at once, and each gets its next date on its own schedule.</span></p>
+            <img class="inline-shot pl" src="/screens/pl-todo.webp" alt="Lista Do zrobienia dla kilku pupili w ApkaŁapce" loading="lazy" width="600" height="1300" />
+            <img class="inline-shot en" src="/screens/pl-todo.webp" alt="To do list for several pets in ApkaŁapka" loading="lazy" width="600" height="1300" />
             <span class="prog" aria-hidden="true"></span>
           </div>
           <div class="tile reveal" data-screen="meal">
@@ -799,7 +818,7 @@
             <span class="badge-premium">Premium</span>
             <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-flask"/></svg></span>
             <h3><span class="pl">Wyniki badań</span><span class="en">Lab results</span></h3>
-            <p><span class="pl">Robisz zdjęcie kartki z laboratorium, a ApkaŁapka odczytuje wyniki. Każdy parametr widzisz na tle normy dla psa albo kota i na wykresie zmian od poprzednich badań.</span><span class="en">Snap the lab printout and ApkaŁapka reads the results. Each value is shown against the normal range for dogs or cats, with a chart of how it changed since earlier tests.</span></p>
+            <p><span class="pl">Wczytujesz wyniki ze zdjęcia kartki albo z pliku PDF od laboratorium. ApkaŁapka porównuje każdą wartość z normą wydrukowaną przez laboratorium, w jednostkach z kartki, i pokazuje zmianę od poprzedniego badania.</span><span class="en">Load results from a photo of the printout or the lab's PDF file. ApkaŁapka compares each value with the reference range printed by the lab, in the sheet's units, and shows the change since the previous test.</span></p>
             <img class="inline-shot pl" src="/screens/bloodtests.webp" alt="Wyniki badań krwi na tle normy w ApkaŁapce" loading="lazy" width="600" height="1300" />
             <img class="inline-shot en" src="/screens/bloodtests.webp" alt="Blood test results against reference ranges in ApkaŁapka" loading="lazy" width="600" height="1300" />
             <span class="prog" aria-hidden="true"></span>
@@ -842,6 +861,10 @@
               <img data-screen="reminders" class="en" src="/screens/en-reminders.webp" alt="ApkaŁapka: reminders" loading="lazy" width="600" height="1300" />
               <img data-screen="calendar" class="pl" src="/screens/pl-calendar.webp" alt="ApkaŁapka: kalendarz" loading="lazy" width="600" height="1300" />
               <img data-screen="calendar" class="en" src="/screens/en-calendar.webp" alt="ApkaŁapka: calendar" loading="lazy" width="600" height="1300" />
+              <img data-screen="meds" class="pl" src="/screens/pl-meds.webp" alt="ApkaŁapka: leki" loading="lazy" width="600" height="1300" />
+              <img data-screen="meds" class="en" src="/screens/pl-meds.webp" alt="ApkaŁapka: medications" loading="lazy" width="600" height="1300" />
+              <img data-screen="todo" class="pl" src="/screens/pl-todo.webp" alt="ApkaŁapka: do zrobienia" loading="lazy" width="600" height="1300" />
+              <img data-screen="todo" class="en" src="/screens/pl-todo.webp" alt="ApkaŁapka: to do" loading="lazy" width="600" height="1300" />
               <img data-screen="meal" class="pl" src="/screens/pl-meal.webp" alt="ApkaŁapka: planer posiłków" loading="lazy" width="600" height="1300" />
               <img data-screen="meal" class="en" src="/screens/en-meal.webp" alt="ApkaŁapka: meal planner" loading="lazy" width="600" height="1300" />
               <img data-screen="litter" class="pl" src="/screens/pl-litter.webp" alt="ApkaŁapka: dziennik kuwety" loading="lazy" width="600" height="1300" />
@@ -868,6 +891,7 @@
       <div class="also reveal">
         <span class="also-label"><span class="pl">Też w środku:</span><span class="en">Also inside:</span></span>
         <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-kidney"/></svg><span class="pl">Panele chorób przewlekłych (CKD, cukrzyca, tarczyca, FLUTD, serce)</span><span class="en">Chronic condition dashboards (CKD, diabetes, thyroid, FLUTD, heart)</span></span>
+        <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-doc"/></svg><span class="pl">Karta „Do omówienia z weterynarzem” w dziennikach</span><span class="en">“To discuss with the vet” card in the diaries</span></span>
         <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-syringe"/></svg><span class="pl">Podpowiedzi szczepień (WSAVA)</span><span class="en">Vaccine suggestions (WSAVA)</span></span>
         <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-share"/></svg><span class="pl">Udostępnianie rodzinie i weterynarzowi</span><span class="en">Sharing with family &amp; your vet</span></span>
         <span class="more-chip"><svg viewBox="0 0 24 24"><use href="#i-cross"/></svg><span class="pl">Karta opiekuna</span><span class="en">Pet sitter card</span></span>
